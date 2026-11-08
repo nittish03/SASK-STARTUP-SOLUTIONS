@@ -15,14 +15,17 @@ const OUTPUT = path.join(__dirname, "..", "public", "sitemap.xml");
 function fetchSitemap(url) {
   return new Promise((resolve, reject) => {
     const client = url.startsWith("https") ? https : http;
-    client
-      .get(url, (res) => {
+    const req = client
+      .get(url, { timeout: 2000 }, (res) => {
         let data = "";
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => {
           if (res.statusCode === 200) resolve(data);
           else reject(new Error(`HTTP ${res.statusCode}`));
         });
+      })
+      .on("timeout", () => {
+        req.destroy(new Error("Request timed out after 2000ms"));
       })
       .on("error", reject);
   });
