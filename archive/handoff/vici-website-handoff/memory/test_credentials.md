@@ -6,7 +6,7 @@
 
 ### Admin Dashboard (/admin, header account icon)
 - Admin email: saskstartupsolutions@viciconsulting.ca (changed from gmail 2026-10)
-- Admin password: ViciAdmin2026!
+- Admin password: REDACTED_PASSWORD
 - Role: admin — bookings (view/search/filter/details, set status Pending/Approved/Declined/Completed), messages, FAQ editing, blog, CMS content/design, account
 
 ### In-app credential change (Admin → Account tab)

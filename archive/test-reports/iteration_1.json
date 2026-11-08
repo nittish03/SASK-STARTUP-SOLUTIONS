@@ -35,7 +35,7 @@
     "/app/backend/tests/test_seo_backend.py"
   ],
   "success_rate": {"backend": "100% (14/14 pytest, 1 skipped FAQ endpoint variant)", "frontend": "~85% (core features all pass; HIGH-priority SEO head duplication is a real but fixable issue)"},
-  "test_credentials": "Admin login works: saskstartupsolutions@viciconsulting.ca / ViciAdmin2026! (from /app/memory/test_credentials.md)",
+  "test_credentials": "Admin login works: saskstartupsolutions@viciconsulting.ca / REDACTED_PASSWORD (from /app/memory/test_credentials.md)",
   "seed_data_creation": "Created one booking (ref 1785C1B2, name 'SEO Test', email delivered@resend.dev, 2026-11-10 10:00 for bookkeeping service) and one contact doc (name 'SEO Test'). Booking was DELETED via DELETE /api/bookings/{id} (200). Contact doc remains in DB because DELETE /api/contacts/{id} returned 403 — see minor backend issue.",
   "retest_needed": true,
   "main_agent_can_self_test": true,

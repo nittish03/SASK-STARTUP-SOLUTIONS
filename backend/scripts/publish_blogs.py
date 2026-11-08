@@ -5,7 +5,7 @@ API = "https://vici-registry-admin.preview.emergentagent.com/api"
 
 token = requests.post(f"{API}/auth/login", json={
     "email": "Saskstartupsolutions@viciconsulting.ca",
-    "password": "ViciAdmin2026!",
+    "password": "REDACTED_PASSWORD",
 }).json()["access_token"]
 H = {"Authorization": f"Bearer {token}"}
 

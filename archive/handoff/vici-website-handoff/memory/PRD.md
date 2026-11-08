@@ -100,7 +100,7 @@ Multi-page marketing + booking website for Vici SaskStartupSolutions (Saskatoon,
 - Dispatched deployment to Emergent deployer with 50 ECU charge acknowledged.
 - Target custom domain: `viciconsulting.ca` via client's existing Cloudflare account.
 - Cloudflare DNS mapping: CNAME/A records for `@` and `www` to point to the deployed app, while preserving all existing MX (Google Workspace) and TXT email records.
-- In-app admin login on production: `saskstartupsolutions@viciconsulting.ca` / `ViciAdmin2026!`.
+- In-app admin login on production: `saskstartupsolutions@viciconsulting.ca` / `REDACTED_PASSWORD`.
 
 ## Email Sender Domain Decision (2026-10)
 - User requested changing "From" address from `hey@email.emergentmails.com` to `saskstartupsolutions@viciconsulting.ca`.

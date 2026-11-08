@@ -27,7 +27,7 @@ A complete business website with:
 
 - **Admin panel:** https://viciconsulting.ca/admin
 - **Email:** saskstartupsolutions@viciconsulting.ca
-- **Password:** ViciAdmin2026!
+- **Password:** REDACTED_PASSWORD
 - **Change either anytime:** Admin → Account tab → a 6-digit verification code is emailed to your current sign-in email before any change applies.
 
 There is exactly ONE admin account by design. Do not create staff accounts.

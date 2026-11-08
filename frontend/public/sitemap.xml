@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Static Pages -->
   <url>
     <loc>https://saskstartupsolutions.ca/</loc>
     <lastmod>2026-11-09</lastmod>
@@ -19,11 +20,43 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://saskstartupsolutions.ca/staff</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/contact</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/faq</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://saskstartupsolutions.ca/blogs</loc>
     <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/sitemap</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- 16 Cornerstone Blog Guides (Canonical /blogs/) -->
   <url>
     <loc>https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon</loc>
     <lastmod>2026-11-09</lastmod>
@@ -43,49 +76,177 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saskstartupsolutions.ca/blog</loc>
+    <loc>https://saskstartupsolutions.ca/blogs/how-to-incorporate-in-saskatchewan-step-by-step-guide</loc>
     <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/sole-proprietorship-vs-incorporation-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatchewan-gst-pst-rules-for-small-business</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/bookkeeping-cleanup-overdue-tax-records-saskatoon</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/monthly-bookkeeping-services-saskatoon-what-to-expect</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/bookkeeping-for-contractors-trades-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatchewan-payroll-management-t4-wcb-deductions</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/notice-to-reader-compilation-financial-statements-saskatoon</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/moving-from-sole-proprietor-to-corporation-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/what-to-do-after-incorporating-in-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/isc-annual-returns-corporate-registry-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/bookkeeping-tax-guide-freelancers-consultants-saskatoon</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/newcomer-business-setup-guide-saskatchewan-multilingual</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Backward-Compatible Alias URLs (/blog/) -->
   <url>
     <loc>https://saskstartupsolutions.ca/blog/small-business-bookkeeping-saskatoon</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://saskstartupsolutions.ca/blog/t2-corporate-tax-filing-saskatchewan</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://saskstartupsolutions.ca/blog/saskatchewan-business-registration-isc-annual-returns</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saskstartupsolutions.ca/staff</loc>
+    <loc>https://saskstartupsolutions.ca/blog/how-to-incorporate-in-saskatchewan-step-by-step-guide</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saskstartupsolutions.ca/faq</loc>
+    <loc>https://saskstartupsolutions.ca/blog/sole-proprietorship-vs-incorporation-saskatchewan</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saskstartupsolutions.ca/contact</loc>
+    <loc>https://saskstartupsolutions.ca/blog/saskatchewan-gst-pst-rules-for-small-business</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://saskstartupsolutions.ca/sitemap</loc>
+    <loc>https://saskstartupsolutions.ca/blog/bookkeeping-cleanup-overdue-tax-records-saskatoon</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/monthly-bookkeeping-services-saskatoon-what-to-expect</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/bookkeeping-for-contractors-trades-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatchewan-payroll-management-t4-wcb-deductions</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/notice-to-reader-compilation-financial-statements-saskatoon</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/moving-from-sole-proprietor-to-corporation-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/what-to-do-after-incorporating-in-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/isc-annual-returns-corporate-registry-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/bookkeeping-tax-guide-freelancers-consultants-saskatoon</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/newcomer-business-setup-guide-saskatchewan-multilingual</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

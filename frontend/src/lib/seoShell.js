@@ -4,7 +4,7 @@ export const HOME_TITLE =
   "Saskatoon Bookkeeping & Tax Setup | Vici";
 
 export const HOME_DESCRIPTION =
-  "Bookkeeping, business registration and incorporation support, T2 filing administration and ISC Registry administration for Saskatoon and Saskatchewan businesses. Book a free introduction.";
+  "Bookkeeping, T2 filing, and ISC registry for Saskatoon businesses. Book a free introduction.";
 
 export const HOME_URL = "https://saskstartupsolutions.ca/";
 

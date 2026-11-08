@@ -28,7 +28,7 @@
   ],
   "updated_files": [],
   "success_rate": {"backend": "100% (DELETE contacts + regression confirmed)", "frontend": "~50% (2/6 cases PASS for SEO duplicates & robots; analytics, FAQ, and booking regression PASS)"},
-  "test_credentials": "Admin saskstartupsolutions@viciconsulting.ca / ViciAdmin2026! works (JWT access_token returned).",
+  "test_credentials": "Admin saskstartupsolutions@viciconsulting.ca / REDACTED_PASSWORD works (JWT access_token returned).",
   "seed_data_creation": "Created and deleted one contact (TEST_DeleteMe, delivered@resend.dev) via POST /api/contact then DELETE /api/contacts/{id} — verified removal. Booking smoke flow stopped at Your Details step (did not submit) so no booking cleanup required.",
   "retest_needed": true,
   "main_agent_can_self_test": true,

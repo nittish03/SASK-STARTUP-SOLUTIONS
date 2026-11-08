@@ -3,7 +3,7 @@ import urllib.parse
 import json
 import time
 
-access_token = '380ce3d77312f3a31949a4bbfb04d049dc199f0a97b82f7ce11c903442b4'
+access_token = 'REDACTED_TOKEN'
 author_name = 'Patrick Vachon'
 author_url = 'https://saskstartupsolutions.ca/'
 
