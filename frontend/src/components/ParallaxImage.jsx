@@ -14,6 +14,7 @@ export default function ParallaxImage({ src, alt, className = "", imgClassName =
         height={height}
         style={{ y }}
         loading="lazy"
+        decoding="async"
         className={`h-full w-full scale-[1.18] object-cover ${imgClassName}`}
       />
     </div>
