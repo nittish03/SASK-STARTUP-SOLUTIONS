@@ -6,7 +6,9 @@
 > **GitHub Remote:** `https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git` (Branch: `main`)  
 > **Local Server:** `http://localhost:3000` (Active & Serving Frontend Build)  
 > **Emergent Project:** "Vici Registry Admin" (`bf42bf06-08c2-40be-9c97-5ecd988db1ef`) under Org "Vici Sask"  
-> **Last Synchronized:** 2026-11-08  
+> **Baseline Checkpoint Tag:** `seo-baseline` | **Backup Branch:** `baseline-backup`  
+> **Current Campaign Focus:** On-Page, Technical & Local SEO Overhaul (Starting from Scratch)  
+> **Last Synchronized:** 2026-11-09  
 
 ---
 
@@ -17,6 +19,8 @@
 * **Practice Lead & Principal:** Patrick Vachon
 * **Physical Office Address:** `539 Avenue I N, Saskatoon, SK S7L 2G9`
 * **Direct Telephone:** `1 (306) 960-0091`
+* **Contact Email:** `Saskstartupsolutions@viciconsulting.ca`
+* **Operating Hours:** Monday–Sunday, 8:00 AM – 8:00 PM CST
 * **Target Geographic Area:** Saskatoon, Regina, Prince Albert, and Saskatchewan province, Canada.
 * **Core Business Offerings:**
   1. Small business monthly bookkeeping & payroll management in Saskatoon.
@@ -29,16 +33,16 @@
 
 ---
 
-## 2. Hard Governance & Account Isolation Rules (STRICT MANDATE)
+## 2. Hard Governance & Account Isolation Rules (MANDATORY)
 
-Any AI agent continuing work on this workspace **MUST** uphold these rules without exception:
+Any AI agent working in this workspace **MUST** uphold these rules without exception:
 
-1. **Strict GitHub Isolation:**
-   - The user's personal GitHub account (`nittish03`) is connected **ONLY** as a git remote on the local machine (`https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git`).
-   - **NEVER** connect, authenticate, or link personal accounts (`nittish03`, personal Gmail, etc.) to Emergent, client Google accounts, or any third-party client dashboard.
+1. **Strict Personal Account Isolation (Zero Personal Linkage):**
+   - The user's personal GitHub account (`nittish03`) is connected **ONLY** as a Git remote on this local machine.
+   - **NEVER** link, authenticate, or connect user personal accounts (`nittish03`, personal Google, etc.) to Emergent, client Google Workspace, or client third-party services.
 2. **Strict Client Account Exclusivity (`Access@clinkora.in`):**
-   - Emergent platform, Google Workspace, and publishing portals must only be accessed under `Access@clinkora.in`.
-   - Author profile name must always be **Patrick Vachon** or **Vici SaskStartupSolutions**.
+   - All client dashboard, Google Cloud, and platform actions must use `Access@clinkora.in`.
+   - Author profile names must always be **Patrick Vachon** or **Vici SaskStartupSolutions**.
 3. **Zero Brand Contamination:**
    - The client Google account previously had a legacy site for an agency client called "Turf Professors" (Richmond, VA).
    - Ensure **ZERO** references to Turf Professors appear in any title, body, author byline, or URL.
@@ -47,144 +51,157 @@ Any AI agent continuing work on this workspace **MUST** uphold these rules witho
 
 ---
 
-## 3. Emergent Cloud Project & Access Audit
+## 3. Technology Stack Breakdown
 
-* **Emergent Dashboard:** `https://app.emergent.sh/`
-* **Organization:** **Vici Sask** (`org_0f360b63-f4c5-4dad-b24c-142ffd034473`)
-* **Project Name:** **Vici Registry Admin**
-* **Project Job ID:** `bf42bf06-08c2-40be-9c97-5ecd988db1ef`
-* **Linked Production Domain:** `saskstartupsolutions.ca` (9th publish active, commit `58d2bd4`)
-* **Emergent Preview Backend API:** `https://vici-registry-admin.preview.emergentagent.com`
-* **Emergent Web VS Code Container:**
-  - URL: `https://vscode-410fd773-4076-4032-8496-66682b5db067.preview.emergentagent.com/`
-  - Access Password: `890d33a4`
-  - Workspace Path in Container: `/app`
-
----
-
-## 4. Codebase Architecture & Local Setup
-
-### Repository Structure
-```
-/Users/eshway/Desktop/NIPUN1
-├── backend/
-│   ├── server.py              # FastAPI application (endpoints for contact, appointments, auth, ISC)
-│   ├── requirements.txt       # Python dependencies (fastapi, motor, uvicorn, pydantic)
-│   ├── .env                   # Backend config (MONGO_URL, DB_NAME, JWT_SECRET, EMERGENT_EMAIL_KEY)
-│   └── tests/                 # Backend test suite
-├── frontend/
-│   ├── src/                   # React 19 application
-│   │   ├── components/        # UI components (Radix, Lucide, Framer Motion)
-│   │   ├── pages/             # Landing, Services, Booking, Blog posts, Admin
-│   │   └── App.js             # Root application router
-│   ├── package.json           # Dependencies (Tailwind, Craco, Axios, React Router)
-│   ├── .env                   # Points to REACT_APP_BACKEND_URL=https://vici-registry-admin.preview.emergentagent.com
-│   └── build/                 # Production compiled build (207 kB JS, 13 kB CSS)
-├── context.md                 # Continuity dossier (this file)
-├── generate_exact_backlinks_pdf.py # Client deliverable PDF generator (max 5 links/platform)
-└── Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf # Client deliverable PDF
-```
-
-### Local Execution Details
-1. **Frontend Server (Currently Active):**
-   - Tool: `serve -s frontend/build -l 3000`
-   - Active URL: `http://localhost:3000`
-   - Tested HTTP Status: **200 OK**
-   - Verified by browser subagent: Page title *"Vici SaskStartupSolutions — Bookkeeping & Business Setup in Saskatoon"*, fully rendered with all CSS, banners, service cards, and booking widgets.
-2. **To Run Frontend in Dev Mode (Live Reload):**
-   ```bash
-   cd /Users/eshway/Desktop/NIPUN1/frontend
-   yarn start
-   ```
-3. **To Run Backend Locally (Optional):**
-   ```bash
-   cd /Users/eshway/Desktop/NIPUN1/backend
-   python3 -m venv venv
-   ./venv/bin/pip install -r requirements.txt
-   ./venv/bin/uvicorn server:app --host 0.0.0.0 --port 8000 --reload
-   ```
-   *Note: Backend uses MongoDB (`motor`). By default, local frontend `.env` points to the live Emergent preview backend (`https://vici-registry-admin.preview.emergentagent.com`), so local backend is optional.*
+* **Frontend:**
+  - **Framework:** React 19 (`19.0.0`) Single Page Application.
+  - **Build Tool:** CRACO (`@craco/craco` 7.1.0) with Webpack 5.
+  - **Styling:** Tailwind CSS (`3.4.17`) + `tailwindcss-animate` + Radix UI Primitives (shadcn/ui style).
+  - **Routing:** React Router v7 (`react-router-dom` 7.15.0).
+  - **Animations & Scrolling:** Framer Motion (`11.18.0`) + Lenis (`1.3.26`) smooth scrolling.
+  - **Forms & Validation:** React Hook Form (`7.56.2`) + Zod (`3.24.4`).
+  - **Data Fetching:** TanStack React Query (`5.56.2`) + Axios (`1.18.0`) + SWR (`2.3.8`).
+  - **Icons & UI:** Lucide React (`0.516.0`), Sonner (toasts), Embla Carousel, Recharts.
+  - **SEO:** `react-helmet-async` for route-level metadata + `generate-sitemap.js` prebuild script.
+* **Backend:**
+  - **Framework:** FastAPI (`0.110.1`) Python async web server.
+  - **Database:** MongoDB via `motor` (`3.3.1` async driver) & `pymongo`.
+  - **Validation:** Pydantic v2 (`2.13.5`).
+  - **Security & Auth:** `PyJWT` (`2.14.0`) + `passlib` / `bcrypt`.
+  - **PDF Generation:** ReportLab (`5.0.1`) for generating client intake and compliance PDFs.
+  - **Email Service:** Emergent Email Delivery API (`EMERGENT_EMAIL_KEY`).
 
 ---
 
-## 5. GitHub Repository & Remote State
+## 4. Environment & Secrets Configuration
 
-* **Remote URL:** `https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git`
-* **Default Branch:** `main`
-* **Local Branch Status:** `On branch main, up to date with 'origin/main'`
-* **Git Remote Configuration:**
+All configuration files are present in the workspace:
+1. `frontend/.env`:
+   ```
+   REACT_APP_BACKEND_URL=https://vici-registry-admin.preview.emergentagent.com
+   WDS_SOCKET_PORT=443
+   ENABLE_HEALTH_CHECK=false
+   ```
+2. `backend/.env`: Configured for local development (`MONGO_URL=mongodb://localhost:27017`, `DB_NAME=test_database`).
+3. `.env.example`: Root template committed to Git for developer reference.
+4. `.env.live`: Secured locally (ignored by `.gitignore`), containing live Emergent secrets:
+   - Live MongoDB Atlas Cluster: `mongodb+srv://vici-registry-admin:dbba5ja4hkhs739fmujg@customer-apps.0caamy.mongodb.net/?retryWrites=true&w=majority&appName=vici-registry-admin&maxPoolSize=5`
+   - Live DB Name: `vici-registry-admin-test_database`
+   - Emergent Email Key: `ek_4e3fd078f9e5db108972c3d64e24fd42`
+   - Integration Proxy: `https://integrations.emergentagent.com`
+
+---
+
+## 5. Local Server & Deployment State
+
+* **Frontend Build Server:** Running in background via `serve -s frontend/build -l 3000`.
+* **Verified URL:** `http://localhost:3000` (**HTTP 200 OK**).
+* **Commands Reference:**
   ```bash
-  git remote add origin https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git
-  git branch -M main
-  git push -u origin main
-  ```
-* **Git Exclusions (`.gitignore`):**
-  - `node_modules/`
-  - `frontend/build/`
-  - `exports/`
-  - `*.zip`
-  - `__pycache__/`
-  *Ensures repository remains lean (pushed 2.10 MiB) without breaching GitHub's 100MB file limits.*
+  # Check server response
+  curl -I http://localhost:3000
 
-### Permanent SEO Starting Point Checkpoint (`seo-baseline`)
-A dedicated Git tag and permanent branch have been created and pushed to GitHub as an immutable restore point:
-* **Tag:** `seo-baseline` (Commit `1f5c390`)
-* **Backup Branch:** `baseline-backup`
-* **Purpose:** Serves as the clean baseline before starting the SEO overhaul from scratch.
-* **How to Revert if anything goes wrong:**
-  ```bash
-  # Option 1: Hard reset working tree to the baseline tag
-  git reset --hard seo-baseline
+  # Rebuild frontend after making code edits
+  cd /Users/eshway/Desktop/NIPUN1/frontend
+  yarn build
 
-  # Option 2: Checkout the backup branch
-  git checkout baseline-backup
+  # Run frontend in interactive development mode (hot-reloading)
+  cd /Users/eshway/Desktop/NIPUN1/frontend
+  yarn start
+
+  # Run backend locally (optional - default frontend connects to live preview backend)
+  cd /Users/eshway/Desktop/NIPUN1/backend
+  python3 -m venv venv && ./venv/bin/pip install -r requirements.txt
+  ./venv/bin/uvicorn server:app --host 0.0.0.0 --port 8000 --reload
   ```
 
+---
+
+## 6. GitHub Repository & Restore Checkpoint
+
+* **Remote:** `https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git`
+* **Active Working Branch:** `main`
+* **Permanent Restore Tag:** `seo-baseline` (Annotated tag pushed to GitHub)
+* **Permanent Backup Branch:** `baseline-backup` (Pushed to GitHub)
+
+### 🚨 Emergency Rollback Instructions
+If any SEO changes or code edits ever break the website or need to be discarded:
+```bash
+# Option 1: Hard reset working tree to the untouched baseline
+git reset --hard seo-baseline
+
+# Option 2: Switch to the backup branch
+git checkout baseline-backup
+```
 
 ---
 
-## 6. Backlink & Off-Page SEO Campaign Status
+## 7. Backlink Campaign Summary (COMPLETED)
 
-The client previously requested backlink building and an exact deliverable PDF with max 5 links per platform.
-
-### Summary of Live Backlink Assets (16 High-DA Root Domains, 59 Assets):
-1. **Taplink (`taplink.cc` - DA 85):** `https://taplink.cc/saskstartupsolutions` (3 links)
-2. **Padlet (`padlet.com` - DA 89):** `https://padlet.com/access_d2vr/vici-saskstartupsolutions-...` (4 links)
-3. **WordPress (`wordpress.com` - DA 94):** `https://saskstartupsolutions.wordpress.com/...` (5 links)
-4. **Tumblr (`tumblr.com` - DA 99):** `https://www.tumblr.com/saskstartupsolutions/...` (9 links, capped at 5)
-5. **Substack (`substack.com` - DA 92):** `https://saskstartupsolutions.substack.com/...` (20 links, capped at 5)
-6. **Blogger (`blogspot.com` - DA 100):** `https://vici-saskstartupsolutions.blogspot.com/...` (20 links, capped at 5)
-7. **Medium (`medium.com` - DA 96):** `https://medium.com/@access_99245/...` (20 links, capped at 5)
-8. **Google Cloud Sites & Docs (`google.com` - DA 100):**
-   - Google Sites: `https://sites.google.com/clinkora.in/vici-saskstartupsolutions`
-   - Google Maps Schema: `https://www.google.com/maps/d/viewer?mid=1p6xRfOSPH2SlsQKODKjtSdCy7ChW4yk`
-   - Google Docs Whitepaper: `https://docs.google.com/document/d/e/2PACX-1vSgmHzcZ0voTdQrRitUuQ5uH3VkuYohQx1Wa1rcDBjLSdjFmyedhHQISElmRjk7iFoKXZAmPKSkiXK7/pub`
-9. **Gravatar (`gravatar.com` - DA 94):** `https://gravatar.com/access5a3edc587b` (1 link)
-10. **Wakelet (`wakelet.com` - DA 87):** `https://wakelet.com/wake/fdzgYVrsjW5VPNrz8otEz` (5 links)
-11. **Linktree (`linktr.ee` - DA 93):** `https://linktr.ee/saskstartupsolutions` (2 links)
-12. **Rentry (`rentry.co` - DA 82):** `https://rentry.co/vrbqv8ck` (20 links, capped at 5)
-13. **Telegra.ph (`telegra.ph` - DA 91):** `https://telegra.ph/Saskatoon-Small-Business-Financial-Blueprint-...` (20 links, capped at 5)
-14. **OpenStreetMap (`openstreetmap.org` - DA 93):** `https://www.openstreetmap.org/user/saskstartupsolutions` (2 links)
-15. **Indie Hackers (`indiehackers.com` - DA 87):** `https://www.indiehackers.com/saskstartupsolutions` (2 links)
-16. **Diigo (`diigo.com` - DA 89):** `https://www.diigo.com/user/saskstartups` (2 links)
-
-### Client Deliverables:
+* **Status:** 100% Complete. No further backlinking required.
+* **Total Assets:** 16 High-DA Root Domains (DA 82–100), 59 Live Published Assets, 61 Verified Links.
+* **Capping Rule:** Maximum 5 links per platform.
 * **Deliverable PDF:** `/Users/eshway/Desktop/NIPUN1/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf`
-* **PDF Generator Script:** `/Users/eshway/Desktop/NIPUN1/generate_exact_backlinks_pdf.py`
+* **PDF Generator:** `/Users/eshway/Desktop/NIPUN1/generate_exact_backlinks_pdf.py`
 
 ---
 
-## 7. Instructions for Any Successor Agent
+## 8. Current Mission: Website SEO from Scratch
 
-If you are a new AI agent resuming this conversation:
-1. **Current State:**
-   - Full repository is extracted, built, and running locally at `http://localhost:3000`.
-   - Git repository is initialized, committed, and pushed to `https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git` (`main` branch).
-   - All backend & frontend source code is in `/Users/eshway/Desktop/NIPUN1`.
-2. **Running Background Tasks:**
-   - `serve -s frontend/build -l 3000` is serving the production build on port 3000.
-3. **If user asks to make changes to the website:**
-   - Make edits in `frontend/src/` or `backend/`.
-   - Rebuild frontend with `cd frontend && yarn build`.
+We are now executing the **full on-page, technical, and local SEO campaign** from scratch.
+
+### SEO Action Plan & Roadmap:
+
+#### Phase 1: Technical SEO & Rich Schema Markup
+1. **Robots.txt & Sitemap Synchronization:**
+   - Update `robots.txt` to reference `/sitemap.xml` directly alongside `/api/sitemap.xml`.
+   - Update `frontend/public/sitemap.xml` with `<changefreq>`, `<priority>`, and exact current `<lastmod>`.
+2. **Schema.org Upgrade:**
+   - In `frontend/public/index.html` and `frontend/src/components/Seo.jsx`:
+     - Upgrade `@type: "LocalBusiness"` to `@type: "AccountingService"` and `"FinancialService"`.
+     - Inject precise Saskatoon geo-coordinates: `latitude: 52.1388`, `longitude: -106.6853`.
+     - Add `hasOfferCatalog` with Bookkeeping, T2 Tax Filing, and ISC Corporate Registry services.
+     - Add `OpeningHoursSpecification` (8 AM - 8 PM daily).
+     - Link `sameAs` schema with Google Maps, LinkedIn, OpenStreetMap, and social bio hubs.
+3. **SPA Prerendering / Meta Fallbacks:**
+   - Ensure clean title, description, and canonical fallbacks for search engine bots that do not execute client-side JavaScript.
+4. **Image SEO & Core Web Vitals:**
+   - Ensure all `<img>` tags in `Home.jsx`, `Services.jsx`, `Staff.jsx` have explicit width, height, and keyword-rich `alt` attributes.
+
+#### Phase 2: On-Page Optimization & Content Hierarchy
+1. **Title & Meta Tag Matrix:**
+   - **Home (`/`):** *"Vici SaskStartupSolutions | Saskatoon Bookkeeping, T2 Tax & ISC Registry"*
+   - **Services (`/services`):** *"Accounting & Bookkeeping Services Saskatoon | T2 Corporate Tax & ISC"*
+   - **Booking (`/booking`):** *"Book Small Business Accounting Consultation | Saskatoon, SK"*
+   - **Staff (`/staff`):** *"Patrick Vachon | Principal Practice Lead | Vici SaskStartupSolutions"*
+   - **FAQ (`/faq`):** *"Saskatchewan Business Accounting & Tax FAQ | Vici SaskStartupSolutions"*
+   - **Contact (`/contact`):** *"Contact Vici SaskStartupSolutions | Saskatoon Office & Support"*
+2. **Heading Tag Structure (`H1` &rarr; `H2` &rarr; `H3`):**
+   - Audit and enforce exactly one semantic `<h1>` per page containing primary target keywords.
+   - Refactor visual subheadings to semantic `<h2>` and `<h3>`.
+3. **Internal Linking Mesh:**
+   - Contextually link the 3 blog posts to `/services` and `/booking` with descriptive anchor text.
+
+#### Phase 3: Local Saskatoon & Saskatchewan SEO
+1. **Local NAP Consistency:** Enforce exact string match across footer, contact page, and structured data:
+   `539 Avenue I N, Saskatoon, SK S7L 2G9` | `1 (306) 960-0091`.
+2. **Local Geo-Targeting Signals:** Geo meta tags (`geo.region: CA-SK`, `geo.placename: Saskatoon`, `geo.position`).
+
+#### Phase 4: AEO / AI Search Engine Optimization (LLM Discovery)
+1. **`llms.txt` Enhancement:** Ensure `frontend/public/llms.txt` clearly outlines company services, pricing policy, and contact info for Perplexity, ChatGPT, and Claude bots.
+2. **FAQ Schema:** Inject `FAQPage` JSON-LD schema into `Faq.jsx` so Google and AI search engines can render rich snippet answers.
+
+---
+
+## 9. Directives for Successor AI Agent
+
+If you are a new AI agent resuming this session:
+1. **Read this file thoroughly** — all necessary context is right here.
+2. **Check git status:** `git status` (should be on `main`).
+3. **Do not repeat backlinking** — off-page backlinking is finished.
+4. **Current Next Step:** Proceed with **Phase 1: Technical SEO & Rich Schema Markup** as outlined in Section 8 above.
+5. **After making code edits:**
+   - Recompile the frontend: `cd frontend && yarn build`.
+   - Verify the server: `curl -I http://localhost:3000`.
    - Commit and push to GitHub: `git add . && git commit -m "..." && git push origin main`.
-4. **Never leak credentials or connect personal accounts to Emergent/client platforms.**
+   - Update this `context.md` file with the completed changes.
