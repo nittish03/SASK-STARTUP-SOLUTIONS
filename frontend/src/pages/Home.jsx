@@ -145,9 +145,10 @@ export default function Home() {
               <img src={imgs.homePatrickPhoto}
                 alt={imgs.homePatrickPhotoAlt || "Patrick Vachon, founder of Vici SaskStartupSolutions, in the Saskatoon office"}
                 data-testid="meet-patrick-photo"
-                width={941} height={1672}
+                width={800} height={1421}
                 className="relative aspect-[4/5] w-full rounded-3xl border-2 border-black/15 object-cover object-top shadow-xl"
-                loading="lazy" />
+                loading="lazy"
+                decoding="async" />
             </Reveal>
             <Reveal delay={0.15}>
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.3em] text-black/70">Meet the founder</p>

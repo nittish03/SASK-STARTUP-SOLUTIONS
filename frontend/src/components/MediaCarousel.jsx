@@ -101,9 +101,10 @@ export default function MediaCarousel() {
                   data-testid={`carousel-image-${i + 1}`}
                   src={slide.src}
                   alt={slide.alt}
-                  width={slide.width}
-                  height={slide.height}
+                  width={slide.width || 800}
+                  height={slide.height || 450}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(0,0,0,0.7)_100%)]" aria-hidden="true" />

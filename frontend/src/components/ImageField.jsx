@@ -28,7 +28,7 @@ export default function ImageField({ label, value, alt, onChange, onAltChange, t
     <div data-testid={testId}>
       <span className="font-sans text-xs font-semibold uppercase tracking-widest text-black">{label}</span>
       {value && (
-        <img src={value} alt={alt || ""} className="mt-2 h-28 w-full max-w-xs rounded-xl border-2 border-black/15 object-cover" />
+        <img src={value} alt={alt || ""} width={320} height={112} loading="lazy" decoding="async" className="mt-2 h-28 w-full max-w-xs rounded-xl border-2 border-black/15 object-cover" />
       )}
       <div className="mt-2 flex flex-wrap items-center gap-2">
         <label className="inline-flex cursor-pointer items-center gap-2 rounded-full border-2 border-black px-4 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-black hover:bg-black hover:text-white">

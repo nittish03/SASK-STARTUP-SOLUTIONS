@@ -254,6 +254,7 @@ export default function Services() {
                         data-testid={`service-image-${svc.slug}`}
                         className="relative aspect-[4/3] w-full rounded-3xl border-2 border-black/15 object-cover shadow-lg"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <p className="mt-6 hidden font-sans text-xs font-semibold uppercase tracking-[0.25em] text-black/60 lg:block">

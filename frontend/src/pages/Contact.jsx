@@ -106,8 +106,11 @@ export default function Contact() {
                   src="/media/patrick-vachon.jpg"
                   alt="Portrait of Patrick Vachon"
                   data-testid="contact-patrick-photo"
+                  width="64"
+                  height="64"
                   className="h-16 w-16 shrink-0 rounded-full border-2 border-white/30 object-cover object-[50%_20%]"
                   loading="lazy"
+                  decoding="async"
                 />
                 <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-white">Patrick Vachon</h2>
               </div>

@@ -6,7 +6,7 @@ function escapeHtml(s) {
 
 function inline(s) {
   return s
-    .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img alt="$1" src="$2" loading="lazy" />')
+    .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, '<img alt="$1" src="$2" loading="lazy" decoding="async" />')
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, u) =>
       u.startsWith("http")
         ? `<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`

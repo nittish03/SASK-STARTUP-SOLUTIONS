@@ -23,6 +23,8 @@ export default function Footer() {
             alt="Vici Sask Startup Solutions — Bookkeeping, Tax, Registry"
             width="352"
             height="318"
+            loading="lazy"
+            decoding="async"
             data-testid="footer-logo"
             className="w-44 rounded-2xl border border-white/10"
           />

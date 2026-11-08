@@ -187,6 +187,7 @@ export default function BlogPost() {
             <Reveal>
               {post.featured_image && (
                 <img src={post.featured_image} alt={post.featured_alt || post.title} data-testid="post-featured-image"
+                  width={1200} height={630} loading="lazy" decoding="async"
                   className="mb-10 w-full rounded-3xl border-2 border-black/15 object-cover" />
               )}
               <Markdown text={post.content} data-testid="post-content"
@@ -218,7 +219,7 @@ export default function BlogPost() {
                   <Link key={p.id} to={`/blogs/${p.slug}`} data-testid={`related-${p.slug}`}
                     className="group block overflow-hidden rounded-3xl border-2 border-black/15 bg-white transition-shadow hover:shadow-xl">
                     {p.featured_image ? (
-                      <img src={p.featured_image} alt={p.featured_alt || p.title} loading="lazy"
+                      <img src={p.featured_image} alt={p.featured_alt || p.title} width={800} height={450} loading="lazy" decoding="async"
                         className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     ) : (
                       <div className="flex aspect-[16/9] w-full items-center justify-center bg-bookgreen">

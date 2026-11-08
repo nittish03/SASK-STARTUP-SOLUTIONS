@@ -141,8 +141,11 @@ export default function Booking() {
                   <img
                     src="/media/patrick-vachon.jpg"
                     alt="Portrait of Patrick Vachon"
+                    width="112"
+                    height="112"
                     className="mx-auto h-28 w-28 rounded-full border-2 border-black/15 object-cover object-[50%_20%]"
                     loading="lazy"
+                    decoding="async"
                   />
                   <h2 className="mt-4 font-serif text-2xl uppercase text-black">Patrick Vachon</h2>
                   <p className="mt-1 font-sans text-xs font-semibold uppercase tracking-widest text-black/60">Founder</p>

@@ -80,8 +80,11 @@ export default function Staff() {
                 <img
                   src={photo}
                   alt={`Portrait of ${name}, founder of Vici SaskStartupSolutions`}
+                  width={800}
+                  height={1421}
                   className="h-72 w-full object-cover object-top md:h-full"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(0,0,0,0.55)_100%)]" aria-hidden="true" />
               </div>

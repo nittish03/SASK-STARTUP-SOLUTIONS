@@ -44,8 +44,9 @@ export default function HeroCarousel({ slides }) {
             alt={slide.alt || slide.title}
             className="absolute inset-0 h-full w-full object-cover"
             fetchPriority="high"
-            width={slideSize?.width}
-            height={slideSize?.height}
+            decoding="async"
+            width={slideSize?.width || 1280}
+            height={slideSize?.height || 720}
           />
         ) : (
           <motion.img
@@ -58,8 +59,9 @@ export default function HeroCarousel({ slides }) {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
-            width={slideSize?.width}
-            height={slideSize?.height}
+            decoding="async"
+            width={slideSize?.width || 1280}
+            height={slideSize?.height || 720}
           />
         )}
       </AnimatePresence>

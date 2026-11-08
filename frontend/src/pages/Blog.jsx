@@ -54,7 +54,7 @@ export default function Blog() {
                     className="group block overflow-hidden rounded-3xl border-2 border-black/15 bg-white transition-shadow hover:shadow-xl"
                   >
                     {p.featured_image ? (
-                      <img src={p.featured_image} alt={p.featured_alt || p.title} loading="lazy"
+                      <img src={p.featured_image} alt={p.featured_alt || p.title} width={800} height={500} loading="lazy" decoding="async"
                         className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     ) : (
                       <div className="flex aspect-[16/10] w-full items-center justify-center bg-bookgreen">
