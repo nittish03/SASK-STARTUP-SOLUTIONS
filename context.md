@@ -141,14 +141,37 @@ git checkout baseline-backup
 * **Status:** 100% Complete. No further backlinking required.
 * **Total Assets:** 16 High-DA Root Domains (DA 82–100), 59 Live Published Assets, 61 Verified Links.
 * **Capping Rule:** Maximum 5 links per platform.
-* **Deliverable PDF:** `/Users/eshway/Desktop/NIPUN1/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf`
-* **PDF Generator:** `/Users/eshway/Desktop/NIPUN1/generate_exact_backlinks_pdf.py`
+* **Deliverable PDF:** `/Users/eshway/Desktop/NIPUN1/campaigns/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf`
+* **PDF Generator:** `/Users/eshway/Desktop/NIPUN1/scripts/generate_exact_backlinks_pdf.py`
 
 ---
 
 ## 8. Current Mission: Website SEO from Scratch
 
-We are now executing the **full on-page, technical, and local SEO campaign** from scratch.
+We are now executing the **full on-page, technical, and local SEO campaign** from scratch based on the agency's official strategy document: [`SaskStartupSolutions_Top_50_Keywords.pdf`](file:///Users/eshway/Desktop/NIPUN1/SaskStartupSolutions_Top_50_Keywords.pdf).
+
+### The Top 50 Target Keywords Blueprint (Agency Official)
+
+The campaign follows an acquisition-to-retention funnel:
+1. **Acquisition (Business Formation):** Searchers look for incorporation and name registration.
+2. **Recurring LTV (Bookkeeping & Compliance):** Convert new entities into monthly bookkeeping and T2 tax clients.
+3. **Geo-Anchored:** Every single keyword targets either **Saskatoon** or **Saskatchewan**.
+
+| Group & Target URL | Key Target Search Queries |
+| :--- | :--- |
+| **Group 1: Incorporation** (1–10)<br/>*Target: `/services`, `/blog/...`* | 1. `incorporate a business Saskatoon`<br/>2. `business incorporation services Saskatoon`<br/>3. `incorporation help Saskatoon`<br/>4. `how to incorporate in Saskatchewan`<br/>5. `incorporate a small business Saskatchewan`<br/>6. `new corporation setup Saskatoon`<br/>7. `incorporating a sole proprietorship Saskatchewan`<br/>8. `incorporation documents needed Saskatchewan`<br/>9. `how long does incorporation take Saskatchewan`<br/>10. `cost to incorporate in Saskatchewan` |
+| **Group 2: Registration** (11–19)<br/>*Target: `/services`* | 11. `register a business name Saskatchewan`<br/>12. `business registration help Saskatoon`<br/>13. `business registration services Saskatoon`<br/>14. `register a small business Saskatoon`<br/>15. `sole proprietorship registration help Saskatchewan`<br/>16. `partnership registration help Saskatchewan`<br/>17. `business name registration process Saskatchewan`<br/>18. `what do I need to register a business name Saskatchewan`<br/>19. `business registration cost Saskatchewan` |
+| **Group 3: Bookkeeping** (20–31)<br/>*Target: `/` (Home), `/services`* | 20. `bookkeeper Saskatoon`<br/>21. `bookkeeping services Saskatoon`<br/>22. `small business bookkeeping Saskatoon`<br/>23. `monthly bookkeeping services Saskatoon`<br/>24. `bookkeeping for new businesses Saskatoon`<br/>25. `bookkeeping for newly incorporated businesses Saskatoon`<br/>26. `bookkeeping for self employed Saskatoon`<br/>27. `sole proprietor bookkeeping Saskatoon`<br/>28. `bookkeeping for freelancers Saskatoon`<br/>29. `bookkeeping for consultants Saskatoon`<br/>30. `remote bookkeeping Saskatchewan`<br/>31. `bookkeeping cleanup Saskatoon` |
+| **Group 4: Startup Guidance** (32–39)<br/>*Target: `/faq`, `/blog`* | 32. `help starting a business in Saskatoon`<br/>33. `starting a business in Saskatchewan`<br/>34. `first time business owner support Saskatoon`<br/>35. `sole proprietorship vs corporation Saskatchewan`<br/>36. `moving from self employed to incorporated Saskatchewan`<br/>37. `what comes after registering a business Saskatchewan`<br/>38. `what to do after incorporation Saskatchewan`<br/>39. `when does a Saskatchewan business need a GST number` |
+| **Group 5: Ongoing Filings** (40–43)<br/>*Target: `/services`, `/faq`* | 40. `annual return filing Saskatchewan corporation`<br/>41. `ISC annual return help Saskatoon`<br/>42. `what records should a small business keep Saskatchewan`<br/>43. `can I keep business receipts digitally Saskatchewan` |
+| **Group 6: Differentiators & Brand** (44–50)<br/>*Target: `/staff`, `/booking`, `/contact`* | 44. `free business consultation Saskatoon`<br/>45. `business setup help for newcomers Saskatoon`<br/>46. `newcomer business registration Saskatchewan`<br/>47. `French speaking bookkeeper Saskatoon`<br/>48. `Russian speaking bookkeeper Saskatoon`<br/>49. `Armenian speaking business support Saskatoon`<br/>50. `SaskStartupSolutions Saskatoon` |
+
+#### Editorial Guardrails from Strategy PDF:
+* **No "Near Me" Keyword Stuffing:** Managed strictly through Schema geo-coordinates (`52.1388, -106.6853`), not spammy body copy.
+* **Exclude Government Terms:** Do not target "business registration office Saskatoon" to avoid visitors seeking the government desk.
+* **Pricing Mentions:** Cite statutory ISC government registry fees; SaskStartupSolutions custom pricing is quoted during free discovery calls.
+* **Timeline Cautions:** Never guarantee fixed turnaround times for government ISC registry approvals.
+
 
 ### SEO Action Plan & Roadmap:
 
