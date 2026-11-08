@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 0%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 0%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 0%;
+        --primary: 96 45% 58%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 0 0% 0%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 0 0% 94%;
+        --muted-foreground: 0 0% 30%;
+        --accent: 51 99% 50%;
+        --accent-foreground: 0 0% 0%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 0%;
+        --input: 0 0% 0%;
+        --ring: 0 0% 0%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-praxeti text-midnight font-serif antialiased;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+        background: #FDD401;
+        color: #000000;
+    }
+    :focus-visible {
+        outline: 3px solid #000000;
+        outline-offset: 2px;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+        animation: none;
+    }
+}
+
+/* Editable brand design tokens (set from the Design tab in /admin) */
+:root {
+    --brand-spring: #FDD401;
+    --brand-bookgreen: #076A21;
+    --brand-mantis: #74C365;
+}
+
+/* Font presets */
+body.preset-classic,
+body.preset-classic .font-serif {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+body.preset-classic .font-sans {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body.preset-modern,
+body.preset-modern .font-serif,
+body.preset-modern .font-sans {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Button styles */
+body.btn-soft .rounded-full {
+    border-radius: 0.9rem !important;
+}
+body.btn-sharp .rounded-full {
+    border-radius: 0.15rem !important;
+}

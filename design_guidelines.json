@@ -1,0 +1,167 @@
+{
+  "project_name": "Vici SaskStartupSolutions",
+  "archetype": "SWISS & HIGH-CONTRAST / EDITORIAL Sartorial Precision",
+  "theme": "Light & Dark High-Contrast Editorial (Primary Dark Green #00804C, Navy #001F3F, Spring Yellow #DBE64C)",
+  "color_palette": {
+    "praxeti_white": "#F6F7ED",
+    "first_colors_of_spring": "#DBE64C",
+    "midnight_mirage": "#001F3F",
+    "mantis": "#74C365",
+    "picture_book_green": "#00804C",
+    "nuit_blanche": "#1E488F"
+  },
+  "contrast_pairings": [
+    {
+      "bg": "#00804C",
+      "text": "#F6F7ED",
+      "usage": "Main hero section, dark statement cards, manifesto sections"
+    },
+    {
+      "bg": "#DBE64C",
+      "text": "#001F3F",
+      "usage": "Sticky Header, Hero text highlights, marquee ribbons, primary badges"
+    },
+    {
+      "bg": "#001F3F",
+      "text": "#F6F7ED",
+      "usage": "Footer, dark editorial cards, dark callout blocks, secondary containers"
+    },
+    {
+      "bg": "#74C365",
+      "text": "#001F3F",
+      "usage": "Primary CTA buttons (Submit Intake Form, Book, Confirm Booking), energetic badges"
+    },
+    {
+      "bg": "#F6F7ED",
+      "text": "#001F3F",
+      "usage": "Light section backgrounds, cards, form container surfaces, main body text background"
+    },
+    {
+      "bg": "#1E488F",
+      "text": "#F6F7ED",
+      "usage": "Links, secondary action buttons, form focus rings, section dividers, active tabs"
+    }
+  ],
+  "typography": {
+    "headings": {
+      "font_family": "serif (Playfair Display / Cormorant Garamond / Georgia fallback)",
+      "style": "Transitional / Editorial Serif, UPPERCASE for section headings",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight leading-tight uppercase",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-serif tracking-normal leading-tight uppercase",
+      "h3": "text-xl sm:text-2xl font-serif leading-snug uppercase",
+      "h4": "text-lg sm:text-xl font-serif"
+    },
+    "body": {
+      "font_family": "serif (Cormorant Garamond / Georgia / serif)",
+      "style": "Elegant editorial serif text",
+      "text": "text-base sm:text-lg leading-relaxed font-serif text-[#001F3F] dark:text-[#F6F7ED]"
+    },
+    "navigation_buttons_services": {
+      "font_family": "sans-serif (Inter / System Sans)",
+      "style": "Clean semi-bold sans-serif",
+      "nav_link": "font-sans font-semibold text-sm uppercase tracking-wider",
+      "button": "font-sans font-semibold text-sm uppercase tracking-wide",
+      "service_title": "font-sans font-semibold text-lg sm:text-xl text-[#001F3F]"
+    }
+  },
+  "header_specifications": {
+    "position": "sticky top-0 z-50",
+    "background": "#DBE64C",
+    "wordmark": {
+      "lines": ["Vici", "SaskStartup", "Solutions"],
+      "font": "font-serif text-lg font-bold leading-tight uppercase text-[#001F3F]",
+      "layout": "stacked three-line serif wordmark on left"
+    },
+    "navigation_links": ["Home", "Staff", "Booking", "Contact Us", "FAQ"],
+    "actions": {
+      "right_button": "Outlined pill (2px #001F3F border, transparent fill, fills #001F3F with #F6F7ED text on hover)",
+      "icons": ["Search button with modal input", "Account modal trigger"]
+    },
+    "mobile_behavior": "Hamburger menu drawer with Book Now button remaining visible at top"
+  },
+  "footer_specifications": {
+    "background": "#001F3F",
+    "text_color": "#F6F7ED",
+    "elements": [
+      "Stacked brand wordmark in #DBE64C",
+      "Quick page links & downloadable intake form links",
+      "Saskatoon office address & Saskatchewan ISC registry legal disclaimers",
+      "Copyright notice & social media links"
+    ]
+  },
+  "pages": {
+    "home": {
+      "route": "/",
+      "components": [
+        "Kinetic Hero section with signature line-by-line reveal",
+        "Slow Editorial Marquee banner",
+        "Featured Services grid with 'Submit Intake Form' trigger",
+        "Editorial Numbered Manifesto (Brand Story)",
+        "Saskatchewan ISC & T2 Corporate Tax interactive calculator widget",
+        "Client testimonials scroller"
+      ]
+    },
+    "booking": {
+      "route": "/booking",
+      "components": [
+        "Our Services showcase with detailed pricing & scope",
+        "Interactive Multi-step Booking Flow (1. Service Select -> 2. Date & Time -> 3. Contact Info -> 4. Confirmation)",
+        "Downloadable Intake Forms section (PDF/DOC intake packages for T2 Tax, Bookkeeping setup, ISC Incorporation)"
+      ]
+    },
+    "staff": {
+      "route": "/staff",
+      "components": [
+        "Founder Profile Card for Patrick Vachon",
+        "Credentials & Saskatchewan regulatory expertise (T2, ISC, PST/GST)",
+        "Personal message to Saskatoon entrepreneurs",
+        "Direct consultation scheduler trigger"
+      ]
+    },
+    "contact": {
+      "route": "/contact",
+      "components": [
+        "Contact Info (Phone, Email, Downtown Saskatoon Address)",
+        "Business Hours panel",
+        "Interactive Contact Form with mock reCAPTCHA notice",
+        "Embedded interactive map placeholder with 'Get Directions' link"
+      ]
+    },
+    "faq": {
+      "route": "/faq",
+      "components": [
+        "Categorized Accordion (T2 Corporate Tax, Bookkeeping, ISC Registry, Pricing)",
+        "Search filter for instant FAQ answers",
+        "Direct help callout box"
+      ]
+    }
+  },
+  "image_urls": {
+    "saskatoon_skyline": "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "saskatoon_bridge": "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "saskatoon_office_building": "https://images.unsplash.com/photo-1758310999515-645097b709db?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "saskatoon_riverfront": "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "patrick_vachon_portrait": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "motion_and_libraries": {
+    "smooth_scroll": "lenis",
+    "animations": "framer-motion for section reveals, line masks, and interactive hover states",
+    "marquee": "react-fast-marquee or framer-motion smooth infinite marquee",
+    "icons": "lucide-react"
+  },
+  "testing_and_accessibility": {
+    "wcag_level": "WCAG AA",
+    "data_testids": "Mandatory on all links, buttons, form fields, modals, and key headings (e.g. data-testid='nav-link-booking', data-testid='submit-intake-btn')"
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the mandated hex colors: #F6F7ED, #DBE64C, #001F3F, #74C365, #00804C, #1E488F.",
+    "Do NOT substitute fonts with Inter for headings. Use font-serif for all main and section headings in UPPERCASE.",
+    "Build clean .js components inside /app/frontend/src.",
+    "Ensure every interactive element includes a descriptive data-testid.",
+    "Implement the multi-step booking modal and direct downloadable intake form triggers.",
+    "Include Lenis smooth scrolling and framer-motion animations for an Awwwards-level feel."
+  ]
+},
+  "path": "/app/design_guidelines.json",
+  "overwrite": true
+}

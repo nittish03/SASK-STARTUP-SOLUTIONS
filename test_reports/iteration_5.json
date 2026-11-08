@@ -1,0 +1,25 @@
+{
+  "summary": "Host-alignment verification (www -> non-www) PASS on all fronts. Backend sitemap/robots and frontend canonical/og:url/JSON-LD across 11 routes all use non-www. 404 content renders. Mobile /services has no horizontal overflow.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_results": {
+    "sitemap_non_www": "PASS - 11 <loc> URLs, 0 www, 3 lastmod on blog posts",
+    "robots_sitemap_line": "PASS - Sitemap: https://saskstartupsolutions.ca/api/sitemap.xml",
+    "canonical_and_og_url_all_routes": "PASS - /, /services, /booking, /staff, /contact, /faq, /blog, /sitemap, 3 blog slugs all return non-www canonical and og:url",
+    "home_json_ld": "PASS - LocalBusiness url=https://saskstartupsolutions.ca/, image=https://saskstartupsolutions.ca/og-image.jpg",
+    "blog_post_json_ld": "PASS - BlogPosting with mainEntityOfPage + BreadcrumbList, no www strings",
+    "client_404": "PASS - [data-testid=not-found-page] renders with HOME/SERVICES/BOOKING/STAFF/CONTACT/FAQ/BLOG links (HTTP 200 noted platform limitation)",
+    "content_preservation": "PASS - Home has hero copy and BOOK CTAs; /services headings and intro paragraph intact",
+    "mobile_375_services": "PASS - scrollWidth == innerWidth (no horizontal overflow). Pexels hero images are reachable (HTTP 200); lazy-load finishes after networkidle so noted but not a defect",
+    "pytest_backend_seo": "PASS - 14 passed, 1 skipped (test_seo_backend.py)"
+  },
+  "test_report_links": ["/app/backend/tests/test_seo_backend.py"],
+  "action_items": [],
+  "critical_code_review_comments": ["All host references consistently non-www in preview build. Live site will reflect on next deploy."],
+  "updated_files": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Preview is fully aligned to non-www. Live site saskstartupsolutions.ca still serves pre-fix build (expected until deploy)."
+}

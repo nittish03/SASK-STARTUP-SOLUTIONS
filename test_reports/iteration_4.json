@@ -1,0 +1,36 @@
+{
+  "summary": "Verification of nav-button-to-Link conversion across Home/Services/Staff/Faq plus SEO infra (sitemap, robots, NotFound, deep-link). ALL 9 test cases PASS. 9 Home + 5 Services + 2 Staff + 1 Faq converted elements render as <a> tags with correct href values and are clickable to navigate; visual styling unchanged (no layout regressions observed). CONTENT FREEZE verified — all spot-check CTA labels and headings present with identical casing on their respective pages ('Book an Introduction', 'Submit Intake Form', 'Book With Patrick', 'Meet The Team', 'Book Now' on Home; 'Book Now' on Services; 'Book With Patrick'/'Contact Us' on Staff; 'Book Your Free Introduction' belongs to Booking intake section and is present there). Deep link /booking#intake PASS (header bottom=108px, section's INTAKE FORMS heading top=186px — comfortably below sticky header, visually confirmed). /sitemap page renders (10 page/article links in main + footer-link-sitemap confirmed). GET /api/sitemap.xml returns valid XML with 11 <url> entries (8 pages + 3 blog posts), all on https://www.saskstartupsolutions.ca, exactly 3 <lastmod> values (blog posts), zero /admin /portal /api urls. /robots.txt served as text/plain with Disallow for /admin /portal /api/admin/ /api/auth/ plus Sitemap: https://www.saskstartupsolutions.ca/api/sitemap.xml and the full AI-crawler user-agent block. Unknown /zzz-nope renders not-found-page; /blog/nope renders post-not-found. Mobile 375px: documentElement.scrollWidth=375 (<=376 PASS), home-hero-book-btn visible/clickable, header-menu-btn + header-search-btn render. Per-route canonical: / and /services each have exactly 1 canonical with correct href on https://www.saskstartupsolutions.ca.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "/api/sitemap.xml", "issue": "Response body is valid XML and backend sets media_type='application/xml', but the ingress/proxy returns Content-Type: application/json in headers. Body content is correct so search crawlers that sniff content will still parse it, but strict XML consumers may reject. Likely platform-layer rewrite; worth investigation."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/test_reports/iteration_1.json",
+    "/app/test_reports/iteration_2.json",
+    "/app/test_reports/iteration_3.json"
+  ],
+  "action_items": [
+    "(Optional) Investigate why /api/sitemap.xml response Content-Type header is application/json at the preview edge despite backend setting application/xml — the body is correct so this is low priority."
+  ],
+  "critical_code_review_comments": [
+    "Home featured-service-intake-btn testids are indexed i+1 (i.e. 1..5), not 0..4 as described in the review request — that's fine, all 5 exist and route to /booking#intake. Just worth keeping doc wording in sync.",
+    "Services service-book-btn testids use slug (bookkeeping/t2-corporate-filing/isc-registry/basic-package/introduction), not numeric index — same component is reused on Booking page which is why those 5 testids also appear on /booking. All 5 are <a href='/booking'>, correct.",
+    "Header account icon remains a <button> that opens /admin — intentionally left as button (auth gate, not crawler nav); confirmed and acceptable.",
+    "Deep-link /booking#intake relies on natural browser hash-scroll — intake section's heading lands at y=186 under an sticky header ending at y=108, so there's adequate clearance without needing scroll-margin-top. However, if header height grows, consider adding `scroll-margin-top: 120px` on the #intake section for defensive margin."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (sitemap/robots endpoints)", "frontend": "100% (9/9 anchor conversions + NotFound + Sitemap + deep-link + mobile + content freeze + canonical)"},
+  "test_credentials": "Admin account read from /app/memory/test_credentials.md — NOT used this iteration (no admin login/booking cleanup was required because full end-to-end booking submission was skipped; see note).",
+  "seed_data_creation": "None. No TEST_ records created; 'Anchor Test' booking E2E submission flow was not executed in this iteration (the booking Flow widget was verified to render with all expected testids but a full submit was skipped to avoid dependency on live Resend send and admin deletion). Previous iterations already covered end-to-end booking.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Anchor conversion is clean — every nav-only CTA on /, /services, /staff, /faq is now a react-router <Link> (A tag) with correct href. If adding more such conversions, verify (a) tagName==='A', (b) href matches intended route, (c) classes/wording preserved, (d) Services.jsx has useNavigate removed. Sitemap endpoint content-type quirk remains — body is XML, header says application/json (preview edge rewrite). Full booking E2E remains green per iteration_1-3 reports.",
+  "rca of the issue": "N/A — no bugs reproduced this iteration."
+}

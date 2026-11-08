@@ -1,0 +1,44 @@
+{
+  "summary": "SEO overhaul full-stack validation. Backend sitemap/robots/blog APIs all pass (14/14 pytest). Frontend: all 9 public routes have distinct titles; NotFound (/this-page-does-not-exist) and post-not-found (/blog/does-not-exist) render correctly with data-testids; /sitemap page lists all 3 blog posts; footer-link-sitemap present on every page; FAQPage JSON-LD present with real (non-placeholder) answers; GA4 dataLayer + gtag initialised with send_page_view:false; SPA navigation pushes page_view events; book_intro_click, contact_click (phone+email), booking_request, contact_request events all fire. Full booking flow completed (SEO Test, delivered@resend.dev, 2026-11-10 10:00) → booking-confirmation-details rendered + booking_request event. Contact form submission success + contact_request event. Static index.html has preferred-host canonical, og:image URL and exactly ONE gtag config for G-03VN7HB92G. Test booking cleaned up (DELETE /api/bookings/{id} → 200).",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "DELETE /api/contacts/{id}", "issue": "Returns 403 Forbidden for admin JWT (login as saskstartupsolutions@viciconsulting.ca). DELETE /api/bookings/{id} works (200) with same token — inconsistent authz."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "SEO head (Helmet vs static index.html)", "issue": "Admin (/admin) and Portal (/portal) render BOTH 'index, follow' (from static index.html) AND 'noindex, nofollow' (from Helmet) meta robots tags. Browsers/crawlers typically use the first one found (index, follow) → risk of these pages being indexed. Static tag lacks data-rh attribute so Helmet appends instead of replacing.", "selector": "meta[name=robots]", "priority": "HIGH"},
+      {"component": "SEO head duplication", "issue": "Every route has TWO meta[name=description] (first = static site-wide, second = per-route from Seo.jsx), TWO link[rel=canonical] (first always homepage, second = per-route), TWO og:title / og:description. First one wins for most crawlers → per-route canonical and description are effectively ignored by SEO consumers that read the first match.", "selector": "link[rel=canonical], meta[name=description]", "priority": "HIGH"},
+      {"component": "AnalyticsTracker (initial load)", "issue": "Two page_view events are pushed to dataLayer for '/' on initial mount (dev build). Likely React.StrictMode double-invokes the useEffect. In production the duplicate may be gone, but recommend using a ref/guard or verifying the production build.", "selector": "AnalyticsTracker useEffect", "priority": "MEDIUM"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_seo_backend.py",
+    "/app/test_reports/pytest/seo_backend.xml"
+  ],
+  "action_items": [
+    "Remove the SEO-related meta tags from frontend/public/index.html that Seo.jsx also controls (meta robots, link canonical, meta description, og:title/description/url, twitter:title/description) so react-helmet-async is the single source of truth per route. Keep static og:image (optional), og:site_name and gtag snippet. This fixes BOTH the admin/portal noindex leak and the duplicate description/canonical tags.",
+    "Investigate duplicate page_view on initial load (likely React.StrictMode in dev). Add a useRef guard in AnalyticsTracker or confirm production build only fires once.",
+    "Make DELETE /api/contacts/{id} consistent with DELETE /api/bookings/{id} (both should allow admin token). Currently contacts returns 403 for authenticated admin."
+  ],
+  "critical_code_review_comments": [
+    "Seo.jsx is correct, but Helmet does not replace static index.html meta tags lacking data-rh — this is the root cause of per-route canonical/description/robots duplication. The static tags should not duplicate what Helmet manages.",
+    "backend/server.py L869-874: DELETE /api/bookings/{id} relies solely on get_current_user; contacts endpoint behaves differently (403) — audit the dependency on both to ensure consistent admin-only semantics.",
+    "AnalyticsTracker useEffect has no guard against StrictMode double-invocation — recommend a mounted ref.",
+    "FAQ answers all start with lowercase (e.g. 'the introduction...', 'bring whatever...'). Not an SEO failure but a copy issue — placeholder prefix was removed but sentence capitalisation was lost."
+  ],
+  "updated_files": [
+    "/app/backend/tests/__init__.py",
+    "/app/backend/tests/test_seo_backend.py"
+  ],
+  "success_rate": {"backend": "100% (14/14 pytest, 1 skipped FAQ endpoint variant)", "frontend": "~85% (core features all pass; HIGH-priority SEO head duplication is a real but fixable issue)"},
+  "test_credentials": "Admin login works: saskstartupsolutions@viciconsulting.ca / ViciAdmin2026! (from /app/memory/test_credentials.md)",
+  "seed_data_creation": "Created one booking (ref 1785C1B2, name 'SEO Test', email delivered@resend.dev, 2026-11-10 10:00 for bookkeeping service) and one contact doc (name 'SEO Test'). Booking was DELETED via DELETE /api/bookings/{id} (200). Contact doc remains in DB because DELETE /api/contacts/{id} returned 403 — see minor backend issue.",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "After main agent removes duplicate SEO tags from public/index.html, re-verify: (1) only ONE meta[name=robots] per page, with noindex,nofollow on /admin and /portal; (2) only ONE link[rel=canonical] whose href matches the current route (e.g. /services → canonical ends in /services); (3) only ONE meta[name=description] matching per-page Seo.jsx. Also re-check that /, /services, /booking, /staff, /contact, /faq, /blog, /sitemap, and /blog/<slug> each have unique canonical/description/og:title. Use the earlier Playwright snippet: `Array.from(document.querySelectorAll('meta[name=description], link[rel=canonical], meta[name=robots]')).map(x=>({tag:x.tagName, name:x.getAttribute('name')||x.getAttribute('rel'), v:x.content||x.href}))` — the array length per tag type must equal 1.",
+  "rca of the issue": "react-helmet-async only replaces tags it previously injected (identified by its own data-rh attribute). Static tags written in public/index.html for the SAME meta name / link rel are left in the DOM, resulting in duplicates. For meta[name=robots] specifically, the FIRST tag (static 'index, follow') overrides the semantics intended for /admin and /portal where Helmet injects a second 'noindex, nofollow'. Fix: remove the per-route-controlled tags from index.html, OR add react-helmet-async's SSR hydration pattern, OR delete the static robots/canonical/description server-side before serving the shell."
+}

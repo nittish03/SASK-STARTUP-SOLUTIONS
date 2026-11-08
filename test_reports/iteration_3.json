@@ -1,0 +1,26 @@
+{
+  "summary": "SEO overhaul retest ROUND 2 — ALL CASES PASS. The fix of removing helmet-managed tags from public/index.html worked. Case 1 PASS: every public route (/, /services, /booking, /staff, /contact, /faq, /blog, /sitemap, /blog/<slug>) now has exactly ONE meta[name=description], ONE link[rel=canonical] (href matches current route on https://www.saskstartupsolutions.ca), ONE meta[name=robots], and ONE og:title. Case 2 PASS: /admin and /portal each expose exactly ONE meta[name=robots] with content 'noindex, nofollow'. Case 3 PASS: initial load of / pushes exactly 1 page_view to window.dataLayer; SPA nav to /contact pushes exactly 1 more (total 2); FAQ page shows capitalized answers and FAQPage JSON-LD (alongside LocalBusiness); home renders; blog post renders with full article h1 'Saskatchewan Business Registration: A Guide to Incorporation, Registry Updates and Annual Returns'. Case 4 PASS: view-source of / contains gtag config('G-03VN7HB92G') exactly once, LocalBusiness JSON-LD once, and the noscript content block.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/test_reports/iteration_1.json",
+    "/app/test_reports/iteration_2.json"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "frontend/public/index.html is now minimal and correct — only non-per-route tags remain (title, og:type, og:site_name, og:image dims/alt, og:locale, twitter:card, favicons, GA4 gtag with send_page_view:false, LocalBusiness JSON-LD, noscript). react-helmet-async (Seo.jsx) is the single source of truth for per-route meta.",
+    "AnalyticsTracker useRef guard confirmed: no duplicate page_view on initial render; SPA navigations push exactly one page_view each."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "n/a (frontend-only retest)", "frontend": "100% (4/4 SEO retest cases PASS across 11 routes)"},
+  "test_credentials": "Not used — all tested routes are public.",
+  "seed_data_creation": "None.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "SEO duplication regression fully resolved. If future routes/pages are added, repeat the per-route inspection: Array.from(document.querySelectorAll('meta[name=description], link[rel=canonical], meta[name=robots], meta[property=\"og:title\"]')) — each count must be exactly 1, canonical href must match route on https://www.saskstartupsolutions.ca, and /admin + /portal robots must be 'noindex, nofollow'.",
+  "rca of the issue": "Root cause of previous failures was that react-helmet-async@3.0.0 does not adopt pre-rendered static head tags (the data-rh='true' attribute is write-only for Helmet, not read-in during client mount). Fix applied by main agent: physically removed the per-route tags (description/robots/canonical/og:title/og:description/og:url/og:image/twitter:title/description/image) from public/index.html so Helmet-rendered copies are the sole occurrences. Verified."
+}

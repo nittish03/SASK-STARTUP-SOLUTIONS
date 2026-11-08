@@ -1,0 +1,37 @@
+{
+  "summary": "SEO overhaul RETEST. Results per case: (1) FAIL — meta duplicates PERSIST on ALL routes despite adding data-rh='true' to static tags in public/index.html. Every route (/, /services, /booking, /staff, /contact, /faq, /blog, /sitemap, /blog/<slug>, /admin, /portal) still has 2x meta[name=description], 2x link[rel=canonical], 2x meta[name=robots], 2x og:title. (2) FAIL — /admin and /portal still render BOTH meta[name=robots]='index, follow, max-image-preview:large, max-snippet:-1' (from static index.html) AND 'noindex, nofollow' (from Helmet) — first one wins, so these pages remain exposed to indexing. (3) PASS — AnalyticsTracker useRef guard works: initial / produces exactly 1 page_view in window.dataLayer; SPA nav to /services adds exactly 1 more (total 2). (4) PASS — FAQ answers now properly capitalized ('The introduction appointment is a no-obligation conversation…'); no 'Placeholder' text; FAQPage JSON-LD present alongside LocalBusiness. (5) PASS — DELETE /api/contacts/{id} with admin Bearer token returns HTTP 200 {'message':'Deleted'} and the contact is removed from GET /api/contacts. (6) PASS — Smoke booking flow progressed Service → Date&Time → Your Details with correct summary 'Part 1 - Bookkeeping · 2026-11-15 · 10:00 a.m. (Saskatoon time)'. Home page renders, booking page renders.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "SEO head (static index.html + react-helmet-async v3.0.0)", "issue": "The data-rh='true' attribute on static meta/link tags in public/index.html does NOT cause react-helmet-async v3.0.0 to replace them. Helmet still appends a second tag of each kind on every route. Result: 2x meta[name=description], 2x link[rel=canonical], 2x meta[name=robots], 2x og:title/description/url/image, 2x twitter:title/description/image on every public route.", "selector": "head > meta, head > link[rel=canonical]", "priority": "HIGH"},
+      {"component": "SEO robots on /admin and /portal", "issue": "Both routes still expose meta[name=robots]='index, follow, max-image-preview:large, max-snippet:-1' (static, listed first) in addition to the intended 'noindex, nofollow' (Helmet-appended). Crawlers that honor the first occurrence will index /admin and /portal — the originally reported leak is NOT fixed.", "selector": "meta[name=robots]", "priority": "HIGH"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_seo_backend.py",
+    "/app/test_reports/pytest/seo_backend.xml",
+    "/app/test_reports/iteration_1.json"
+  ],
+  "action_items": [
+    "The data-rh='true' approach is INEFFECTIVE with react-helmet-async v3.0.0 — Helmet v3 does NOT reconcile against existing static DOM tags by that attribute (it only replaces tags it itself has mounted). Pick ONE of the following for a real fix: (a) REMOVE the following from public/index.html entirely so Helmet becomes the single source: meta[name=description], meta[name=robots], link[rel=canonical], og:title, og:description, og:url, og:image, twitter:title, twitter:description, twitter:image (keep title, og:type, og:site_name, og:image dimensions/alt, og:locale, twitter:card, favicon, gtag snippet, JSON-LD); (b) Add a one-time cleanup effect in a root component that removes server-rendered static copies of those tags on mount before Helmet renders; or (c) switch to a Helmet version/approach that supports true hydration takeover of statically-rendered head tags. Option (a) is simplest and was the recommendation from iteration_1 — adding data-rh did not help.",
+    "After the above fix, verify /admin and /portal have exactly ONE meta[name=robots] = 'noindex, nofollow'."
+  ],
+  "critical_code_review_comments": [
+    "frontend/public/index.html lines 10–38: adding data-rh='true' to static tags is a no-op with react-helmet-async@^3.0.0. The library doesn't adopt existing DOM nodes by that attribute. Remove the duplicated SEO tags instead of marking them.",
+    "AnalyticsTracker useRef guard is correctly implemented and verified.",
+    "backend DELETE /api/contacts/{id} with Bearer works (200); the earlier 403 reported in iteration_1 was CSRF-related for cookie auth — behavior is now understood and consistent with other admin endpoints when using Bearer tokens."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (DELETE contacts + regression confirmed)", "frontend": "~50% (2/6 cases PASS for SEO duplicates & robots; analytics, FAQ, and booking regression PASS)"},
+  "test_credentials": "Admin saskstartupsolutions@viciconsulting.ca / ViciAdmin2026! works (JWT access_token returned).",
+  "seed_data_creation": "Created and deleted one contact (TEST_DeleteMe, delivered@resend.dev) via POST /api/contact then DELETE /api/contacts/{id} — verified removal. Booking smoke flow stopped at Your Details step (did not submit) so no booking cleanup required.",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Main agent must implement one of the three action-item options. Simplest: remove the 8+ duplicated SEO tags from public/index.html entirely (keep title, og:type, og:site_name, og:image width/height/alt, og:locale, twitter:card, favicons, GA4 gtag, JSON-LD). After fix, re-run the same per-route meta inspection: `Array.from(document.querySelectorAll('meta[name=description], link[rel=canonical], meta[name=robots]')).map(x=>({tag:x.tagName, name:x.getAttribute('name')||x.getAttribute('rel'), v:x.content||x.href}))` — each tag type count MUST equal 1 on every route, and /admin+/portal MUST have exactly ONE meta[name=robots] = 'noindex, nofollow'.",
+  "rca of the issue": "react-helmet-async v3.0.0 inserts head tags via its own render pipeline and tracks what it inserts to replace them on updates. It does NOT scan existing document head for tags marked with data-rh and claim ownership of them — that attribute is written OUT by Helmet (SSR output marker) but is NOT a signal Helmet reads IN during client-side mounting. Therefore, static tags in public/index.html (even with data-rh='true') remain in the DOM alongside Helmet-rendered tags. The only reliable fixes are (a) delete the static duplicates from index.html, or (b) imperatively remove them in a mount effect before Helmet mounts."
+}
