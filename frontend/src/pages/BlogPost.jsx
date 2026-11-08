@@ -7,6 +7,51 @@ import Markdown from "@/components/Markdown";
 import { API } from "@/lib/site";
 import Seo from "@/components/Seo";
 
+const BLOG_FAQS = {
+  "small-business-bookkeeping-saskatoon": [
+    {
+      q: "Do I need a professional bookkeeper for my small business in Saskatoon?",
+      a: "While not legally mandatory, engaging professional bookkeeping services in Saskatoon ensures your financial transactions are organized accurately, Saskatchewan PST (6%) and federal GST are tracked correctly, and your business remains compliant with CRA recordkeeping standards."
+    },
+    {
+      q: "How long must a Saskatchewan business keep bookkeeping records?",
+      a: "The Canada Revenue Agency (CRA) mandates that Canadian businesses retain all receipts, invoices, bank reconciliations, payroll records, and tax filings for a minimum of six years from the end of the relevant taxation year."
+    },
+    {
+      q: "What is the difference between bookkeeping and accounting in Saskatchewan?",
+      a: "Bookkeeping involves the daily and monthly recording, reconciling, and categorizing of financial transactions. Accounting involves synthesizing those records, preparing compilation financial statements, and completing annual T2 corporate tax filings."
+    }
+  ],
+  "t2-corporate-tax-filing-saskatchewan": [
+    {
+      q: "When is the T2 corporate tax return due in Saskatchewan?",
+      a: "A Saskatchewan corporation must file its T2 corporate income tax return with the CRA no later than six months after the close of its fiscal year. However, any corporate tax balance owing must be paid within two or three months after year-end to prevent interest penalties."
+    },
+    {
+      q: "What documents are required to file a T2 corporate tax return in Saskatchewan?",
+      a: "Key documents include year-end financial statements (balance sheet and income statement), general ledger, bank and credit card reconciliations, asset receipts, previous year's Notice of Assessment, and the federal Business Number (BN)."
+    },
+    {
+      q: "Does an inactive corporation in Saskatchewan need to file a T2 return?",
+      a: "Yes. Every incorporated entity in Saskatchewan must file a T2 corporate tax return with the CRA every year, even if there was zero revenue, no expenses, and no active business operations."
+    }
+  ],
+  "saskatchewan-business-registration-isc-annual-returns": [
+    {
+      q: "How much does it cost to incorporate a business in Saskatchewan?",
+      a: "The official statutory filing fee charged by Information Services Corporation (ISC) is approximately $255 CAD for the incorporation application, plus $50 CAD for the Nuans name reservation."
+    },
+    {
+      q: "When is an ISC annual return due in Saskatchewan?",
+      a: "An ISC annual return must be submitted each year during the month immediately following the corporation's incorporation anniversary month."
+    },
+    {
+      q: "What happens if a corporation does not file its ISC annual return in Saskatchewan?",
+      a: "Neglecting an ISC annual return leads to financial penalties and, if unresolved, ISC will strike the corporation from the Corporate Registry, legally dissolving the company and freezing corporate bank accounts."
+    }
+  ]
+};
+
 export default function BlogPost() {
   const { slug } = useParams();
   const [post, setPost] = useState(null);
@@ -26,10 +71,7 @@ export default function BlogPost() {
 
   useEffect(() => {
     if (!post) return;
-    const ld = document.createElement("script");
-    ld.type = "application/ld+json";
-    ld.dataset.blogSchema = "true";
-    ld.text = JSON.stringify([
+    const schemas = [
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -39,19 +81,48 @@ export default function BlogPost() {
         datePublished: post.published_at || undefined,
         dateModified: post.updated_at || undefined,
         author: { "@type": "Person", name: post.author },
-        publisher: { "@type": "Organization", name: "Vici SaskStartupSolutions" },
-        mainEntityOfPage: `https://saskstartupsolutions.ca/blog/${post.slug}`,
+        publisher: { 
+          "@type": "Organization", 
+          name: "Vici SaskStartupSolutions",
+          url: "https://saskstartupsolutions.ca/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://saskstartupsolutions.ca/media/logo-full.png"
+          }
+        },
+        mainEntityOfPage: `https://saskstartupsolutions.ca/blogs/${post.slug}`,
       },
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://saskstartupsolutions.ca/" },
-          { "@type": "ListItem", position: 2, name: "Blog", item: "https://saskstartupsolutions.ca/blog" },
+          { "@type": "ListItem", position: 2, name: "Blogs", item: "https://saskstartupsolutions.ca/blogs" },
           { "@type": "ListItem", position: 3, name: post.title },
         ],
       },
-    ]);
+    ];
+
+    const faqs = BLOG_FAQS[post.slug];
+    if (faqs && faqs.length > 0) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.a,
+          },
+        })),
+      });
+    }
+
+    const ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.dataset.blogSchema = "true";
+    ld.text = JSON.stringify(schemas);
     document.head.appendChild(ld);
 
     return () => {
@@ -65,12 +136,12 @@ export default function BlogPost() {
         <Seo
           title={post.seo_title || `${post.title} | Vici SaskStartupSolutions`}
           description={post.seo_description || `Read "${post.title}" from Vici SaskStartupSolutions — practical guidance for Saskatchewan small businesses.`}
-          path={`/blog/${post.slug}`}
+          path={`/blogs/${post.slug}`}
           type="article"
         />
       )}
       {missing && (
-        <Seo title="Post Not Found | Vici SaskStartupSolutions" description="This article may have been unpublished or removed." path={`/blog/${slug}`} noindex />
+        <Seo title="Post Not Found | Vici SaskStartupSolutions" description="This article may have been unpublished or removed." path={`/blogs/${slug}`} noindex />
       )}
       <section className="bg-bookgreen">
         <div className="mx-auto max-w-[800px] px-4 py-16 sm:px-6 sm:py-20">
@@ -78,7 +149,7 @@ export default function BlogPost() {
             <ol className="flex flex-wrap items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-widest text-white/80">
               <li><Link to="/" className="hover:text-spring">Home</Link></li>
               <li aria-hidden="true"><ChevronRight className="h-3.5 w-3.5" /></li>
-              <li><Link to="/blog" className="hover:text-spring">Blog</Link></li>
+              <li><Link to="/blogs" className="hover:text-spring">Blogs</Link></li>
               {post && (
                 <>
                   <li aria-hidden="true"><ChevronRight className="h-3.5 w-3.5" /></li>
@@ -106,7 +177,7 @@ export default function BlogPost() {
             <div data-testid="post-not-found" className="text-center">
               <p className="font-serif text-2xl text-black">Post not found</p>
               <p className="mt-2 font-serif text-base text-black/70">It may have been unpublished or removed.</p>
-              <Link to="/blog" className="mt-4 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-wide text-black underline underline-offset-4">
+              <Link to="/blogs" className="mt-4 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-wide text-black underline underline-offset-4">
                 <ArrowLeft className="h-4 w-4" aria-hidden="true" /> All posts
               </Link>
             </div>
@@ -144,7 +215,7 @@ export default function BlogPost() {
               <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-black">Related articles</h2>
               <div className="mt-6 grid gap-6 sm:grid-cols-2">
                 {related.map((p) => (
-                  <Link key={p.id} to={`/blog/${p.slug}`} data-testid={`related-${p.slug}`}
+                  <Link key={p.id} to={`/blogs/${p.slug}`} data-testid={`related-${p.slug}`}
                     className="group block overflow-hidden rounded-3xl border-2 border-black/15 bg-white transition-shadow hover:shadow-xl">
                     {p.featured_image ? (
                       <img src={p.featured_image} alt={p.featured_alt || p.title} loading="lazy"

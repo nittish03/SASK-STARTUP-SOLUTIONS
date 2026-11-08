@@ -32,6 +32,26 @@ const FALLBACK_FAQS = [
     question: "What's included in the All in one Basic Service Package?",
     answer: "The Basic Package includes all three parts: Bookkeeping, T2 Corporate Filing Administration, and ISC Registry Administration. One team, one relationship, all your compliance handled.",
   },
+  {
+    question: "What is the difference between a sole proprietorship and a corporation in Saskatchewan?",
+    answer: "A sole proprietorship is simpler and less expensive to start, but the business owner carries unlimited personal liability for debts and legal obligations. A Saskatchewan corporation (incorporated via ISC) creates a distinct legal entity that provides limited liability protection and access to the small business corporate tax rate, but requires annual ISC returns and T2 corporate tax filings.",
+  },
+  {
+    question: "When does a Saskatchewan small business need a CRA GST number?",
+    answer: "A Saskatchewan business must register for a federal GST/HST account once its worldwide taxable gross sales exceed $30,000 CAD over a single calendar quarter or four consecutive quarters. Many businesses also choose to register voluntarily earlier to claim input tax credits (ITCs) on business startup expenses.",
+  },
+  {
+    question: "How long does incorporation take in Saskatchewan?",
+    answer: "Standard business corporation filings submitted online through the Information Services Corporation (ISC) Corporate Registry portal typically take between 1 and 3 business days for approval once the mandatory Nuans name reservation has been cleared.",
+  },
+  {
+    question: "Can I keep my business receipts digitally in Saskatchewan?",
+    answer: "Yes. The Canada Revenue Agency (CRA) explicitly permits businesses to keep digital copies of receipts, invoices, and bank statements, provided electronic scans are clear, legible, and retained for at least six years from the end of the tax year.",
+  },
+  {
+    question: "Do you offer consultations for newcomers to Saskatchewan in other languages?",
+    answer: "Yes. In addition to English, our team provides introductory consultations and administrative assistance in French, Russian, and Armenian to help newcomers and immigrant entrepreneurs navigate Saskatchewan business setup and bookkeeping requirements.",
+  },
 ];
 
 export default function Faq() {
@@ -47,8 +67,8 @@ export default function Faq() {
   return (
     <div data-testid="faq-page">
       <Seo
-        title="FAQ | Vici SaskStartupSolutions, Saskatoon"
-        description="Answers about free introductions, bookkeeping, T2 corporate filing administration, ISC annual returns and business registration in Saskatchewan."
+        title="Saskatchewan Small Business Accounting & Tax FAQ | Vici Saskatoon"
+        description="Frequently asked questions about bookkeeping, T2 corporate tax deadlines, ISC corporate registry annual returns, GST registration, and business setup in Saskatoon, SK."
         path="/faq"
       >
         <script type="application/ld+json">

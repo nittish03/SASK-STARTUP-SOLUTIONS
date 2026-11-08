@@ -9,7 +9,7 @@ export const SERVICES = [
     duration: "30 mins",
     button: "Book Now",
     blurb: "Let us take care of the boring work and let you focus on the business.",
-    img: "https://images.pexels.com/photos/4476378/pexels-photo-4476378.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/4476378/pexels-photo-4476378.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Bookkeeper recording figures on paper while using a calculator",
     paragraphs: [
       "Accurate bookkeeping is the foundation of every healthy startup. Our Saskatoon bookkeeping service covers monthly transaction recording, bank and credit card reconciliation, expense categorization, and financial statement preparation — all kept audit-ready and fully compliant with CRA bookkeeping standards. Whether you're currently tracking expenses in a spreadsheet, a shoebox of receipts, or an outdated system that no longer fits your growing business, we'll build a bookkeeping solution that scales with you.",
@@ -28,7 +28,7 @@ export const SERVICES = [
     duration: "30 mins",
     button: "Book Now",
     blurb: "Provide us with your data and we will take care of the administration part so you don't have to worry about missing a deadline!",
-    img: "https://images.pexels.com/photos/7821934/pexels-photo-7821934.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/7821934/pexels-photo-7821934.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "A person completing a corporate form with a pen",
     paragraphs: [
       "Corporate tax filing doesn't have to be stressful. Our T2 corporate tax filing administration service manages the entire process for your Saskatchewan corporation — from gathering financial documents and preparing your corporate tax return, to coordinating submission to the Canada Revenue Agency (CRA) on your behalf. We help startups and growing companies stay ahead of T2 filing deadlines, avoid late-filing penalties, and maintain clean, compliant corporate tax records year after year.",
@@ -47,7 +47,7 @@ export const SERVICES = [
     duration: "30 mins",
     button: "Book Now",
     blurb: "There so many things to keep track of, let us take of this too, we'll help you with the administration of filing your new corporation with Information Services Corporation (ISC).",
-    img: "https://images.pexels.com/photos/11482790/pexels-photo-11482790.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/11482790/pexels-photo-11482790.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Facade of an official registry building with stone columns",
     paragraphs: [
       "Staying compliant with Saskatchewan's Information Services Corporation (ISC) Registry is easy to overlook — and costly to miss. Our ISC Registry administration service manages your corporate registry filings from incorporation through ongoing annual reports, so your business stays in good standing with the Saskatchewan corporate registry at all times. We track your filing deadlines, prepare the required registry documents, and handle submissions so you avoid missed deadlines, late fees, and compliance penalties.",
@@ -66,7 +66,7 @@ export const SERVICES = [
     duration: "1 hr 30 mins",
     button: "Book Now",
     blurb: "The power to focus on your business is crucial for success. Let us take a load off and let that happen. This package includes: Bookkeeping, T2 Corporate Filing Administration and ISC Registry Administration",
-    img: "https://images.pexels.com/photos/7718714/pexels-photo-7718714.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/7718714/pexels-photo-7718714.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "An organized desk flat lay with notebooks, laptop and office tools",
     paragraphs: [
       "Running a startup means wearing every hat — founder, operator, and accountant all at once. Our All in One Basic Service Package takes the full compliance workload off your plate in a single engagement, combining Bookkeeping, T2 Corporate Filing Administration, and Saskatchewan ISC Registry Administration into one streamlined service. It's the most efficient way for Saskatoon startups and growing Saskatchewan businesses to stay financially organized, tax-compliant, and registry-current — without juggling multiple providers or deadlines.",
@@ -84,7 +84,7 @@ export const SERVICES = [
     duration: "30 mins (Free)",
     button: "Book Your Free Introduction",
     blurb: "Every engagement starts here. We'll review your situation and show you exactly how we can help - no obligation.",
-    img: "https://images.pexels.com/photos/3874033/pexels-photo-3874033.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/3874033/pexels-photo-3874033.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Two people shaking hands across a cafe table over coffee and a notebook",
     paragraphs: [
       "Every client relationship starts with a conversation, not a contract. Book a free, no-obligation 30-minute introduction appointment with our Saskatoon team to walk through your current bookkeeping, corporate tax, and registry situation. We'll review where things stand, identify any gaps or upcoming deadlines, and show you exactly how our bookkeeping, T2 filing, and ISC Registry administration services can support your startup's growth — with zero pressure and zero commitment.",
@@ -114,15 +114,15 @@ export const DEFAULT_HERO_SLIDES = [
 ];
 
 export const DEFAULT_PAGE_IMAGES = {
-  homeGallerySkyline: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  homeGalleryBridge: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
-  homeGalleryRiverfront: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
+  homeGallerySkyline: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
+  homeGalleryBridge: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
+  homeGalleryRiverfront: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
   homePatrickPhoto: "/media/patrick-vachon.jpg",
-  carouselPhoto1: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  carouselPhoto2: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  carouselPhoto3: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600",
-  bookingBand: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=85&w=2000",
-  bookingIntake: "https://images.unsplash.com/photo-1758310999515-645097b709db?crop=entropy&cs=srgb&fm=jpg&q=85&w=900",
+  carouselPhoto1: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
+  carouselPhoto2: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
+  carouselPhoto3: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
+  bookingBand: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=75&w=1200",
+  bookingIntake: "https://images.unsplash.com/photo-1758310999515-645097b709db?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
 };
 
 export const PAGE_IMAGE_FIELDS = [

@@ -27,4 +27,5 @@ Disallow: /portal
 Disallow: /api/admin/
 Disallow: /api/auth/
 
+Sitemap: https://saskstartupsolutions.ca/sitemap.xml
 Sitemap: https://saskstartupsolutions.ca/api/sitemap.xml

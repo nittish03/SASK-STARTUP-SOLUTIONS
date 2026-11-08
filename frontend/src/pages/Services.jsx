@@ -13,7 +13,7 @@ const SERVICE_DETAILS = [
     badge: "Part of Basic Service Package",
     duration: "30 mins",
     button: "Book Now",
-    img: "https://images.pexels.com/photos/4476378/pexels-photo-4476378.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/4476378/pexels-photo-4476378.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Bookkeeper recording figures on paper while using a calculator",
     paragraphs: [
       "Accurate bookkeeping is the foundation of every healthy startup. Our Saskatoon bookkeeping service covers monthly transaction recording, bank and credit card reconciliation, expense categorization, and financial statement preparation — all kept audit-ready and fully compliant with CRA bookkeeping standards. Whether you're currently tracking expenses in a spreadsheet, a shoebox of receipts, or an outdated system that no longer fits your growing business, we'll build a bookkeeping solution that scales with you.",
@@ -30,7 +30,7 @@ const SERVICE_DETAILS = [
     badge: "Part of Basic Service Package",
     duration: "30 mins",
     button: "Book Now",
-    img: "https://images.pexels.com/photos/7821934/pexels-photo-7821934.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/7821934/pexels-photo-7821934.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "A person completing a corporate form with a pen",
     paragraphs: [
       "Corporate tax filing doesn't have to be stressful. Our T2 corporate tax filing administration service manages the entire process for your Saskatchewan corporation — from gathering financial documents and preparing your corporate tax return, to coordinating submission to the Canada Revenue Agency (CRA) on your behalf. We help startups and growing companies stay ahead of T2 filing deadlines, avoid late-filing penalties, and maintain clean, compliant corporate tax records year after year.",
@@ -47,7 +47,7 @@ const SERVICE_DETAILS = [
     badge: "Part of Basic Service Package",
     duration: "30 mins",
     button: "Book Now",
-    img: "https://images.pexels.com/photos/11482790/pexels-photo-11482790.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/11482790/pexels-photo-11482790.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Facade of an official registry building with stone columns",
     paragraphs: [
       "Staying compliant with Saskatchewan's Information Services Corporation (ISC) Registry is easy to overlook — and costly to miss. Our ISC Registry administration service manages your corporate registry filings from incorporation through ongoing annual reports, so your business stays in good standing with the Saskatchewan corporate registry at all times. We track your filing deadlines, prepare the required registry documents, and handle submissions so you avoid missed deadlines, late fees, and compliance penalties.",
@@ -64,7 +64,7 @@ const SERVICE_DETAILS = [
     badge: "Best Value",
     duration: "1 hr 30 mins",
     button: "Book Now",
-    img: "https://images.pexels.com/photos/7718714/pexels-photo-7718714.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/7718714/pexels-photo-7718714.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "An organized desk flat lay with notebooks, laptop and office tools",
     paragraphs: [
       "Running a startup means wearing every hat — founder, operator, and accountant all at once. Our All in One Basic Service Package takes the full compliance workload off your plate in a single engagement, combining Bookkeeping, T2 Corporate Filing Administration, and Saskatchewan ISC Registry Administration into one streamlined service. It's the most efficient way for Saskatoon startups and growing Saskatchewan businesses to stay financially organized, tax-compliant, and registry-current — without juggling multiple providers or deadlines.",
@@ -80,7 +80,7 @@ const SERVICE_DETAILS = [
     badge: null,
     duration: "30 mins (Free)",
     button: "Book Your Free Introduction",
-    img: "https://images.pexels.com/photos/3874033/pexels-photo-3874033.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    img: "https://images.pexels.com/photos/3874033/pexels-photo-3874033.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Two people shaking hands across a cafe table over coffee and a notebook",
     paragraphs: [
       "Every client relationship starts with a conversation, not a contract. Book a free, no-obligation 30-minute introduction appointment with our Saskatoon team to walk through your current bookkeeping, corporate tax, and registry situation. We'll review where things stand, identify any gaps or upcoming deadlines, and show you exactly how our bookkeeping, T2 filing, and ISC Registry administration services can support your startup's growth — with zero pressure and zero commitment.",
@@ -182,9 +182,12 @@ export default function Services() {
           {items.map((svc, i) => (
             <Reveal key={svc.slug} delay={0.05}>
               <article
+                id={svc.slug}
                 data-testid={`service-block-${svc.slug}`}
-                className={`border-black/15 py-12 sm:py-16 ${i > 0 ? "border-t-2" : ""}`}
+                className={`scroll-mt-24 border-black/15 py-12 sm:py-16 ${i > 0 ? "border-t-2" : ""}`}
               >
+                {svc.slug === "t2-corporate-filing" && <span id="tax" className="scroll-mt-24" aria-hidden="true" />}
+                {svc.slug === "isc-registry" && <span id="registry" className="scroll-mt-24" aria-hidden="true" />}
                 <div className="grid items-start gap-10 lg:grid-cols-5 lg:gap-14">
                   <div className={`lg:col-span-2 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                     <div className="relative">
@@ -195,6 +198,8 @@ export default function Services() {
                       <img
                         src={svc.img}
                         alt={svc.alt}
+                        width={800}
+                        height={600}
                         data-testid={`service-image-${svc.slug}`}
                         className="relative aspect-[4/3] w-full rounded-3xl border-2 border-black/15 object-cover shadow-lg"
                         loading="lazy"

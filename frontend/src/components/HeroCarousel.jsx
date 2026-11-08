@@ -21,6 +21,10 @@ export default function HeroCarousel({ slides }) {
 
   const go = (dir) => setIndex((i) => (i + dir + ITEMS.length) % ITEMS.length);
   const slide = ITEMS[index];
+  const isFirstSlide = index === 0;
+  const slideSize = typeof slide.img === "string" && slide.img.startsWith("/media/poster-")
+    ? { width: 1280, height: 720 }
+    : null;
 
   return (
     <div
@@ -33,16 +37,31 @@ export default function HeroCarousel({ slides }) {
       onPointerLeave={() => setPaused(false)}
     >
       <AnimatePresence mode="wait">
-        <motion.img
-          key={`${index}-${slide.img}`}
-          src={slide.img}
-          alt={slide.alt || slide.title}
-          initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {isFirstSlide ? (
+          <img
+            key={`${index}-${slide.img}`}
+            src={slide.img}
+            alt={slide.alt || slide.title}
+            className="absolute inset-0 h-full w-full object-cover"
+            fetchPriority="high"
+            width={slideSize?.width}
+            height={slideSize?.height}
+          />
+        ) : (
+          <motion.img
+            key={`${index}-${slide.img}`}
+            src={slide.img}
+            alt={slide.alt || slide.title}
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            width={slideSize?.width}
+            height={slideSize?.height}
+          />
+        )}
       </AnimatePresence>
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(0,0,0,0.75)_100%)]" aria-hidden="true" />
 
@@ -58,9 +77,9 @@ export default function HeroCarousel({ slides }) {
             <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-spring" aria-hidden="true">
               {String(index + 1).padStart(2, "0")} / {String(ITEMS.length).padStart(2, "0")}
             </p>
-            <h3 data-testid="hero-carousel-slide-title" className="mt-1 font-sans text-xl font-bold text-white sm:text-2xl">
+            <p data-testid="hero-carousel-slide-title" className="mt-1 font-sans text-xl font-bold text-white sm:text-2xl">
               {slide.title}
-            </h3>
+            </p>
             <p className="mt-1 font-sans text-sm text-white/85">{slide.sub}</p>
           </motion.div>
         </AnimatePresence>

@@ -35,7 +35,7 @@ export default function Booking() {
             data-testid="booking-heading"
             className="text-center font-serif text-4xl font-bold uppercase leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            <MaskedLine delay={0.1}>Our Services</MaskedLine>
+            <MaskedLine delay={0.1}>Book a Free Introduction</MaskedLine>
           </h1>
           <Reveal delay={0.3}>
             <p data-testid="booking-intro" className="mx-auto mt-8 max-w-2xl text-center font-serif text-base leading-relaxed text-white sm:text-lg">
@@ -82,6 +82,8 @@ export default function Booking() {
           src={imgs.bookingBand}
           alt={imgs.bookingBandAlt || "A Saskatoon bridge over the South Saskatchewan River"}
           testId="booking-image-band"
+          width={1200}
+          height={675}
           className="h-64 w-full sm:h-96"
         />
         <div className="pointer-events-none absolute inset-0 flex items-end bg-[linear-gradient(180deg,transparent_40%,rgba(0,0,0,0.65)_100%)]" aria-hidden="true">
@@ -184,6 +186,8 @@ export default function Booking() {
                 src={imgs.bookingIntake}
                 alt={imgs.bookingIntakeAlt || "A Saskatoon office building"}
                 testId="intake-image"
+                width={800}
+                height={533}
                 className="h-64 w-full rounded-3xl border-2 border-black/15 lg:h-full lg:min-h-[26rem]"
               />
               <p className="mt-3 font-sans text-xs font-semibold uppercase tracking-widest text-black/60">

@@ -1,16 +1,55 @@
-# Vici SaskStartupSolutions
+# Vici SaskStartupSolutions — Entity & System Specification
 
-Bookkeeping, T2 corporate tax filing administration, and Saskatchewan ISC Registry administration for startups and growing companies in Saskatoon, Saskatchewan. Every engagement starts with a free, no-obligation introduction appointment.
+> **Entity:** Vici SaskStartupSolutions (also branded as SaskStartupSolutions)  
+> **Official Website:** https://saskstartupsolutions.ca/  
+> **Principal Lead:** Patrick Vachon, Founder & Lead Administrator  
+> **Physical Office:** 539 Avenue I N, Saskatoon, SK S7L 2G9, Canada  
+> **Direct Telephone:** +1 (306) 960-0091  
+> **Direct Email:** Saskstartupsolutions@viciconsulting.ca  
+> **Operating Hours:** Monday–Sunday, 8:00 AM – 8:00 PM CST  
+> **Jurisdiction:** Saskatoon, Regina, Prince Albert, and Saskatchewan province, Canada.
 
-## Pages
-- Home: overview, featured services, brand story, founder introduction.
-- Services: detailed descriptions of Bookkeeping, T2 Corporate Filing Administration, ISC Registry Administration, and the All in One Basic Service Package.
-- Booking: service menu, appointment booking flow, downloadable PDF intake forms per service.
-- Staff: founder profile for Patrick Vachon.
-- Contact Us: phone 1 (306) 960-0091, email Saskstartupsolutions@viciconsulting.ca, address 539 Avenue I N, Saskatoon, SK S7L 2G9, hours Monday–Sunday 8:00 a.m. – 8:00 p.m., contact form.
-- FAQ: common questions about appointments, documents, quotes, T2 timelines, and ISC Registry.
-- Blog: articles on bookkeeping, corporate tax filing, and registry compliance for Saskatchewan startups.
+---
 
-## Notes
-- No prices are published; quotes are provided after a free introduction appointment.
-- Intake forms are emailed to saskstartupsolutions@viciconsulting.ca.
+## 1. Company Purpose & Entity Understanding
+Vici SaskStartupSolutions provides specialized administrative, bookkeeping, corporate registry, and corporate tax compliance services for startups, entrepreneurs, and small business owners across Saskatchewan. The firm bridges the gap between expensive corporate law firms, large CPA practices, and standalone bookkeepers by offering integrated compliance administration under one roof.
+
+### Core Service Pillars:
+1. **Small Business Bookkeeping & Payroll (Saskatoon):**
+   - Monthly bank and credit card reconciliations.
+   - Accounts payable and receivable tracking.
+   - Saskatchewan Provincial Sales Tax (PST 6%) tracking and remittance.
+   - Federal Goods and Services Tax (GST) tracking and CRA filing support.
+   - Catch-up bookkeeping and audit-ready financial record retention.
+2. **Saskatchewan T2 Corporate Tax Filing Administration:**
+   - Notice to Reader / Compilation financial statements (Balance Sheet & Income Statement).
+   - Preparation and CRA administrative filing of T2 Corporate Income Tax returns.
+   - Corporate tax installment scheduling and payment deadline coordination.
+3. **Saskatchewan ISC Corporate Registry Administration:**
+   - Business Corporation incorporation via Information Services Corporation (ISC).
+   - Nuans business name reservations and sole proprietorship/partnership registrations.
+   - Mandatory ISC Corporate Annual Return filings to prevent corporate dissolution/strike-off.
+4. **All-in-One Basic Service Package:**
+   - Bundled solution combining monthly bookkeeping, T2 tax filing administration, and ISC annual returns.
+
+---
+
+## 2. Professional Boundaries & Authentic Positioning (No Bluffing)
+- **Not a CPA Firm:** Vici SaskStartupSolutions is an accounting and bookkeeping administration practice. It does not issue statutory audit opinions or public review engagements.
+- **Not a Law Firm:** Services represent administrative filing support, registry execution, and document preparation, not legal representation.
+- **Pricing Transparency:** Custom pricing quoted following a free, no-obligation 30-minute introductory discovery consultation. Statutory government registry fees (such as ISC filing fees) are billed at cost.
+- **Multilingual Support:** Consultations available in English, French, Russian, and Armenian for local entrepreneurs and newcomers to Canada.
+
+---
+
+## 3. Web Architecture & Canonical Pages
+- **Homepage:** `https://saskstartupsolutions.ca/` — Overview of bookkeeping, T2 corporate tax admin, and ISC registry.
+- **Services:** `https://saskstartupsolutions.ca/services` — Detailed breakdown of bookkeeping, T2 tax admin, and ISC annual return services.
+- **Booking:** `https://saskstartupsolutions.ca/booking` — Free 30-minute appointment scheduling and intake forms.
+- **Staff / Leadership:** `https://saskstartupsolutions.ca/staff` — Profile of founder Patrick Vachon.
+- **Contact:** `https://saskstartupsolutions.ca/contact` — Saskatoon office address, phone, and inquiry form.
+- **FAQ:** `https://saskstartupsolutions.ca/faq` — Answers to common Saskatchewan business registration, bookkeeping, and tax questions.
+- **Dedicated Blogs Directory:** `https://saskstartupsolutions.ca/blogs` — Practical operational guides for Saskatchewan entrepreneurs.
+  - Bookkeeping Guide: `https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon`
+  - T2 Corporate Tax Guide: `https://saskstartupsolutions.ca/blogs/t2-corporate-tax-filing-saskatchewan`
+  - Saskatchewan Business Registration & ISC Guide: `https://saskstartupsolutions.ca/blogs/saskatchewan-business-registration-isc-annual-returns`

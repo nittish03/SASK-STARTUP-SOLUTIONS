@@ -6,33 +6,66 @@
     <meta name="theme-color" content="#076A21" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <title>Vici SaskStartupSolutions | Bookkeeping, T2 Filing & ISC Registry — Saskatoon, SK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&amp;family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&amp;family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;display=swap" />
+    </noscript>
+    <title>Saskatoon Bookkeeping & Tax Setup | Vici</title>
+    <meta data-seo-shell="home" name="description" content="Bookkeeping, business registration and incorporation support, T2 filing administration and ISC Registry administration for Saskatoon and Saskatchewan businesses. Book a free introduction." />
+    <link data-seo-shell="home" rel="canonical" href="https://saskstartupsolutions.ca/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vici SaskStartupSolutions" />
+    <meta data-seo-shell="home" property="og:title" content="Saskatoon Bookkeeping & Tax Setup | Vici" />
+    <meta data-seo-shell="home" property="og:description" content="Bookkeeping, business registration and incorporation support, T2 filing administration and ISC Registry administration for Saskatoon and Saskatchewan businesses. Book a free introduction." />
+    <meta data-seo-shell="home" property="og:url" content="https://saskstartupsolutions.ca/" />
+    <meta data-seo-shell="home" property="og:image" content="https://saskstartupsolutions.ca/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Vici SaskStartupSolutions logo — Bookkeeping, Tax and Registry services in Saskatoon" />
     <meta property="og:locale" content="en_CA" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- Per-route description/canonical/robots/OG/Twitter tags are managed by react-helmet-async (Seo.jsx) -->
-    <!-- Google Analytics 4 (G-03VN7HB92G) — initial page_view disabled; SPA route views fire from the app -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-03VN7HB92G"></script>
+    <meta data-seo-shell="home" name="twitter:title" content="Saskatoon Bookkeeping & Tax Setup | Vici" />
+    <meta data-seo-shell="home" name="twitter:description" content="Bookkeeping, business registration and incorporation support, T2 filing administration and ISC Registry administration for Saskatoon and Saskatchewan businesses. Book a free introduction." />
+    <meta data-seo-shell="home" name="twitter:image" content="https://saskstartupsolutions.ca/og-image.jpg" />
+    <!-- Google Analytics 4 (G-03VN7HB92G) — loaded after window load; initial page_view disabled; SPA route views fire from the app -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-03VN7HB92G', { send_page_view: false });
+      function loadGtag(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-03VN7HB92G';
+        document.head.appendChild(s);
+      }
+      window.addEventListener('load', function () {
+        if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 3000 });
+        else loadGtag();
+      });
     </script>
+    <!-- Local Saskatoon & Saskatchewan GEO Meta Tags -->
+    <meta name="geo.region" content="CA-SK" />
+    <meta name="geo.placename" content="Saskatoon" />
+    <meta name="geo.position" content="52.1388;-106.6853" />
+    <meta name="ICBM" content="52.1388, -106.6853" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["AccountingService", "FinancialService"],
+      "@id": "https://saskstartupsolutions.ca/#organization",
       "name": "Vici SaskStartupSolutions",
-      "description": "Bookkeeping, T2 corporate tax filing administration, and Saskatchewan ISC Registry administration for startups and growing companies.",
+      "legalName": "Vici SaskStartupSolutions",
+      "description": "Professional small business bookkeeping, T2 corporate tax filing administration, and Saskatchewan ISC Corporate Registry administration for startups and growing companies in Saskatoon, SK.",
       "url": "https://saskstartupsolutions.ca/",
       "image": "https://saskstartupsolutions.ca/og-image.jpg",
+      "logo": "https://saskstartupsolutions.ca/media/logo-full.png",
       "telephone": "+1-306-960-0091",
       "email": "Saskstartupsolutions@viciconsulting.ca",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "539 Avenue I N",
@@ -41,15 +74,60 @@
         "postalCode": "S7L 2G9",
         "addressCountry": "CA"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.1388,
+        "longitude": -106.6853
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
         "opens": "08:00",
         "closes": "20:00"
       },
-      "founder": { "@type": "Person", "name": "Patrick Vachon" },
-      "areaServed": "Saskatoon, Saskatchewan",
-      "sameAs": ["https://maps.app.goo.gl/131Hpy68DZoQbHv18"]
+      "founder": {
+        "@type": "Person",
+        "name": "Patrick Vachon",
+        "jobTitle": "Founder & Lead Administrator"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Saskatoon" },
+        { "@type": "AdministrativeArea", "name": "Saskatchewan" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Saskatchewan Startup & Accounting Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Small Business Bookkeeping in Saskatoon",
+              "description": "Monthly transaction recording, bank reconciliations, GST and Saskatchewan PST (6%) tracking."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Saskatchewan T2 Corporate Tax Filing Administration",
+              "description": "Year-end financial statement preparation and corporate tax compliance filing with the CRA."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Saskatchewan ISC Corporate Registry Administration",
+              "description": "Provincial business incorporation, name reservations, and mandatory annual return filings."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://maps.app.goo.gl/131Hpy68DZoQbHv18",
+        "https://taplink.cc/saskstartupsolutions"
+      ]
     }
     </script>
   </head>

@@ -9,7 +9,7 @@ const NAV = [
   { to: "/booking", label: "Booking" },
   { to: "/contact", label: "Contact Us" },
   { to: "/faq", label: "FAQ" },
-  { to: "/blog", label: "Blog" },
+  { to: "/blogs", label: "Blogs" },
 ];
 
 export default function Footer() {
@@ -21,6 +21,8 @@ export default function Footer() {
           <img
             src="/media/logo-full.png"
             alt="Vici Sask Startup Solutions — Bookkeeping, Tax, Registry"
+            width="352"
+            height="318"
             data-testid="footer-logo"
             className="w-44 rounded-2xl border border-white/10"
           />

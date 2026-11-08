@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { Reveal, MaskedLine } from "@/components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import Marquee from "@/components/Marquee";
 import ParallaxImage from "@/components/ParallaxImage";
 import MediaCarousel from "@/components/MediaCarousel";
@@ -8,6 +8,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { DEFAULT_HOME_SECTIONS, DEFAULT_PAGE_IMAGES } from "@/lib/site";
 import { useContent } from "@/lib/content";
 import Seo from "@/components/Seo";
+import { HOME_DESCRIPTION, HOME_TITLE } from "@/lib/seoShell";
 
 const FEATURED = [
   "Part 1 - Bookkeeping",
@@ -110,23 +111,26 @@ export default function Home() {
               <ParallaxImage
                 src={imgs.homeGallerySkyline}
                 alt={imgs.homeGallerySkylineAlt || "Saskatoon skyline at dusk"} testId="gallery-image-skyline"
+                width={800} height={533}
                 className="h-72 rounded-3xl border-2 border-white/20 md:h-[26rem]" />
-              <p className="mt-3 font-sans text-xs font-semibold uppercase tracking-widest text-white/70">Downtown Saskatoon</p>
+              <p className="mt-3 font-sans text-xs font-semibold uppercase tracking-widest text-white">Downtown Saskatoon</p>
             </Reveal>
             <div className="grid gap-5">
               <Reveal delay={0.1}>
                 <ParallaxImage
                   src={imgs.homeGalleryBridge}
                   alt={imgs.homeGalleryBridgeAlt || "A Saskatoon bridge over the South Saskatchewan River"} testId="gallery-image-bridge"
+                  width={800} height={533}
                   className="h-44 rounded-3xl border-2 border-white/20 md:h-[12.25rem]" />
               </Reveal>
               <Reveal delay={0.2}>
                 <ParallaxImage
                   src={imgs.homeGalleryRiverfront}
                   alt={imgs.homeGalleryRiverfrontAlt || "The Saskatoon riverfront"} testId="gallery-image-riverfront"
+                  width={800} height={533}
                   className="h-44 rounded-3xl border-2 border-white/20 md:h-[12.25rem]" />
               </Reveal>
-              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-white/70">The South Saskatchewan River</p>
+              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-white">The South Saskatchewan River</p>
             </div>
           </div>
         </div>
@@ -141,6 +145,7 @@ export default function Home() {
               <img src={imgs.homePatrickPhoto}
                 alt={imgs.homePatrickPhotoAlt || "Patrick Vachon, founder of Vici SaskStartupSolutions, in the Saskatoon office"}
                 data-testid="meet-patrick-photo"
+                width={941} height={1672}
                 className="relative aspect-[4/5] w-full rounded-3xl border-2 border-black/15 object-cover object-top shadow-xl"
                 loading="lazy" />
             </Reveal>
@@ -221,8 +226,9 @@ export default function Home() {
   return (
     <div data-testid="home-page">
       <Seo
-        title="Vici SaskStartupSolutions — Bookkeeping & Business Setup in Saskatoon"
-        description="Bookkeeping, business registration and incorporation support, T2 filing administration and ISC Registry administration for Saskatoon and Saskatchewan businesses. Book a free introduction."
+        staticShell
+        title={HOME_TITLE}
+        description={HOME_DESCRIPTION}
         path="/"
       />
       <section className="relative overflow-hidden bg-bookgreen" aria-labelledby="home-hero-heading">
@@ -233,20 +239,16 @@ export default function Home() {
             <div>
               <h1 id="home-hero-heading" data-testid="home-hero-heading"
                 className="text-center font-serif text-4xl font-bold uppercase leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-left lg:text-6xl">
-                <MaskedLine delay={0.1}>{c.heroLine1 || "Let Your Business Grow."}</MaskedLine>
-                <MaskedLine delay={0.28}>{c.heroLine2 || "We'll Handle"}</MaskedLine>
-                <MaskedLine delay={0.46}>{c.heroLine3 || "the Paperwork."}</MaskedLine>
+                <span className="block">{c.heroLine1 || "Let Your Business Grow."}</span>
+                <span className="block">{c.heroLine2 || "We'll Handle"}</span>
+                <span className="block">{c.heroLine3 || "the Paperwork."}</span>
               </h1>
-              <Reveal delay={0.55}>
-                <p data-testid="home-hero-para-1" className="mt-10 text-left font-serif text-base leading-relaxed text-white sm:text-lg">
-                  {c.heroPara1 || "Running a startup means juggling a hundred things. Bookkeeping. Tax filing. Corporate registry requirements. We take the paperwork off your plate—so you can focus on what you do best: building your business."}
-                </p>
-              </Reveal>
-              <Reveal delay={0.65}>
-                <p data-testid="home-hero-para-2" className="mt-6 text-left font-serif text-base leading-relaxed text-white sm:text-lg">
-                  {c.heroPara2 || "Vici SaskStartupSolution specializes in bookkeeping, T2 corporate tax filing, and Saskatchewan ISC Registry administration for startups and growing companies. We keep your finances accurate, your filings on time, and your business compliant."}
-                </p>
-              </Reveal>
+              <p data-testid="home-hero-para-1" className="mt-10 text-left font-serif text-base leading-relaxed text-white sm:text-lg">
+                {c.heroPara1 || "Running a startup means juggling a hundred things. Bookkeeping. Tax filing. Corporate registry requirements. We take the paperwork off your plate—so you can focus on what you do best: building your business."}
+              </p>
+              <p data-testid="home-hero-para-2" className="mt-6 text-left font-serif text-base leading-relaxed text-white sm:text-lg">
+                {c.heroPara2 || "Vici SaskStartupSolution specializes in bookkeeping, T2 corporate tax filing, and Saskatchewan ISC Registry administration for startups and growing companies. We keep your finances accurate, your filings on time, and your business compliant."}
+              </p>
               <Reveal delay={0.75}>
                 <div className="mt-10 border-l-4 border-spring pl-6">
                   <p data-testid="home-hero-callout" className="text-left font-serif text-lg leading-relaxed text-white sm:text-xl">
@@ -260,9 +262,7 @@ export default function Home() {
                 </div>
               </Reveal>
             </div>
-            <Reveal delay={0.5} y={48}>
-              <HeroCarousel slides={design.heroSlides} />
-            </Reveal>
+            <HeroCarousel slides={design.heroSlides} />
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -20,6 +20,7 @@ import NotFound from "@/pages/NotFound";
 import { scrollToId } from "@/lib/site";
 import { useContent } from "@/lib/content";
 import { trackPageView } from "@/lib/analytics";
+import { ensureHomeSeoShell, removeHomeSeoShell } from "@/lib/seoShell";
 
 function AnalyticsTracker() {
   const location = useLocation();
@@ -31,6 +32,15 @@ function AnalyticsTracker() {
     lastFired.current = path;
     trackPageView(path);
   }, [location.pathname, location.search]);
+  return null;
+}
+
+function SeoShellManager() {
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    if (pathname === "/") ensureHomeSeoShell();
+    else removeHomeSeoShell();
+  }, [pathname]);
   return null;
 }
 
@@ -89,6 +99,7 @@ function App() {
     <div className="App min-h-screen flex flex-col">
       <HelmetProvider>
         <BrowserRouter>
+          <SeoShellManager />
           <ScrollManager />
           <AnalyticsTracker />
           <ThemeEffect />
@@ -101,6 +112,8 @@ function App() {
               <Route path="/staff" element={<Staff />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<Faq />} />
+              <Route path="/blogs" element={<Blog />} />
+              <Route path="/blogs/:slug" element={<BlogPost />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/sitemap" element={<Sitemap />} />

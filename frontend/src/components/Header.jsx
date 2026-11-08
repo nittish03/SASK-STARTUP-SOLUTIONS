@@ -11,7 +11,7 @@ const NAV = [
   { to: "/booking", label: "Booking" },
   { to: "/contact", label: "Contact Us" },
   { to: "/faq", label: "FAQ" },
-  { to: "/blog", label: "Blog" },
+  { to: "/blogs", label: "Blogs" },
 ];
 
 const SEARCH_INDEX = [
@@ -24,12 +24,13 @@ const SEARCH_INDEX = [
   { label: "Contact us", to: "/contact", keywords: "phone email address hours map" },
   { label: "FAQ", to: "/faq", keywords: "questions quote documents timeline" },
   { label: "Our staff", to: "/staff", keywords: "patrick vachon founder team" },
+  { label: "Blogs & Business Guides", to: "/blogs", keywords: "blogs articles bookkeeping saskatoon t2 tax isc annual return registration" },
 ];
 
 function Wordmark() {
   return (
-    <Link to="/" data-testid="wordmark-link" className="flex items-center gap-2.5 leading-none shrink-0" aria-label="Vici SaskStartupSolutions - Home">
-      <img src="/media/logo-icon.png" alt="" width="44" height="44" data-testid="header-logo" className="h-10 w-10 rounded-full shadow-[0_1px_0_rgba(0,31,63,0.25)] sm:h-11 sm:w-11" />
+    <Link to="/" data-testid="wordmark-link" className="flex items-center gap-2.5 leading-none shrink-0">
+      <img src="/media/logo-icon.png" alt="" width="132" height="132" data-testid="header-logo" className="h-10 w-10 rounded-full shadow-[0_1px_0_rgba(0,31,63,0.25)] sm:h-11 sm:w-11" />
       <span>
         <span className="block font-serif font-bold uppercase tracking-tight text-midnight text-base sm:text-lg leading-[1.05]">Vici</span>
         <span className="block font-serif font-bold uppercase tracking-tight text-midnight text-base sm:text-lg leading-[1.05]">SaskStartup</span>

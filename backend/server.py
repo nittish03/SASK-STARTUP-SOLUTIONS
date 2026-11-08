@@ -1096,9 +1096,13 @@ async def sitemap(request: Request):
         host = request.headers.get("x-forwarded-host") or request.headers.get("host") or request.url.hostname
         proto = request.headers.get("x-forwarded-proto") or request.url.scheme
         base = f"{proto}://{host}"
-    pages = ["", "/services", "/booking", "/staff", "/contact", "/faq", "/blog", "/sitemap"]
+    pages = ["", "/services", "/booking", "/staff", "/contact", "/faq", "/blogs", "/blog", "/sitemap"]
     posts = await db.posts.find({"status": "published"}, {"_id": 0, "slug": 1, "published_at": 1}).to_list(500)
     urls = "".join(f"<url><loc>{base}{p}</loc></url>" for p in pages)
+    urls += "".join(
+        f"<url><loc>{base}/blogs/{p['slug']}</loc><lastmod>{(p.get('published_at') or '')[:10]}</lastmod></url>"
+        for p in posts
+    )
     urls += "".join(
         f"<url><loc>{base}/blog/{p['slug']}</loc><lastmod>{(p.get('published_at') or '')[:10]}</lastmod></url>"
         for p in posts

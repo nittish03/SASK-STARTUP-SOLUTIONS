@@ -190,7 +190,32 @@ The campaign follows an acquisition-to-retention funnel:
   - Competitor Weaknesses: No multilingual support (newcomers), fragmented services (bookkeepers won't touch ISC registry; law firms charge $1,200+ for basic incorporation).
   - Vici's Authentic Differentiators: All-in-One Basic Package (Bookkeeping + T2 Tax Admin + ISC Annual Returns) at an accessible price point; multilingual consultations in English, French, Russian, and Armenian; free 30-min discovery call.
 
-### 8.2 SEO Action Plan & Implementation Roadmap:
+### 8.2 SEO, AEO & GEO Implementation Status (COMPLETED)
+
+1. **Dedicated Blog Architecture (`/blogs` & `/blogs/:slug`):**
+   - Activated dedicated routes in `frontend/src/App.js`: `<Route path="/blogs" element={<Blog />} />` and `<Route path="/blogs/:slug" element={<BlogPost />} />`.
+   - Maintained backward-compatible alias routes for `/blog` and `/blog/:slug` to prevent broken backlinks or 404s on existing GSC impressions.
+   - Updated primary site navigation in `Header.jsx`, `Footer.jsx`, `Sitemap.jsx`, and internal links to point directly to `/blogs`.
+   - Added hash anchor links (`#bookkeeping`, `#tax`, `#registry`) in `Services.jsx` so readers jumping from blog posts smoothly land on the corresponding service tier.
+2. **Technical SEO & Sitemap XML Fix:**
+   - Generated static raw XML at `frontend/public/sitemap.xml` with non-www canonical domain (`https://saskstartupsolutions.ca`), exact `<lastmod>`, `<changefreq>`, and `<priority>`.
+   - Declared both `https://saskstartupsolutions.ca/sitemap.xml` and `https://saskstartupsolutions.ca/api/sitemap.xml` in `robots.txt`.
+   - Updated dynamic backend XML sitemap in `backend/server.py` to list both `/blogs` and `/blogs/${slug}`.
+   - Configured `serve.json` to ensure clean SPA rewrites while serving XML sitemaps, robots.txt, and llms.txt as raw text.
+3. **Structured Data, Local SEO & GEO Entity Signals:**
+   - Upgraded Schema.org markup in `frontend/public/index.html` and `frontend/src/components/Seo.jsx` to `@type: ["AccountingService", "FinancialService"]`.
+   - Injected Saskatchewan geographic coordinates (`latitude: 52.1388`, `longitude: -106.6853`) and geo meta tags (`geo.region: CA-SK`, `geo.placename: Saskatoon`, `geo.position`, `ICBM`).
+   - Attached `hasOfferCatalog` with 3 core service offerings (Bookkeeping, T2 Tax Admin, ISC Registry).
+   - Injected `FAQPage` JSON-LD schema dynamically into `Faq.jsx` and `BlogPost.jsx` for AI Overview and direct answer scraping.
+   - Injected `BlogPosting` and `BreadcrumbList` schema with non-www canonical URLs (`https://saskstartupsolutions.ca/blogs/...`).
+4. **Comprehensive AEO/GEO Blog Content Expansion:**
+   - Rewrote and expanded all 3 cornerstone blog posts in `/Users/eshway/Desktop/NIPUN1/scripts/blogs/` (`blog1.md`, `blog2.md`, `blog3.md`) to 2,400–2,600+ word exhaustive guides.
+   - Integrated Top 50 target keywords, question-based H2/H3 headings followed by direct 2-3 sentence answer paragraphs, formatted comparison tables, and dedicated AEO FAQ sections.
+   - Built and ran `publish_blogs.py` to update all 3 posts on the live preview backend (`https://vici-registry-admin.preview.emergentagent.com/api`).
+5. **GEO Engine Asset (`llms.txt`):**
+   - Expanded `frontend/public/llms.txt` with complete entity definitions, Saskatchewan jurisdictional scope, multilingual capabilities (English, French, Russian, Armenian), and canonical URLs for LLM crawlers (ChatGPT, Claude, Gemini, Perplexity).
+
+### 8.3 SEO Action Plan & Implementation Roadmap:
 
 #### Phase 1: Technical SEO & Rich Schema Markup
 1. **Robots.txt & Sitemap Synchronization:**

@@ -11,7 +11,7 @@ const PAGES = [
   { to: "/staff", label: "Meet the Team", desc: "Patrick Vachon, Founder & Lead Administrator" },
   { to: "/contact", label: "Contact Us", desc: "Phone, email, address, hours and contact form" },
   { to: "/faq", label: "FAQ", desc: "Common questions about our services and process" },
-  { to: "/blog", label: "Blog", desc: "Guides for Saskatchewan small businesses" },
+  { to: "/blogs", label: "Blogs & Practical Guides", desc: "Guides for Saskatchewan small businesses" },
 ];
 
 export default function Sitemap() {
@@ -56,7 +56,7 @@ export default function Sitemap() {
             <ul className="mt-4 divide-y divide-black/10 border-y-2 border-black/15">
               {posts.map((p) => (
                 <li key={p.slug} className="py-4">
-                  <Link to={`/blog/${p.slug}`} data-testid={`sitemap-post-${p.slug}`} className="font-serif text-lg font-semibold text-bookgreen underline-offset-4 hover:underline">
+                  <Link to={`/blogs/${p.slug}`} data-testid={`sitemap-post-${p.slug}`} className="font-serif text-lg font-semibold text-bookgreen underline-offset-4 hover:underline">
                     {p.title}
                   </Link>
                   {p.published_at && (

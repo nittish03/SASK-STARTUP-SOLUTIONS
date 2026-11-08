@@ -9,16 +9,15 @@ export default function Blog() {
   const [posts, setPosts] = useState(null);
 
   useEffect(() => {
-    document.title = "Blog | Vici SaskStartupSolutions";
     axios.get(`${API}/blog`).then((r) => setPosts(r.data)).catch(() => setPosts([]));
   }, []);
 
   return (
     <div data-testid="blog-page">
       <Seo
-        title="Blog | Vici SaskStartupSolutions, Saskatoon"
-        description="Practical guides on bookkeeping, incorporation, business registration and corporate compliance for Saskatoon and Saskatchewan small businesses."
-        path="/blog"
+        title="Small Business & Startup Blog Saskatoon | Bookkeeping & Tax Guides | Vici"
+        description="Practical guides on bookkeeping, Saskatchewan incorporation, ISC business registration, T2 corporate tax filing, and CRA compliance for Saskatoon entrepreneurs."
+        path="/blogs"
       />
       <section className="bg-bookgreen" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">
@@ -27,11 +26,11 @@ export default function Blog() {
             data-testid="blog-heading"
             className="text-center font-serif text-4xl font-bold uppercase leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            <MaskedLine delay={0.1}>Blog</MaskedLine>
+            <MaskedLine delay={0.1}>Saskatchewan Business & Startup Guides</MaskedLine>
           </h1>
           <Reveal delay={0.3}>
             <p className="mx-auto mt-6 max-w-2xl text-center font-serif text-base leading-relaxed text-white sm:text-lg">
-              Practical guides on bookkeeping, T2 filing, and ISC Registry for Saskatchewan startups and small businesses. Our articles cover the essential topics every Saskatchewan entrepreneur needs to understand — from setting up your first corporation and registering your business name, to keeping compliant with annual returns and maintaining accurate financial records throughout the year.
+              Practical guides on bookkeeping, T2 corporate tax filing, and Information Services Corporation (ISC) Registry administration for Saskatchewan startups and small businesses. Our articles cover the essential compliance topics every Saskatoon entrepreneur needs to master — from setting up your first corporation and registering your business name, to keeping compliant with annual returns and maintaining audit-ready financial records.
             </p>
           </Reveal>
         </div>
@@ -50,7 +49,7 @@ export default function Blog() {
               {posts.map((p, i) => (
                 <Reveal key={p.id} delay={i * 0.06}>
                   <Link
-                    to={`/blog/${p.slug}`}
+                    to={`/blogs/${p.slug}`}
                     data-testid={`blog-card-${p.slug}`}
                     className="group block overflow-hidden rounded-3xl border-2 border-black/15 bg-white transition-shadow hover:shadow-xl"
                   >
