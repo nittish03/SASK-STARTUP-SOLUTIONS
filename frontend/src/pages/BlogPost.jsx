@@ -1,71 +1,54 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronRight, HelpCircle, CheckCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import Markdown from "@/components/Markdown";
 import { API } from "@/lib/site";
 import Seo from "@/components/Seo";
-
-const BLOG_FAQS = {
-  "small-business-bookkeeping-saskatoon": [
-    {
-      q: "Do I need a professional bookkeeper for my small business in Saskatoon?",
-      a: "While not legally mandatory, engaging professional bookkeeping services in Saskatoon ensures your financial transactions are organized accurately, Saskatchewan PST (6%) and federal GST are tracked correctly, and your business remains compliant with CRA recordkeeping standards."
-    },
-    {
-      q: "How long must a Saskatchewan business keep bookkeeping records?",
-      a: "The Canada Revenue Agency (CRA) mandates that Canadian businesses retain all receipts, invoices, bank reconciliations, payroll records, and tax filings for a minimum of six years from the end of the relevant taxation year."
-    },
-    {
-      q: "What is the difference between bookkeeping and accounting in Saskatchewan?",
-      a: "Bookkeeping involves the daily and monthly recording, reconciling, and categorizing of financial transactions. Accounting involves synthesizing those records, preparing compilation financial statements, and completing annual T2 corporate tax filings."
-    }
-  ],
-  "t2-corporate-tax-filing-saskatchewan": [
-    {
-      q: "When is the T2 corporate tax return due in Saskatchewan?",
-      a: "A Saskatchewan corporation must file its T2 corporate income tax return with the CRA no later than six months after the close of its fiscal year. However, any corporate tax balance owing must be paid within two or three months after year-end to prevent interest penalties."
-    },
-    {
-      q: "What documents are required to file a T2 corporate tax return in Saskatchewan?",
-      a: "Key documents include year-end financial statements (balance sheet and income statement), general ledger, bank and credit card reconciliations, asset receipts, previous year's Notice of Assessment, and the federal Business Number (BN)."
-    },
-    {
-      q: "Does an inactive corporation in Saskatchewan need to file a T2 return?",
-      a: "Yes. Every incorporated entity in Saskatchewan must file a T2 corporate tax return with the CRA every year, even if there was zero revenue, no expenses, and no active business operations."
-    }
-  ],
-  "saskatchewan-business-registration-isc-annual-returns": [
-    {
-      q: "How much does it cost to incorporate a business in Saskatchewan?",
-      a: "The official statutory filing fee charged by Information Services Corporation (ISC) is approximately $255 CAD for the incorporation application, plus $50 CAD for the Nuans name reservation."
-    },
-    {
-      q: "When is an ISC annual return due in Saskatchewan?",
-      a: "An ISC annual return must be submitted each year during the month immediately following the corporation's incorporation anniversary month."
-    },
-    {
-      q: "What happens if a corporation does not file its ISC annual return in Saskatchewan?",
-      a: "Neglecting an ISC annual return leads to financial penalties and, if unresolved, ISC will strike the corporation from the Corporate Registry, legally dissolving the company and freezing corporate bank accounts."
-    }
-  ]
-};
+import { STATIC_BLOG_POSTS, BLOG_POSTS_BY_SLUG } from "@/data/blogPosts";
+import { BLOG_FAQS } from "@/data/blogFaqs";
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [related, setRelated] = useState([]);
+  const staticMatch = BLOG_POSTS_BY_SLUG[slug] || null;
+  const [post, setPost] = useState(staticMatch);
+  const [related, setRelated] = useState(
+    STATIC_BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3)
+  );
   const [missing, setMissing] = useState(false);
 
   useEffect(() => {
-    setPost(null);
-    setMissing(false);
-    axios.get(`${API}/blog/${slug}`)
-      .then((r) => setPost(r.data))
-      .catch(() => setMissing(true));
-    axios.get(`${API}/blog`)
-      .then((r) => setRelated(r.data.filter((p) => p.slug !== slug).slice(0, 2)))
+    const localPost = BLOG_POSTS_BY_SLUG[slug] || null;
+    if (localPost) {
+      setPost(localPost);
+      setRelated(STATIC_BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3));
+      setMissing(false);
+    } else {
+      setPost(null);
+      setMissing(false);
+    }
+
+    axios
+      .get(`${API}/blog/${slug}`)
+      .then((r) => {
+        if (r.data) {
+          setPost(r.data);
+        }
+      })
+      .catch((e) => {
+        if (!localPost && e.response?.status === 404) {
+          setMissing(true);
+        }
+      });
+
+    axios
+      .get(`${API}/blog`)
+      .then((r) => {
+        if (Array.isArray(r.data) && r.data.length > 1) {
+          setRelated(r.data.filter((p) => p.slug !== slug).slice(0, 3));
+        }
+      })
       .catch(() => {});
   }, [slug]);
 
@@ -80,9 +63,18 @@ export default function BlogPost() {
         image: post.featured_image || undefined,
         datePublished: post.published_at || undefined,
         dateModified: post.updated_at || undefined,
-        author: { "@type": "Person", name: post.author },
-        publisher: { 
-          "@type": "Organization", 
+        author: {
+          "@type": "Person",
+          name: post.author || "Patrick Vachon",
+          jobTitle: "Practice Lead",
+          worksFor: {
+            "@type": "Organization",
+            name: "Vici SaskStartupSolutions",
+            url: "https://saskstartupsolutions.ca/"
+          }
+        },
+        publisher: {
+          "@type": "Organization",
           name: "Vici SaskStartupSolutions",
           url: "https://saskstartupsolutions.ca/",
           logo: {
@@ -103,7 +95,7 @@ export default function BlogPost() {
       },
     ];
 
-    const faqs = BLOG_FAQS[post.slug];
+    const faqs = BLOG_FAQS[post.slug] || post.faqs;
     if (faqs && faqs.length > 0) {
       schemas.push({
         "@context": "https://schema.org",
@@ -130,81 +122,202 @@ export default function BlogPost() {
     };
   }, [post]);
 
+  const activeFaqs = post ? (BLOG_FAQS[post.slug] || post.faqs || []) : [];
+
   return (
     <div data-testid="blog-post-page">
       {post && (
         <Seo
           title={post.seo_title || `${post.title} | Vici SaskStartupSolutions`}
-          description={post.seo_description || `Read "${post.title}" from Vici SaskStartupSolutions — practical guidance for Saskatchewan small businesses.`}
+          description={
+            post.seo_description ||
+            `Read "${post.title}" from Vici SaskStartupSolutions — practical guidance for Saskatchewan small businesses.`
+          }
           path={`/blogs/${post.slug}`}
           type="article"
         />
       )}
       {missing && (
-        <Seo title="Post Not Found | Vici SaskStartupSolutions" description="This article may have been unpublished or removed." path={`/blogs/${slug}`} noindex />
+        <Seo
+          title="Post Not Found | Vici SaskStartupSolutions"
+          description="This article may have been unpublished or removed."
+          path={`/blogs/${slug}`}
+          noindex
+        />
       )}
       <section className="bg-bookgreen">
-        <div className="mx-auto max-w-[800px] px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[850px] px-4 py-16 sm:px-6 sm:py-20">
           <nav aria-label="Breadcrumb" data-testid="post-breadcrumb">
             <ol className="flex flex-wrap items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-widest text-white/80">
-              <li><Link to="/" className="hover:text-spring">Home</Link></li>
-              <li aria-hidden="true"><ChevronRight className="h-3.5 w-3.5" /></li>
-              <li><Link to="/blogs" className="hover:text-spring">Blogs</Link></li>
+              <li>
+                <Link to="/" className="hover:text-spring">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true">
+                <ChevronRight className="h-3.5 w-3.5" />
+              </li>
+              <li>
+                <Link to="/blogs" className="hover:text-spring">
+                  Blogs
+                </Link>
+              </li>
               {post && (
                 <>
-                  <li aria-hidden="true"><ChevronRight className="h-3.5 w-3.5" /></li>
-                  <li aria-current="page" className="text-spring">{post.title.length > 40 ? `${post.title.slice(0, 40)}…` : post.title}</li>
+                  <li aria-hidden="true">
+                    <ChevronRight className="h-3.5 w-3.5" />
+                  </li>
+                  <li aria-current="page" className="text-spring">
+                    {post.title.length > 40 ? `${post.title.slice(0, 40)}…` : post.title}
+                  </li>
                 </>
               )}
             </ol>
           </nav>
           {post && (
             <>
-              <h1 data-testid="post-title" className="mt-6 font-serif text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-5xl">
+              <h1
+                data-testid="post-title"
+                className="mt-6 font-serif text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
+              >
                 {post.title}
               </h1>
-              <p className="mt-4 font-sans text-xs font-semibold uppercase tracking-widest text-white/80">
-                By {post.author}{post.published_at ? ` · ${new Date(post.published_at).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}` : ""}
-              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-3 font-sans text-xs font-semibold uppercase tracking-widest text-white/80">
+                <span>By {post.author || "Patrick Vachon"}</span>
+                <span>•</span>
+                <span>
+                  {post.published_at
+                    ? new Date(post.published_at).toLocaleDateString("en-CA", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                      })
+                    : "November 2026"}
+                </span>
+                <span>•</span>
+                <span className="rounded bg-white/20 px-2 py-0.5 text-[11px] text-white">
+                  Saskatchewan Business Guide
+                </span>
+              </div>
             </>
           )}
         </div>
       </section>
 
       <section className="bg-praxeti">
-        <div className="mx-auto max-w-[800px] px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[850px] px-4 py-14 sm:px-6 sm:py-20">
           {missing ? (
             <div data-testid="post-not-found" className="text-center">
               <p className="font-serif text-2xl text-black">Post not found</p>
-              <p className="mt-2 font-serif text-base text-black/70">It may have been unpublished or removed.</p>
-              <Link to="/blogs" className="mt-4 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-wide text-black underline underline-offset-4">
+              <p className="mt-2 font-serif text-base text-black/70">
+                It may have been unpublished or removed.
+              </p>
+              <Link
+                to="/blogs"
+                className="mt-4 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-wide text-black underline underline-offset-4"
+              >
                 <ArrowLeft className="h-4 w-4" aria-hidden="true" /> All posts
               </Link>
             </div>
           ) : !post ? (
-            <p className="font-serif text-black/70">Loading...</p>
+            <p className="font-serif text-black/70">Loading guide...</p>
           ) : (
             <Reveal>
               {post.featured_image && (
-                <img src={post.featured_image} alt={post.featured_alt || post.title} data-testid="post-featured-image"
-                  width={1200} height={630} loading="lazy" decoding="async"
-                  className="mb-10 w-full rounded-3xl border-2 border-black/15 object-cover" />
+                <img
+                  src={post.featured_image}
+                  alt={post.featured_alt || post.title}
+                  data-testid="post-featured-image"
+                  width={1200}
+                  height={630}
+                  loading="lazy"
+                  decoding="async"
+                  className="mb-10 w-full rounded-3xl border-2 border-black/15 object-cover shadow-sm"
+                />
               )}
-              <Markdown text={post.content} data-testid="post-content"
-                className="font-serif text-lg leading-relaxed text-black/85 [&_a]:font-semibold [&_a]:underline [&_a]:underline-offset-4 [&_h2]:mt-10 [&_h2]:font-sans [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-black [&_h3]:mt-8 [&_h3]:font-sans [&_h3]:text-lg [&_h3]:font-bold [&_img]:my-6 [&_img]:rounded-2xl [&_p]:mt-5 [&_ul]:mt-5 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:mt-5 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:mt-2 [&_table]:my-8 [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-hidden [&_table]:rounded-xl [&_th]:bg-bookgreen [&_th]:p-3 [&_th]:text-left [&_th]:font-sans [&_th]:text-sm [&_th]:font-semibold [&_th]:text-white [&_td]:border [&_td]:border-black/15 [&_td]:p-3 [&_td]:align-top [&_td]:text-base [&_tbody_tr:nth-child(even)]:bg-black/[0.03]" />
-              <div data-testid="post-cta" className="mt-14 rounded-3xl bg-bookgreen p-8 text-center sm:p-10">
-                <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-white">Ready to get organized?</h2>
-                <p className="mx-auto mt-3 max-w-md font-serif text-base text-white/85">
-                  Book a free introduction appointment or reach out with any questions — no obligation.
+              <Markdown
+                text={post.content}
+                data-testid="post-content"
+                className="font-serif text-lg leading-relaxed text-black/85 [&_a]:font-semibold [&_a]:text-bookgreen [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-black [&_h2]:mt-10 [&_h2]:font-sans [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-black [&_h3]:mt-8 [&_h3]:font-sans [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-black [&_img]:my-6 [&_img]:rounded-2xl [&_p]:mt-5 [&_ul]:mt-5 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:mt-5 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:mt-2 [&_table]:my-8 [&_table]:w-full [&_table]:border-collapse [&_table]:overflow-hidden [&_table]:rounded-xl [&_th]:bg-bookgreen [&_th]:p-3 [&_th]:text-left [&_th]:font-sans [&_th]:text-sm [&_th]:font-semibold [&_th]:text-white [&_td]:border [&_td]:border-black/15 [&_td]:p-3 [&_td]:align-top [&_td]:text-base [&_tbody_tr:nth-child(even)]:bg-black/[0.03]"
+              />
+
+              {/* On-Page Visual FAQ Section for Answer Engines & Searchers */}
+              {activeFaqs.length > 0 && (
+                <section
+                  className="mt-14 rounded-3xl border-2 border-black/15 bg-white p-6 sm:p-10 shadow-sm"
+                  aria-labelledby="faq-section-heading"
+                >
+                  <div className="flex items-center gap-3">
+                    <HelpCircle className="h-6 w-6 text-bookgreen" />
+                    <h2
+                      id="faq-section-heading"
+                      className="font-serif text-2xl font-bold uppercase tracking-tight text-black sm:text-3xl"
+                    >
+                      Frequently Asked Questions
+                    </h2>
+                  </div>
+                  <p className="mt-2 font-serif text-sm text-black/70">
+                    Key answers and statutory guidelines for Saskatchewan entrepreneurs regarding {post.title.toLowerCase()}.
+                  </p>
+                  <div className="mt-6 space-y-6 divide-y divide-black/10">
+                    {activeFaqs.map((faq, idx) => (
+                      <div key={idx} className={idx > 0 ? "pt-6" : ""}>
+                        <h3 className="font-serif text-lg font-bold text-black flex items-start gap-2">
+                          <CheckCircle className="h-5 w-5 text-mantis shrink-0 mt-0.5" />
+                          <span>{faq.q}</span>
+                        </h3>
+                        <p className="mt-2 pl-7 font-serif text-base leading-relaxed text-black/80">
+                          {faq.a}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Author Attribution Box */}
+              <div className="mt-10 rounded-2xl border border-black/10 bg-white/70 p-6 flex flex-col sm:flex-row items-center gap-5">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-bookgreen text-2xl font-bold text-white">
+                  PV
+                </div>
+                <div className="text-center sm:text-left">
+                  <h3 className="font-serif text-lg font-bold text-black">
+                    Written by Patrick Vachon
+                  </h3>
+                  <p className="font-sans text-xs uppercase tracking-wider text-black/60">
+                    Practice Lead · Vici SaskStartupSolutions · Saskatoon, SK
+                  </p>
+                  <p className="mt-1 font-serif text-sm text-black/75">
+                    Advising Saskatchewan startups, sole proprietors, and corporations on bookkeeping systems, CRA sales tax compliance, and ISC Corporate Registry administration.
+                  </p>
+                </div>
+              </div>
+
+              {/* Call to Action Card */}
+              <div
+                data-testid="post-cta"
+                className="mt-14 rounded-3xl bg-bookgreen p-8 text-center sm:p-10 shadow-lg"
+              >
+                <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
+                  Ready to get organized in Saskatoon?
+                </h2>
+                <p className="mx-auto mt-3 max-w-lg font-serif text-base leading-relaxed text-white/90">
+                  Book a free introductory appointment with Patrick Vachon. We’ll review your Saskatchewan business setup, bookkeeping, sales tax, or registry requirements with zero obligation.
                 </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-3">
-                  <Link to="/contact" data-testid="post-cta-contact"
-                    className="rounded-full bg-mantis px-7 py-3 font-sans text-sm font-semibold uppercase tracking-wide text-black transition-transform duration-300 hover:scale-105">
-                    Contact Vici SaskStartupSolutions
+                  <Link
+                    to="/booking"
+                    data-testid="post-cta-booking"
+                    className="rounded-full bg-mantis px-7 py-3 font-sans text-sm font-semibold uppercase tracking-wide text-black transition-transform duration-300 hover:scale-105 shadow-md"
+                  >
+                    Book Free Consultation
                   </Link>
-                  <Link to="/booking" data-testid="post-cta-booking"
-                    className="rounded-full border-2 border-white bg-transparent px-7 py-3 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-black">
-                    Book Now
+                  <Link
+                    to="/contact"
+                    data-testid="post-cta-contact"
+                    className="rounded-full border-2 border-white bg-transparent px-7 py-3 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                  >
+                    Contact Us Directly
                   </Link>
                 </div>
               </div>
@@ -213,24 +326,41 @@ export default function BlogPost() {
 
           {related.length > 0 && (
             <div className="mt-16" data-testid="related-posts">
-              <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-black">Related articles</h2>
-              <div className="mt-6 grid gap-6 sm:grid-cols-2">
+              <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-black">
+                Related Saskatchewan Business Guides
+              </h2>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((p) => (
-                  <Link key={p.id} to={`/blogs/${p.slug}`} data-testid={`related-${p.slug}`}
-                    className="group block overflow-hidden rounded-3xl border-2 border-black/15 bg-white transition-shadow hover:shadow-xl">
+                  <Link
+                    key={p.id || p.slug}
+                    to={`/blogs/${p.slug}`}
+                    data-testid={`related-${p.slug}`}
+                    className="group flex flex-col overflow-hidden rounded-3xl border-2 border-black/15 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  >
                     {p.featured_image ? (
-                      <img src={p.featured_image} alt={p.featured_alt || p.title} width={800} height={450} loading="lazy" decoding="async"
-                        className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <img
+                        src={p.featured_image}
+                        alt={p.featured_alt || p.title}
+                        width={800}
+                        height={450}
+                        loading="lazy"
+                        decoding="async"
+                        className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     ) : (
                       <div className="flex aspect-[16/9] w-full items-center justify-center bg-bookgreen">
                         <span className="font-serif text-xl font-bold uppercase text-white">Vici</span>
                       </div>
                     )}
-                    <div className="p-5">
-                      <h3 className="font-serif text-lg font-bold text-black">{p.title}</h3>
-                      <span className="mt-2 inline-block font-sans text-xs font-semibold uppercase tracking-wide text-black underline underline-offset-4">
-                        Read post
-                      </span>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="font-serif text-base font-bold leading-snug text-black group-hover:text-bookgreen transition-colors">
+                        {p.title}
+                      </h3>
+                      <div className="mt-auto pt-3">
+                        <span className="inline-block font-sans text-xs font-semibold uppercase tracking-wide text-black underline underline-offset-4 group-hover:text-mantis transition-colors">
+                          Read post →
+                        </span>
+                      </div>
                     </div>
                   </Link>
                 ))}

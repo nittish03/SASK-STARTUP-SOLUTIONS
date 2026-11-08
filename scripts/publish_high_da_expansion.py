@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """
-High-DA Authority Backlink Publishing Script (Write.as & Rentry.co & Telegra.ph)
-Targeting Saskatchewan & Saskatoon small business bookkeeping, tax, and incorporation keywords.
+High-DA Authority Backlink Publishing Script (Write.as & Rentry.co)
+Using Python standard library (urllib.request) - Zero credentials required.
 Strictly isolated from personal accounts.
 """
 
 import json
 import time
-import requests
+import urllib.request
+import urllib.parse
 import re
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-}
+DEFAULT_UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 
 def publish_writeas(title, content):
     """Publish an article to Write.as (DA ~75)"""
@@ -21,49 +20,49 @@ def publish_writeas(title, content):
         "title": title,
         "body": content
     }
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={
+            "User-Agent": DEFAULT_UA,
+            "Content-Type": "application/json"
+        },
+        method="POST"
+    )
     try:
-        r = requests.post(url, json=payload, headers=HEADERS, timeout=15)
-        if r.status_code == 201:
-            data = r.json().get("data", {})
-            post_id = data.get("id")
-            post_url = f"https://write.as/{post_id}"
-            return {"platform": "Write.as (DA 75)", "url": post_url, "status": "success"}
-        else:
-            return {"platform": "Write.as (DA 75)", "error": f"Status {r.status_code}: {r.text}", "status": "failed"}
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            res = json.loads(resp.read().decode("utf-8"))
+            if res.get("code") == 201:
+                post_id = res.get("data", {}).get("id")
+                return {"platform": "Write.as (DA 75)", "url": f"https://write.as/{post_id}", "status": "success"}
+            return {"platform": "Write.as (DA 75)", "error": str(res), "status": "failed"}
     except Exception as e:
         return {"platform": "Write.as (DA 75)", "error": str(e), "status": "failed"}
 
 def publish_rentry(title, content):
     """Publish an article to Rentry.co (DA 82)"""
-    session = requests.Session()
+    url = "https://rentry.co/api/new"
+    full_text = f"# {title}\n\n{content}"
+    payload = {
+        "text": full_text,
+        "csrfmiddlewaretoken": ""
+    }
+    data = urllib.parse.urlencode(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={
+            "User-Agent": DEFAULT_UA
+        },
+        method="POST"
+    )
     try:
-        r = session.get("https://rentry.co", headers=HEADERS, timeout=10)
-        csrf_match = re.search(r'name=["\']csrfmiddlewaretoken["\'] value=["\']([^"\']+)["\']', r.text)
-        if not csrf_match:
-            csrf_token = session.cookies.get("csrftoken", "")
-        else:
-            csrf_token = csrf_match.group(1)
-
-        post_headers = {
-            **HEADERS,
-            "Referer": "https://rentry.co/",
-            "X-CSRFToken": csrf_token
-        }
-        full_text = f"# {title}\n\n{content}"
-        payload = {
-            "csrfmiddlewaretoken": csrf_token,
-            "text": full_text,
-            "edit_code": "sasktax2026"
-        }
-        res = session.post("https://rentry.co/api/new", data=payload, headers=post_headers, timeout=15)
-        if res.status_code == 200:
-            data = res.json()
-            if data.get("status") == "200":
-                url = data.get("url")
-                return {"platform": "Rentry.co (DA 82)", "url": url, "status": "success"}
-            else:
-                return {"platform": "Rentry.co (DA 82)", "error": data.get("content"), "status": "failed"}
-        return {"platform": "Rentry.co (DA 82)", "error": f"Status {res.status_code}", "status": "failed"}
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            res = json.loads(resp.read().decode("utf-8"))
+            if res.get("status") == "200":
+                return {"platform": "Rentry.co (DA 82)", "url": res.get("url"), "status": "success"}
+            return {"platform": "Rentry.co (DA 82)", "error": str(res), "status": "failed"}
     except Exception as e:
         return {"platform": "Rentry.co (DA 82)", "error": str(e), "status": "failed"}
 
@@ -84,7 +83,7 @@ For Saskatoon business owners seeking structured, monthly financial management, 
 
 ### Key Workflows in Modern Bookkeeping
 A robust monthly bookkeeping cadence includes:
-- **Cloud Document Capture**: Utilizing digital tools (Dext, Hubdoc) to digitize receipts and invoices immediately, eliminating lost documentation during CRA audits.
+- **Cloud Document Capture**: Utilizing digital tools to digitize receipts and invoices immediately, eliminating lost documentation during CRA audits.
 - **Monthly Balance Sheet Verification**: Ensuring all accounts receivable, accounts payable, and loan accounts reflect accurate balances.
 - **Interim Financial Statements**: Providing management with monthly Profit & Loss statements to guide hiring, inventory purchasing, and expansion decisions.
 
@@ -277,13 +276,11 @@ def main():
 
         if pref == "writeas":
             res = publish_writeas(title, content)
-            # fallback to rentry if writeas encounters any issue
             if res.get("status") != "success":
                 print(f"  Write.as failed ({res.get('error')}), falling back to Rentry...")
                 res = publish_rentry(title, content)
         else:
             res = publish_rentry(title, content)
-            # fallback to writeas if rentry encounters any issue
             if res.get("status") != "success":
                 print(f"  Rentry failed ({res.get('error')}), falling back to Write.as...")
                 res = publish_writeas(title, content)
@@ -292,7 +289,7 @@ def main():
         res["target_keywords"] = art["target_keywords"]
         print(f"  -> Result: {res.get('status')} | {res.get('url', res.get('error'))}")
         results.append(res)
-        time.sleep(2)  # Respectful pause
+        time.sleep(2)
 
     out_path = "campaigns/expanded_keyword_backlinks.json"
     with open(out_path, "w") as f:

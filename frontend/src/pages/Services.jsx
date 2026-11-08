@@ -8,6 +8,23 @@ import Seo from "@/components/Seo";
 
 const SERVICE_DETAILS = [
   {
+    slug: "incorporation-setup",
+    title: "Saskatchewan Business Incorporation & Startup Registration",
+    badge: "Startup Essential",
+    duration: "45 mins",
+    button: "Book Incorporation Setup",
+    img: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800",
+    alt: "Founders reviewing Saskatchewan incorporation documents in Saskatoon",
+    paragraphs: [
+      "Incorporate your business in Saskatoon or anywhere in Saskatchewan with complete legal precision and tax-advantaged architecture. Our Saskatchewan incorporation service manages your entire startup setup: official Information Services Corporation (ISC) Corporate Name Reservation, drafting Articles of Incorporation, designing multi-class share structures (Class A voting, Class B non-voting, and Class C preferred), registered office setup, and issuing your official Certificate of Incorporation.",
+      "Beyond basic registry paperwork, we immediately activate your federal Canada Revenue Agency (CRA) 9-digit Business Number, corporate income tax (RC) account, GST/HST (RT) registration, provincial Saskatchewan PST licensing, and corporate minute book registers. Avoid the expensive $1,500+ legal retainer fees while getting hands-on advisory tailored to Saskatchewan tax rules.",
+    ],
+    faqs: [
+      { q: "How much does it cost to incorporate in Saskatchewan?", a: "Statutory ISC fees are $50 for Name Reservation and $255 for Articles of Incorporation ($305 total). Numbered corporations bypass name reservation for $255." },
+      { q: "How long does incorporation take?", a: "Online filings are typically processed and approved by ISC within 1 to 3 business days." },
+    ],
+  },
+  {
     slug: "bookkeeping",
     title: "Part 1 - Bookkeeping Services",
     badge: "Part of Basic Service Package",
@@ -72,6 +89,23 @@ const SERVICE_DETAILS = [
     ],
     faqs: [
       { q: "Can I upgrade from a single service to the full package later?", a: "Yes, we can roll your existing service into the Basic Package at any time." },
+    ],
+  },
+  {
+    slug: "multilingual-startup",
+    title: "Multilingual Business Setup & Advisory (French, Russian, Armenian)",
+    badge: "Multilingual Support",
+    duration: "45 mins",
+    button: "Book Multilingual Consultation",
+    img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+    alt: "Multilingual business advisory meeting with newcomer entrepreneurs in Saskatoon",
+    paragraphs: [
+      "Starting a new venture in Saskatchewan as a newcomer, work permit holder, or international entrepreneur comes with unique regulatory hurdles. We bridge the communication and compliance gap by providing complete business registration, bank account onboarding, CRA account activation, and ongoing bookkeeping support in English, French, Russian, and Armenian.",
+      "Whether you are establishing a business under the Saskatchewan Immigrant Nominee Program (SINP) Entrepreneur Category or launching an independent local enterprise, Patrick Vachon and the Vici team provide trusted guidance so you feel confident in your compliance from day one.",
+    ],
+    faqs: [
+      { q: "Can work permit holders incorporate a business in Saskatchewan?", a: "Yes. Saskatchewan allows foreign nationals and temporary residents to incorporate. There are no Canadian citizenship requirements for corporate directors under provincial law." },
+      { q: "Which languages are supported?", a: "We provide consultation and accounting workflows in English, French (Français), Russian (Русский), and Armenian (Հայերեն)." },
     ],
   },
   {

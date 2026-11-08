@@ -10,47 +10,59 @@ import Seo from "@/components/Seo";
 const FALLBACK_FAQS = [
   {
     question: "What does the free introduction appointment cover?",
-    answer: "The introduction appointment is a no-obligation conversation where we review your current situation, understand your needs across bookkeeping, T2 filing, and ISC Registry administration, and show you exactly how we can help before you commit to anything.",
+    answer: "The introduction appointment is a no-obligation conversation with Patrick Vachon where we review your current Saskatchewan business situation, evaluate your requirements across bookkeeping, T2 corporate tax filing, and ISC Registry administration, and recommend a clear, customized roadmap before you commit to anything.",
   },
   {
-    question: "What documents should I bring to my first appointment?",
-    answer: "Bring whatever you have: your CRA business number, recent bank statements, prior tax filings, and any ISC Registry correspondence. If you're not sure, just bring yourself — we'll help you figure out what's missing.",
+    question: "How much does it cost to incorporate a business in Saskatchewan?",
+    answer: "The official statutory fees charged by Information Services Corporation (ISC) are $50 CAD for a Corporate Name Reservation and $255 CAD for filing Articles of Incorporation, totaling $305 CAD in baseline provincial fees. Numbered corporations bypass the name reservation fee and incorporate for $255 CAD.",
   },
   {
-    question: "How do quotes work?",
-    answer: "Every engagement starts with the free introduction appointment. Once we understand the scope of your bookkeeping, tax filing, or registry needs, we provide a clear, accurate quote. No pricing is listed online because every business is different.",
-  },
-  {
-    question: "What are the timelines for T2 corporate filing?",
-    answer: "T2 corporate returns are generally due within six months of your corporation's year-end, with any balance owing due earlier. In your introduction appointment, we'll walk you through our filing timeline for your specific year-end so there are no surprises.",
-  },
-  {
-    question: "What does ISC Registry administration include?",
-    answer: "We handle the administration of your Saskatchewan ISC Registry requirements: incorporation documents, annual returns, and keeping your corporate information current with Information Services Corporation (ISC) — no missed deadlines, no penalties.",
-  },
-  {
-    question: "What's included in the All in one Basic Service Package?",
-    answer: "The Basic Package includes all three parts: Bookkeeping, T2 Corporate Filing Administration, and ISC Registry Administration. One team, one relationship, all your compliance handled.",
+    question: "What documents and information do I need to incorporate in Saskatchewan?",
+    answer: "To incorporate through ISC, you need: an approved Saskatchewan Corporate Name Reservation (or numbered corporation choice), Articles of Incorporation specifying your share structure (Class A voting, Class B non-voting), registered office address located in Saskatchewan, list of initial directors, and director consent resolutions.",
   },
   {
     question: "What is the difference between a sole proprietorship and a corporation in Saskatchewan?",
-    answer: "A sole proprietorship is simpler and less expensive to start, but the business owner carries unlimited personal liability for debts and legal obligations. A Saskatchewan corporation (incorporated via ISC) creates a distinct legal entity that provides limited liability protection and access to the small business corporate tax rate, but requires annual ISC returns and T2 corporate tax filings.",
+    answer: "A sole proprietorship is simpler and less expensive to start ($50 name + $65 registration), but the owner carries unlimited personal liability and business profits are taxed at personal progressive income tax rates up to 47.5%. Incorporating creates a separate legal person with limited liability protection and access to the combined 10% active small business tax rate in Saskatchewan.",
   },
   {
     question: "When does a Saskatchewan small business need a CRA GST number?",
-    answer: "A Saskatchewan business must register for a federal GST/HST account once its worldwide taxable gross sales exceed $30,000 CAD over a single calendar quarter or four consecutive quarters. Many businesses also choose to register voluntarily earlier to claim input tax credits (ITCs) on business startup expenses.",
+    answer: "A Saskatchewan business must register for a federal GST/HST account once its worldwide taxable gross sales exceed $30,000 CAD over a single calendar quarter or four consecutive quarters. However, many businesses register voluntarily earlier to claim input tax credits (ITCs) on business startup expenses.",
   },
   {
-    question: "How long does incorporation take in Saskatchewan?",
-    answer: "Standard business corporation filings submitted online through the Information Services Corporation (ISC) Corporate Registry portal typically take between 1 and 3 business days for approval once the mandatory Nuans name reservation has been cleared.",
+    question: "How does Saskatchewan PST (6%) differ from federal GST (5%)?",
+    answer: "Federal GST (5%) is a value-added tax where you claim Input Tax Credits on purchases. Saskatchewan PST (6%) is a provincial retail sales tax administered by the Ministry of Finance. Unlike GST, Saskatchewan has no $30,000 small supplier threshold for PST on retail sales of taxable goods and services; registration is mandatory from your first dollar of taxable sales.",
   },
   {
-    question: "Can I keep my business receipts digitally in Saskatchewan?",
-    answer: "Yes. The Canada Revenue Agency (CRA) explicitly permits businesses to keep digital copies of receipts, invoices, and bank statements, provided electronic scans are clear, legible, and retained for at least six years from the end of the tax year.",
+    question: "What are the timelines and deadlines for T2 corporate tax filing in Saskatchewan?",
+    answer: "A Saskatchewan corporation must file its T2 corporate income tax return with the CRA no later than six months after its fiscal year-end. However, any corporate tax balance owing must be paid within three months (for CCPCs eligible for the small business deduction) or two months after year-end to prevent non-deductible interest penalties.",
   },
   {
-    question: "Do you offer consultations for newcomers to Saskatchewan in other languages?",
-    answer: "Yes. In addition to English, our team provides introductory consultations and administrative assistance in French, Russian, and Armenian to help newcomers and immigrant entrepreneurs navigate Saskatchewan business setup and bookkeeping requirements.",
+    question: "What does ISC Registry administration include, and what happens if I miss an annual return?",
+    answer: "We manage all mandatory Information Services Corporation (ISC) Corporate Registry filings: incorporation, director updates, registered office changes, and annual corporate returns. If an annual return is not filed within the statutory window following your incorporation anniversary month, ISC issues late penalties and will administratively dissolve (strike off) the company, freezing bank accounts and forfeiting the corporate name.",
+  },
+  {
+    question: "What is catch-up and cleanup bookkeeping, and how do you fix overdue tax years?",
+    answer: "Catch-up bookkeeping reconstructs incomplete financial records for businesses that are months or years behind on accounting. We audit historical bank and credit card statements, categorize vendor receipts, produce accurate balance sheets, and file overdue GST/PST and T2 returns with the CRA to stop penalty accumulation.",
+  },
+  {
+    question: "Can I keep my small business receipts and records digitally in Saskatchewan?",
+    answer: "Yes. Under CRA Information Circular IC78-10R5, digital images, optical scans, and electronic receipts are accepted as legal audit documentation, provided the images are clear, tamper-proof, and accessible for the mandatory six-year statutory retention period.",
+  },
+  {
+    question: "What bookkeeping and tax support do you provide for trades and construction contractors in Saskatchewan?",
+    answer: "We provide specialized contractor bookkeeping covering Saskatchewan PST on real property contracts, mandatory WCB clearance letters under Section 131 of the Workers' Compensation Act, subcontractor T5018 Statement of Contract Payments reporting, and job costing integrations.",
+  },
+  {
+    question: "Do you prepare Notice to Reader / Compilation financial statements for Saskatoon bank loans?",
+    answer: "Yes. We compile formal balance sheets and income statements in compliance with Canadian Standard on Related Services (CSRS 4200) Compilation Engagements, providing the verifiable documentation required by Saskatoon commercial banks, credit unions, and equipment lenders.",
+  },
+  {
+    question: "Do you offer consultations and bookkeeping for newcomers to Saskatchewan in other languages?",
+    answer: "Yes! In addition to English, our Practice Lead and team provide startup advisory, corporate registration assistance, and recurring bookkeeping in French, Russian, and Armenian, guiding newcomers and immigrant entrepreneurs through Saskatchewan commercial setup.",
+  },
+  {
+    question: "What is included in the All-in-One Basic Service Package?",
+    answer: "Our flagship All-in-One Package brings your entire financial back office under one roof: monthly cloud bookkeeping and bank reconciliations, sales tax filing (GST & PST), annual T2 corporate tax return preparation, and ISC Corporate Registry annual return maintenance.",
   },
 ];
 
