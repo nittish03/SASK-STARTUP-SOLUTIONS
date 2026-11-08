@@ -38,6 +38,10 @@ exports/
 *.crdownload
 
 # Environment files (comprehensive coverage)
+.env.live
+.env.local
+.env.*.local
+
 
 *token.json*
 *credentials.json*
