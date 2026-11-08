@@ -24,8 +24,8 @@ export default function Booking() {
   return (
     <div data-testid="booking-page">
       <Seo
-        title="Book a Free Introduction | Vici SaskStartupSolutions, Saskatoon"
-        description="Book a free, no-obligation introduction appointment — bookkeeping, T2 filing administration and ISC Registry services in Saskatoon. Open daily 8:00 a.m.–8:00 p.m."
+        title="Free Business Consultation Saskatoon | Book Appointment | Vici"
+        description="Schedule a free 30-minute introduction appointment for bookkeeping, T2 corporate tax filing administration, or Saskatchewan ISC business registration in Saskatoon."
         path="/booking"
       />
       <section className="bg-bookgreen" aria-labelledby="booking-heading">

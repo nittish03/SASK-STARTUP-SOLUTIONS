@@ -153,12 +153,63 @@ export default function Services() {
     };
   });
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Small Business Accounting, Bookkeeping & Corporate Registry Services in Saskatoon",
+    "url": "https://saskstartupsolutions.ca/services",
+    "description": "Comprehensive small business bookkeeping, Saskatchewan ISC business registration and incorporation, T2 corporate tax filing administration, and annual returns.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "Vici SaskStartupSolutions",
+      "url": "https://saskstartupsolutions.ca/"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "Small Business Bookkeeping & Payroll Services Saskatoon",
+          "serviceType": "Bookkeeping",
+          "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
+          "areaServed": "Saskatoon, Saskatchewan",
+          "description": "Monthly transaction recording, bank reconciliations, expense tracking, Saskatchewan PST (6%) and federal GST compliance."
+        },
+        {
+          "@type": "Service",
+          "name": "Saskatchewan T2 Corporate Tax Filing Administration",
+          "serviceType": "Corporate Tax Administration",
+          "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
+          "areaServed": "Saskatchewan",
+          "description": "Year-end financial compilation schedules, T2 corporate income tax return preparation, and CRA filing administration."
+        },
+        {
+          "@type": "Service",
+          "name": "Saskatchewan ISC Corporate Registry Administration",
+          "serviceType": "Corporate Registry Services",
+          "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
+          "areaServed": "Saskatchewan",
+          "description": "Information Services Corporation (ISC) business incorporation, Nuans name reservation, and annual return filings."
+        },
+        {
+          "@type": "Service",
+          "name": "All-in-One Basic Service Package",
+          "serviceType": "Bundled Startup Administration",
+          "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
+          "areaServed": "Saskatchewan",
+          "description": "Comprehensive startup compliance bundle combining monthly bookkeeping, T2 corporate tax filing administration, and ISC annual returns."
+        }
+      ]
+    }
+  };
+
   return (
     <div data-testid="services-page">
       <Seo
-        title="Services — Bookkeeping, Registration & ISC Registry | Vici Saskatoon"
-        description="Monthly bookkeeping, business registration and incorporation help, T2 corporate filing administration and Saskatchewan ISC annual returns — start with a free introduction."
+        title="Business Incorporation, Bookkeeping & T2 Tax Services Saskatoon | Vici"
+        description="Comprehensive small business bookkeeping, Saskatchewan ISC business incorporation, T2 corporate tax filing administration, and annual returns in Saskatoon, SK."
         path="/services"
+        schema={servicesSchema}
       />
       <section className="bg-bookgreen" aria-labelledby="services-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">

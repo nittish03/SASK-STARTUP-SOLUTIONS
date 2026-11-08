@@ -40,12 +40,45 @@ export default function Contact() {
     }
   };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Vici SaskStartupSolutions",
+    "url": "https://saskstartupsolutions.ca/contact",
+    "mainEntity": {
+      "@type": "AccountingService",
+      "name": "Vici SaskStartupSolutions",
+      "telephone": "+1-306-960-0091",
+      "email": "Saskstartupsolutions@viciconsulting.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "539 Avenue I N",
+        "addressLocality": "Saskatoon",
+        "addressRegion": "SK",
+        "postalCode": "S7L 2G9",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.1388,
+        "longitude": -106.6853
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    }
+  };
+
   return (
     <div data-testid="contact-page">
       <Seo
-        title="Contact Us | Vici SaskStartupSolutions, Saskatoon"
-        description="Reach Vici SaskStartupSolutions in Saskatoon — call 1 (306) 960-0091, email, or visit 539 Avenue I N. Open daily 8:00 a.m.–8:00 p.m. Saskatoon time."
+        title="Contact Vici SaskStartupSolutions | Saskatoon Office & Support"
+        description="Contact Vici SaskStartupSolutions at 539 Avenue I N, Saskatoon, SK. Call 1 (306) 960-0091 or email for bookkeeping, T2 corporate tax admin, and ISC registry help."
         path="/contact"
+        schema={contactSchema}
       />
       <section className="bg-bookgreen" aria-labelledby="contact-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">

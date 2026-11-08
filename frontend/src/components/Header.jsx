@@ -30,7 +30,7 @@ const SEARCH_INDEX = [
 function Wordmark() {
   return (
     <Link to="/" data-testid="wordmark-link" className="flex items-center gap-2.5 leading-none shrink-0">
-      <img src="/media/logo-icon.png" alt="" width="132" height="132" data-testid="header-logo" className="h-10 w-10 rounded-full shadow-[0_1px_0_rgba(0,31,63,0.25)] sm:h-11 sm:w-11" />
+      <img src="/media/logo-icon.png" alt="Vici SaskStartupSolutions — Bookkeeping and Startup Administration in Saskatoon" width="132" height="132" data-testid="header-logo" className="h-10 w-10 rounded-full shadow-[0_1px_0_rgba(0,31,63,0.25)] sm:h-11 sm:w-11" />
       <span>
         <span className="block font-serif font-bold uppercase tracking-tight text-midnight text-base sm:text-lg leading-[1.05]">Vici</span>
         <span className="block font-serif font-bold uppercase tracking-tight text-midnight text-base sm:text-lg leading-[1.05]">SaskStartup</span>

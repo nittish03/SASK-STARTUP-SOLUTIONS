@@ -9,12 +9,46 @@ export default function Staff() {
   const name = sc.staffName || "Patrick Vachon";
   const photo = sc.staffPhoto || "/media/patrick-vachon.jpg";
 
+  const staffSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Patrick Vachon — Vici SaskStartupSolutions",
+    "url": "https://saskstartupsolutions.ca/staff",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Patrick Vachon",
+      "jobTitle": "Founder & Lead Administrator",
+      "worksFor": {
+        "@type": "AccountingService",
+        "name": "Vici SaskStartupSolutions",
+        "url": "https://saskstartupsolutions.ca/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "539 Avenue I N",
+        "addressLocality": "Saskatoon",
+        "addressRegion": "SK",
+        "postalCode": "S7L 2G9",
+        "addressCountry": "CA"
+      },
+      "alumniOf": "University of Saskatchewan",
+      "knowsLanguage": [
+        { "@type": "Language", "name": "English" },
+        { "@type": "Language", "name": "French" },
+        { "@type": "Language", "name": "Russian" },
+        { "@type": "Language", "name": "Armenian" }
+      ],
+      "description": "Founder and lead administrator at Vici SaskStartupSolutions in Saskatoon, SK. Helping small businesses with full-service bookkeeping, T2 corporate tax filing administration, and Saskatchewan ISC corporate registry compliance."
+    }
+  };
+
   return (
     <div data-testid="staff-page">
       <Seo
-        title="Meet the Team | Vici SaskStartupSolutions, Saskatoon"
-        description="Meet Patrick Vachon, founder of Vici SaskStartupSolutions — years of hands-on experience running his own Saskatchewan business, now helping Saskatoon owners with books, filings and registry."
+        title="Patrick Vachon | Principal Practice Lead | Vici SaskStartupSolutions Saskatoon"
+        description="Meet Patrick Vachon, practice lead at Vici SaskStartupSolutions in Saskatoon. Providing dedicated small business bookkeeping, T2 corporate tax admin, and ISC registry support."
         path="/staff"
+        schema={staffSchema}
       />
       <section className="bg-bookgreen" aria-labelledby="staff-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">
