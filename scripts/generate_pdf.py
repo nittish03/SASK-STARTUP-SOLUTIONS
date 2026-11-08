@@ -319,7 +319,7 @@ def generate_pdf(output_filename):
     print(f"Generated complete PDF successfully: {output_filename}")
 
 if __name__ == '__main__':
-    out1 = "/Users/eshway/Desktop/NIPUN1/Vici_SaskStartupSolutions_Backlink_Execution_Report.pdf"
-    out2 = "/Users/eshway/Desktop/NIPUN1/Vici_SaskStartupSolutions_Verified_Backlinks_Directory.pdf"
+    out1 = "/Users/eshway/Desktop/NIPUN1/campaigns/Vici_SaskStartupSolutions_Backlink_Execution_Report.pdf"
+    out2 = "/Users/eshway/Desktop/NIPUN1/campaigns/Vici_SaskStartupSolutions_Verified_Backlinks_Directory.pdf"
     generate_pdf(out1)
     generate_pdf(out2)

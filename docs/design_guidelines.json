@@ -162,6 +162,6 @@
     "Include Lenis smooth scrolling and framer-motion animations for an Awwwards-level feel."
   ]
 },
-  "path": "/app/design_guidelines.json",
+  "path": "/app/docs/design_guidelines.json",
   "overwrite": true
 }

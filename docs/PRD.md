@@ -125,7 +125,7 @@ Multi-page marketing + booking website for Vici SaskStartupSolutions (Saskatoon,
 - GA4 G-03VN7HB92G: gtag in index.html (send_page_view:false, anonymize_ip), SPA page_view via AnalyticsTracker with useRef guard (no StrictMode dupes). Events: book_intro_click (header CTA), booking_request (on successful booking, service slug only), contact_request (contact form success), contact_click (phone/email links). No PII sent.
 - FAQ: 'Placeholder answer —' prefixes removed (DB + fallback), capitalization fixed, FAQPage JSON-LD renders from visible FAQs.
 - og-image.jpg (1200x630 branded share card) generated from owned logo.
-- Testing: /app/test_reports/iteration_1-3.json — final round ALL PASS (11 routes single-tag canonicals/descriptions/robots, noindex on admin/portal, GA4 events, booking+contact regression, 14/14 backend pytest).
+- Testing: archive/test-reports/iteration_1-3.json — final round ALL PASS (11 routes single-tag canonicals/descriptions/robots, noindex on admin/portal, GA4 events, booking+contact regression, 14/14 backend pytest).
 - PENDING (need user approval/production access): deploy + enable bot-prerender toggle; Search Console: verify property saskstartupsolutions.ca, submit https://www.saskstartupsolutions.ca/api/sitemap.xml; GA4 realtime verification on live; approval batch for services-page copy emphasis (incorporation → registration → monthly bookkeeping order) — NOT yet changed per 'batch substantial copy for approval' rule.
 
 ## SEO audit fixes — thin content + compression (2026-11, preview only — awaiting deploy)

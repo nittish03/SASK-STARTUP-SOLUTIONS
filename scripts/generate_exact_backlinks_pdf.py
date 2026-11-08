@@ -51,7 +51,7 @@ class NumberedCanvas(canvas.Canvas):
         self.restoreState()
 
 def build_pdf():
-    pdf_filename = "/Users/eshway/Desktop/NIPUN1/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf"
+    pdf_filename = "/Users/eshway/Desktop/NIPUN1/campaigns/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf"
     doc = SimpleDocTemplate(
         pdf_filename,
         pagesize=letter,

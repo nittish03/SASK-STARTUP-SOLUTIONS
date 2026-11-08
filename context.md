@@ -173,7 +173,24 @@ The campaign follows an acquisition-to-retention funnel:
 * **Timeline Cautions:** Never guarantee fixed turnaround times for government ISC registry approvals.
 
 
-### SEO Action Plan & Roadmap:
+### 8.1 Live Google Search Console & Competitor Audit Findings (Completed Nov 2026)
+
+* **GSC Domain Property:** `sc-domain:saskstartupsolutions.ca` (Account: `access@clinkora.in`)
+* **Live Performance (Last 28 Days / Oct 27 – Nov 6, 2026):**
+  - Clicks: **2** | Impressions: **12** | CTR: **16.7%** | Average Position: **42.4**
+  - **Live Search Queries:**
+    1. `incorporate in saskatchewan`: 2 Impressions, 0 Clicks, Pos **67.5**
+    2. `saskatchewan corporate search`: 2 Impressions, 0 Clicks, Pos **82.5**
+    3. `start your own business saskatoon`: 1 Impression, 0 Clicks, Pos **78.0**
+    4. `business incorporation saskatchewan`: 1 Impression, 0 Clicks, Pos **88.0**
+    5. Branded Queries (`sask startup solutions`): 2 Clicks, 3 Impressions, Pos **1.7**
+  - **Critical Technical Finding:** Submitted sitemap `https://saskstartupsolutions.ca/sitemap.xml` returns HTML (`index.html`) due to SPA routing fallback, resulting in **0 Discovered Pages** in GSC. Two core blog posts (`small-business-bookkeeping-saskatoon` and `t2-corporate-tax-filing-saskatchewan`) are completely unindexed.
+* **Competitor Intelligence (Saskatoon & Saskatchewan):**
+  - Competitors: Lift Accounting, A&H Bookkeeping, SM Pro Services, Go-Get Consulting, CNA Professional Accountants.
+  - Competitor Weaknesses: No multilingual support (newcomers), fragmented services (bookkeepers won't touch ISC registry; law firms charge $1,200+ for basic incorporation).
+  - Vici's Authentic Differentiators: All-in-One Basic Package (Bookkeeping + T2 Tax Admin + ISC Annual Returns) at an accessible price point; multilingual consultations in English, French, Russian, and Armenian; free 30-min discovery call.
+
+### 8.2 SEO Action Plan & Implementation Roadmap:
 
 #### Phase 1: Technical SEO & Rich Schema Markup
 1. **Robots.txt & Sitemap Synchronization:**
