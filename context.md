@@ -94,8 +94,13 @@ All configuration files are present in the workspace:
 
 ## 5. Local Server & Deployment State
 
+* **Live Production Website:** `https://saskstartupsolutions.ca` (**HTTP 200 OK**).
+  - **Live Publish Version:** 11th Publish (`8a24da4b-55c0-43b2-ab85-45a49171fd3c`) on Emergent Cloud Cluster.
+  - **Live Homepage Title:** `Saskatoon Bookkeeping & Tax Setup | Vici`
+  - **Live Blog Routes:** `https://saskstartupsolutions.ca/blogs` & `https://saskstartupsolutions.ca/blog` (3 Published Cornerstone Posts).
+  - **Live XML Sitemap:** `https://saskstartupsolutions.ca/sitemap.xml` (Application/XML, 200 OK).
 * **Frontend Build Server:** Running in background via `serve -s frontend/build -l 3000`.
-* **Verified URL:** `http://localhost:3000` (**HTTP 200 OK**).
+* **Verified Local URL:** `http://localhost:3000` (**HTTP 200 OK**).
 * **Commands Reference:**
   ```bash
   # Check server response
