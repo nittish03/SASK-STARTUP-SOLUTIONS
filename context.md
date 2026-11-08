@@ -126,6 +126,21 @@ Any AI agent continuing work on this workspace **MUST** uphold these rules witho
   - `__pycache__/`
   *Ensures repository remains lean (pushed 2.10 MiB) without breaching GitHub's 100MB file limits.*
 
+### Permanent SEO Starting Point Checkpoint (`seo-baseline`)
+A dedicated Git tag and permanent branch have been created and pushed to GitHub as an immutable restore point:
+* **Tag:** `seo-baseline` (Commit `1f5c390`)
+* **Backup Branch:** `baseline-backup`
+* **Purpose:** Serves as the clean baseline before starting the SEO overhaul from scratch.
+* **How to Revert if anything goes wrong:**
+  ```bash
+  # Option 1: Hard reset working tree to the baseline tag
+  git reset --hard seo-baseline
+
+  # Option 2: Checkout the backup branch
+  git checkout baseline-backup
+  ```
+
+
 ---
 
 ## 6. Backlink & Off-Page SEO Campaign Status
