@@ -95,16 +95,23 @@ All configuration files are present in the workspace:
 ## 5. Local Server & Deployment State
 
 * **Live Production Website:** `https://saskstartupsolutions.ca` (**HTTP 200 OK**).
-  - **Live Publish Version:** 11th Publish (`8a24da4b-55c0-43b2-ab85-45a49171fd3c`) on Emergent Cloud Cluster.
+  - **Live Publish Version:** 16th Publish deployed on Emergent Cloud Cluster behind Cloudflare CDN.
+  - **Live Production Bundle:** `static/js/main.f70d2ca5.js` (Verified HTTP 200).
   - **Live Homepage Title:** `Saskatoon Bookkeeping & Tax Setup | Vici`
-  - **Live Blog Routes:** `https://saskstartupsolutions.ca/blogs` & `https://saskstartupsolutions.ca/blog` (3 Published Cornerstone Posts).
-  - **Live XML Sitemap:** `https://saskstartupsolutions.ca/sitemap.xml` (Application/XML, 200 OK).
+  - **Live Blog Routes:** `https://saskstartupsolutions.ca/blogs` & `https://saskstartupsolutions.ca/blogs/:slug` (18 Comprehensive Pillar Guides, 71,000+ words).
+  - **Live XML Sitemap:** `https://saskstartupsolutions.ca/sitemap.xml` (Application/XML, 200 OK, exactly 45 canonical URLs).
 * **Frontend Build Server:** Running in background via `serve -s frontend/build -l 3000`.
 * **Verified Local URL:** `http://localhost:3000` (**HTTP 200 OK**).
 * **Commands Reference:**
   ```bash
-  # Check server response
+  # Check local server response
   curl -I http://localhost:3000
+
+  # Check live production bundle hash
+  curl -s https://saskstartupsolutions.ca/ | grep -o 'static/js/main\.[^"]*'
+
+  # Verify live sitemap URL count
+  curl -s https://saskstartupsolutions.ca/sitemap.xml | grep -c "<loc>"
 
   # Rebuild frontend after making code edits
   cd /Users/eshway/Desktop/NIPUN1/frontend
@@ -113,11 +120,6 @@ All configuration files are present in the workspace:
   # Run frontend in interactive development mode (hot-reloading)
   cd /Users/eshway/Desktop/NIPUN1/frontend
   yarn start
-
-  # Run backend locally (optional - default frontend connects to live preview backend)
-  cd /Users/eshway/Desktop/NIPUN1/backend
-  python3 -m venv venv && ./venv/bin/pip install -r requirements.txt
-  ./venv/bin/uvicorn server:app --host 0.0.0.0 --port 8000 --reload
   ```
 
 ---
@@ -266,72 +268,138 @@ All 16 mandatory SEO tasks from the agency directive have been executed, tested,
 
 ---
 
-## 9. Deployment & Search Console Live Verification
+## 9. Deployment Architecture & Standard Operating Procedure (SOP)
 
-### 13th, 14th & 15th Publishes Deployed to `https://saskstartupsolutions.ca/` (2026-11-09)
-* **Build Hash:** `main.4117b857.js` (replaces legacy `main.efd575c1.js`, `main.831fdc21.js` and `main.0c25942b.js`).
-* **Commits:** `2259a1f`, `63c3f8c`, `5e941b1`, and `f031924` on branch `main`.
-* **Zero-Latency Static Data & Complete Schema Architecture:**
-  - Embedded all 16 comprehensive blog guides (63,584 total words) into `frontend/src/data/blogPosts.js`.
-  - Embedded structured question & answers into `frontend/src/data/blogFaqs.js`.
-  - Added interactive category filter pills on `/blogs` (*All Guides*, *Incorporation & Setup*, *Small Business Bookkeeping*, *CRA Tax & Filing*, *ISC Registry & Compliance*, *Newcomers & Multilingual*).
-  - Added visual FAQ accordions with SVG checkmarks and Schema.org `FAQPage` JSON-LD on all individual blog posts, `/faq`, and `/services`.
-  - Added Practice Lead Patrick Vachon author bio card on every article.
-  - Added `/about` and `/team` route aliases in `App.js` pointing to `Staff.jsx` (eliminating 404s).
-  - Implemented Schema.org `@graph` bundling in `Seo.jsx` so custom page schemas (`ContactPage`, `ProfilePage`, `CollectionPage`, `WebPage`) preserve core `LocalBusiness` / `AccountingService` NAP, coordinates, and phone numbers.
-  - Added dynamic `image` prop in `Seo.jsx` for rich Open Graph / Twitter Cards with custom article featured images.
-* **Route Verification:**
-  - `https://saskstartupsolutions.ca/`: HTTP 200 OK.
-  - `https://saskstartupsolutions.ca/about`: HTTP 200 OK (alias to Patrick Vachon staff profile).
-  - `https://saskstartupsolutions.ca/blogs`: HTTP 200 OK (CollectionPage schema with 16 ItemList entries).
-  - `https://saskstartupsolutions.ca/services`: HTTP 200 OK (7 services in ItemList + FAQPage schema).
-  - `https://saskstartupsolutions.ca/faq`: HTTP 200 OK (14 question accordions wrapped in semantic `<h3>`).
-  - `https://saskstartupsolutions.ca/sitemap.xml`: HTTP 200 OK (exactly 41 canonical URLs).
+### How Code is Deployed to the Live Site Now (End-to-End Pipeline)
 
-### Google Search Console Verification (Tested 2026-11-09)
-* **XML Sitemap Submission:**
-  - Submitted `https://saskstartupsolutions.ca/sitemap.xml` directly in GSC Sitemaps.
-  - Status: **Success** | Discovered pages: **41**.
-* **Priority Indexing Submissions:**
-  - `https://saskstartupsolutions.ca/blogs`: Live tested & confirmed **"URL is available to Google / Page can be indexed"**. Priority indexing requested.
-  - `https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon`: Live tested & confirmed **"Page can be indexed"** (Breadcrumbs: 2 valid items detected). Priority indexing requested.
-  - `https://saskstartupsolutions.ca/blogs/saskatchewan-gst-pst-rules-for-small-business`: Live tested & confirmed **"URL is available to Google / Page can be indexed"**. Priority indexing requested (Status: "Indexing requested" modal confirmed).
-  - `https://saskstartupsolutions.ca/blogs/how-to-incorporate-in-saskatchewan-step-by-step-guide`: Live tested & priority indexing requested.
+The live production website (`https://saskstartupsolutions.ca/`) is hosted on **Emergent Cloud** behind Cloudflare CDN under Project **"Vici Registry Admin"** (`bf42bf06-08c2-40be-9c97-5ecd988db1ef`) in Org **"Vici Sask"** (`org_0f360b63-f4c5-4dad-b24c-142ffd034473`). 
 
-### High-DA Authority Backlinks Network (20 Live Assets)
-Published across official client properties and independent high-DA platforms (DA 75 – DA 91) without using personal accounts:
-* **Official Client Properties (Google Workspace / Blogger):**
-  - `https://vici-saskstartupsolutions.blogspot.com/2026/11/how-to-incorporate-small-business-in.html` (Keywords: `incorporate a business Saskatoon`, `how to incorporate in Saskatchewan`)
-  - `https://vici-saskstartupsolutions.blogspot.com/2026/11/blog-post_08.html` (Keywords: `small business bookkeeping Saskatoon`, `ISC annual return help Saskatoon`)
-  - `https://sites.google.com/clinkora.in/vici-saskstartupsolutions` (Verified client authority hub)
-* **Telegra.ph (DA 91):**
-  - `https://telegra.ph/How-to-Incorporate-a-Business-in-Saskatoon-Saskatchewan-Founder-Roadmap-11-08`
-  - `https://telegra.ph/Saskatchewan-GST-and-PST-Compliance-Small-Business-Registration-Thresholds-11-08`
-  - `https://telegra.ph/Catch-Up--Cleanup-Bookkeeping-in-Saskatoon-Resolving-Overdue-CRA-Tax-Records-11-08`
-* **Rentry.co (DA 82):**
-  - `https://rentry.co/abkfwqgm` (Saskatoon Business Incorporation & Entity Architecture)
-  - `https://rentry.co/ugf4qmg7` (Saskatchewan Small Business Bookkeeping & Sales Tax Protocol)
-  - `https://rentry.co/zaqoav2f` (Saskatchewan ISC Corporate Annual Returns: Compliance Protocol)
-  - `https://rentry.co/5kq2d8yx` (Saskatoon Bookkeeping Cleanup & CRA Catch-Up Accounting)
-  - `https://rentry.co/48pqg2fm` (Multilingual Business Setup for Newcomers in Saskatchewan)
-  - `https://rentry.co/owgh59ib` (Sole Proprietorship vs. Corporation in Saskatchewan)
-  - `https://rentry.co/3tkiouks` (Newcomer Entrepreneur Guide to Starting a Business in Saskatchewan)
-  - `https://rentry.co/x5arduhb` (Saskatchewan T2 Corporate Tax Filing: Deadlines & Rates)
-  - `https://rentry.co/3gmfufw4` (Saskatchewan GST and PST Rules for Small Businesses)
-  - `https://rentry.co/p2vf9xe7` (Bookkeeping for Trades & Construction Contractors in Saskatchewan)
-  - `https://rentry.co/zihieeka` (Saskatchewan Small Business Payroll & WCB Guide)
-  - `https://rentry.co/c5t5g6fw` (Notice to Reader & Compilation Financial Statements in Saskatoon)
-* **Write.as (DA 75):**
-  - `https://write.as/dr3gv5ds2flrc` (Saskatchewan Business Registration & ISC Roadmap)
-  - `https://write.as/v9k1jpzpcqs05` (Catch-Up Bookkeeping in Saskatoon: Resolving Overdue CRA Tax Records)
+Because code changes originate in the local environment and must propagate cleanly through GitHub into Emergent's containerized cloud builder, the deployment follows a strict 5-stage pipeline:
+
+```
+[Local Workspace: /Users/eshway/Desktop/NIPUN1]
+       │  (1. Test, Build & Commit)
+       ▼
+[GitHub Remote: origin/main]
+       │  (2. Git Fetch & Hard Reset in code-server)
+       ▼
+[Emergent Cloud Container: /app]
+       │  (3. Click "Publish changes" / "Republish")
+       ▼
+[Emergent Production Cloud Builder]
+       │  - Workspace ready & Changes packaged
+       │  - yarn build (Webpack 5 minification)
+       │  - Database verification & settings applied
+       │  - Deployment to cloud cluster (~4-5 mins)
+       ▼
+[Cloudflare CDN Edge & Live Site: https://saskstartupsolutions.ca/]
+       │  (4. Live Hash & Route Verification via curl)
+       ▼
+[Google Search Console: sc-domain:saskstartupsolutions.ca]
+          (5. Sitemap Submission & Priority Crawl Request)
+```
+
+---
+
+### Step-by-Step SOP for Deploying New Changes:
+
+#### Stage 1: Local Verification & Git Push
+1. Make code edits in `/Users/eshway/Desktop/NIPUN1`.
+2. Validate data files and build integrity:
+   ```bash
+   node -e "const p = require('./frontend/src/data/blogPosts.js'); console.log('Posts:', p.length);"
+   cd /Users/eshway/Desktop/NIPUN1/frontend && yarn build
+   ```
+3. Commit cleanly on `main`:
+   ```bash
+   git add -A
+   git commit -m "feat(seo): <clear semantic description>"
+   git push origin main
+   ```
+
+#### Stage 2: Synchronize Emergent's Container (`/app`)
+Emergent runs an internal web container with VS Code Web (`code-server`) mounted at `/app` (`https://vscode-410fd773-4076-4032-8496-66682b5db067.preview.emergentagent.com/?folder=/app`). The container filesystem must be synchronized with `origin/main` before triggering the build.
+* Inside the code-server bash terminal:
+  ```bash
+  cd /app
+  git fetch origin
+  git checkout main
+  git reset --hard origin/main
+  git --no-pager log -1 --oneline
+  ```
+* Verify the commit hash matches the local `git rev-parse HEAD`.
+
+#### Stage 3: Trigger Emergent Production Build & Publish
+1. Open the Emergent Project dashboard (`https://app.emergent.sh/workspace/org_0f360b63-f4c5-4dad-b24c-142ffd034473/chat`).
+2. Navigate to the **Publish** overview tab.
+3. Click **"Publish changes"** (or **"Republish"**).
+4. Monitor the build progress:
+   - `Workspace ready` (0m 10s)
+   - `Changes packaged` (0m 30s)
+   - `Building your website...` (React production build, ~3m 30s)
+   - `Website built` & `Database ready` (4m 20s)
+   - `Publishing your website to cloud... Installing your website on Emergent's servers` (4m 45s)
+   - **`Published`** / **`Deployment finished`** (5m 00s).
+
+#### Stage 4: Live Verification & Cache Invalidation Audit
+Once the build status shows "Published", verify Cloudflare CDN is serving the new bundle and routes:
+```bash
+# 1. Check live JavaScript bundle hash
+curl -s https://saskstartupsolutions.ca/ | grep -o 'static/js/main\.[^"]*'
+
+# 2. Check live sitemap URL count
+curl -s https://saskstartupsolutions.ca/sitemap.xml | grep -c "<loc>"
+
+# 3. Verify HTTP 200 on newly deployed routes
+curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
+```
+
+#### Stage 5: Google Search Console (GSC) Priority Crawling
+1. Access Google Search Console (`sc-domain:saskstartupsolutions.ca`) via client profile `access@clinkora.in`.
+2. Under **Indexing &rarr; Sitemaps**, resubmit `sitemap.xml` and verify the modal displays *"Sitemap submitted successfully"* with all discovered pages registered.
+3. Under **URL Inspection**, inspect each newly added URL &rarr; click **TEST LIVE URL** &rarr; verify *"URL is available to Google / Page can be indexed"* &rarr; click **REQUEST INDEXING** (*"URL was added to a priority crawl queue"*).
+
+---
+
+### Recent Production Releases
+
+#### 16th Publish (2026-11-09) — Current Live State
+* **Commit:** `3b0da7b` (*"feat(seo): add 2 new pillar blog guides (tax write-offs & business banking), update FAQs, and expand sitemap to 45 URLs"*)
+* **Live Production Bundle:** `static/js/main.f70d2ca5.js` (HTTP 200 OK)
+* **Sitemap URLs Discovered in GSC:** **45 URLs** (up from 41)
+* **New Pillar Blog Guides Deployed:**
+  1. `https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-tax-deductions-write-offs-guide`
+     - Focus: 1% Saskatchewan small business tax threshold on $600,000 active business income, motor vehicle write-offs, CCA rules, and non-refundable 6% PST handling.
+     - GSC Status: Live tested & verified available &bull; Added to priority crawl queue.
+  2. `https://saskstartupsolutions.ca/blogs/how-to-open-a-business-bank-account-in-saskatchewan`
+     - Focus: Commercial banking requirements, ISC 30-day Certificate of Status, Directors' Banking Resolution, and CUDGC unlimited deposit protection at Saskatchewan credit unions.
+     - GSC Status: Live tested & verified available &bull; Added to priority crawl queue.
+
+#### 15th Publish (2026-11-09)
+* **Commit:** `f031924`
+* **Live Production Bundle:** `static/js/main.4117b857.js`
+* **Features:** Route aliases `/about` and `/team` &rarr; `Staff.jsx`, Schema.org `@graph` preservation of LocalBusiness NAP across all pages, dynamic article Open Graph images.
+
+---
+
+### High-DA Authority Backlinks Network (31 Live Assets)
+Published across official client properties and independent high-DA platforms (DA 75 – DA 99) without using personal accounts:
+* **Google Blogger (DA 99):** [`https://vicisaskatoon.blogspot.com/`](https://vicisaskatoon.blogspot.com/) (2 published guides)
+* **Google Sites (DA 97):** [`https://sites.google.com/view/saskstartupsolutions/home`](https://sites.google.com/view/saskstartupsolutions/home) (Multi-section hub)
+* **Telegra.ph (DA 91):** 3 live published guides
+* **Rentry.co (DA 82):** **23 live published articles**, including new assets for the 2 latest pillar guides:
+  - `https://rentry.co/m6fygdfu` (*Saskatchewan Small Business Tax Deductions & CRA Write-Offs Guide*)
+  - `https://rentry.co/un4wphbd` (*How to Open a Business Bank Account in Saskatchewan: Document Checklist*)
+  - 21 individual pillar and cluster article citations cross-referencing all 18 guides and main service routes.
 
 ---
 
 ## 10. Directives for Successor AI Agent
 
 If you are a new AI agent resuming this session:
-1. **Read this file thoroughly** — all necessary context is right here.
-2. **Current Status:** All 16 SEO/AEO/GEO checklist items and the dedicated `/blogs` architecture are completed, tested, committed to Git `main` (clean commit `31762b4`), deployed to live production on Emergent (12th Publish), verified in Google Search Console, and backlinked across 18 authority URLs.
-3. **Emergency Rollback:** Annotated tag `seo-baseline` and branch `baseline-backup` remain available if rollback is ever requested.
-4. **Local Build Server:** `http://localhost:3000` is running in background.
-5. **Git Status:** Working tree clean on `main`, tracked `.env` removed, all credentials sanitized. Repository can remain Private.
+1. **Read this file thoroughly** — all necessary context and deployment procedures are right here.
+2. **Current Status:** All 16 SEO/AEO/GEO checklist items, 18 pillar blog guides (71,000+ words), and 45 sitemap URLs are completed, tested, committed to Git `main` (`3b0da7b`), deployed to live production on Emergent (**16th Publish**, bundle `main.f70d2ca5.js`), verified in Google Search Console, and backlinked across 31 authority URLs.
+3. **Deployment Workflow:** Always follow the 5-stage SOP in Section 9: commit & push locally &rarr; reset `/app` in code-server to `origin/main` &rarr; click Republish in Emergent &rarr; verify live bundle &rarr; submit to GSC.
+4. **Emergency Rollback:** Annotated tag `seo-baseline` and branch `baseline-backup` remain available if rollback is ever requested.
+5. **Local Build Server:** `http://localhost:3000` is running in background.
+6. **Git Status:** Working tree clean on `main`, tracked `.env` removed, all credentials sanitized. Repository can remain Private.
