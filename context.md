@@ -375,6 +375,28 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
      - Focus: CSRS 4200 Compilation Engagement standard replacing legacy Notice to Reader (NTR), commercial bank loan and credit union requirements (Affinity, Conexus, RBC, BDC), and how monthly bookkeeping cuts year-end CPA fees by up to 60%.
      - GSC Status: Priority live indexing submission in-progress.
 
+#### 18th Publish (2026-11-09) - In Progress / Deploying
+* **Commit:** `192e76d` (*"feat(seo): add Posts 21 and 22 (USA Shareholder Agreements & Saskatchewan PST SETS) expanding to 53 sitemap URLs"*)
+* **Local Bundle:** `static/js/main.8e4cecbe.js` (Compiled successfully)
+* **Sitemap URLs Discovered in GSC:** **53 URLs** (up from 49)
+* **Pillar Blog Guides Deployed:**
+  1. `https://saskstartupsolutions.ca/blogs/unanimous-shareholder-agreement-saskatchewan-guide`
+     - Focus: Section 140 of *The Business Corporations Act, 2021* (Saskatchewan), stripping director powers, 50/50 deadlocks, shotgun clauses, ROFR, tag-along/drag-along, corporate-owned life insurance buyouts via Capital Dividend Accounts (CDA), and single-shareholder deemed USAs.
+  2. `https://saskstartupsolutions.ca/blogs/saskatchewan-pst-registration-etax-services-guide`
+     - Focus: Zero small-supplier exemption for PST (vs $30k CRA GST), Vendor's Licence vs Registered Consumer Number (RCN), 6% rate (11% combined), Saskatchewan eTax Services (SETS) registration, 24-hour password rule, out-of-province self-assessment, and nil returns.
+
+#### 17th Publish (2026-11-09) - DEPLOYED & LIVE
+* **Commit:** `c36d55f` (*"feat(seo): add 2 new pillar guides (WCB Saskatchewan & Notice to Reader compilation), expand sitemap to 49 URLs, and update FAQs, nittish03"*)
+* **Live Production Bundle:** `static/js/main.1ef466c8.js` (HTTP 200 OK)
+* **Sitemap URLs Discovered in GSC:** **49 URLs** (up from 45, verified in GSC screenshot `gsc_sitemap_49_discovered.png`)
+* **Pillar Blog Guides Deployed & Live-Indexed:**
+  1. `https://saskstartupsolutions.ca/blogs/wcb-saskatchewan-employer-registration-payroll-guide`
+     - Focus: Mandatory 30-day registration under *The Workers' Compensation Act, 2013*, 2026 assessable earnings ceiling ($103,425), joint liability traps on sub-contractors, mandatory clearance letters, and Feb 28 EPS filing.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_wcb_guide_indexing_requested.png`).
+  2. `https://saskstartupsolutions.ca/blogs/notice-to-reader-compilation-engagement-saskatchewan-guide`
+     - Focus: CPA Canada CSRS 4200 standard replacing Section 9200 NTR, commercial bank loan underwriting (Affinity, Conexus, RBC, BDC), Schedule 1 net income reconciliation, and how monthly bookkeeping slashes year-end CPA fees by 60%.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_notice_to_reader_indexing_requested.png`).
+
 #### 16th Publish (2026-11-09)
 * **Commit:** `3b0da7b` (*"feat(seo): add 2 new pillar blog guides (tax write-offs & business banking), update FAQs, and expand sitemap to 45 URLs"*)
 * **Live Production Bundle:** `static/js/main.f70d2ca5.js` (HTTP 200 OK)
@@ -394,18 +416,21 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ---
 
-### High-DA Authority Backlinks Network (33 Live Assets)
-Published across official client properties and independent high-DA platforms (DA 75 – DA 99) without using personal accounts:
+### High-DA Authority Backlinks Network (37 Live Assets)
+Published across official client properties and independent high-DA platforms (DA 75 – DA 99) strictly under client credentials (`access@clinkora.in`) without using any personal accounts:
+* **Tumblr (DA 99):** [`https://www.tumblr.com/saskstartupsolutions/832774413762117632/saskatchewan-founders-playbook-cra-tax`](https://www.tumblr.com/saskstartupsolutions/832774413762117632/saskatchewan-founders-playbook-cra-tax) (*Saskatchewan Founder's Playbook: CRA Tax Deductions, Commercial Banking, and Bookkeeping Architecture* &bull; Screenshot: `tumblr_article_live.png`)
+* **Substack (DA 92):** [`https://saskstartupsolutions.substack.com/p/saskatchewan-small-business-financial`](https://saskstartupsolutions.substack.com/p/saskatchewan-small-business-financial) (*Saskatchewan Small Business Financial Blueprint: CRA Tax Deductions, Corporate Banking & Bookkeeping Architecture* &bull; Screenshot: `substack_article_live.png`)
 * **Google Blogger (DA 99):** [`https://vicisaskatoon.blogspot.com/`](https://vicisaskatoon.blogspot.com/) (2 published guides)
-* **Google Sites (DA 97):** [`https://sites.google.com/view/saskstartupsolutions/home`](https://sites.google.com/view/saskstartupsolutions/home) (Multi-section hub)
+* **Google Sites (DA 97):** [`https://sites.google.com/view/saskstartupsolutions/home`](https://sites.google.com/view/saskstartupsolutions/home) (Multi-section authority hub)
 * **Telegra.ph (DA 91):** 3 live published guides
-* **Rentry.co (DA 82):** **25 live published articles**, including new assets for the latest pillar guides:
+* **Rentry.co (DA 82):** **27 live published articles**, including new assets for Posts 21 and 22:
+  - `https://rentry.co/o2t4wfhx` (*Unanimous Shareholder Agreement (USA) Saskatchewan: Small Business Co-Founder & SBCA 2021 Legal Architecture*)
+  - `https://rentry.co/q7rwdeug` (*Saskatchewan PST Registration & SETS Guide: Provincial Sales Tax Rules, 6% Rates & Small Business E-Filing*)
   - `https://rentry.co/da233xt9` (*WCB Saskatchewan Employer Registration & Payroll Compliance Guide*)
   - `https://rentry.co/rw5ukwaw` (*Notice to Reader vs. Compilation Engagement CSRS 4200 in Saskatchewan*)
   - `https://rentry.co/m6fygdfu` (*Saskatchewan Small Business Tax Deductions & CRA Write-Offs Guide*)
   - `https://rentry.co/un4wphbd` (*How to Open a Business Bank Account in Saskatchewan: Document Checklist*)
-  - 21 individual pillar and cluster article citations cross-referencing all 18 guides and main service routes.
-* **Medium & Tumblr (DA 96 & 99):** In-progress automated publishing by Web2 Publisher subagent.
+  - 21 individual pillar and cluster article citations cross-referencing all earlier guides and main service routes.
 
 ---
 
