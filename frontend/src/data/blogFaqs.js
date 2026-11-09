@@ -259,5 +259,61 @@ export const BLOG_FAQS = {
       "q": "What are the entrepreneur requirements for the Saskatchewan Immigrant Nominee Program (SINP)?",
       "a": "The SINP Entrepreneur Category requires a minimum net worth of $500,000 CAD, an investment of at least $300,000 CAD in Saskatoon (or $200,000 CAD outside), active management, and the creation of at least two jobs for Canadian citizens/permanent residents if based in Saskatoon."
     }
+  ],
+  "saskatchewan-small-business-tax-deductions-write-offs-guide": [
+      {
+          "q": "What is the small business corporate tax rate in Saskatchewan?",
+          "a": "Saskatchewan offers a 1% provincial small business corporate income tax rate on active business income up to ,000 (compared to the ,000 federal limit). Combined with the federal 9% rate, eligible corporations pay a combined rate of only 10%."
+      },
+      {
+          "q": "Is Saskatchewan PST (6%) refundable like federal GST?",
+          "a": "No. Unlike the 5% federal GST which is refundable through Input Tax Credits (ITCs), Saskatchewan Provincial Sales Tax (PST) is non-refundable. It must be added to the cost basis of capital assets or deducted as an operating expense."
+      },
+      {
+          "q": "What records does the CRA require for business vehicle deductions?",
+          "a": "The CRA requires a contemporaneous mileage log recording the date of each business trip, destination, commercial purpose, and exact kilometers driven, alongside total odometer readings at the beginning and end of the fiscal year."
+      }
+  ],
+  "how-to-open-a-business-bank-account-in-saskatchewan": [
+      {
+          "q": "What documents are required to open a corporate bank account in Saskatchewan?",
+          "a": "Corporations require Certificate and Articles of Incorporation, an ISC Certificate of Status or Corporate Profile issued within the last 30 days, a signed Directors Banking Resolution, CRA Business Number confirmation, and photo ID for all 25%+ shareholders."
+      },
+      {
+          "q": "What is the deposit insurance advantage of Saskatchewan Credit Unions?",
+          "a": "Saskatchewan credit unions (such as Affinity and Conexus) offer 100% unlimited deposit protection guaranteed by the Credit Union Deposit Guarantee Corporation (CUDGC), whereas chartered banks are limited to ,000 per category under CDIC."
+      },
+      {
+          "q": "Can a Saskatchewan sole proprietorship use a personal bank account for business?",
+          "a": "While legally possible for sole proprietors operating strictly under their legal name, mixing personal and business funds makes accounting chaotic, risks disallowed CRA deductions, and complicates GST/PST audits. Opening a dedicated commercial account is strongly recommended."
+      }
+  ],
+  "wcb-saskatchewan-employer-registration-payroll-guide": [
+      {
+          "q": "When must a Saskatchewan employer register with WCB?",
+          "a": "Under Section 122 of The Workers' Compensation Act, 2013, an employer must register with WCB Saskatchewan within 30 calendar days of hiring their first worker."
+      },
+      {
+          "q": "What happens if a contractor does not obtain a WCB clearance letter in Saskatchewan?",
+          "a": "Under Saskatchewan law, if you hire an unregistered or delinquent subcontractor without obtaining a WCB Clearance Letter before payment, you become jointly and severally liable for all unpaid WCB premiums and assessments incurred by that subcontractor."
+      },
+      {
+          "q": "What is the annual reporting deadline for WCB Saskatchewan payroll?",
+          "a": "Every registered employer must file their Annual Employer Payroll Statement (EPS) with WCB Saskatchewan by February 28 each year, reporting actual prior-year gross payroll and estimated current-year payroll."
+      }
+  ],
+  "notice-to-reader-compilation-engagement-saskatchewan-guide": [
+      {
+          "q": "What is the difference between Notice to Reader and Compilation Engagement?",
+          "a": "They describe the same level of unaudited reporting. In December 2021, CPA Canada officially retired the legacy Notice to Reader (NTR) standard (Section 9200) and replaced it with CSRS 4200 (Compilation Engagements), requiring an explicit basis of accounting note and clear intended-user scope."
+      },
+      {
+          "q": "Why do banks in Saskatchewan require Compilation Engagement financial statements?",
+          "a": "Lenders at Affinity Credit Union, Conexus, RBC, and BDC require CSRS 4200 compilation financial statements because they present standardized GAAP/ASPE formatting, reconcile net income to CRA T2 filings, and provide verified asset depreciation and debt schedules."
+      },
+      {
+          "q": "How does monthly bookkeeping lower year-end compilation accounting fees?",
+          "a": "Maintaining clean monthly books with pre-reconciled bank feeds, asset schedules, and sales tax ledgers eliminates 20 to 30 billable cleanup hours by year-end CPAs, cutting final accounting invoices by up to 60%."
+      }
   ]
 };
