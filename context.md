@@ -363,6 +363,21 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ### Recent Production Releases
 
+#### 21st Publish (2026-11-09) — DEPLOYED & LIVE
+* **Commit:** `fa6d383` (*"feat(seo): embed 100% Top 50 target keywords, add Posts 27-30 (30 pillar guides), and expand sitemap to 69 URLs"*)
+* **Live Production Bundle:** 21st Publish deployed on Emergent Cloud Cluster (commit `fa6d383`)
+* **Sitemap URLs:** **69 URLs** (`https://saskstartupsolutions.ca/sitemap.xml`)
+* **Top 50 Keywords Verbatim Audit:** **50/50 Exact Matches (100% Verbatim Coverage)** in `Home.jsx`, `Services.jsx`, `Faq.jsx`, and `Staff.jsx`.
+* **Pillar Blog Guides Deployed (Posts 27-30, Total 30 Guides / 105,000+ Words):**
+  1. `https://saskstartupsolutions.ca/blogs/how-to-register-a-business-name-in-saskatchewan-guide` (Post 27)
+     - Focus: ISC Name Reservation ($50) + Registration Statement ($65, $115 total), Sole Prop vs Partnership, Nuans search, CRA BN9, GST $30,000 rule, 6% PST on SETS, WCB within 30 days, commercial banking.
+  2. `https://saskstartupsolutions.ca/blogs/saskatoon-small-business-startup-incorporation-bookkeeping-guide` (Post 28)
+     - Focus: First-time founder support, Forms 1, 2, 3, director consents, 1-3 business day turnaround, monthly bookkeeping setup, mandatory 6-year CRA record retention under ITA 230(4), digital receipts under IC78-10R5, multilingual support (EN, FR, RU, HY).
+  3. `https://saskstartupsolutions.ca/blogs/saskatoon-business-incorporation-services-cost-timeline-guide` (Post 29)
+     - Focus: Incorporation help Saskatoon, ISC statutory fees ($305 total), realistic timelines, Class A/B/C multi-class shares, minute book vault, Section 85 ITA asset rollover, and Saskatchewan's 1% small business tax rate ($600K threshold).
+  4. `https://saskstartupsolutions.ca/blogs/saskatoon-small-business-bookkeeping-services-freelancers-consultants-guide` (Post 30)
+     - Focus: Local Saskatoon bookkeeper vs remote call centers, monthly reconciliations, sole proprietor T2125, freelancer multi-currency, emergency bookkeeping cleanup for overdue CRA records, and cloud workflows (QBO/Xero).
+
 #### 20th Publish (2026-11-09) — DEPLOYED & LIVE
 * **Commit:** `cf1ec9b` (*"feat(seo): add Posts 25 and 26 (Grants/STSI incentives & Corporate Dissolution TX19) expanding to 61 sitemap URLs"*)
 * **Live Production Bundle:** `static/js/main.7f7c34f0.js` / Emergent commit `40e619f` (HTTP 200 OK)
@@ -401,7 +416,7 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ---
 
-### High-DA Authority Backlinks Network (50 Live Assets)
+### High-DA Authority Backlinks Network (58 Live Assets)
 Published across official client properties and independent high-DA platforms (DA 75 – DA 99) strictly under client credentials (`access@clinkora.in`) without using any personal accounts (STRICTLY NO PERSONAL GITHUB OR LINKEDIN):
 * **Tumblr (DA 99):** [`https://www.tumblr.com/saskstartupsolutions/832774413762117632/saskatchewan-founders-playbook-cra-tax`](https://www.tumblr.com/saskstartupsolutions/832774413762117632/saskatchewan-founders-playbook-cra-tax) (*Saskatchewan Founder's Playbook: CRA Tax Deductions, Commercial Banking, and Bookkeeping Architecture* &bull; Screenshot: `tumblr_article_live.png`)
 * **Substack (DA 92):** [`https://saskstartupsolutions.substack.com/p/saskatchewan-small-business-financial`](https://saskstartupsolutions.substack.com/p/saskatchewan-small-business-financial) (*Saskatchewan Small Business Financial Blueprint: CRA Tax Deductions, Corporate Banking & Bookkeeping Architecture* &bull; Screenshot: `substack_article_live.png`)
@@ -413,21 +428,22 @@ Published across official client properties and independent high-DA platforms (D
   - `https://telegra.ph/Commercial-Lease-Agreement-Saskatchewan-Small-Business-Tenant-Guide-to-Triple-Net-11-09`
   - `https://telegra.ph/Unanimous-Shareholder-Agreement-USA-Saskatchewan-Small-Business-Legal-Architecture-11-09` (*links to Post 21*)
   - `https://telegra.ph/Saskatchewan-PST-Registration--SETS-Guide-Provincial-Sales-Tax-Rules--6-Rates-11-09` (*links to Post 22*)
-* **Rentry.co (DA 82):** **33 live published articles**, including:
+* **Rentry.co (DA 82):** **37 live published articles**, including:
+  - `https://rentry.co/2achzn3o` (*Business Incorporation Services in Saskatoon: Costs, ISC Timelines and Share Structuring* &bull; Top 50 Keywords)
+  - `https://rentry.co/2t7zwcgf` (*Small Business Bookkeeping in Saskatoon: Guide for Freelancers, Consultants & Corporations* &bull; Top 50 Keywords)
+  - `https://rentry.co/4x89ixkx` (*How to Register a Business Name in Saskatchewan: ISC Process, Costs & Sole Proprietorship Setup* &bull; Top 50 Keywords)
+  - `https://rentry.co/ewq48q2c` (*Starting a Business in Saskatoon: First-Time Founder Support, Incorporation Documents & CRA Compliance* &bull; Top 50 Keywords)
   - `https://rentry.co/gexrbtxu` (*Saskatchewan Farm Corporation Tax Planning: Section 85 ITA Rollovers & $1.25M LCGE Exemption*)
   - `https://rentry.co/mxikx5og` (*Saskatchewan Commercial Lease Guide: Triple Net (NNN), CAM Expenses and Tenant Protections*)
   - `https://rentry.co/iftd2pzm` (*Saskatchewan Small Business Grants & Funding: STSI 45% Tax Credit and Innovation Incentives*)
   - `https://rentry.co/7wkx4xz6` (*How to Dissolve a Corporation in Saskatchewan: ISC Articles of Dissolution & CRA Clearance (TX19)*)
-  - `https://rentry.co/ib2mqgri` (*Saskatchewan Agri-Business Incorporation: Farm Corporation Tax Planning, $1.25M+ LCGE & Family Succession Architecture*)
-  - `https://rentry.co/zwse6dxm` (*Commercial Lease Agreement Saskatchewan: Small Business Tenant Guide to Triple Net (NNN), CAM Costs & SBCA 2021 Protections*)
-  - `https://rentry.co/o2t4wfhx` (*Unanimous Shareholder Agreement (USA) Saskatchewan: Small Business Co-Founder & SBCA 2021 Legal Architecture*)
-  - `https://rentry.co/q7rwdeug` (*Saskatchewan PST Registration & SETS Guide: Provincial Sales Tax Rules, 6% Rates & Small Business E-Filing*)
-  - + 25 earlier live articles.
-* **Write.as (DA 75):** **5 live published articles**, including:
-  - `https://write.as/awys9l1cza0ar.md`
-  - `https://write.as/i2royqq1xercz.md`
-  - `https://write.as/wuumxi3dgkzmh.md`
-  - + 2 earlier live articles.
+  - + 29 earlier live articles.
+* **Write.as (DA 75):** **9 live published articles**, including:
+  - `https://write.as/oy5gfays62f1x` (*Business Incorporation Services in Saskatoon: Costs, ISC Timelines and Share Structuring*)
+  - `https://write.as/pqqmx4ziu2vuh` (*Small Business Bookkeeping in Saskatoon: Guide for Freelancers, Consultants & Corporations*)
+  - `https://write.as/w8a8wqo29hcs4` (*How to Register a Business Name in Saskatchewan: ISC Process, Costs & Sole Proprietorship Setup*)
+  - `https://write.as/s9f1quho11y6f` (*Starting a Business in Saskatoon: First-Time Founder Support, Incorporation Documents & CRA Compliance*)
+  - + 5 earlier live articles.
 
 ---
 
