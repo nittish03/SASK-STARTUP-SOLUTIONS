@@ -20,7 +20,7 @@ export default function Seo({ title, description, path = "/", noindex = false, t
 
   const defaultEntitySchema = {
     "@context": "https://schema.org",
-    "@type": ["AccountingService", "FinancialService"],
+    "@type": ["AccountingService", "LocalBusiness", "FinancialService"],
     "@id": `${SITE_URL}/#organization`,
     "name": "Vici SaskStartupSolutions",
     "legalName": "Vici SaskStartupSolutions",
@@ -31,6 +31,7 @@ export default function Seo({ title, description, path = "/", noindex = false, t
     "telephone": "+1-306-960-0091",
     "email": "Saskstartupsolutions@viciconsulting.ca",
     "priceRange": "$$",
+    "hasMap": "https://maps.app.goo.gl/131Hpy68DZoQbHv18",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "539 Avenue I N",
@@ -95,6 +96,17 @@ export default function Seo({ title, description, path = "/", noindex = false, t
     ]
   };
 
+  // Merge custom page schema with default organization entity using @graph
+  const finalSchema = schema
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [
+          defaultEntitySchema,
+          ...(Array.isArray(schema) ? schema : [schema]),
+        ],
+      }
+    : defaultEntitySchema;
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -116,14 +128,17 @@ export default function Seo({ title, description, path = "/", noindex = false, t
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={cardImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={cardImage} />
 
-      {/* Global Entity Structured Data */}
+      {/* Linked Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(schema || defaultEntitySchema)}
+        {JSON.stringify(finalSchema)}
       </script>
 
       {children}

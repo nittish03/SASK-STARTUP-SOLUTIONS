@@ -10,14 +10,18 @@ export default function Staff() {
   const photo = sc.staffPhoto || "/media/patrick-vachon.jpg";
 
   const staffSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "name": "Patrick Vachon — Vici SaskStartupSolutions",
+    "@type": ["AboutPage", "ProfilePage"],
+    "@id": "https://saskstartupsolutions.ca/staff#webpage",
+    "name": "Patrick Vachon — Practice Lead | Vici SaskStartupSolutions",
     "url": "https://saskstartupsolutions.ca/staff",
     "mainEntity": {
       "@type": "Person",
+      "@id": "https://saskstartupsolutions.ca/staff#patrick-vachon",
       "name": "Patrick Vachon",
       "jobTitle": "Founder & Lead Administrator",
+      "telephone": "+1-306-960-0091",
+      "email": "Saskstartupsolutions@viciconsulting.ca",
+      "image": "https://saskstartupsolutions.ca/media/patrick-vachon.jpg",
       "worksFor": {
         "@type": "AccountingService",
         "name": "Vici SaskStartupSolutions",
@@ -37,6 +41,10 @@ export default function Staff() {
         { "@type": "Language", "name": "French" },
         { "@type": "Language", "name": "Russian" },
         { "@type": "Language", "name": "Armenian" }
+      ],
+      "sameAs": [
+        "https://maps.app.goo.gl/131Hpy68DZoQbHv18",
+        "https://taplink.cc/saskstartupsolutions"
       ],
       "description": "Founder and lead administrator at Vici SaskStartupSolutions in Saskatoon, SK. Helping small businesses with full-service bookkeeping, T2 corporate tax filing administration, and Saskatchewan ISC corporate registry compliance."
     }

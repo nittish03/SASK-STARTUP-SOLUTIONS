@@ -54,12 +54,30 @@ export default function Blog() {
     });
   }, [posts, activeCategory]);
 
+  const blogSchema = {
+    "@type": "CollectionPage",
+    "@id": "https://saskstartupsolutions.ca/blogs#collection",
+    "name": "Small Business & Startup Blog Saskatoon",
+    "url": "https://saskstartupsolutions.ca/blogs",
+    "description": "Comprehensive guides on small business bookkeeping, Saskatchewan incorporation, ISC business registration, T2 corporate tax filing, and CRA compliance.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": posts.map((p, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "url": `https://saskstartupsolutions.ca/blogs/${p.slug}`,
+        "name": p.title,
+      })),
+    },
+  };
+
   return (
     <div data-testid="blog-page">
       <Seo
         title="Small Business & Startup Blog Saskatoon | 16 Bookkeeping & Tax Guides | Vici"
         description="Comprehensive guides on small business bookkeeping, Saskatchewan incorporation, ISC business registration, T2 corporate tax filing, and CRA compliance for Saskatoon entrepreneurs."
         path="/blogs"
+        schema={blogSchema}
       />
       <section className="bg-bookgreen" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-[950px] px-4 py-20 sm:px-6 sm:py-28">

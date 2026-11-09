@@ -110,6 +110,8 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/booking" element={<Booking />} />
               <Route path="/staff" element={<Staff />} />
+              <Route path="/about" element={<Staff />} />
+              <Route path="/team" element={<Staff />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/blogs" element={<Blog />} />

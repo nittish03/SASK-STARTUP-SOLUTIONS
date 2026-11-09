@@ -200,7 +200,7 @@ export default function Contact() {
         <div className="mx-auto max-w-[720px] px-4 py-16 sm:px-6 sm:py-24">
           <Reveal>
             <h2 id="contact-form-heading" data-testid="contact-form-heading" className="text-center font-serif text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl">
-              {cc.formHeading || "Contact us"}
+              {cc.formHeading || "Send Us a Message"}
             </h2>
             <p className="mt-4 text-center font-serif text-base leading-relaxed text-white sm:text-lg">
               {cc.formIntro || "Reach out to us and let us know if there is anything we can do for you"}
