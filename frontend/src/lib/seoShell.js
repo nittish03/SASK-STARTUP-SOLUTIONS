@@ -8,7 +8,7 @@ export const HOME_DESCRIPTION =
 
 export const HOME_URL = "https://saskstartupsolutions.ca/";
 
-export const HOME_OG_IMAGE = "https://saskstartupsolutions.ca/og-image.jpg";
+export const HOME_OG_IMAGE = "https://saskstartupsolutions.ca/og-image.jpg?v=3";
 
 const SHELL = "home";
 
