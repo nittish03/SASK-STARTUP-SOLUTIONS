@@ -363,15 +363,17 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ### Recent Production Releases
 
-#### 20th Publish (2026-11-09) — Deploying & In Verification
+#### 20th Publish (2026-11-09) — DEPLOYED & LIVE
 * **Commit:** `cf1ec9b` (*"feat(seo): add Posts 25 and 26 (Grants/STSI incentives & Corporate Dissolution TX19) expanding to 61 sitemap URLs"*)
-* **Total Pillar Blog Guides:** **26 comprehensive guides (over 93,000 words)**
-* **Sitemap URLs Discovered in GSC:** **61 URLs** (up from 57)
-* **New Pillar Blog Guides Deployed:**
+* **Live Production Bundle:** `static/js/main.7f7c34f0.js` / Emergent commit `40e619f` (HTTP 200 OK)
+* **Sitemap URLs Discovered in GSC:** **61 URLs** (Status: Success, verified in GSC screenshot `gsc_sitemap_61_discovered.png`)
+* **Pillar Blog Guides Deployed & Live-Indexed:**
   1. `https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-grants-funding-tax-incentives-guide`
      - Focus: Non-dilutive capital, Saskatchewan Technology Startup Incentive (STSI) 45% angel investor tax credit, Saskatchewan Commercial Innovation Incentive (SCII) 6% patent box, PrairiesCan BSP $500K–$5M interest-free funding, doubled $2,000,000 SR&ED CCPC expenditure limit, and project-based general ledger tracking.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_grants_guide_indexing_requested.png`).
   2. `https://saskstartupsolutions.ca/blogs/dissolve-corporation-saskatchewan-isc-cra-clearance-guide`
      - Focus: Statutory corporate dissolution under *The Business Corporations Act, 2021* (SBCA 2021) Section 210, personal director liability traps under Section 159(3) ITA, CRA Form TX19 (*Asking for a Clearance Certificate*), SETS PST account closure, WCB payroll reconciliation, ISC Form 17 Articles of Dissolution, and 6-year record retention rule.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_dissolution_guide_indexing_requested.png`).
 
 #### 19th Publish (2026-11-09) — DEPLOYED & LIVE
 * **Commit:** `181d560` (*"feat(seo): add Posts 23 and 24 (Agri-Business Farm Rollover & Commercial Lease) expanding sitemap to 57 URLs"*)
