@@ -448,4 +448,94 @@ export const BLOG_FAQS = {
         "a": "Under Subsection 230(4) of the Income Tax Act, directors must retain all financial records, corporate minute books, tax returns, bank statements, and supporting receipts for at least six full years following the dissolution date."
     }
 ],
+  "how-to-register-a-business-name-in-saskatchewan-guide": [
+    {
+        "q": "What is the cost to register a business name in Saskatchewan?",
+        "a": "The total statutory government fee to register a business name (sole proprietorship or partnership) in Saskatchewan is $115 CAD paid to Information Services Corporation (ISC): $50 for the Name Reservation and $65 for the Registration Statement."
+    },
+    {
+        "q": "How long does the business name registration process take in Saskatchewan?",
+        "a": "Online name reservations through ISC Corporate Online typically take 1 to 3 business days for approval. Once approved, filing the registration statement takes 1 to 2 business days, completing the entire process within 2 to 5 business days."
+    },
+    {
+        "q": "What is the difference between registering a business name and incorporating in Saskatchewan?",
+        "a": "Registering a business name creates a sole proprietorship or partnership ($115 fee); the business is not a separate legal entity, and the owner carries unlimited personal liability. Incorporating creates a separate corporation ($305 statutory fee) with limited liability protection and access to the 10% active small business corporate tax rate."
+    },
+    {
+        "q": "What do I need to register a business name in Saskatchewan?",
+        "a": "You need a proposed business name that satisfies ISC availability rules, an approved Name Reservation ($50), the business structure (sole proprietor or partnership), a physical Saskatchewan street address, a description of primary commercial activities, and full owner/partner identification."
+    },
+    {
+        "q": "What comes after registering a business name in Saskatchewan?",
+        "a": "Immediately activate your CRA 9-digit Business Number, open a commercial business bank account, register for Saskatchewan PST on SETS (mandatory from your first dollar of taxable sales), evaluate the $30,000 GST threshold, obtain a municipal business licence from the City of Saskatoon, and set up monthly bookkeeping."
+    }
+],
+  "saskatoon-small-business-startup-incorporation-bookkeeping-guide": [
+    {
+        "q": "What incorporation documents are needed in Saskatchewan?",
+        "a": "To incorporate in Saskatchewan through ISC, you need: an approved Saskatchewan Corporate Name Reservation (or numbered corporation request), Articles of Incorporation (Form 1) detailing share structures, Notice of Registered Office (Form 2) with a Saskatchewan street address, Notice of Directors (Form 3), and signed Director Consents."
+    },
+    {
+        "q": "How long does incorporation take in Saskatchewan?",
+        "a": "Online incorporation filings submitted via Information Services Corporation (ISC) Corporate Online are typically reviewed and approved within 1 to 3 business days. The entire setup, including name reservation, is generally completed within 3 to 5 business days."
+    },
+    {
+        "q": "What records should a small business keep in Saskatchewan?",
+        "a": "Saskatchewan businesses must maintain complete general ledgers, detailed vendor expense receipts, sales invoices, merchant reports, bank statements, payroll source deduction records, and corporate minute books for at least six full years under CRA rules."
+    },
+    {
+        "q": "Can I keep business receipts digitally in Saskatchewan?",
+        "a": "Yes. Under CRA Information Circular IC78-10R5, digital optical scans and PDF electronic receipts are fully recognized as valid audit documentation, provided the scans are clear, complete, and maintained securely for the six-year retention period."
+    },
+    {
+        "q": "Where can I get first-time business owner support or newcomer setup help in Saskatoon?",
+        "a": "Vici SaskStartupSolutions offers free introductory consultations in Saskatoon for first-time founders and newcomers, providing startup guidance, ISC corporate registration, CRA tax account activation, and multilingual bookkeeping in English, French, Russian, and Armenian."
+    }
+],
+  "saskatoon-business-incorporation-services-cost-timeline-guide": [
+    {
+        "q": "How much does it cost to incorporate a business in Saskatoon?",
+        "a": "The mandatory statutory government fee payable to Information Services Corporation (ISC) is $305.00 CAD ($50 for the Name Reservation Request and $255 for filing Articles of Incorporation). Numbered corporations pay $255.00 CAD. Professional legal and corporate registry setup fees vary based on share structure complexity."
+    },
+    {
+        "q": "How long does incorporation take in Saskatchewan?",
+        "a": "Standard electronic incorporation via ISC typically takes 1 to 3 business days for name approval, followed by 24 to 48 hours for corporate registration. Full operational setup\u2014including CRA corporate tax accounts, GST registration, and bank account onboarding\u2014generally takes 3 to 5 business days."
+    },
+    {
+        "q": "What documents are required to incorporate in Saskatchewan?",
+        "a": "You must submit Form 1 (Articles of Incorporation), Form 2 (Notice of Registered Office), Form 3 (Notice of Directors), along with an approved ISC Name Reservation number. Founding directors must also execute signed Director Consents and formal organization minutes."
+    },
+    {
+        "q": "Can a newcomer or non-resident incorporate a corporation in Saskatoon?",
+        "a": "Yes. Under Saskatchewan's The Business Corporations Act, 2021, there are no Canadian residency requirements for corporate directors. International entrepreneurs, permanent residents, work permit holders, and newcomers can legally incorporate and direct a Saskatchewan corporation."
+    },
+    {
+        "q": "What is the difference between incorporating federally vs provincially in Saskatchewan?",
+        "a": "A federal corporation under the CBCA grants nationwide name protection and requires at least 25% Canadian resident directors, but must still be extra-provincially registered in Saskatchewan with ISC. Provincial incorporation under SBCA 2021 has no Canadian residency restriction, involves single-tier annual reporting, and is simpler and more cost-effective for Saskatchewan-focused enterprises."
+    }
+],
+  "saskatoon-small-business-bookkeeping-services-freelancers-consultants-guide": [
+    {
+        "q": "Why should I hire a local Saskatoon bookkeeper instead of an out-of-province call center?",
+        "a": "Saskatchewan possesses specific provincial tax rules\u2014including 6% PST with no small-supplier exemption, Saskatchewan eTax Services (SETS) protocols, and WCB industry assessments\u2014that out-of-province or foreign virtual assistants frequently mishandle. A local Saskatoon bookkeeper understands local commercial realities, provincial tax audits, and local banking relationships."
+    },
+    {
+        "q": "When does a Saskatchewan business need to register for GST?",
+        "a": "Under CRA rules, you must register for GST when your worldwide gross taxable revenues exceed $30,000 CAD in a single calendar quarter or across four consecutive calendar quarters. However, registering voluntarily earlier allows you to recover all GST paid on startup capital expenses through Input Tax Credits."
+    },
+    {
+        "q": "How much do monthly bookkeeping services cost in Saskatoon?",
+        "a": "Small business monthly bookkeeping typically ranges from $250 to $750+ per month depending on transaction volume, number of bank/credit card accounts, payroll complexity, and filing frequencies. Custom fixed-price agreements eliminate surprise hourly billing."
+    },
+    {
+        "q": "Can SaskStartupSolutions help clean up several years of unfiled taxes in Saskatoon?",
+        "a": "Yes. Our emergency bookkeeping cleanup service specializes in reconstructing multi-year backlogs of unfiled corporate T2 returns, sole proprietor T2125 statements, overdue GST/HST, and delinquent PST filings."
+    },
+    {
+        "q": "Can I keep business receipts digitally in Saskatchewan?",
+        "a": "Yes. Under CRA Information Circular IC78-10R5 (Books and Records Retention/Destruction), the Canada Revenue Agency legally accepts electronic images of paper source documents, provided the digital reproduction captures all original text and dates clearly and is retained for the mandatory six-year statutory period."
+    }
+]
 };
+
+module.exports = { BLOG_FAQS };

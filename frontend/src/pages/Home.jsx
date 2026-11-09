@@ -19,10 +19,10 @@ const FEATURED = [
 ];
 
 const DEFAULT_STORY_POINTS = [
-  "Our Purpose | Starting a business comes with important decisions, paperwork, and ongoing responsibilities. At Vici SaskStartupSolutions, our goal is to make the administrative side of business simpler, giving entrepreneurs more time to focus on building their future.",
-  "Our Services | From business registration and corporate registry administration to bookkeeping and corporate tax filing administration support, we help Saskatchewan business owners manage essential business tasks with greater clarity and confidence.",
-  "Our Approach | We believe every business deserves personal attention. We take the time to understand your needs, communicate clearly, and provide practical support tailored to your business journey.",
-  "Our Commitment | Based in Saskatoon, we are proud to support startups, entrepreneurs, and small businesses across Saskatchewan. Whether you are launching a new venture or managing an established business, we are here to help you take the next step.",
+  "Our Purpose | Starting a business in Saskatchewan comes with critical decisions, compliance paperwork, and legal responsibilities. At SaskStartupSolutions Saskatoon, our purpose is to deliver dedicated first time business owner support Saskatoon and experienced help starting a business in Saskatoon so you launch with confidence.",
+  "Incorporation & Registration | When you need to incorporate a business Saskatoon or seek professional business incorporation services Saskatoon, our team provides trusted incorporation help Saskatoon, new corporation setup Saskatoon, and guidance on incorporating a sole proprietorship Saskatchewan. We also provide full business registration help Saskatoon to register a business name Saskatchewan with ISC.",
+  "Dedicated Bookkeeping | Need a meticulous bookkeeper Saskatoon? We provide full-service bookkeeping services Saskatoon, small business bookkeeping Saskatoon, monthly bookkeeping services Saskatoon, and specialized bookkeeping for new businesses Saskatoon, along with tailored sole proprietor bookkeeping Saskatoon to keep your ledgers audit-ready.",
+  "Ongoing Compliance | From mandatory annual return filing Saskatchewan corporation and dedicated ISC annual return help Saskatoon to T2 corporate tax preparation and CRA compliance, we ensure your Saskatchewan enterprise stays in good standing year after year.",
 ].join("\n");
 
 // CMS format: one point per line, "Title | Text" (title optional)

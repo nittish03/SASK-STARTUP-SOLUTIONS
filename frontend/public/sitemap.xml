@@ -366,4 +366,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/how-to-register-a-business-name-in-saskatchewan-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/how-to-register-a-business-name-in-saskatchewan-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatoon-small-business-startup-incorporation-bookkeeping-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatoon-small-business-startup-incorporation-bookkeeping-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatoon-business-incorporation-services-cost-timeline-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatoon-business-incorporation-services-cost-timeline-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatoon-small-business-bookkeeping-services-freelancers-consultants-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatoon-small-business-bookkeeping-services-freelancers-consultants-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
 </urlset>
