@@ -110,7 +110,7 @@ export default function Contact() {
             <div data-testid="contact-info-card" className="rounded-3xl bg-black p-8 text-white sm:p-10">
               <div className="flex items-center gap-4">
                 <img
-                  src="/media/patrick-vachon.jpg"
+                  src="/media/patrick-vachon.webp"
                   alt="Portrait of Patrick Vachon"
                   data-testid="contact-patrick-photo"
                   width="64"

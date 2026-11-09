@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <img
-            src="/media/logo-full.png"
+            src="/media/logo-full.webp"
             alt="Vici Sask Startup Solutions — Bookkeeping, Tax, Registry"
             width="352"
             height="318"

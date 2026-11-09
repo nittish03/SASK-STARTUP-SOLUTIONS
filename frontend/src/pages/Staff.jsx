@@ -7,7 +7,7 @@ import Seo from "@/components/Seo";
 export default function Staff() {
   const sc = useContent("staff");
   const name = sc.staffName || "Patrick Vachon";
-  const photo = sc.staffPhoto || "/media/patrick-vachon.jpg";
+  const photo = sc.staffPhoto || "/media/patrick-vachon.webp";
 
   const staffSchema = {
     "@type": ["AboutPage", "ProfilePage"],
@@ -21,7 +21,7 @@ export default function Staff() {
       "jobTitle": "Founder & Lead Administrator",
       "telephone": "+1-306-960-0091",
       "email": "Saskstartupsolutions@viciconsulting.ca",
-      "image": "https://saskstartupsolutions.ca/media/patrick-vachon.jpg",
+      "image": "https://saskstartupsolutions.ca/media/patrick-vachon.webp",
       "worksFor": {
         "@type": "AccountingService",
         "name": "Vici SaskStartupSolutions",

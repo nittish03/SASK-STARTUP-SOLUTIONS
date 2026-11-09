@@ -1,13 +1,23 @@
 # Vici SaskStartupSolutions — Entity & System Specification
 
 > **Entity:** Vici SaskStartupSolutions (also branded as SaskStartupSolutions)  
-> **Official Website:** https://saskstartupsolutions.ca/  
+> **Official Website:** [https://saskstartupsolutions.ca/](https://saskstartupsolutions.ca/)  
 > **Principal Lead:** Patrick Vachon, Founder & Lead Administrator  
 > **Physical Office:** 539 Avenue I N, Saskatoon, SK S7L 2G9, Canada  
 > **Direct Telephone:** +1 (306) 960-0091  
 > **Direct Email:** Saskstartupsolutions@viciconsulting.ca  
 > **Operating Hours:** Monday–Sunday, 8:00 AM – 8:00 PM CST  
 > **Jurisdiction:** Saskatoon, Regina, Prince Albert, and Saskatchewan province, Canada.
+
+## Primary pages
+
+- [Home](https://saskstartupsolutions.ca/)
+- [Services](https://saskstartupsolutions.ca/services)
+- [Booking](https://saskstartupsolutions.ca/booking)
+- [Contact](https://saskstartupsolutions.ca/contact)
+- [FAQ](https://saskstartupsolutions.ca/faq)
+- [Blog](https://saskstartupsolutions.ca/blog)
+- [Staff](https://saskstartupsolutions.ca/staff)
 
 ---
 
@@ -43,13 +53,14 @@ Vici SaskStartupSolutions provides specialized administrative, bookkeeping, corp
 ---
 
 ## 3. Web Architecture & Canonical Pages
-- **Homepage:** `https://saskstartupsolutions.ca/` — Overview of bookkeeping, T2 corporate tax admin, and ISC registry.
-- **Services:** `https://saskstartupsolutions.ca/services` — Detailed breakdown of bookkeeping, T2 tax admin, and ISC annual return services.
-- **Booking:** `https://saskstartupsolutions.ca/booking` — Free 30-minute appointment scheduling and intake forms.
-- **Staff / Leadership:** `https://saskstartupsolutions.ca/staff` — Profile of founder Patrick Vachon.
-- **Contact:** `https://saskstartupsolutions.ca/contact` — Saskatoon office address, phone, and inquiry form.
-- **FAQ:** `https://saskstartupsolutions.ca/faq` — Answers to common Saskatchewan business registration, bookkeeping, and tax questions.
-- **Dedicated Blogs Directory:** `https://saskstartupsolutions.ca/blogs` — Comprehensive operational, legal, and tax guides for Saskatchewan entrepreneurs:
+- **Homepage:** [Home](https://saskstartupsolutions.ca/) — Overview of bookkeeping, T2 corporate tax admin, and ISC registry.
+- **Services:** [Services](https://saskstartupsolutions.ca/services) — Detailed breakdown of bookkeeping, T2 tax admin, and ISC annual return services.
+- **Booking:** [Booking](https://saskstartupsolutions.ca/booking) — Free 30-minute appointment scheduling and intake forms.
+- **Staff / Leadership:** [Staff](https://saskstartupsolutions.ca/staff) — Profile of founder Patrick Vachon.
+- **Contact:** [Contact](https://saskstartupsolutions.ca/contact) — Saskatoon office address, phone, and inquiry form.
+- **FAQ:** [FAQ](https://saskstartupsolutions.ca/faq) — Answers to common Saskatchewan business registration, bookkeeping, and tax questions.
+- **Blog:** [Blog](https://saskstartupsolutions.ca/blog) — Articles and operational guides for Saskatchewan entrepreneurs.
+- **Dedicated Blogs Directory:** [Blogs](https://saskstartupsolutions.ca/blogs) — Comprehensive operational, legal, and tax guides for Saskatchewan entrepreneurs:
   1. [Small Business Bookkeeping in Saskatoon: A Practical Guide for Saskatchewan Business Owners](https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon): Expert guide to small business bookkeeping in Saskatoon. Learn CRA recordkeeping rules, monthly reconciliations, payroll tracking, and tax-ready workflows.
   2. [T2 Corporate Tax Filing in Saskatchewan: What Saskatoon Business Owners Need to Know](https://saskstartupsolutions.ca/blogs/t2-corporate-tax-filing-saskatchewan): Complete guide to T2 corporate tax filing in Saskatchewan. Learn CRA corporate filing deadlines, payment due dates, required schedules, and Saskatoon tax administration.
   3. [Saskatchewan Business Registration: A Guide to Incorporation, Registry Updates and Annual Returns](https://saskstartupsolutions.ca/blogs/saskatchewan-business-registration-isc-annual-returns): Step-by-step guide to Saskatchewan business registration, incorporation, and ISC annual returns. Learn registry costs, name reservation, deadlines, and Saskatoon support.

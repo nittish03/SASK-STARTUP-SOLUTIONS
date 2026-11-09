@@ -5,7 +5,7 @@ import Marquee from "@/components/Marquee";
 import ParallaxImage from "@/components/ParallaxImage";
 import MediaCarousel from "@/components/MediaCarousel";
 import HeroCarousel from "@/components/HeroCarousel";
-import { DEFAULT_HOME_SECTIONS, DEFAULT_PAGE_IMAGES } from "@/lib/site";
+import { DEFAULT_HOME_SECTIONS, DEFAULT_PAGE_IMAGES, imageForDelivery } from "@/lib/site";
 import { useContent } from "@/lib/content";
 import Seo from "@/components/Seo";
 import { HOME_DESCRIPTION, HOME_TITLE } from "@/lib/seoShell";
@@ -42,7 +42,14 @@ function parseStoryPoints(text) {
 export default function Home() {
   const c = useContent("home");
   const design = useContent("design");
-  const imgs = { ...DEFAULT_PAGE_IMAGES, ...(design.images || {}) };
+  const merged = { ...DEFAULT_PAGE_IMAGES, ...(design.images || {}) };
+  const imgs = {
+    ...merged,
+    homeGallerySkyline: imageForDelivery(merged.homeGallerySkyline, 800),
+    homeGalleryBridge: imageForDelivery(merged.homeGalleryBridge, 640),
+    homeGalleryRiverfront: imageForDelivery(merged.homeGalleryRiverfront, 640),
+    homePatrickPhoto: imageForDelivery(merged.homePatrickPhoto),
+  };
 
   const blocks = {
     featured: (

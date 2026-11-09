@@ -1,4 +1,13 @@
-# Hashed build assets and local media. Do not cache the HTML document.
+# HTML must revalidate. Hashed build assets and local media cache for a year.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /media/*
   Cache-Control: public, max-age=31536000
 

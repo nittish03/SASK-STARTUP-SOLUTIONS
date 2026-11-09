@@ -165,7 +165,7 @@ export default function Booking() {
               <motion.div key="staff" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.35 }}>
                 <div data-testid="booking-staff-panel" className="rounded-2xl border-2 border-black/15 p-8 text-center">
                   <img
-                    src="/media/patrick-vachon.jpg"
+                    src="/media/patrick-vachon.webp"
                     alt="Portrait of Patrick Vachon"
                     width="112"
                     height="112"

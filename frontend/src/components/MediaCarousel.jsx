@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { DEFAULT_PAGE_IMAGES } from "@/lib/site";
+import { DEFAULT_PAGE_IMAGES, imageForDelivery } from "@/lib/site";
 import { useContent } from "@/lib/content";
 
 const SLIDES = [
   {
-    src: "/media/poster-bookkeeping.jpg",
+    src: "/media/poster-bookkeeping.webp",
     alt: "Accountant writing in a ledger at a desk",
     caption: "Bookkeeping, handled for you",
-    width: 1280,
-    height: 720,
+    width: 960,
+    height: 540,
   },
   {
     imageKey: "carouselPhoto1",
@@ -20,11 +20,11 @@ const SLIDES = [
     height: 533,
   },
   {
-    src: "/media/poster-meeting.jpg",
+    src: "/media/poster-meeting.webp",
     alt: "Two people in a first consultation meeting",
     caption: "Introduction appointments that start with listening",
-    width: 1280,
-    height: 720,
+    width: 960,
+    height: 540,
   },
   {
     imageKey: "carouselPhoto2",
@@ -34,11 +34,11 @@ const SLIDES = [
     height: 533,
   },
   {
-    src: "/media/poster-calculator.jpg",
+    src: "/media/poster-calculator.webp",
     alt: "Close-up of hands using a calculator over paperwork",
     caption: "T2 filing, on time",
-    width: 1280,
-    height: 720,
+    width: 960,
+    height: 540,
   },
   {
     imageKey: "carouselPhoto3",
@@ -52,7 +52,7 @@ const SLIDES = [
 export default function MediaCarousel() {
   const design = useContent("design");
   const images = { ...DEFAULT_PAGE_IMAGES, ...(design.images || {}) };
-  const slides = SLIDES.map((s) => (s.imageKey ? { ...s, src: images[s.imageKey] } : s));
+  const slides = SLIDES.map((s) => (s.imageKey ? { ...s, src: imageForDelivery(images[s.imageKey], 800) } : s));
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selected, setSelected] = useState(0);

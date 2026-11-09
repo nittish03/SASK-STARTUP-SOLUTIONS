@@ -108,22 +108,46 @@ export const SERVICES = [
 ];
 
 export const DEFAULT_HERO_SLIDES = [
-  { img: "/media/poster-meeting.jpg", title: "A real conversation first", sub: "Let's review your business and know where you stand.", alt: "Two people in a first consultation meeting" },
-  { img: "/media/poster-calculator.jpg", title: "Every filing on time", sub: "Without fear of deadlines.", alt: "Close-up of hands using a calculator over paperwork" },
-  { img: "/media/poster-bookkeeping.jpg", title: "Up-to-date bookkeeping", sub: "For an accurate pulse of your business.", alt: "Accountant writing in a ledger at a desk" },
+  { img: "/media/poster-meeting.webp", title: "A real conversation first", sub: "Let's review your business and know where you stand.", alt: "Two people in a first consultation meeting" },
+  { img: "/media/poster-calculator.webp", title: "Every filing on time", sub: "Without fear of deadlines.", alt: "Close-up of hands using a calculator over paperwork" },
+  { img: "/media/poster-bookkeeping.webp", title: "Up-to-date bookkeeping", sub: "For an accurate pulse of your business.", alt: "Accountant writing in a ledger at a desk" },
 ];
 
 export const DEFAULT_PAGE_IMAGES = {
-  homeGallerySkyline: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
-  homeGalleryBridge: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
-  homeGalleryRiverfront: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
-  homePatrickPhoto: "/media/patrick-vachon.jpg",
-  carouselPhoto1: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
-  carouselPhoto2: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
-  carouselPhoto3: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
-  bookingBand: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&fm=jpg&q=75&w=1200",
-  bookingIntake: "https://images.unsplash.com/photo-1758310999515-645097b709db?crop=entropy&cs=srgb&fm=jpg&q=75&w=800",
+  homeGallerySkyline: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&auto=format&q=75&w=800",
+  homeGalleryBridge: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&auto=format&q=75&w=640",
+  homeGalleryRiverfront: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&auto=format&q=75&w=640",
+  homePatrickPhoto: "/media/patrick-vachon.webp",
+  carouselPhoto1: "https://images.unsplash.com/photo-1758310999518-4126c4a1bf5f?crop=entropy&cs=srgb&auto=format&q=75&w=800",
+  carouselPhoto2: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&auto=format&q=75&w=800",
+  carouselPhoto3: "https://images.unsplash.com/photo-1662996514099-0e62004d311b?crop=entropy&cs=srgb&auto=format&q=75&w=800",
+  bookingBand: "https://images.unsplash.com/photo-1758565940999-68bb93af9c29?crop=entropy&cs=srgb&auto=format&q=75&w=800",
+  bookingIntake: "https://images.unsplash.com/photo-1758310999515-645097b709db?crop=entropy&cs=srgb&auto=format&q=75&w=800",
 };
+
+const LOCAL_WEBP = {
+  "/media/patrick-vachon.jpg": "/media/patrick-vachon.webp",
+  "/media/poster-meeting.jpg": "/media/poster-meeting.webp",
+  "/media/poster-calculator.jpg": "/media/poster-calculator.webp",
+  "/media/poster-bookkeeping.jpg": "/media/poster-bookkeeping.webp",
+};
+
+/** Prefer the smaller local WebP, and ask Unsplash for a modern format at a capped width. */
+export function imageForDelivery(src, maxWidth = 800) {
+  if (typeof src !== "string") return src;
+  if (LOCAL_WEBP[src]) return LOCAL_WEBP[src];
+  if (!src.includes("images.unsplash.com")) return src;
+  try {
+    const url = new URL(src);
+    url.searchParams.delete("fm");
+    url.searchParams.set("auto", "format");
+    const w = Number(url.searchParams.get("w"));
+    if (!w || w > maxWidth) url.searchParams.set("w", String(maxWidth));
+    return url.toString();
+  } catch {
+    return src;
+  }
+}
 
 export const PAGE_IMAGE_FIELDS = [
   { key: "homeGallerySkyline", label: "Home — Gallery: skyline (large)" },

@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { DEFAULT_HERO_SLIDES } from "@/lib/site";
+import { DEFAULT_HERO_SLIDES, imageForDelivery } from "@/lib/site";
 
 export default function HeroCarousel({ slides }) {
-  const ITEMS = slides && slides.filter((s) => s && s.img).length ? slides.filter((s) => s && s.img) : DEFAULT_HERO_SLIDES;
+  const raw = slides && slides.filter((s) => s && s.img).length ? slides.filter((s) => s && s.img) : DEFAULT_HERO_SLIDES;
+  const ITEMS = raw.map((s) => ({
+    ...s,
+    img: imageForDelivery(s.img),
+  }));
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const reduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -23,7 +27,7 @@ export default function HeroCarousel({ slides }) {
   const slide = ITEMS[index];
   const isFirstSlide = index === 0;
   const slideSize = typeof slide.img === "string" && slide.img.startsWith("/media/poster-")
-    ? { width: 1280, height: 720 }
+    ? { width: 960, height: 540 }
     : null;
 
   return (
@@ -45,8 +49,8 @@ export default function HeroCarousel({ slides }) {
             className="absolute inset-0 h-full w-full object-cover"
             fetchPriority="high"
             decoding="async"
-            width={slideSize?.width || 1280}
-            height={slideSize?.height || 720}
+            width={slideSize?.width || 960}
+            height={slideSize?.height || 540}
           />
         ) : (
           <motion.img
@@ -60,8 +64,8 @@ export default function HeroCarousel({ slides }) {
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
             decoding="async"
-            width={slideSize?.width || 1280}
-            height={slideSize?.height || 720}
+            width={slideSize?.width || 960}
+            height={slideSize?.height || 540}
           />
         )}
       </AnimatePresence>

@@ -33,7 +33,7 @@ export const CONTENT_DEFAULTS = {
     staffRole: "Founder",
     staffTitle: "Founder & Lead Administrator",
     staffBio: "Good business administration isn't just about managing numbers—it’s about delivering exceptional customer service and giving owners peace of mind. As the founder and lead administrator, Patrick draws directly on his real-world experience building and operating local businesses to help clients streamline their day-to-day operations. From full-service bookkeeping and ISC corporate maintenance to T2 tax filings, Patrick focuses on turning chaotic back-office tasks into clean, reliable systems that provide total clarity on business performance. A U of S graduate who grew up in St. Louis and has lived in Saskatoon for the past nine years, Patrick is dedicated to supporting local entrepreneurs across Saskatchewan. In his spare time, he is an avid reader and long-time Lord of the Rings enthusiast.",
-    staffPhoto: "/media/patrick-vachon.jpg",
+    staffPhoto: "/media/patrick-vachon.webp",
   },
   contact: {
     phone: "1 (306) 960-0091",
