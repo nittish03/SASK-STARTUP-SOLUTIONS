@@ -21,12 +21,38 @@ export default function Booking() {
     document.getElementById("booking-flow")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const bookingSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Free Business Consultation Saskatoon | Book Appointment",
+    "url": "https://saskstartupsolutions.ca/booking",
+    "description": "Schedule a free 30-minute introduction appointment for bookkeeping, T2 corporate tax filing administration, or Saskatchewan ISC business registration in Saskatoon.",
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Free 30-Minute Business Introduction Consultation",
+      "provider": {
+        "@type": "AccountingService",
+        "name": "Vici SaskStartupSolutions",
+        "url": "https://saskstartupsolutions.ca/"
+      },
+      "areaServed": "Saskatoon, Saskatchewan",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "description": "No-obligation 30-minute intake consultation with Practice Lead Patrick Vachon."
+      }
+    }
+  };
+
   return (
     <div data-testid="booking-page">
       <Seo
         title="Free Business Consultation Saskatoon | Book Appointment | Vici"
         description="Schedule a free 30-minute introduction appointment for bookkeeping, T2 corporate tax filing administration, or Saskatchewan ISC business registration in Saskatoon."
         path="/booking"
+        schema={bookingSchema}
       />
       <section className="bg-bookgreen" aria-labelledby="booking-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">

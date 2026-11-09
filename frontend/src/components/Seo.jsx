@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 export const SITE_URL = "https://saskstartupsolutions.ca";
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
-export default function Seo({ title, description, path = "/", noindex = false, type = "website", staticShell = false, schema, children }) {
+export default function Seo({ title, description, path = "/", noindex = false, type = "website", staticShell = false, schema, image, children }) {
   if (staticShell) {
     return (
       <Helmet>
@@ -16,6 +16,7 @@ export default function Seo({ title, description, path = "/", noindex = false, t
   }
 
   const canonical = `${SITE_URL}${path}`;
+  const cardImage = image || OG_IMAGE;
 
   const defaultEntitySchema = {
     "@context": "https://schema.org",
@@ -114,11 +115,11 @@ export default function Seo({ title, description, path = "/", noindex = false, t
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image" content={cardImage} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={OG_IMAGE} />
+      <meta name="twitter:image" content={cardImage} />
 
       {/* Global Entity Structured Data */}
       <script type="application/ld+json">

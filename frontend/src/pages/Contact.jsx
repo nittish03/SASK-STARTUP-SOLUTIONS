@@ -63,6 +63,13 @@ export default function Contact() {
         "latitude": 52.1388,
         "longitude": -106.6853
       },
+      "hasMap": "https://maps.app.goo.gl/131Hpy68DZoQbHv18",
+      "priceRange": "$$",
+      "image": "https://saskstartupsolutions.ca/og-image.jpg",
+      "sameAs": [
+        "https://maps.app.goo.gl/131Hpy68DZoQbHv18",
+        "https://taplink.cc/saskstartupsolutions"
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

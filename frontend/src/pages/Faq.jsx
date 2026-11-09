@@ -127,7 +127,7 @@ export default function Faq() {
                       <span className="font-sans text-xs font-semibold uppercase tracking-widest text-black/60" aria-hidden="true">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-serif text-lg font-bold text-black sm:text-xl">{item.question}</span>
+                      <h3 className="font-serif text-lg font-bold text-black sm:text-xl inline m-0 p-0">{item.question}</h3>
                     </span>
                     <motion.span animate={{ rotate: isOpen ? 45 : 0 }} transition={{ duration: 0.25 }} className="shrink-0">
                       <Plus className="h-6 w-6 text-black" aria-hidden="true" />

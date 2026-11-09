@@ -135,6 +135,7 @@ export default function BlogPost() {
           }
           path={`/blogs/${post.slug}`}
           type="article"
+          image={post.featured_image}
         />
       )}
       {missing && (

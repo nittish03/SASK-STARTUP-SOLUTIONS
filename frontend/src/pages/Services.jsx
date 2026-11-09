@@ -203,6 +203,14 @@ export default function Services() {
       "itemListElement": [
         {
           "@type": "Service",
+          "name": "Saskatchewan Business Incorporation & Startup Registration",
+          "serviceType": "Incorporation & Corporate Setup",
+          "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
+          "areaServed": "Saskatoon, Saskatchewan",
+          "description": "Information Services Corporation (ISC) name reservations, Articles of Incorporation, share structure design, CRA Business Number setup, and corporate minute books."
+        },
+        {
+          "@type": "Service",
           "name": "Small Business Bookkeeping & Payroll Services Saskatoon",
           "serviceType": "Bookkeeping",
           "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
@@ -227,6 +235,14 @@ export default function Services() {
         },
         {
           "@type": "Service",
+          "name": "Multilingual Business Setup & Advisory (French, Russian, Armenian)",
+          "serviceType": "Multilingual Startup Advisory",
+          "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
+          "areaServed": "Saskatoon, Saskatchewan",
+          "description": "Comprehensive corporate setup, registration, and bookkeeping guidance for newcomers in English, French, Russian, and Armenian."
+        },
+        {
+          "@type": "Service",
           "name": "All-in-One Basic Service Package",
           "serviceType": "Bundled Startup Administration",
           "provider": { "@type": "AccountingService", "name": "Vici SaskStartupSolutions" },
@@ -237,6 +253,8 @@ export default function Services() {
     }
   };
 
+  const allServiceFaqs = SERVICE_DETAILS.flatMap((s) => s.faqs || []);
+
   return (
     <div data-testid="services-page">
       <Seo
@@ -244,7 +262,21 @@ export default function Services() {
         description="Comprehensive small business bookkeeping, Saskatchewan ISC business incorporation, T2 corporate tax filing administration, and annual returns in Saskatoon, SK."
         path="/services"
         schema={servicesSchema}
-      />
+      >
+        {allServiceFaqs.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": allServiceFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.q,
+                "acceptedAnswer": { "@type": "Answer", "text": f.a },
+              })),
+            })}
+          </script>
+        )}
+      </Seo>
       <section className="bg-bookgreen" aria-labelledby="services-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">
           <h1
