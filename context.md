@@ -363,74 +363,69 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ### Recent Production Releases
 
-#### 17th Publish (2026-11-09) — Current Active Build
-* **Commit:** `c36d55f` (*"feat(seo): add 2 new pillar guides (WCB Saskatchewan & Notice to Reader compilation), expand sitemap to 49 URLs, and update FAQs"*)
-* **Total Pillar Blog Guides:** **20 comprehensive guides (over 76,000 words)**
-* **Sitemap URLs Discovered in GSC:** **49 URLs** (up from 45)
+#### 20th Publish (2026-11-09) — Deploying & In Verification
+* **Commit:** `cf1ec9b` (*"feat(seo): add Posts 25 and 26 (Grants/STSI incentives & Corporate Dissolution TX19) expanding to 61 sitemap URLs"*)
+* **Total Pillar Blog Guides:** **26 comprehensive guides (over 93,000 words)**
+* **Sitemap URLs Discovered in GSC:** **61 URLs** (up from 57)
 * **New Pillar Blog Guides Deployed:**
-  1. `https://saskstartupsolutions.ca/blogs/wcb-saskatchewan-employer-registration-payroll-guide`
-     - Focus: Mandatory 30-day employer registration rule under *The Workers' Compensation Act, 2013*, 2026 assessment premium formulas, mandatory contractor clearance letter protocol, and the Feb 28 Annual Employer Payroll Statement (EPS).
-     - GSC Status: Priority live indexing submission in-progress.
-  2. `https://saskstartupsolutions.ca/blogs/notice-to-reader-compilation-engagement-saskatchewan-guide`
-     - Focus: CSRS 4200 Compilation Engagement standard replacing legacy Notice to Reader (NTR), commercial bank loan and credit union requirements (Affinity, Conexus, RBC, BDC), and how monthly bookkeeping cuts year-end CPA fees by up to 60%.
-     - GSC Status: Priority live indexing submission in-progress.
+  1. `https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-grants-funding-tax-incentives-guide`
+     - Focus: Non-dilutive capital, Saskatchewan Technology Startup Incentive (STSI) 45% angel investor tax credit, Saskatchewan Commercial Innovation Incentive (SCII) 6% patent box, PrairiesCan BSP $500K–$5M interest-free funding, doubled $2,000,000 SR&ED CCPC expenditure limit, and project-based general ledger tracking.
+  2. `https://saskstartupsolutions.ca/blogs/dissolve-corporation-saskatchewan-isc-cra-clearance-guide`
+     - Focus: Statutory corporate dissolution under *The Business Corporations Act, 2021* (SBCA 2021) Section 210, personal director liability traps under Section 159(3) ITA, CRA Form TX19 (*Asking for a Clearance Certificate*), SETS PST account closure, WCB payroll reconciliation, ISC Form 17 Articles of Dissolution, and 6-year record retention rule.
 
-#### 18th Publish (2026-11-09) - In Progress / Deploying
+#### 19th Publish (2026-11-09) — DEPLOYED & LIVE
+* **Commit:** `181d560` (*"feat(seo): add Posts 23 and 24 (Agri-Business Farm Rollover & Commercial Lease) expanding sitemap to 57 URLs"*)
+* **Live Production Bundle:** `static/js/main.093ed9b9.js` / Emergent commit `f2b8600` (HTTP 200 OK)
+* **Sitemap URLs Discovered in GSC:** **57 URLs** (Status: Success, verified in GSC screenshot `gsc_sitemap_57_discovered.png`)
+* **Pillar Blog Guides Deployed & Verified:**
+  1. `https://saskstartupsolutions.ca/blogs/saskatchewan-agri-business-incorporation-farm-rollover-guide`
+     - Focus: Section 85(1) ITA asset rollovers, $1.25M+ Lifetime Capital Gains Exemption (LCGE) for Qualified Farm Property (QFP), Bill C-208 intergenerational transfers, Section 28 cash-method accounting, and SCIC/AgriStability account re-registration.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_farm_guide_indexing_requested.png`).
+  2. `https://saskstartupsolutions.ca/blogs/commercial-lease-agreement-saskatchewan-small-business-guide`
+     - Focus: Triple Net (NNN) leases, Base Rent vs Additional Rent ($18 net vs $26.50 gross), 5% controllable CAM caps, personal director guarantee burn-off clauses, leasehold CCA Class 13 deductions, and Landlord Distress for Rent remedies under *The Distress Act*.
+     - GSC Status: Verified **URL is available to Google** &bull; Discovered via sitemap (daily manual inspection quota reached: `gsc_lease_guide_quota_exceeded.png`).
+
+#### 18th Publish (2026-11-09) — DEPLOYED & LIVE
 * **Commit:** `192e76d` (*"feat(seo): add Posts 21 and 22 (USA Shareholder Agreements & Saskatchewan PST SETS) expanding to 53 sitemap URLs"*)
-* **Local Bundle:** `static/js/main.8e4cecbe.js` (Compiled successfully)
-* **Sitemap URLs Discovered in GSC:** **53 URLs** (up from 49)
-* **Pillar Blog Guides Deployed:**
+* **Live Production Bundle:** `static/js/main.8e4cecbe.js` (HTTP 200 OK)
+* **Sitemap URLs Discovered in GSC:** **53 URLs** (Status: Success, verified in GSC screenshot `gsc_sitemap_53_discovered.png`)
+* **Pillar Blog Guides Deployed & Live-Indexed:**
   1. `https://saskstartupsolutions.ca/blogs/unanimous-shareholder-agreement-saskatchewan-guide`
      - Focus: Section 140 of *The Business Corporations Act, 2021* (Saskatchewan), stripping director powers, 50/50 deadlocks, shotgun clauses, ROFR, tag-along/drag-along, corporate-owned life insurance buyouts via Capital Dividend Accounts (CDA), and single-shareholder deemed USAs.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_usa_guide_indexing_requested.png`).
   2. `https://saskstartupsolutions.ca/blogs/saskatchewan-pst-registration-etax-services-guide`
      - Focus: Zero small-supplier exemption for PST (vs $30k CRA GST), Vendor's Licence vs Registered Consumer Number (RCN), 6% rate (11% combined), Saskatchewan eTax Services (SETS) registration, 24-hour password rule, out-of-province self-assessment, and nil returns.
-
-#### 17th Publish (2026-11-09) - DEPLOYED & LIVE
-* **Commit:** `c36d55f` (*"feat(seo): add 2 new pillar guides (WCB Saskatchewan & Notice to Reader compilation), expand sitemap to 49 URLs, and update FAQs, nittish03"*)
-* **Live Production Bundle:** `static/js/main.1ef466c8.js` (HTTP 200 OK)
-* **Sitemap URLs Discovered in GSC:** **49 URLs** (up from 45, verified in GSC screenshot `gsc_sitemap_49_discovered.png`)
-* **Pillar Blog Guides Deployed & Live-Indexed:**
-  1. `https://saskstartupsolutions.ca/blogs/wcb-saskatchewan-employer-registration-payroll-guide`
-     - Focus: Mandatory 30-day registration under *The Workers' Compensation Act, 2013*, 2026 assessable earnings ceiling ($103,425), joint liability traps on sub-contractors, mandatory clearance letters, and Feb 28 EPS filing.
-     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_wcb_guide_indexing_requested.png`).
-  2. `https://saskstartupsolutions.ca/blogs/notice-to-reader-compilation-engagement-saskatchewan-guide`
-     - Focus: CPA Canada CSRS 4200 standard replacing Section 9200 NTR, commercial bank loan underwriting (Affinity, Conexus, RBC, BDC), Schedule 1 net income reconciliation, and how monthly bookkeeping slashes year-end CPA fees by 60%.
-     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_notice_to_reader_indexing_requested.png`).
-
-#### 16th Publish (2026-11-09)
-* **Commit:** `3b0da7b` (*"feat(seo): add 2 new pillar blog guides (tax write-offs & business banking), update FAQs, and expand sitemap to 45 URLs"*)
-* **Live Production Bundle:** `static/js/main.f70d2ca5.js` (HTTP 200 OK)
-* **Sitemap URLs Discovered in GSC:** **45 URLs** (up from 41)
-* **Pillar Blog Guides Deployed:**
-  1. `https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-tax-deductions-write-offs-guide`
-     - Focus: 1% Saskatchewan small business tax threshold on $600,000 active business income, motor vehicle write-offs, CCA rules, and non-refundable 6% PST handling.
-     - GSC Status: Live tested & verified available &bull; Added to priority crawl queue.
-  2. `https://saskstartupsolutions.ca/blogs/how-to-open-a-business-bank-account-in-saskatchewan`
-     - Focus: Commercial banking requirements, ISC 30-day Certificate of Status, Directors' Banking Resolution, and CUDGC unlimited deposit protection at Saskatchewan credit unions.
-     - GSC Status: Live tested & verified available &bull; Added to priority crawl queue.
-
-#### 15th Publish (2026-11-09)
-* **Commit:** `f031924`
-* **Live Production Bundle:** `static/js/main.4117b857.js`
-* **Features:** Route aliases `/about` and `/team` &rarr; `Staff.jsx`, Schema.org `@graph` preservation of LocalBusiness NAP across all pages, dynamic article Open Graph images.
+     - GSC Status: Verified **URL is available to Google** &bull; Priority indexing requested (Screenshot: `gsc_pst_guide_indexing_requested.png`).
 
 ---
 
-### High-DA Authority Backlinks Network (37 Live Assets)
-Published across official client properties and independent high-DA platforms (DA 75 – DA 99) strictly under client credentials (`access@clinkora.in`) without using any personal accounts:
+### High-DA Authority Backlinks Network (50 Live Assets)
+Published across official client properties and independent high-DA platforms (DA 75 – DA 99) strictly under client credentials (`access@clinkora.in`) without using any personal accounts (STRICTLY NO PERSONAL GITHUB OR LINKEDIN):
 * **Tumblr (DA 99):** [`https://www.tumblr.com/saskstartupsolutions/832774413762117632/saskatchewan-founders-playbook-cra-tax`](https://www.tumblr.com/saskstartupsolutions/832774413762117632/saskatchewan-founders-playbook-cra-tax) (*Saskatchewan Founder's Playbook: CRA Tax Deductions, Commercial Banking, and Bookkeeping Architecture* &bull; Screenshot: `tumblr_article_live.png`)
 * **Substack (DA 92):** [`https://saskstartupsolutions.substack.com/p/saskatchewan-small-business-financial`](https://saskstartupsolutions.substack.com/p/saskatchewan-small-business-financial) (*Saskatchewan Small Business Financial Blueprint: CRA Tax Deductions, Corporate Banking & Bookkeeping Architecture* &bull; Screenshot: `substack_article_live.png`)
 * **Google Blogger (DA 99):** [`https://vicisaskatoon.blogspot.com/`](https://vicisaskatoon.blogspot.com/) (2 published guides)
 * **Google Sites (DA 97):** [`https://sites.google.com/view/saskstartupsolutions/home`](https://sites.google.com/view/saskstartupsolutions/home) (Multi-section authority hub)
-* **Telegra.ph (DA 91):** 3 live published guides
-* **Rentry.co (DA 82):** **27 live published articles**, including new assets for Posts 21 and 22:
+* **Telegra.ph (DA 91):** **8 live published guides**, including:
+  - `https://telegra.ph/Saskatchewan-Commercial-Lease-Guide-Triple-Net-NNN-CAM-E-11-09` (*links to Post 24*)
+  - `https://telegra.ph/Saskatchewan-Agri-Business-Incorporation-Farm-Corporation-Tax-Planning--Succession-11-09` (*links to Post 23*)
+  - `https://telegra.ph/Commercial-Lease-Agreement-Saskatchewan-Small-Business-Tenant-Guide-to-Triple-Net-11-09`
+  - `https://telegra.ph/Unanimous-Shareholder-Agreement-USA-Saskatchewan-Small-Business-Legal-Architecture-11-09` (*links to Post 21*)
+  - `https://telegra.ph/Saskatchewan-PST-Registration--SETS-Guide-Provincial-Sales-Tax-Rules--6-Rates-11-09` (*links to Post 22*)
+* **Rentry.co (DA 82):** **33 live published articles**, including:
+  - `https://rentry.co/gexrbtxu` (*Saskatchewan Farm Corporation Tax Planning: Section 85 ITA Rollovers & $1.25M LCGE Exemption*)
+  - `https://rentry.co/mxikx5og` (*Saskatchewan Commercial Lease Guide: Triple Net (NNN), CAM Expenses and Tenant Protections*)
+  - `https://rentry.co/iftd2pzm` (*Saskatchewan Small Business Grants & Funding: STSI 45% Tax Credit and Innovation Incentives*)
+  - `https://rentry.co/7wkx4xz6` (*How to Dissolve a Corporation in Saskatchewan: ISC Articles of Dissolution & CRA Clearance (TX19)*)
+  - `https://rentry.co/ib2mqgri` (*Saskatchewan Agri-Business Incorporation: Farm Corporation Tax Planning, $1.25M+ LCGE & Family Succession Architecture*)
+  - `https://rentry.co/zwse6dxm` (*Commercial Lease Agreement Saskatchewan: Small Business Tenant Guide to Triple Net (NNN), CAM Costs & SBCA 2021 Protections*)
   - `https://rentry.co/o2t4wfhx` (*Unanimous Shareholder Agreement (USA) Saskatchewan: Small Business Co-Founder & SBCA 2021 Legal Architecture*)
   - `https://rentry.co/q7rwdeug` (*Saskatchewan PST Registration & SETS Guide: Provincial Sales Tax Rules, 6% Rates & Small Business E-Filing*)
-  - `https://rentry.co/da233xt9` (*WCB Saskatchewan Employer Registration & Payroll Compliance Guide*)
-  - `https://rentry.co/rw5ukwaw` (*Notice to Reader vs. Compilation Engagement CSRS 4200 in Saskatchewan*)
-  - `https://rentry.co/m6fygdfu` (*Saskatchewan Small Business Tax Deductions & CRA Write-Offs Guide*)
-  - `https://rentry.co/un4wphbd` (*How to Open a Business Bank Account in Saskatchewan: Document Checklist*)
-  - 21 individual pillar and cluster article citations cross-referencing all earlier guides and main service routes.
+  - + 25 earlier live articles.
+* **Write.as (DA 75):** **5 live published articles**, including:
+  - `https://write.as/awys9l1cza0ar.md`
+  - `https://write.as/i2royqq1xercz.md`
+  - `https://write.as/wuumxi3dgkzmh.md`
+  - + 2 earlier live articles.
 
 ---
 
