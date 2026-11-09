@@ -359,5 +359,49 @@ export const BLOG_FAQS = {
     "q": "Do I have to file a Saskatchewan PST return if I had zero sales?",
     "a": "Yes. If your business holds an active PST Vendor's Licence, you must log into Saskatchewan eTax Services (SETS) and file a 'Nil' return by your assigned filing deadline, even if you had $0 in sales. Failing to file a Nil return results in automated non-filing penalties."
   }
+],
+  "saskatchewan-agri-business-incorporation-farm-rollover-guide": [
+    {
+        "q": "What is the 2026 Lifetime Capital Gains Exemption (LCGE) for Saskatchewan farm property?",
+        "a": "In 2026, the Lifetime Capital Gains Exemption (LCGE) for Qualified Farm Property (QFP) is $1,250,000 per individual (indexed to inflation). A farm couple jointly owning qualifying farm corporation shares or land can shelter up to $2,500,000 in capital gains completely tax-free."
+    },
+    {
+        "q": "Can I transfer farm machinery and land into a corporation without paying income tax in Saskatchewan?",
+        "a": "Yes. By executing a joint election under Section 85(1) of the federal Income Tax Act using CRA Form T2057, farm assets (land, machinery, livestock, inventory) can be transferred into a Saskatchewan corporation at their tax cost (UCC or ACB), legally deferring all capital gains and depreciation recapture."
+    },
+    {
+        "q": "What is the difference between cash method and accrual accounting for a Saskatchewan farm?",
+        "a": "Under the cash method (Section 28 ITA), farm income is recorded only when payments are received and expenses deducted only when cash is paid out, enabling strategic year-end input purchases to reduce tax. Under accrual accounting, revenues and expenses are matched to the period they are incurred regardless of cash flow."
+    },
+    {
+        "q": "How does Bill C-208 help Saskatchewan farm families pass the business to their children?",
+        "a": "Bill C-208 removed punitive tax rules (Section 84.1 ITA) that treated share sales to adult children's corporations as taxable dividends. Under current rules, parents can sell farm corporation shares to their children's company and fully utilize their $1,250,000 Lifetime Capital Gains Exemption, just as they could when selling to a stranger."
+    },
+    {
+        "q": "Do I have to register for Saskatchewan PST if I only sell grain and cattle?",
+        "a": "Primary agricultural producers selling solely raw bulk grain and livestock are generally exempt from collecting PST on farm commodities. However, if your farm corporation provides custom combining, trucking, spraying, or equipment rentals to neighboring operations, you must register for a PST Vendor's Licence and remit 6% PST on those custom service revenues."
+    }
+],
+  "commercial-lease-agreement-saskatchewan-small-business-guide": [
+    {
+        "q": "What is the difference between base rent and additional rent in a Saskatchewan commercial lease?",
+        "a": "Base rent is the fixed monthly rate per square foot paid directly to the landlord for occupying the premises. Additional rent (in a Triple Net lease) covers the tenant's proportionate share of building operating expenses (CAM), municipal property taxes, and commercial building insurance."
+    },
+    {
+        "q": "Can a commercial landlord in Saskatchewan seize my business equipment if rent is late?",
+        "a": "Yes. Under The Landlord and Tenant Act and The Distress Act (Saskatchewan), a commercial landlord has the legal right of 'distress for rent'. If rent is in arrears, the landlord can enter the premises, seize commercial equipment, inventory, and furniture, and sell them at public auction to recover unpaid rent without prior court approval."
+    },
+    {
+        "q": "How can I protect my personal assets when signing a commercial lease for my corporation?",
+        "a": "To protect personal assets, negotiate to remove the personal director guarantee entirely or replace it with a larger commercial deposit or Letter of Credit. If a guarantee is mandatory, negotiate a 'burn-off' clause terminating the guarantee after 2 to 3 years of timely payments, or cap the maximum liability to 6-12 months of rent."
+    },
+    {
+        "q": "How are leasehold improvements written off for tax purposes in Canada?",
+        "a": "Under the federal Income Tax Act, leasehold improvements cannot be deducted as immediate 100% current expenses. They must be capitalized under CCA Class 13 and amortized on a straight-line basis over the remaining lease term plus one renewal option (minimum 5-year amortization period)."
+    },
+    {
+        "q": "Do I have to pay GST and Saskatchewan PST on commercial rent?",
+        "a": "Commercial rent in Canada is subject to 5% federal Goods and Services Tax (GST), which your GST-registered business can claim back as an Input Tax Credit (ITC). Commercial rent itself is currently exempt from 6% Saskatchewan PST, but certain taxable services billed within CAM (such as security monitoring or specialized cleaning) may carry PST."
+    }
 ]
 };
