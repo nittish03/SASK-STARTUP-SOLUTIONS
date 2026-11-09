@@ -1,3 +1,4 @@
 /sitemap.xml /api/sitemap.xml 200
 /robots.txt /robots.txt 200
+/.well-known/ard.json /.well-known/ard.json 200
 /* /index.html 200

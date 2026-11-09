@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:saskstartupsolutions.ca:business",
+      "displayName": "Vici SaskStartupSolutions",
+      "description": "Vici SaskStartupSolutions provides bookkeeping, Saskatchewan T2 corporate tax administration, and ISC corporate registry services for startups and small businesses. Principal lead Patrick Vachon. Office: 539 Avenue I N, Saskatoon, SK S7L 2G9. Phone: 1 (306) 960-0091. Email: Saskstartupsolutions@viciconsulting.ca.",
+      "type": "application/agent-card+json",
+      "url": "https://saskstartupsolutions.ca/llms.txt",
+      "representativeQueries": [
+        "Saskatoon small business bookkeeping and payroll",
+        "Saskatchewan T2 corporate tax filing administration",
+        "ISC corporate annual return for a Saskatchewan corporation",
+        "How to incorporate a business in Saskatchewan"
+      ]
+    }
+  ]
+}
