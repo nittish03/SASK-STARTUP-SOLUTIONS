@@ -315,5 +315,49 @@ export const BLOG_FAQS = {
           "q": "How does monthly bookkeeping lower year-end compilation accounting fees?",
           "a": "Maintaining clean monthly books with pre-reconciled bank feeds, asset schedules, and sales tax ledgers eliminates 20 to 30 billable cleanup hours by year-end CPAs, cutting final accounting invoices by up to 60%."
       }
-  ]
+  ],
+  "unanimous-shareholder-agreement-saskatchewan-guide": [
+  {
+    "q": "What is the difference between a Shareholder Agreement and a Unanimous Shareholder Agreement (USA) in Saskatchewan?",
+    "a": "Under The Business Corporations Act, 2021 (Saskatchewan), a conventional shareholder agreement is signed by some or all shareholders but cannot override board of directors powers. A Unanimous Shareholder Agreement (USA) must be signed by 100% of shareholders and possesses statutory authority to strip or restrict director powers, shifting managerial authority and corresponding legal liabilities directly to the shareholders."
+  },
+  {
+    "q": "Why do 50/50 business partners in Saskatchewan need a shotgun clause?",
+    "a": "In an equal 50/50 partnership, neither party has a controlling vote. If a fundamental operational or strategic disagreement creates gridlock, a shotgun clause allows one partner to name a buyout price per share. The other partner must either sell their shares or purchase the initiating partner's shares at that exact price, effectively breaking deadlocks without litigating in court."
+  },
+  {
+    "q": "Can a single-shareholder corporation have a Unanimous Shareholder Agreement in Saskatchewan?",
+    "a": "Yes. Under Section 140 of The Business Corporations Act, 2021 (Saskatchewan), a sole shareholder who is the beneficial owner of all issued shares can execute a written declaration that restricts director powers. That declaration is legally deemed to be a Unanimous Shareholder Agreement and binds future purchasers of shares."
+  },
+  {
+    "q": "How does corporate life insurance fund a shareholder buyout upon death?",
+    "a": "The corporation owns and pays premiums on life insurance policies for each shareholder. Upon a partner's death, proceeds are received tax-free by the corporation and credited to the Capital Dividend Account (CDA). The corporation uses these funds to pay tax-free capital dividends or redeem the deceased owner's shares from their estate without depleting operational capital."
+  },
+  {
+    "q": "Does a Unanimous Shareholder Agreement prevent co-founders from opening a competing business in Saskatoon?",
+    "a": "Yes. A properly drafted USA contains explicit non-competition, non-solicitation, and confidentiality covenants that prohibit departing or active shareholders from soliciting corporate customers, hiring staff, or opening a competing business within a defined geographical radius (such as Saskatoon or Saskatchewan) for a reasonable period."
+  }
+],
+  "saskatchewan-pst-registration-etax-services-guide": [
+  {
+    "q": "Is there a small supplier exemption for Saskatchewan PST like the federal GST $30,000 rule?",
+    "a": "No. Unlike federal GST, which exempts small suppliers with under $30,000 in gross annual revenue, Saskatchewan Provincial Sales Tax (PST) has zero small-supplier threshold. If you sell taxable goods, software, or taxable services in Saskatchewan, you must obtain a PST Vendor's Licence before making your first dollar of sales."
+  },
+  {
+    "q": "What is the current Saskatchewan PST rate in 2026?",
+    "a": "The general Saskatchewan Provincial Sales Tax (PST) rate is 6%. Combined with the federal 5% Goods and Services Tax (GST), the total sales tax rate on taxable goods and services in Saskatchewan is 11%."
+  },
+  {
+    "q": "How long do I have to activate my Saskatchewan eTax Services (SETS) account?",
+    "a": "When the Saskatchewan Ministry of Finance processes your online registration, they email a temporary password that expires within 24 hours. You must log in within that 24-hour window to set your permanent credentials, otherwise your onboarding token expires."
+  },
+  {
+    "q": "What is PST self-assessment in Saskatchewan?",
+    "a": "If your Saskatchewan business purchases taxable equipment, tools, furniture, or digital software from out-of-province or foreign suppliers who did not collect Saskatchewan PST, you are legally required to self-assess 6% PST on the purchase price and remit it directly on your SETS return."
+  },
+  {
+    "q": "Do I have to file a Saskatchewan PST return if I had zero sales?",
+    "a": "Yes. If your business holds an active PST Vendor's Licence, you must log into Saskatchewan eTax Services (SETS) and file a 'Nil' return by your assigned filing deadline, even if you had $0 in sales. Failing to file a Nil return results in automated non-filing penalties."
+  }
+]
 };

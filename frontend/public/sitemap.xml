@@ -299,4 +299,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/unanimous-shareholder-agreement-saskatchewan-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/unanimous-shareholder-agreement-saskatchewan-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatchewan-pst-registration-etax-services-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatchewan-pst-registration-etax-services-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
