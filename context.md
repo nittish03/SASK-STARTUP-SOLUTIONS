@@ -363,11 +363,23 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ### Recent Production Releases
 
-#### 16th Publish (2026-11-09) — Current Live State
+#### 17th Publish (2026-11-09) — Current Active Build
+* **Commit:** `c36d55f` (*"feat(seo): add 2 new pillar guides (WCB Saskatchewan & Notice to Reader compilation), expand sitemap to 49 URLs, and update FAQs"*)
+* **Total Pillar Blog Guides:** **20 comprehensive guides (over 76,000 words)**
+* **Sitemap URLs Discovered in GSC:** **49 URLs** (up from 45)
+* **New Pillar Blog Guides Deployed:**
+  1. `https://saskstartupsolutions.ca/blogs/wcb-saskatchewan-employer-registration-payroll-guide`
+     - Focus: Mandatory 30-day employer registration rule under *The Workers' Compensation Act, 2013*, 2026 assessment premium formulas, mandatory contractor clearance letter protocol, and the Feb 28 Annual Employer Payroll Statement (EPS).
+     - GSC Status: Priority live indexing submission in-progress.
+  2. `https://saskstartupsolutions.ca/blogs/notice-to-reader-compilation-engagement-saskatchewan-guide`
+     - Focus: CSRS 4200 Compilation Engagement standard replacing legacy Notice to Reader (NTR), commercial bank loan and credit union requirements (Affinity, Conexus, RBC, BDC), and how monthly bookkeeping cuts year-end CPA fees by up to 60%.
+     - GSC Status: Priority live indexing submission in-progress.
+
+#### 16th Publish (2026-11-09)
 * **Commit:** `3b0da7b` (*"feat(seo): add 2 new pillar blog guides (tax write-offs & business banking), update FAQs, and expand sitemap to 45 URLs"*)
 * **Live Production Bundle:** `static/js/main.f70d2ca5.js` (HTTP 200 OK)
 * **Sitemap URLs Discovered in GSC:** **45 URLs** (up from 41)
-* **New Pillar Blog Guides Deployed:**
+* **Pillar Blog Guides Deployed:**
   1. `https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-tax-deductions-write-offs-guide`
      - Focus: 1% Saskatchewan small business tax threshold on $600,000 active business income, motor vehicle write-offs, CCA rules, and non-refundable 6% PST handling.
      - GSC Status: Live tested & verified available &bull; Added to priority crawl queue.
@@ -382,15 +394,18 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ---
 
-### High-DA Authority Backlinks Network (31 Live Assets)
+### High-DA Authority Backlinks Network (33 Live Assets)
 Published across official client properties and independent high-DA platforms (DA 75 – DA 99) without using personal accounts:
 * **Google Blogger (DA 99):** [`https://vicisaskatoon.blogspot.com/`](https://vicisaskatoon.blogspot.com/) (2 published guides)
 * **Google Sites (DA 97):** [`https://sites.google.com/view/saskstartupsolutions/home`](https://sites.google.com/view/saskstartupsolutions/home) (Multi-section hub)
 * **Telegra.ph (DA 91):** 3 live published guides
-* **Rentry.co (DA 82):** **23 live published articles**, including new assets for the 2 latest pillar guides:
+* **Rentry.co (DA 82):** **25 live published articles**, including new assets for the latest pillar guides:
+  - `https://rentry.co/da233xt9` (*WCB Saskatchewan Employer Registration & Payroll Compliance Guide*)
+  - `https://rentry.co/rw5ukwaw` (*Notice to Reader vs. Compilation Engagement CSRS 4200 in Saskatchewan*)
   - `https://rentry.co/m6fygdfu` (*Saskatchewan Small Business Tax Deductions & CRA Write-Offs Guide*)
   - `https://rentry.co/un4wphbd` (*How to Open a Business Bank Account in Saskatchewan: Document Checklist*)
   - 21 individual pillar and cluster article citations cross-referencing all 18 guides and main service routes.
+* **Medium & Tumblr (DA 96 & 99):** In-progress automated publishing by Web2 Publisher subagent.
 
 ---
 
