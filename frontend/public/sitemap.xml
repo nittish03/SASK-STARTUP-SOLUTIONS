@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Static Pages -->
   <url>
-    <loc>https://saskstartupsolutions.ca/</loc>
+    <loc>https://saskstartupsolutions.ca</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -47,7 +47,7 @@
     <loc>https://saskstartupsolutions.ca/blog</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://saskstartupsolutions.ca/sitemap</loc>
@@ -56,7 +56,7 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- 16 Cornerstone Blog Guides (Canonical /blogs/) -->
+  <!-- 18 Cornerstone Blog Guides (Canonical /blogs/) -->
   <url>
     <loc>https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon</loc>
     <lastmod>2026-11-09</lastmod>
@@ -153,8 +153,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-tax-deductions-write-offs-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/how-to-open-a-business-bank-account-in-saskatchewan</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Backward-Compatible Alias URLs (/blog/) -->
+  <!-- 18 Mirror/Alias Blog Posts (/blog/) -->
   <url>
     <loc>https://saskstartupsolutions.ca/blog/small-business-bookkeeping-saskatoon</loc>
     <lastmod>2026-11-09</lastmod>
@@ -247,6 +259,18 @@
   </url>
   <url>
     <loc>https://saskstartupsolutions.ca/blog/newcomer-business-setup-guide-saskatchewan-multilingual</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatchewan-small-business-tax-deductions-write-offs-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/how-to-open-a-business-bank-account-in-saskatchewan</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

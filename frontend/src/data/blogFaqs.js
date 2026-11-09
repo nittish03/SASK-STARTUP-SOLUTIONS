@@ -1,4 +1,41 @@
 export const BLOG_FAQS = {
+  "saskatchewan-small-business-tax-deductions-write-offs-guide": [
+    {
+      "q": "What is Saskatchewan's small business corporate tax rate?",
+      "a": "Saskatchewan features a competitive 1% provincial small business corporate tax rate that uniquely applies to the first $600,000 of active business income. Combined with the federal 9% rate, eligible corporations pay an effective 10% tax rate on their first $500,000 of taxable profit."
+    },
+    {
+      "q": "Are business meals 100% tax-deductible in Saskatchewan?",
+      "a": "No. Under Section 67.1 of the federal Income Tax Act, business meals and entertainment expenses incurred with clients or partners are subject to a 50% deduction limitation. However, up to six annual social events hosted for all employees (such as a holiday party) are 100% deductible."
+    },
+    {
+      "q": "Can I claim Input Tax Credits (ITCs) on Saskatchewan PST?",
+      "a": "No. Unlike federal 5% GST where registered businesses recover tax paid through ITCs, Saskatchewan 6% PST is a non-refundable provincial retail sales tax. The PST paid on operational overhead cannot be claimed as an ITC; instead, it is added to the expense cost basis and deducted from income."
+    },
+    {
+      "q": "What documentation does the CRA require for motor vehicle deductions?",
+      "a": "The CRA requires a contemporaneous mileage log recording the date of each business trip, destination, commercial purpose, and starting/ending odometer readings. Deductions are calculated by multiplying total vehicle operating costs by your business-use percentage."
+    }
+  ],
+  "how-to-open-a-business-bank-account-in-saskatchewan": [
+    {
+      "q": "Can I use my personal bank account for my Saskatchewan business?",
+      "a": "No. Commingling personal and business funds destroys the limited liability protection of an incorporated company ('piercing the corporate veil'), causes severe CRA audit exposure, and Canadian banks will refuse to clear customer cheques made out to your trade name."
+    },
+    {
+      "q": "What documents do I need to open a corporate bank account in Saskatchewan?",
+      "a": "You need your Certificate and Articles of Incorporation from ISC, an up-to-date Corporate Profile Report or Certificate of Status, a signed Directors' Banking Resolution naming signing officers, beneficial ownership details for anyone owning 25% or more voting shares, and two pieces of ID for all signing officers."
+    },
+    {
+      "q": "What is the deposit guarantee difference between credit unions and banks in Saskatchewan?",
+      "a": "In Saskatchewan credit unions (such as Affinity Credit Union or Conexus), all member deposits are 100% guaranteed without dollar limit by the Credit Union Deposit Guarantee Corporation (CUDGC). Chartered banks (such as RBC or TD) are insured under CDIC up to $100,000 per category."
+    },
+    {
+      "q": "Do I need to visit the bank branch in person in Saskatchewan?",
+      "a": "While you can initiate business account applications online with many institutions, almost all chartered banks and credit unions require all authorized signing officers and significant shareholders to visit a local branch in person to verify original IDs and sign official signature cards."
+    }
+  ],
+
   "small-business-bookkeeping-saskatoon": [
     {
       "q": "Do I need a professional bookkeeper for my small business in Saskatoon?",
