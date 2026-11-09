@@ -268,23 +268,25 @@ All 16 mandatory SEO tasks from the agency directive have been executed, tested,
 
 ## 9. Deployment & Search Console Live Verification
 
-### 13th & 14th Publishes Deployed to `https://saskstartupsolutions.ca/` (2026-11-09)
-* **Build Hash:** `main.efd575c1.js` (replaces legacy `main.831fdc21.js` and `main.0c25942b.js`).
-* **Commits:** `2259a1f` and `63c3f8c` on branch `main`.
-* **Zero-Latency Static Data Architecture:**
+### 13th, 14th & 15th Publishes Deployed to `https://saskstartupsolutions.ca/` (2026-11-09)
+* **Build Hash:** `main.4117b857.js` (replaces legacy `main.efd575c1.js`, `main.831fdc21.js` and `main.0c25942b.js`).
+* **Commits:** `2259a1f`, `63c3f8c`, `5e941b1`, and `f031924` on branch `main`.
+* **Zero-Latency Static Data & Complete Schema Architecture:**
   - Embedded all 16 comprehensive blog guides (63,584 total words) into `frontend/src/data/blogPosts.js`.
   - Embedded structured question & answers into `frontend/src/data/blogFaqs.js`.
   - Added interactive category filter pills on `/blogs` (*All Guides*, *Incorporation & Setup*, *Small Business Bookkeeping*, *CRA Tax & Filing*, *ISC Registry & Compliance*, *Newcomers & Multilingual*).
-  - Added visual FAQ accordions with SVG checkmarks and Schema.org `FAQPage` JSON-LD on all individual blog posts and `/faq`.
+  - Added visual FAQ accordions with SVG checkmarks and Schema.org `FAQPage` JSON-LD on all individual blog posts, `/faq`, and `/services`.
   - Added Practice Lead Patrick Vachon author bio card on every article.
-  - Added dedicated modules for "Saskatchewan Business Incorporation" and "Multilingual Business Setup" on `/services`.
+  - Added `/about` and `/team` route aliases in `App.js` pointing to `Staff.jsx` (eliminating 404s).
+  - Implemented Schema.org `@graph` bundling in `Seo.jsx` so custom page schemas (`ContactPage`, `ProfilePage`, `CollectionPage`, `WebPage`) preserve core `LocalBusiness` / `AccountingService` NAP, coordinates, and phone numbers.
+  - Added dynamic `image` prop in `Seo.jsx` for rich Open Graph / Twitter Cards with custom article featured images.
 * **Route Verification:**
-  - `https://saskstartupsolutions.ca/blogs`: HTTP 200 OK.
-  - `https://saskstartupsolutions.ca/blogs/how-to-incorporate-in-saskatchewan-step-by-step-guide`: HTTP 200 OK.
-  - `https://saskstartupsolutions.ca/blogs/saskatchewan-gst-pst-rules-for-small-business`: HTTP 200 OK.
-  - `https://saskstartupsolutions.ca/services`: HTTP 200 OK.
-  - `https://saskstartupsolutions.ca/faq`: HTTP 200 OK.
-  - `https://saskstartupsolutions.ca/sitemap.xml`: HTTP 200 OK (Content-Type: `application/xml`, exactly 41 canonical URLs).
+  - `https://saskstartupsolutions.ca/`: HTTP 200 OK.
+  - `https://saskstartupsolutions.ca/about`: HTTP 200 OK (alias to Patrick Vachon staff profile).
+  - `https://saskstartupsolutions.ca/blogs`: HTTP 200 OK (CollectionPage schema with 16 ItemList entries).
+  - `https://saskstartupsolutions.ca/services`: HTTP 200 OK (7 services in ItemList + FAQPage schema).
+  - `https://saskstartupsolutions.ca/faq`: HTTP 200 OK (14 question accordions wrapped in semantic `<h3>`).
+  - `https://saskstartupsolutions.ca/sitemap.xml`: HTTP 200 OK (exactly 41 canonical URLs).
 
 ### Google Search Console Verification (Tested 2026-11-09)
 * **XML Sitemap Submission:**
