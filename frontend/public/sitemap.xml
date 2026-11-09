@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Static Pages -->
   <url>
     <loc>https://saskstartupsolutions.ca</loc>
     <lastmod>2026-11-09</lastmod>
@@ -55,8 +54,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
-  <!-- 18 Cornerstone Blog Guides (Canonical /blogs/) -->
   <url>
     <loc>https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon</loc>
     <lastmod>2026-11-09</lastmod>
@@ -165,8 +162,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- 18 Mirror/Alias Blog Posts (/blog/) -->
   <url>
     <loc>https://saskstartupsolutions.ca/blog/small-business-bookkeeping-saskatoon</loc>
     <lastmod>2026-11-09</lastmod>
@@ -346,5 +341,29 @@
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-grants-funding-tax-incentives-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/saskatchewan-small-business-grants-funding-tax-incentives-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blogs/dissolve-corporation-saskatchewan-isc-cra-clearance-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://saskstartupsolutions.ca/blog/dissolve-corporation-saskatchewan-isc-cra-clearance-guide</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 </urlset>
