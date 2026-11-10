@@ -537,5 +537,3 @@ export const BLOG_FAQS = {
     }
 ]
 };
-
-module.exports = { BLOG_FAQS };
