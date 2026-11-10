@@ -4,11 +4,11 @@
 > **Entity:** Vici SaskStartupSolutions (`https://saskstartupsolutions.ca/`)  
 > **Local Workspace:** `/Users/eshway/Desktop/NIPUN1`  
 > **GitHub Remote:** `https://github.com/nittish03/SASK-STARTUP-SOLUTIONS.git` (Branch: `main`)  
-> **Local Server:** `http://localhost:3000` (Active & Serving Frontend Build)  
+> **Local Server:** `http://localhost:3000` (On-demand via `npx serve -s frontend/build -l 3000`; not running persistently)  
 > **Emergent Project:** "Vici Registry Admin" (`bf42bf06-08c2-40be-9c97-5ecd988db1ef`) under Org "Vici Sask"  
 > **Baseline Checkpoint Tag:** `seo-baseline` | **Backup Branch:** `baseline-backup`  
-> **Current Campaign Focus:** On-Page, Technical & Local SEO Overhaul (Starting from Scratch)  
-> **Last Synchronized:** 2026-11-09  
+> **Current Campaign Focus:** SEO, AEO & GEO Ranking Execution (Top 50 Keywords, 30 Pillar Guides, 69 Sitemap URLs, 58 High-DA Backlinks)  
+> **Last Synchronized:** 2026-11-10  
 
 ---
 
@@ -95,13 +95,12 @@ All configuration files are present in the workspace:
 ## 5. Local Server & Deployment State
 
 * **Live Production Website:** `https://saskstartupsolutions.ca` (**HTTP 200 OK**).
-  - **Live Publish Version:** 16th Publish deployed on Emergent Cloud Cluster behind Cloudflare CDN.
-  - **Live Production Bundle:** `static/js/main.f70d2ca5.js` (Verified HTTP 200).
+  - **Live Publish Version:** Emergent **25th publish** (`0f59fd2`, finished `Nov 10, 12:01 AM`) behind Cloudflare CDN; Emergent container `/app` synced cleanly to GitHub `origin/main` (`cbf9ec1`). *(Note: Emergent wallet shows `-0.47` / `You ran out of credits!` on `access@clinkora.in`; top-up required before triggering additional Emergent builds/publishes if prompted.)*
+  - **Live Production Bundle:** `static/js/main.f22a2d84.js` (Verified HTTP 200).
   - **Live Homepage Title:** `Saskatoon Bookkeeping & Tax Setup | Vici`
-  - **Live Blog Routes:** `https://saskstartupsolutions.ca/blogs` & `https://saskstartupsolutions.ca/blogs/:slug` (18 Comprehensive Pillar Guides, 71,000+ words).
-  - **Live XML Sitemap:** `https://saskstartupsolutions.ca/sitemap.xml` (Application/XML, 200 OK, exactly 45 canonical URLs).
-* **Frontend Build Server:** Running in background via `serve -s frontend/build -l 3000`.
-* **Verified Local URL:** `http://localhost:3000` (**HTTP 200 OK**).
+  - **Live Blog Routes:** `https://saskstartupsolutions.ca/blogs` & `https://saskstartupsolutions.ca/blogs/:slug` (30 Comprehensive Pillar Guides, ~105,000+ words).
+  - **Live XML Sitemap:** `https://saskstartupsolutions.ca/sitemap.xml` (`application/xml`, HTTP 200 OK, **69** unique non-www URLs).
+* **Frontend Build Verification:** `frontend/build` compiles cleanly (`npm run build` / `yarn build`); optional local preview can be launched on-demand via `npx serve -s frontend/build -l 3000` (port 3000 idle by default).
 * **Commands Reference:**
   ```bash
   # Check local server response
@@ -143,19 +142,17 @@ git checkout baseline-backup
 
 ---
 
-## 7. Backlink Campaign Summary (COMPLETED)
+## 7. Legacy Pre-Overhaul Backlink Directory Archive
 
-* **Status:** 100% Complete. No further backlinking required.
-* **Total Assets:** 16 High-DA Root Domains (DA 82–100), 59 Live Published Assets, 61 Verified Links.
-* **Capping Rule:** Maximum 5 links per platform.
-* **Deliverable PDF:** `/Users/eshway/Desktop/NIPUN1/campaigns/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf`
+* **Status:** Archived baseline directory (superseded operationally by the post-overhaul 58-asset Top 50 / pillar backlink network in Section 9).
+* **Historical Deliverable PDF:** `/Users/eshway/Desktop/NIPUN1/campaigns/Vici_SaskStartupSolutions_Exact_Backlinks_Directory.pdf`
 * **PDF Generator:** `/Users/eshway/Desktop/NIPUN1/scripts/generate_exact_backlinks_pdf.py`
 
 ---
 
-## 8. Current Mission: Website SEO from Scratch
+## 8. SEO, AEO & GEO Strategy & Implementation (`Top 50 Keywords`)
 
-We are now executing the **full on-page, technical, and local SEO campaign** from scratch based on the agency's official strategy document: [`SaskStartupSolutions_Top_50_Keywords.pdf`](file:///Users/eshway/Desktop/NIPUN1/SaskStartupSolutions_Top_50_Keywords.pdf).
+We executed the **full on-page, technical, local SEO, AEO, and GEO campaign** aligned to the agency's official strategy document: [`SaskStartupSolutions_Top_50_Keywords.pdf`](file:///Users/eshway/Desktop/NIPUN1/SaskStartupSolutions_Top_50_Keywords.pdf). Exact-match audit status: **50/50** across the complete codebase (`48/50` verbatim across `Home.jsx`, `Services.jsx`, `Faq.jsx`, `Staff.jsx` + `2/50` in `blogPosts.js`/`blogFaqs.js`).
 
 ### The Top 50 Target Keywords Blueprint (Agency Official)
 
@@ -305,12 +302,15 @@ Because code changes originate in the local environment and must propagate clean
 
 #### Stage 1: Local Verification & Git Push
 1. Make code edits in `/Users/eshway/Desktop/NIPUN1`.
-2. Validate data files and build integrity:
+2. **Strict ESM Export Rule:** All modules inside `frontend/src/` (including `frontend/src/data/blogPosts.js` and `frontend/src/data/blogFaqs.js`) **MUST** use pure ES Module `export const ...` syntax only. **NEVER** append `module.exports = ...` or `exports.*` inside `frontend/src/`, because Webpack 5 will compile cleanly yet throw `Uncaught Error: ES Modules may not assign module.exports or exports.*` at runtime in browsers.
+3. Validate strict ESM imports, zero CommonJS leaks, and build integrity:
    ```bash
-   node -e "const p = require('./frontend/src/data/blogPosts.js'); console.log('Posts:', p.length);"
-   cd /Users/eshway/Desktop/NIPUN1/frontend && yarn build
+   grep -rnE "(module\.exports|exports\.)" frontend/src/ && exit 1 || echo "ESM clean"
+   node --input-type=module -e "import { STATIC_BLOG_POSTS } from './frontend/src/data/blogPosts.js'; import { BLOG_FAQS } from './frontend/src/data/blogFaqs.js'; console.log('Posts:', STATIC_BLOG_POSTS.length, 'FAQs:', Object.keys(BLOG_FAQS).length);"
+   cd /Users/eshway/Desktop/NIPUN1/frontend && npm run build
    ```
-3. Commit cleanly on `main`:
+   *(Note: `prebuild` runs `scripts/generate-sitemap.js`, which safely falls back to keeping static `frontend/public/sitemap.xml` when the backend API is unreachable.)*
+4. Commit cleanly on `main`:
    ```bash
    git add -A
    git commit -m "feat(seo): <clear semantic description>"
@@ -318,7 +318,7 @@ Because code changes originate in the local environment and must propagate clean
    ```
 
 #### Stage 2: Synchronize Emergent's Container (`/app`)
-Emergent runs an internal web container with VS Code Web (`code-server`) mounted at `/app` (`https://vscode-410fd773-4076-4032-8496-66682b5db067.preview.emergentagent.com/?folder=/app`). The container filesystem must be synchronized with `origin/main` before triggering the build.
+Emergent runs an internal web container with VS Code Web (`code-server`) mounted at `/app` (`https://vscode-410fd773-4076-4032-8496-66682b5db067.preview.emergentagent.com/?folder=/app`). Note that `/app` does not carry GitHub push credentials — **always push from local `/Users/eshway/Desktop/NIPUN1` and pull/reset into `/app`**, never commit-and-push exclusively from inside `/app`.
 * Inside the code-server bash terminal:
   ```bash
   cd /app
@@ -327,7 +327,7 @@ Emergent runs an internal web container with VS Code Web (`code-server`) mounted
   git reset --hard origin/main
   git --no-pager log -1 --oneline
   ```
-* Verify the commit hash matches the local `git rev-parse HEAD`.
+* Verify the commit hash matches local `git rev-parse HEAD`.
 
 #### Stage 3: Trigger Emergent Production Build & Publish
 1. Open the Emergent Project dashboard (`https://app.emergent.sh/workspace/org_0f360b63-f4c5-4dad-b24c-142ffd034473/chat`).
@@ -363,20 +363,26 @@ curl -sI https://saskstartupsolutions.ca/blogs/<new-slug>
 
 ### Recent Production Releases
 
-#### 21st Publish (2026-11-09) — DEPLOYED & LIVE
-* **Commit:** `fa6d383` (*"feat(seo): embed 100% Top 50 target keywords, add Posts 27-30 (30 pillar guides), and expand sitemap to 69 URLs"*)
-* **Live Production Bundle:** 21st Publish deployed on Emergent Cloud Cluster (commit `fa6d383`)
-* **Sitemap URLs:** **69 URLs** (`https://saskstartupsolutions.ca/sitemap.xml`)
-* **Top 50 Keywords Verbatim Audit:** **50/50 Exact Matches (100% Verbatim Coverage)** in `Home.jsx`, `Services.jsx`, `Faq.jsx`, and `Staff.jsx`.
-* **Pillar Blog Guides Deployed (Posts 27-30, Total 30 Guides / 105,000+ Words):**
+#### Emergent 24th & 25th Publishes / Strict ESM Parity Sync (`cbf9ec1` — Nov 9–10, 2026) — DEPLOYED & VERIFIED LIVE
+* **Commits:** `fa6d383` (*Posts 27–30 + Top 50 target keywords + 69-URL sitemap*) &rarr; `9d2392f` (*Campaign 5 & docs*) &rarr; `cbf9ec1` (*"fix(seo): remove trailing CommonJS module.exports from blogFaqs.js for strict ESM"*)
+* **Emergent Live Release:** **25th publish** (`0f59fd2`, completed `Nov 10, 12:01 AM`; supersedes `24th publish` `abb86f7`) serving bundle **`static/js/main.f22a2d84.js`** (HTTP 200 OK).
+* **Critical Runtime Fix Verified:** Stripping the trailing `module.exports = { BLOG_FAQS };` CommonJS line from `frontend/src/data/blogFaqs.js` resolved the Webpack 5 runtime error (`Uncaught Error: ES Modules may not assign module.exports or exports.*`). Verified on Nov 10 via headless Chromium across Posts 27–30: **0 runtime JS/ESM errors**, full headings/content (`1,712–2,320` words/post), and 3 valid JSON-LD `<script>` tags (`AccountingService`, `BlogPosting`, `BreadcrumbList`, `FAQPage`) on every post.
+* **Container Parity:** Emergent `/app` had previously committed the `blogFaqs.js` fix locally (`032f295`) without GitHub push credentials. Commit `cbf9ec1` pushed the ESM fix to GitHub `origin/main` cleanly, and `/app` was hard-reset to `origin/main` (`cbf9ec1`) so local, GitHub, `/app`, and live production have 100% code parity.
+* **Sitemap & GSC Discovery:** [`https://saskstartupsolutions.ca/sitemap.xml`](https://saskstartupsolutions.ca/sitemap.xml) verified with **69 unique non-www URLs**; GSC Sitemaps Status **`Success`** &bull; Discovered pages: **`69`** (Last read `10 Nov 2026`).
+* **Top 50 Keywords Codebase Audit:** **50/50** exact-match phrases verified in codebase (`48/50` verbatim across `Home.jsx`, `Services.jsx`, `Faq.jsx`, `Staff.jsx` + `2/50` in `blogPosts.js`/`blogFaqs.js`).
+* **Pillar Blog Guides Deployed & GSC Verified (Posts 27–30, Total 30 Guides / ~105,000+ Words):**
   1. `https://saskstartupsolutions.ca/blogs/how-to-register-a-business-name-in-saskatchewan-guide` (Post 27)
      - Focus: ISC Name Reservation ($50) + Registration Statement ($65, $115 total), Sole Prop vs Partnership, Nuans search, CRA BN9, GST $30,000 rule, 6% PST on SETS, WCB within 30 days, commercial banking.
+     - GSC Status: Passed Live Test &bull; Priority **Indexing requested** (Nov 9).
   2. `https://saskstartupsolutions.ca/blogs/saskatoon-small-business-startup-incorporation-bookkeeping-guide` (Post 28)
-     - Focus: First-time founder support, Forms 1, 2, 3, director consents, 1-3 business day turnaround, monthly bookkeeping setup, mandatory 6-year CRA record retention under ITA 230(4), digital receipts under IC78-10R5, multilingual support (EN, FR, RU, HY).
+     - Focus: First-time founder support, Forms 1, 2, 3, director consents, 1–3 business day turnaround, monthly bookkeeping setup, mandatory 6-year CRA record retention under ITA 230(4), digital receipts under IC78-10R5, multilingual support (EN, FR, RU, HY).
+     - GSC Status: **`URL is on Google` (`Page is indexed`)** &bull; Passed Live Test (`10 Nov 2026, 21:10`) &bull; Priority **Indexing requested** (`10 Nov 2026`).
   3. `https://saskstartupsolutions.ca/blogs/saskatoon-business-incorporation-services-cost-timeline-guide` (Post 29)
      - Focus: Incorporation help Saskatoon, ISC statutory fees ($305 total), realistic timelines, Class A/B/C multi-class shares, minute book vault, Section 85 ITA asset rollover, and Saskatchewan's 1% small business tax rate ($600K threshold).
+     - GSC Status: Passed Live Test &bull; Priority **Indexing requested** (Nov 9).
   4. `https://saskstartupsolutions.ca/blogs/saskatoon-small-business-bookkeeping-services-freelancers-consultants-guide` (Post 30)
      - Focus: Local Saskatoon bookkeeper vs remote call centers, monthly reconciliations, sole proprietor T2125, freelancer multi-currency, emergency bookkeeping cleanup for overdue CRA records, and cloud workflows (QBO/Xero).
+     - GSC Status: **`URL is on Google` (`Page is indexed`)** &bull; Passed Live Test (`10 Nov 2026, 21:11`) &bull; Priority **Indexing requested** (`10 Nov 2026`).
 
 #### 20th Publish (2026-11-09) — DEPLOYED & LIVE
 * **Commit:** `cf1ec9b` (*"feat(seo): add Posts 25 and 26 (Grants/STSI incentives & Corporate Dissolution TX19) expanding to 61 sitemap URLs"*)
@@ -450,9 +456,14 @@ Published across official client properties and independent high-DA platforms (D
 ## 10. Directives for Successor AI Agent
 
 If you are a new AI agent resuming this session:
-1. **Read this file thoroughly** — all necessary context and deployment procedures are right here.
-2. **Current Status:** All 16 SEO/AEO/GEO checklist items, 18 pillar blog guides (71,000+ words), and 45 sitemap URLs are completed, tested, committed to Git `main` (`3b0da7b`), deployed to live production on Emergent (**16th Publish**, bundle `main.f70d2ca5.js`), verified in Google Search Console, and backlinked across 31 authority URLs.
-3. **Deployment Workflow:** Always follow the 5-stage SOP in Section 9: commit & push locally &rarr; reset `/app` in code-server to `origin/main` &rarr; click Republish in Emergent &rarr; verify live bundle &rarr; submit to GSC.
+1. **Read this file thoroughly** — all codebase architecture, credential boundaries, ESM rules, and deployment procedures are documented here.
+2. **Current State (Verified Nov 10, 2026):**
+   - **Code & Git Parity:** Local workspace, GitHub `origin/main` (`cbf9ec1` + latest docs commit), and Emergent container `/app` are synchronized cleanly. Pure ES Module exports (`export const ...`) are enforced across `frontend/src/`.
+   - **Content & Top 50 Keywords:** All 16 technical SEO/AEO/GEO checklist items complete, **50/50** target keywords from `SaskStartupSolutions_Top_50_Keywords.pdf` integrated across the codebase, **30 pillar blog guides** (~105,000+ words) live, and `frontend/public/llms.txt` updated for AI crawlers.
+   - **Live Production (`https://saskstartupsolutions.ca/`):** Serving **25th publish** (`0f59fd2`, bundle `static/js/main.f22a2d84.js`, HTTP 200 OK) with **69 URLs** in `sitemap.xml` and verified **0 JS/ESM runtime errors** across Posts 27–30.
+   - **Google Search Console (`sc-domain:saskstartupsolutions.ca`):** `sitemap.xml` Status **`Success`** (**69** discovered pages as of `10 Nov 2026`); Posts 27, 28, 29, and 30 all passed Live URL tests with Priority Indexing requested (Posts 28 & 30 already confirmed **`URL is on Google` / `Page is indexed`**).
+   - **Off-Page Authority:** **58 verified live high-DA backlink assets** across Rentry, Write.as, Telegra.ph, Blogger, Substack, Tumblr, and Google Sites — strictly **ZERO** personal GitHub or personal LinkedIn accounts used.
+3. **Deployment Workflow:** Always follow the 5-stage SOP in Section 9: verify strict ESM + `npm run build`, commit & push from local `/Users/eshway/Desktop/NIPUN1` &rarr; `git fetch origin && git reset --hard origin/main` inside Emergent `/app` &rarr; Republish in Emergent &rarr; verify live bundle & routes &rarr; submit to GSC. Note that Emergent org `Vici Sask` (`access@clinkora.in`) currently displays `-0.47` credits (`Buy Credits` notice); confirm credits before future publishes.
 4. **Emergency Rollback:** Annotated tag `seo-baseline` and branch `baseline-backup` remain available if rollback is ever requested.
-5. **Local Build Server:** `http://localhost:3000` is running in background.
-6. **Git Status:** Working tree clean on `main`, tracked `.env` removed, all credentials sanitized. Repository can remain Private.
+5. **Local Preview Server:** Port `3000` is idle by default; start on demand with `npx serve -s frontend/build -l 3000`.
+6. **Git Hygiene:** Tracked `.env` removed, `.gitignore` enforces secret exclusions, working tree kept clean on `main`.
