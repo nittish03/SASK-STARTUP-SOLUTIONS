@@ -33,22 +33,21 @@ export default function Blog() {
   const filteredPosts = useMemo(() => {
     if (activeCategory === "all") return posts;
     return posts.filter((p) => {
-      const slug = p.slug.toLowerCase();
-      const title = p.title.toLowerCase();
+      const slug = (p.slug || "").toLowerCase();
       if (activeCategory === "incorporation") {
-        return slug.includes("incorporate") || slug.includes("sole-proprietor");
+        return slug.includes("incorporat") || slug.includes("sole-proprietor") || slug.includes("shareholder") || slug.includes("agri-business") || slug.includes("ownr") || slug.includes("startup");
       }
       if (activeCategory === "bookkeeping") {
-        return slug.includes("bookkeeping") || slug.includes("freelancer") || slug.includes("contractor");
+        return slug.includes("bookkeeping") || slug.includes("freelancer") || slug.includes("contractor") || slug.includes("notice-to-reader") || slug.includes("bank-account");
       }
       if (activeCategory === "tax") {
-        return slug.includes("tax") || slug.includes("gst-pst") || slug.includes("payroll");
+        return slug.includes("tax") || slug.includes("gst") || slug.includes("pst") || slug.includes("payroll") || slug.includes("cpp2") || slug.includes("grants");
       }
       if (activeCategory === "compliance") {
-        return slug.includes("isc") || slug.includes("annual-return") || slug.includes("registration");
+        return slug.includes("isc") || slug.includes("annual-return") || slug.includes("registration") || slug.includes("register") || slug.includes("wcb") || slug.includes("lease") || slug.includes("dissolve") || slug.includes("beneficial-ownership") || slug.includes("licence");
       }
       if (activeCategory === "newcomer") {
-        return slug.includes("newcomer") || slug.includes("multilingual");
+        return slug.includes("newcomer") || slug.includes("multilingual") || slug.includes("startup");
       }
       return true;
     });
@@ -74,7 +73,7 @@ export default function Blog() {
   return (
     <div data-testid="blog-page">
       <Seo
-        title="Small Business & Startup Blog Saskatoon | 16 Bookkeeping & Tax Guides | Vici"
+        title={`Small Business & Startup Blog Saskatoon | ${posts.length} Bookkeeping & Tax Guides | Vici`}
         description="Comprehensive guides on small business bookkeeping, Saskatchewan incorporation, ISC business registration, T2 corporate tax filing, and CRA compliance for Saskatoon entrepreneurs."
         path="/blogs"
         schema={blogSchema}
@@ -82,7 +81,7 @@ export default function Blog() {
       <section className="bg-bookgreen" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-[950px] px-4 py-20 sm:px-6 sm:py-28">
           <div className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-mantis mb-6 text-center w-full sm:w-auto">
-            16 Comprehensive Saskatchewan Founder & Accounting Guides
+            {posts.length} Comprehensive Saskatchewan Founder &amp; Accounting Guides
           </div>
           <h1
             id="blog-heading"

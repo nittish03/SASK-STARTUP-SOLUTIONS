@@ -3,10 +3,17 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
 import { API } from "@/lib/site";
+import { STATIC_BLOG_POSTS } from "@/data/blogPosts";
 
 const PAGES = [
   { to: "/", label: "Home", desc: "Bookkeeping, business setup and registry administration for Saskatchewan businesses" },
   { to: "/services", label: "Services", desc: "Bookkeeping, T2 filing administration and ISC Registry administration" },
+  { to: "/incorporate-saskatoon", label: "Incorporate a Business in Saskatoon", desc: "Provincial SBCA 2021 incorporation administration, Form 1-3 preparation & CRA BN9 setup" },
+  { to: "/business-registration-saskatchewan", label: "Saskatchewan Business Registration", desc: "Sole proprietorship & partnership name registration ($115 ISC fee) & licensing" },
+  { to: "/bookkeeping-saskatoon", label: "Small Business Bookkeeping Saskatoon", desc: "Monthly cloud bookkeeping, GST/PST reconciliations, 2026 payroll & T2 readiness" },
+  { to: "/bookkeeping-cleanup-saskatoon", label: "Bookkeeping Cleanup Saskatoon", desc: "Multi-year catch-up bookkeeping for overdue CRA, GST, PST & T2 records" },
+  { to: "/isc-annual-returns-saskatoon", label: "ISC Annual Returns & Registry", desc: "Annual corporate returns ($60 on-time), SBCA 2021 Beneficial Ownership & restoration" },
+  { to: "/multilingual-newcomer-business-saskatoon", label: "Newcomer & Multilingual Business Setup", desc: "Startup setup and bookkeeping in English, French, Russian & Armenian" },
   { to: "/booking", label: "Booking", desc: "Book a free, no-obligation introduction appointment" },
   { to: "/staff", label: "Meet the Team", desc: "Patrick Vachon, Founder & Lead Administrator" },
   { to: "/contact", label: "Contact Us", desc: "Phone, email, address, hours and contact form" },
@@ -15,10 +22,17 @@ const PAGES = [
 ];
 
 export default function Sitemap() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(STATIC_BLOG_POSTS);
 
   useEffect(() => {
-    axios.get(`${API}/blog`).then((r) => setPosts(Array.isArray(r.data) ? r.data : [])).catch(() => {});
+    axios.get(`${API}/blog`).then((r) => {
+      if (Array.isArray(r.data) && r.data.length) {
+        const merged = [...STATIC_BLOG_POSTS];
+        const slugs = new Set(merged.map((p) => p.slug));
+        r.data.forEach((p) => { if (p?.slug && !slugs.has(p.slug)) merged.push(p); });
+        setPosts(merged);
+      }
+    }).catch(() => {});
   }, []);
 
   return (

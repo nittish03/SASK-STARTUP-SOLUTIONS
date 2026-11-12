@@ -100,8 +100,8 @@ const SERVICE_DETAILS = [
     img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
     alt: "Multilingual business advisory meeting with newcomer entrepreneurs in Saskatoon",
     paragraphs: [
-      "Starting a business in Saskatchewan or searching for help starting a business in Saskatoon? We specialize in first time business owner support Saskatoon and hands-on business setup help for newcomers Saskatoon, including newcomer business registration Saskatchewan and commercial banking setup. We bridge the regulatory gap by providing complete registration, bank account onboarding, CRA account activation, and ongoing bookkeeping support.",
-      "Connect with our French speaking bookkeeper Saskatoon, Russian speaking bookkeeper Saskatoon, or access Armenian speaking business support Saskatoon. We clarify sole proprietorship vs corporation Saskatchewan, moving from self employed to incorporated Saskatchewan, what comes after registering a business Saskatchewan, and what to do after incorporation Saskatchewan so you feel confident from day one.",
+      "Starting a business in Saskatchewan is much easier with clear local guidance. We provide dedicated support for first-time business owners and practical business setup help for newcomers in Saskatoon, including newcomer business registration in Saskatchewan, CRA account activation, commercial banking preparation, and ongoing bookkeeping.",
+      "Work directly with a French-speaking bookkeeper in Saskatoon, alongside bilingual support in Russian and Armenian. We walk through sole proprietorship ($115 ISC fee) versus incorporation ($255 numbered / $305 named), transitioning from self-employed to incorporated under SBCA 2021, and your post-incorporation checklist so every step feels clear from day one.",
     ],
     faqs: [
       { q: "Can work permit holders incorporate a business in Saskatchewan?", a: "Yes. Saskatchewan allows foreign nationals and temporary residents to incorporate. There are no Canadian citizenship requirements for corporate directors under provincial law." },
@@ -276,6 +276,19 @@ export default function Services() {
             })}
           </script>
         )}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Register or Incorporate and Set Up Compliance in Saskatchewan",
+            "step": [
+              { "@type": "HowToStep", "position": 1, "name": "Choose Structure & Name Clearance", "text": "Decide between sole proprietorship ($115 total ISC fee) or SBCA 2021 incorporation ($255 numbered / $305 named ISC fee)." },
+              { "@type": "HowToStep", "position": 2, "name": "Prepare ISC Forms 1-3 & Beneficial Ownership Register", "text": "File Articles of Incorporation, Registered Office, and Notice of Directors, plus maintain an SBCA 2021 Beneficial Ownership / ISC Register." },
+              { "@type": "HowToStep", "position": 3, "name": "Activate CRA BN9, GST, 6% SK PST & Municipal Licence", "text": "Register federal CRA accounts (RC0001, RT0001 over $30,000, RP0001), Saskatchewan SETS (6% PST, no small-supplier cap), and City of Saskatoon Business Licence ($135 new)." },
+              { "@type": "HowToStep", "position": 4, "name": "Run Monthly Cloud Bookkeeping & Annual Filings", "text": "Maintain monthly QuickBooks Online or Xero reconciliations, track 2026 CPP/CPP2/EI/mileage rules, and file ISC Annual Returns ($60 on-time) and T2 returns." }
+            ]
+          })}
+        </script>
       </Seo>
       <section className="bg-bookgreen" aria-labelledby="services-heading">
         <div className="mx-auto max-w-[900px] px-4 py-20 sm:px-6 sm:py-28">
@@ -351,6 +364,80 @@ export default function Services() {
               </article>
             </Reveal>
           ))}
+
+          {/* 2026 Saskatchewan Statutory Fee Comparison & Dedicated Landing Pages */}
+          <Reveal delay={0.05}>
+            <div className="mt-10 rounded-3xl border-2 border-black/15 bg-white p-6 shadow-sm sm:p-10">
+              <h2 className="font-serif text-2xl font-bold uppercase tracking-tight text-black sm:text-3xl">
+                2026 Saskatchewan Statutory Registry &amp; Tax Fee Schedule
+              </h2>
+              <p className="mt-2 font-serif text-base text-black/75">
+                Transparent government statutory fees paid directly to ISC, City of Saskatoon, and CRA/Saskatchewan Finance:
+              </p>
+              <div className="mt-6 overflow-x-auto">
+                <table className="w-full border-collapse text-left">
+                  <thead>
+                    <tr className="bg-bookgreen text-white">
+                      <th className="p-3 font-sans text-xs font-semibold uppercase tracking-wider sm:text-sm">Filing / Registration</th>
+                      <th className="p-3 font-sans text-xs font-semibold uppercase tracking-wider sm:text-sm">2026 Statutory Fee</th>
+                      <th className="p-3 font-sans text-xs font-semibold uppercase tracking-wider sm:text-sm">Key Compliance Rule</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-black/15 p-3 font-serif font-bold text-black">Named Saskatchewan Corporation</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">$305 CAD ($50 name + $255 Articles)</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">SBCA 2021 Form 1-3 + Beneficial Ownership Register</td>
+                    </tr>
+                    <tr className="bg-black/[0.03]">
+                      <td className="border border-black/15 p-3 font-serif font-bold text-black">Numbered Saskatchewan Corporation</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">$255 CAD (Articles only)</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">No name reservation needed; full limited liability</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black/15 p-3 font-serif font-bold text-black">Sole Proprietorship / Partnership</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">$115 CAD ($50 name + $65 reg.)</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">3-year trade name renewal ($60 statutory fee)</td>
+                    </tr>
+                    <tr className="bg-black/[0.03]">
+                      <td className="border border-black/15 p-3 font-serif font-bold text-black">ISC Corporate Annual Return</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">$60 CAD (on time)</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">Due annually; separate from CRA T2 corporate taxes</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black/15 p-3 font-serif font-bold text-black">City of Saskatoon Business Licence</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">$135 new / $95 annual renewal</td>
+                      <td className="border border-black/15 p-3 font-serif text-black/80">Applies to commercial and home-based Saskatoon businesses</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 className="mt-8 font-serif text-xl font-bold uppercase tracking-tight text-black">
+                Dedicated Service Guides by Need
+              </h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Link to="/incorporate-saskatoon" className="rounded-full border-2 border-bookgreen px-5 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen transition-colors hover:bg-bookgreen hover:text-white">
+                  Incorporate a Business in Saskatoon
+                </Link>
+                <Link to="/business-registration-saskatchewan" className="rounded-full border-2 border-bookgreen px-5 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen transition-colors hover:bg-bookgreen hover:text-white">
+                  Saskatchewan Business Registration
+                </Link>
+                <Link to="/bookkeeping-saskatoon" className="rounded-full border-2 border-bookgreen px-5 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen transition-colors hover:bg-bookgreen hover:text-white">
+                  Bookkeeping Services Saskatoon
+                </Link>
+                <Link to="/bookkeeping-cleanup-saskatoon" className="rounded-full border-2 border-bookgreen px-5 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen transition-colors hover:bg-bookgreen hover:text-white">
+                  Bookkeeping Cleanup Saskatoon
+                </Link>
+                <Link to="/isc-annual-returns-saskatoon" className="rounded-full border-2 border-bookgreen px-5 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen transition-colors hover:bg-bookgreen hover:text-white">
+                  ISC Annual Returns &amp; Registry
+                </Link>
+                <Link to="/multilingual-newcomer-business-saskatoon" className="rounded-full border-2 border-bookgreen px-5 py-2 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen transition-colors hover:bg-bookgreen hover:text-white">
+                  Multilingual Newcomer Setup
+                </Link>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

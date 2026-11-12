@@ -16,6 +16,15 @@ function inline(s) {
     .replace(/\*([^*]+)\*/g, "<em>$1</em>");
 }
 
+function slugifyHeading(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/&amp;|&lt;|&gt;/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+
 function renderBlock(b) {
   const lines = b.split("\n").map((l) => l.trimEnd()).filter((l) => l.trim());
 
@@ -32,9 +41,18 @@ function renderBlock(b) {
   if (lines.every((l) => /^\d+\.\s/.test(l.trim()))) {
     return `<ol>${lines.map((l) => `<li>${inline(l.trim().replace(/^\d+\.\s/, ""))}</li>`).join("")}</ol>`;
   }
-  if (b.startsWith("### ")) return `<h3>${inline(b.slice(4))}</h3>`;
-  if (b.startsWith("## ")) return `<h2>${inline(b.slice(3))}</h2>`;
-  if (b.startsWith("# ")) return `<h2>${inline(b.slice(2))}</h2>`;
+  if (b.startsWith("### ")) {
+    const text = b.slice(4);
+    return `<h3 id="${slugifyHeading(text)}">${inline(text)}</h3>`;
+  }
+  if (b.startsWith("## ")) {
+    const text = b.slice(3);
+    return `<h2 id="${slugifyHeading(text)}">${inline(text)}</h2>`;
+  }
+  if (b.startsWith("# ")) {
+    const text = b.slice(2);
+    return `<h2 id="${slugifyHeading(text)}">${inline(text)}</h2>`;
+  }
   return `<p>${inline(b).replace(/\n/g, "<br />")}</p>`;
 }
 

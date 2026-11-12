@@ -13,10 +13,16 @@
 
 - [Home](https://saskstartupsolutions.ca/)
 - [Services](https://saskstartupsolutions.ca/services)
+- [Incorporate a Business in Saskatoon](https://saskstartupsolutions.ca/incorporate-saskatoon)
+- [Saskatchewan Business Registration](https://saskstartupsolutions.ca/business-registration-saskatchewan)
+- [Small Business Bookkeeping Saskatoon](https://saskstartupsolutions.ca/bookkeeping-saskatoon)
+- [Bookkeeping Cleanup Saskatoon](https://saskstartupsolutions.ca/bookkeeping-cleanup-saskatoon)
+- [ISC Annual Returns & Registry](https://saskstartupsolutions.ca/isc-annual-returns-saskatoon)
+- [Newcomer & Multilingual Business Setup](https://saskstartupsolutions.ca/multilingual-newcomer-business-saskatoon)
 - [Booking](https://saskstartupsolutions.ca/booking)
 - [Contact](https://saskstartupsolutions.ca/contact)
 - [FAQ](https://saskstartupsolutions.ca/faq)
-- [Blog](https://saskstartupsolutions.ca/blog)
+- [Blogs](https://saskstartupsolutions.ca/blogs)
 - [Staff](https://saskstartupsolutions.ca/staff)
 
 ---
@@ -59,7 +65,6 @@ Vici SaskStartupSolutions provides specialized administrative, bookkeeping, corp
 - **Staff / Leadership:** [Staff](https://saskstartupsolutions.ca/staff) — Profile of founder Patrick Vachon.
 - **Contact:** [Contact](https://saskstartupsolutions.ca/contact) — Saskatoon office address, phone, and inquiry form.
 - **FAQ:** [FAQ](https://saskstartupsolutions.ca/faq) — Answers to common Saskatchewan business registration, bookkeeping, and tax questions.
-- **Blog:** [Blog](https://saskstartupsolutions.ca/blog) — Articles and operational guides for Saskatchewan entrepreneurs.
 - **Dedicated Blogs Directory:** [Blogs](https://saskstartupsolutions.ca/blogs) — Comprehensive operational, legal, and tax guides for Saskatchewan entrepreneurs:
   1. [Small Business Bookkeeping in Saskatoon: A Practical Guide for Saskatchewan Business Owners](https://saskstartupsolutions.ca/blogs/small-business-bookkeeping-saskatoon): Expert guide to small business bookkeeping in Saskatoon. Learn CRA recordkeeping rules, monthly reconciliations, payroll tracking, and tax-ready workflows.
   2. [T2 Corporate Tax Filing in Saskatchewan: What Saskatoon Business Owners Need to Know](https://saskstartupsolutions.ca/blogs/t2-corporate-tax-filing-saskatchewan): Complete guide to T2 corporate tax filing in Saskatchewan. Learn CRA corporate filing deadlines, payment due dates, required schedules, and Saskatoon tax administration.
@@ -87,7 +92,11 @@ Vici SaskStartupSolutions provides specialized administrative, bookkeeping, corp
   24. [Commercial Lease Agreement Saskatchewan: Small Business Tenant Guide to Triple Net (NNN), CAM Costs & SBCA Protections](https://saskstartupsolutions.ca/blogs/commercial-lease-agreement-saskatchewan-small-business-guide): Essential Saskatchewan commercial lease guide for small business tenants. Triple Net (NNN) rates, CAM operational audits, director guarantees & eviction rules.
   25. [Saskatchewan Small Business Grants & Funding: STSI 45% Tax Credit, PrairiesCan & Provincial Incentives Guide](https://saskstartupsolutions.ca/blogs/saskatchewan-small-business-grants-funding-tax-incentives-guide): Definitive guide to small business grants and funding in Saskatchewan. Discover the 45% STSI tax credit, SCII Patent Box, PrairiesCan BSP, and SR&ED R&D incentives.
   26. [How to Dissolve a Corporation in Saskatchewan: ISC Articles of Dissolution & CRA Clearance Certificate (TX19) Guide](https://saskstartupsolutions.ca/blogs/dissolve-corporation-saskatchewan-isc-cra-clearance-guide): Complete legal & tax guide to dissolving a Saskatchewan corporation. Learn how to pass special resolutions, obtain CRA Clearance Form TX19, and file ISC Articles of Dissolution.
-  27. [How to Register a Business Name in Saskatchewan: ISC Registration Process, Costs & Nuans Guide](https://saskstartupsolutions.ca/blogs/how-to-register-a-business-name-in-saskatchewan-guide): Step-by-step guide to registering a business name in Saskatchewan with ISC. Learn sole proprietorship, partnership, and trade name filing requirements, government fees ( total), and CRA BN setup.
+  27. [How to Register a Business Name in Saskatchewan: ISC Registration Process, Costs & Nuans Guide](https://saskstartupsolutions.ca/blogs/how-to-register-a-business-name-in-saskatchewan-guide): Step-by-step guide to registering a business name in Saskatchewan with ISC. Learn sole proprietorship, partnership, and trade name filing requirements, government fees ($115 total), and CRA BN setup.
   28. [Starting a Business in Saskatoon: First-Time Founder Support, Incorporation Documents & CRA Recordkeeping Guide](https://saskstartupsolutions.ca/blogs/saskatoon-small-business-startup-incorporation-bookkeeping-guide): First-time entrepreneur handbook for starting a business in Saskatoon. Learn incorporation documents, ISC Form 1/2/3 filings, mandatory CRA 6-year record retention under ITA 230(4), digital receipts under IC78-10R5, and multilingual bookkeeper support.
   29. [Business Incorporation Services Saskatoon: Costs, ISC Timelines & New Corporation Setup Guide (2026)](https://saskstartupsolutions.ca/blogs/saskatoon-business-incorporation-services-cost-timeline-guide): Complete guide to business incorporation services in Saskatoon. Discover exact ISC registration costs, setup timelines, required incorporation documents, and share structuring for new Saskatchewan corporations.
   30. [Small Business Bookkeeping Services Saskatoon: Complete Guide for Freelancers, Consultants & Corporations](https://saskstartupsolutions.ca/blogs/saskatoon-small-business-bookkeeping-services-freelancers-consultants-guide): Top-tier small business bookkeeping services in Saskatoon. Discover monthly bookkeeping workflows, bookkeeping cleanup for overdue records, CRA digital receipt rules, and tax compliance for freelancers, consultants, and new corporations.
+  31. [Ownr Alternatives in Saskatchewan (2026): Why Ownr Doesn't Support SK Incorporation & Local Options](https://saskstartupsolutions.ca/blogs/ownr-saskatchewan-alternative-how-to-incorporate): Why Ownr does not support provincial Saskatchewan incorporation under SBCA 2021, comparing ISC statutory fees ($255 numbered / $305 named) and local Saskatoon coordination.
+  32. [2026 Saskatchewan Payroll, CPP2, EI & CRA Mileage Rates Guide for Small Business Employers](https://saskstartupsolutions.ca/blogs/saskatchewan-2026-payroll-cpp2-ei-mileage-rates-guide): Verified 2026 CRA payroll ceilings (CPP YMPE $74,600, CPP2 YAMPE $85,000, EI MIE $68,900) and $0.73/km / $0.67/km mileage rates.
+  33. [Beneficial Ownership & ISC Register in Saskatchewan: SBCA 2021 Guide for Small Corporations](https://saskstartupsolutions.ca/blogs/beneficial-ownership-isc-register-saskatchewan-sbca-2021): Complete guide to SBCA 2021 Register of Individuals with Significant Control (25% threshold), FINTRAC KYC alignment, and annual compliance.
+  34. [City of Saskatoon Business Licence Guide (2026): Home-Based vs. Commercial Fees ($135) & Setup Steps](https://saskstartupsolutions.ca/blogs/saskatoon-business-licence-home-based-commercial-guide): Complete 2026 guide to City of Saskatoon business licence fees ($135 initial / $95 renewal), zoning, and coordinating with ISC registration & SK PST.

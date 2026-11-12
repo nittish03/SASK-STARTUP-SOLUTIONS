@@ -19,10 +19,10 @@ const FEATURED = [
 ];
 
 const DEFAULT_STORY_POINTS = [
-  "Our Purpose | Starting a business in Saskatchewan comes with critical decisions, compliance paperwork, and legal responsibilities. At SaskStartupSolutions Saskatoon, our purpose is to deliver dedicated first time business owner support Saskatoon and experienced help starting a business in Saskatoon so you launch with confidence.",
-  "Incorporation & Registration | When you need to incorporate a business Saskatoon or seek professional business incorporation services Saskatoon, our team provides trusted incorporation help Saskatoon, new corporation setup Saskatoon, and guidance on incorporating a sole proprietorship Saskatchewan. We also provide full business registration help Saskatoon to register a business name Saskatchewan with ISC.",
-  "Dedicated Bookkeeping | Need a meticulous bookkeeper Saskatoon? We provide full-service bookkeeping services Saskatoon, small business bookkeeping Saskatoon, monthly bookkeeping services Saskatoon, and specialized bookkeeping for new businesses Saskatoon, along with tailored sole proprietor bookkeeping Saskatoon to keep your ledgers audit-ready.",
-  "Ongoing Compliance | From mandatory annual return filing Saskatchewan corporation and dedicated ISC annual return help Saskatoon to T2 corporate tax preparation and CRA compliance, we ensure your Saskatchewan enterprise stays in good standing year after year.",
+  "Our Purpose | Starting and scaling a business in Saskatchewan involves critical incorporation choices, CRA sales tax deadlines, and ongoing registry paperwork. At Vici SaskStartupSolutions in Saskatoon, we provide dedicated support for first-time business owners and newcomers so you launch with clarity and confidence.",
+  "Incorporation & Registration | Whether you are registering a sole proprietorship or partnership trade name ($115 total ISC fee) or incorporating a Saskatchewan company under SBCA 2021 ($255 numbered / $305 named), we coordinate Form 1-3 filings, minute books, CRA Business Numbers, and Saskatchewan PST registration.",
+  "Dedicated Bookkeeping | From monthly cloud reconciliations and contractor T5018/WCB tracking to multi-year catch-up bookkeeping cleanups, our Saskatoon bookkeeping team keeps your QuickBooks Online or Xero ledgers reconciled, digital receipts archived under CRA rules, and T2 schedules audit-ready.",
+  "Ongoing Compliance | We track your Saskatchewan ISC Corporate Annual Return anniversary ($60 on-time statutory fee), maintain SBCA 2021 Beneficial Ownership registers, and administer T2 corporate tax filings so your business remains in good standing year after year.",
 ].join("\n");
 
 // CMS format: one point per line, "Title | Text" (title optional)
@@ -287,6 +287,49 @@ export default function Home() {
       />
 
       {sections.map((s) => blocks[s.id])}
+
+      <section className="bg-praxeti border-t border-black/10 py-16 sm:py-20" aria-labelledby="home-specialized-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="text-center">
+            <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-bookgreen">
+              Saskatoon &amp; Saskatchewan Services
+            </p>
+            <h2 id="home-specialized-heading" className="mt-2 font-serif text-3xl font-bold uppercase tracking-tight text-black sm:text-4xl">
+              Explore Our Core Business Solutions
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { to: "/incorporate-saskatoon", title: "Incorporate in Saskatoon", desc: "SBCA 2021 incorporation administration, Form 1-3 preparation, minute books & CRA BN9 setup." },
+              { to: "/business-registration-saskatchewan", title: "Business Registration SK", desc: "Sole proprietorship & partnership name registration ($115 ISC), municipal licences & PST setup." },
+              { to: "/bookkeeping-saskatoon", title: "Monthly Bookkeeping", desc: "Cloud reconciliations, GST/SK PST tracking, 2026 CPP/EI payroll support & year-end readiness." },
+              { to: "/bookkeeping-cleanup-saskatoon", title: "Bookkeeping Cleanup", desc: "Systematic catch-up for overdue CRA records, bank reconstructions & unfiled tax periods." },
+              { to: "/isc-annual-returns-saskatoon", title: "ISC Annual Returns", desc: "On-time provincial corporate renewals ($60 statutory fee), Beneficial Ownership & restoration." },
+              { to: "/multilingual-newcomer-business-saskatoon", title: "Newcomer Multilingual Setup", desc: "Guided business setup and bookkeeping in English, French, Russian, and Armenian." },
+            ].map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="group rounded-2xl border-2 border-black/15 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-bookgreen hover:shadow-lg"
+              >
+                <h3 className="font-serif text-xl font-bold text-black group-hover:text-bookgreen">{item.title}</h3>
+                <p className="mt-2 font-serif text-sm leading-relaxed text-black/75">{item.desc}</p>
+                <span className="mt-4 inline-flex items-center gap-1 font-sans text-xs font-semibold uppercase tracking-wide text-bookgreen">
+                  Learn More <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link to="/blogs" className="rounded-full border-2 border-black px-6 py-2.5 font-sans text-xs font-semibold uppercase tracking-wide text-black transition-colors hover:bg-black hover:text-white">
+              Read 34 Saskatchewan Business Guides
+            </Link>
+            <Link to="/faq" className="rounded-full border-2 border-black px-6 py-2.5 font-sans text-xs font-semibold uppercase tracking-wide text-black transition-colors hover:bg-black hover:text-white">
+              View Accounting &amp; Tax FAQs
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

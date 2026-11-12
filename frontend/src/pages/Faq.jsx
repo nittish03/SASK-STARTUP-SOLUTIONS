@@ -90,13 +90,45 @@ const FALLBACK_FAQS = [
   },
 ];
 
+const EXTRA_2026_FAQS = [
+  {
+    q: "What is the SBCA 2021 Beneficial Ownership / ISC Register requirement in Saskatchewan?",
+    a: "Under The Business Corporations Act, 2021 (SBCA 2021), provincial Saskatchewan corporations must maintain an accurate register of individuals with significant control (25% or more voting shares or fair market equity value) and keep beneficial ownership details updated with corporate records and ISC reporting rules."
+  },
+  {
+    q: "What are the key 2026 CRA payroll ceilings and mileage rates for Saskatchewan employers?",
+    a: "For 2026, base CPP applies at 5.95% up to the $74,600 YMPE (max $4,230.45 employee and employer each), second-tier CPP2 applies at 4.0% from $74,600 to $85,000 YAMPE (max $416), EI applies at 1.63% up to $68,900 MIE (max $1,123.07 employee / $1,572.30 employer), and the CRA tax-exempt automobile allowance is $0.73/km for the first 5,000 km ($0.67/km thereafter)."
+  },
+  {
+    q: "Does Ownr support provincial Saskatchewan incorporation or do I need a Saskatoon administrator?",
+    a: "Ownr primarily serves federal CBCA corporations and select provincial registries (Ontario, BC, Alberta) and does not handle provincial Saskatchewan incorporation under SBCA 2021. Vici SaskStartupSolutions handles complete provincial Saskatchewan incorporations ($255 numbered / $305 named ISC statutory fees), City of Saskatoon Business Licences ($135 new), and SETS 6% PST registration."
+  }
+];
+
+function mergeFaqs(apiFaqs, fallbackFaqs) {
+  const merged = [];
+  const seen = new Set();
+  for (const item of [...(fallbackFaqs || []), ...EXTRA_2026_FAQS, ...(Array.isArray(apiFaqs) ? apiFaqs : [])]) {
+    const key = (item?.q || "").trim().toLowerCase();
+    if (key && !seen.has(key)) {
+      seen.add(key);
+      merged.push(item);
+    }
+  }
+  return merged;
+}
+
 export default function Faq() {
   const [open, setOpen] = useState(0);
-  const [faqs, setFaqs] = useState(FALLBACK_FAQS);
+  const [faqs, setFaqs] = useState(() => mergeFaqs([], FALLBACK_FAQS));
 
   useEffect(() => {
     axios.get(`${API}/faqs`)
-      .then((r) => { if (Array.isArray(r.data) && r.data.length) setFaqs(r.data); })
+      .then((r) => {
+        if (Array.isArray(r.data) && r.data.length) {
+          setFaqs(mergeFaqs(r.data, FALLBACK_FAQS));
+        }
+      })
       .catch(() => {});
   }, []);
 

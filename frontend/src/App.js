@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useLayoutEffect, useRef } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useParams } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Lenis from "lenis";
 import Header from "@/components/Header";
@@ -21,7 +21,13 @@ const Portal = lazy(() => import("@/pages/Portal"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Sitemap = lazy(() => import("@/pages/Sitemap"));
+const ServiceLandingPage = lazy(() => import("@/pages/ServiceLandingPage"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
+
+function BlogRedirect() {
+  const { slug } = useParams();
+  return <Navigate to={`/blogs/${slug}`} replace />;
+}
 
 function AnalyticsTracker() {
   const location = useLocation();
@@ -110,16 +116,22 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/incorporate-saskatoon" element={<ServiceLandingPage slug="incorporate-saskatoon" />} />
+                <Route path="/business-registration-saskatchewan" element={<ServiceLandingPage slug="business-registration-saskatchewan" />} />
+                <Route path="/bookkeeping-saskatoon" element={<ServiceLandingPage slug="bookkeeping-saskatoon" />} />
+                <Route path="/bookkeeping-cleanup-saskatoon" element={<ServiceLandingPage slug="bookkeeping-cleanup-saskatoon" />} />
+                <Route path="/isc-annual-returns-saskatoon" element={<ServiceLandingPage slug="isc-annual-returns-saskatoon" />} />
+                <Route path="/multilingual-newcomer-business-saskatoon" element={<ServiceLandingPage slug="multilingual-newcomer-business-saskatoon" />} />
                 <Route path="/booking" element={<Booking />} />
                 <Route path="/staff" element={<Staff />} />
-                <Route path="/about" element={<Staff />} />
-                <Route path="/team" element={<Staff />} />
+                <Route path="/about" element={<Navigate to="/staff" replace />} />
+                <Route path="/team" element={<Navigate to="/staff" replace />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/blogs" element={<Blog />} />
                 <Route path="/blogs/:slug" element={<BlogPost />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/blog" element={<Navigate to="/blogs" replace />} />
+                <Route path="/blog/:slug" element={<BlogRedirect />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/portal" element={<Portal />} />

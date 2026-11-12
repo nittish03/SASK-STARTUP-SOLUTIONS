@@ -9,20 +9,53 @@ import Seo from "@/components/Seo";
 import { STATIC_BLOG_POSTS, BLOG_POSTS_BY_SLUG } from "@/data/blogPosts";
 import { BLOG_FAQS } from "@/data/blogFaqs";
 
+function selectRelatedPosts(allPosts, currentSlug) {
+  const current = allPosts.find((p) => p.slug === currentSlug) || BLOG_POSTS_BY_SLUG[currentSlug];
+  const tokens = (s) =>
+    new Set(
+      String(s || "")
+        .toLowerCase()
+        .split(/[^a-z0-9]+/)
+        .filter((w) => w.length > 3 && !["saskatchewan", "saskatoon", "guide", "small", "business", "your", "with"].includes(w))
+    );
+  const currentTokens = tokens(`${current?.slug || ""} ${current?.title || ""}`);
+  return allPosts
+    .filter((p) => p.slug !== currentSlug)
+    .map((p) => {
+      const pTokens = tokens(`${p.slug} ${p.title}`);
+      let overlap = 0;
+      pTokens.forEach((t) => { if (currentTokens.has(t)) overlap += 1; });
+      return { p, overlap };
+    })
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, 3)
+    .map((x) => x.p);
+}
+
+function extractTocHeadings(markdown) {
+  return String(markdown || "")
+    .split(/\n+/)
+    .filter((l) => l.startsWith("## "))
+    .map((l) => {
+      const text = l.slice(3).trim();
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
+      return { text, id };
+    })
+    .slice(0, 8);
+}
+
 export default function BlogPost() {
   const { slug } = useParams();
   const staticMatch = BLOG_POSTS_BY_SLUG[slug] || null;
   const [post, setPost] = useState(staticMatch);
-  const [related, setRelated] = useState(
-    STATIC_BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3)
-  );
+  const [related, setRelated] = useState(() => selectRelatedPosts(STATIC_BLOG_POSTS, slug));
   const [missing, setMissing] = useState(false);
 
   useEffect(() => {
     const localPost = BLOG_POSTS_BY_SLUG[slug] || null;
     if (localPost) {
       setPost(localPost);
-      setRelated(STATIC_BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3));
+      setRelated(selectRelatedPosts(STATIC_BLOG_POSTS, slug));
       setMissing(false);
     } else {
       setPost(null);
@@ -45,8 +78,11 @@ export default function BlogPost() {
     axios
       .get(`${API}/blog`)
       .then((r) => {
-        if (Array.isArray(r.data) && r.data.length > 1) {
-          setRelated(r.data.filter((p) => p.slug !== slug).slice(0, 3));
+        if (Array.isArray(r.data) && r.data.length > 0) {
+          const merged = [...STATIC_BLOG_POSTS];
+          const seen = new Set(merged.map((p) => p.slug));
+          r.data.forEach((p) => { if (p?.slug && !seen.has(p.slug)) merged.push(p); });
+          setRelated(selectRelatedPosts(merged, slug));
         }
       })
       .catch(() => {});
@@ -235,6 +271,25 @@ export default function BlogPost() {
                   decoding="async"
                   className="mb-10 w-full rounded-3xl border-2 border-black/15 object-cover shadow-sm"
                 />
+              )}
+              {extractTocHeadings(post.content).length >= 3 && (
+                <nav aria-label="In this guide" className="mb-8 rounded-2xl border border-black/15 bg-white p-5">
+                  <p className="font-sans text-xs font-semibold uppercase tracking-widest text-bookgreen">
+                    In This Guide
+                  </p>
+                  <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                    {extractTocHeadings(post.content).map((h) => (
+                      <li key={h.id}>
+                        <a
+                          href={`#${h.id}`}
+                          className="font-serif text-sm text-black/80 underline-offset-4 hover:text-bookgreen hover:underline"
+                        >
+                          {h.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
               )}
               <Markdown
                 text={post.content}

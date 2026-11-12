@@ -1,52 +1,60 @@
-#!/usr/bin/env node
-/**
- * Pre-build script: fetches the dynamic sitemap from the API and writes it
- * to public/sitemap.xml so the static file server serves valid XML at /sitemap.xml.
- * Falls back to the existing file if the API is unreachable (e.g., during CI build).
- */
+// Canonical sitemap generator for Vici SaskStartupSolutions
 const fs = require("fs");
 const path = require("path");
-const https = require("https");
-const http = require("http");
 
-const API_BASE = process.env.REACT_APP_BACKEND_URL || "http://localhost:8001";
-const OUTPUT = path.join(__dirname, "..", "public", "sitemap.xml");
+const SITE_URL = "https://saskstartupsolutions.ca";
+const PUBLIC_SITEMAP = path.join(__dirname, "..", "public", "sitemap.xml");
+const BLOG_POSTS_PATH = path.join(__dirname, "..", "src", "data", "blogPosts.js");
 
-function fetchSitemap(url) {
-  return new Promise((resolve, reject) => {
-    const client = url.startsWith("https") ? https : http;
-    const req = client
-      .get(url, { timeout: 2000 }, (res) => {
-        let data = "";
-        res.on("data", (chunk) => (data += chunk));
-        res.on("end", () => {
-          if (res.statusCode === 200) resolve(data);
-          else reject(new Error(`HTTP ${res.statusCode}`));
-        });
-      })
-      .on("timeout", () => {
-        req.destroy(new Error("Request timed out after 2000ms"));
-      })
-      .on("error", reject);
-  });
-}
+const CORE_ROUTES = [
+  "",
+  "/services",
+  "/incorporate-saskatoon",
+  "/business-registration-saskatchewan",
+  "/bookkeeping-saskatoon",
+  "/bookkeeping-cleanup-saskatoon",
+  "/isc-annual-returns-saskatoon",
+  "/multilingual-newcomer-business-saskatoon",
+  "/booking",
+  "/staff",
+  "/contact",
+  "/faq",
+  "/blogs",
+  "/sitemap",
+];
 
-async function main() {
-  const apiUrl = `${API_BASE}/api/sitemap.xml`;
-  try {
-    console.log(`Fetching sitemap from ${apiUrl}...`);
-    const xml = await fetchSitemap(apiUrl);
-    fs.writeFileSync(OUTPUT, xml, "utf8");
-    console.log(`Wrote ${OUTPUT} (${xml.length} bytes)`);
-  } catch (err) {
-    console.warn(`Could not fetch sitemap: ${err.message}`);
-    if (fs.existsSync(OUTPUT)) {
-      console.warn("Keeping existing sitemap.xml (may be stale)");
-    } else {
-      console.error("No fallback sitemap.xml exists — build may serve SPA shell at /sitemap.xml");
-      process.exit(1);
+async function run() {
+  const { STATIC_BLOG_POSTS } = await import(BLOG_POSTS_PATH);
+  const urls = [];
+  const seen = new Set();
+
+  for (const route of CORE_ROUTES) {
+    const loc = `${SITE_URL}${route}`;
+    if (!seen.has(loc)) {
+      seen.add(loc);
+      urls.push(`<url><loc>${loc}</loc></url>`);
     }
   }
+
+  for (const post of STATIC_BLOG_POSTS) {
+    if (!post?.slug) continue;
+    const loc = `${SITE_URL}/blogs/${post.slug}`;
+    if (seen.has(loc)) continue;
+    seen.add(loc);
+    const lastmod = (post.updated_at || post.published_at || "").slice(0, 10);
+    urls.push(
+      lastmod
+        ? `<url><loc>${loc}</loc><lastmod>${lastmod}</lastmod></url>`
+        : `<url><loc>${loc}</loc></url>`
+    );
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
+  fs.writeFileSync(PUBLIC_SITEMAP, xml, "utf8");
+  console.log(`Generated canonical sitemap.xml with ${urls.length} URLs (0 /blog duplicate URLs).`);
 }
 
-main();
+run().catch((err) => {
+  console.error("Failed to generate sitemap:", err);
+  process.exit(1);
+});

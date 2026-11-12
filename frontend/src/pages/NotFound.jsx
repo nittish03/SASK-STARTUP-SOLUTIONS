@@ -4,11 +4,13 @@ import Seo from "@/components/Seo";
 const LINKS = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/incorporate-saskatoon", label: "Incorporate in Saskatoon" },
+  { to: "/bookkeeping-saskatoon", label: "Bookkeeping Saskatoon" },
   { to: "/booking", label: "Book a Free Introduction" },
   { to: "/staff", label: "Meet the Team" },
   { to: "/contact", label: "Contact Us" },
   { to: "/faq", label: "FAQ" },
-  { to: "/blog", label: "Blog" },
+  { to: "/blogs", label: "Blogs & Guides" },
 ];
 
 export default function NotFound() {

@@ -535,5 +535,61 @@ export const BLOG_FAQS = {
         "q": "Can I keep business receipts digitally in Saskatchewan?",
         "a": "Yes. Under CRA Information Circular IC78-10R5 (Books and Records Retention/Destruction), the Canada Revenue Agency legally accepts electronic images of paper source documents, provided the digital reproduction captures all original text and dates clearly and is retained for the mandatory six-year statutory period."
     }
+],
+  "ownr-saskatchewan-alternative-how-to-incorporate": [
+    {
+        "q": "Can I use Ownr to register a Saskatchewan provincial corporation?",
+        "a": "No. Ownr does not currently offer provincial incorporations under Saskatchewan's The Business Corporations Act, 2021. Choosing a federal corporation through a national tool still requires extra-provincial ISC registration in Saskatchewan plus dual annual returns."
+    },
+    {
+        "q": "How much does local provincial incorporation cost in Saskatchewan?",
+        "a": "Mandatory statutory fees payable to ISC are $255 CAD for a numbered Saskatchewan corporation or $305 CAD ($50 name reservation + $255 Articles of Incorporation) for a named corporation."
+    },
+    {
+        "q": "Do Saskatchewan provincial corporations require Canadian-resident directors?",
+        "a": "No. Under The Business Corporations Act, 2021 (SBCA 2021), Saskatchewan provincial corporations do not require Canadian-resident directors."
+    }
+],
+  "saskatchewan-2026-payroll-cpp2-ei-mileage-rates-guide": [
+    {
+        "q": "What is the 2026 CPP2 ceiling and maximum contribution?",
+        "a": "In 2026, the Year's Additional Maximum Pensionable Earnings (YAMPE) is $85,000 (covering pensionable earnings between $74,600 YMPE and $85,000). Both employee and employer contribute 4.0% up to a maximum of $416.00 each."
+    },
+    {
+        "q": "What is the 2026 EI maximum premium in Saskatchewan?",
+        "a": "In 2026, the Maximum Insurable Earnings (MIE) ceiling is $68,900 at an employee rate of 1.63% (maximum employee deduction $1,123.07; 1.4x employer match $1,572.30)."
+    },
+    {
+        "q": "What is the 2026 CRA mileage rate?",
+        "a": "The 2026 CRA reasonable tax-exempt automobile allowance is $0.73/km for the first 5,000 business kilometers driven and $0.67/km thereafter."
+    }
+],
+  "beneficial-ownership-isc-register-saskatchewan-sbca-2021": [
+    {
+        "q": "Who must be listed on a Saskatchewan Beneficial Ownership / ISC Register?",
+        "a": "Under SBCA 2021, any individual who owns, controls, or exercises significant control over 25% or more of corporate voting rights or fair market equity value (alone or jointly) must be recorded on the corporation's Individuals with Significant Control register."
+    },
+    {
+        "q": "Does a sole shareholder 100%-owned Saskatoon corporation still need an ISC Register?",
+        "a": "Yes. Even a single-founder corporation owns more than the 25% significant control threshold, so the sole founder's details must be recorded cleanly in the corporation's minute book and Beneficial Ownership register."
+    },
+    {
+        "q": "How much is a Saskatchewan corporate annual return with ISC?",
+        "a": "The on-time statutory annual return fee payable to Information Services Corporation (ISC) is $60 CAD per year, filed separately from federal CRA T2 corporate taxes."
+    }
+],
+  "saskatoon-business-licence-home-based-commercial-guide": [
+    {
+        "q": "How much is a City of Saskatoon business licence in 2026?",
+        "a": "For standard commercial and home-based businesses, the initial City of Saskatoon Business Licence application fee is $135 CAD, followed by a $95 CAD annual renewal fee."
+    },
+    {
+        "q": "If I incorporate in Saskatchewan, do I still need a municipal business licence in Saskatoon?",
+        "a": "Yes. Provincial incorporation through ISC creates your legal entity under Saskatchewan corporate law, whereas the City of Saskatoon Business Licence authorizes physical commercial or home-based business activity within municipal boundaries."
+    },
+    {
+        "q": "Do I need a City of Saskatoon licence if I run an online or consulting business from home?",
+        "a": "Yes. Home-based businesses operating inside Saskatoon must hold a City of Saskatoon Home-Based Business Licence ($135 initial application / $95 annual renewal) and meet residential zoning rules."
+    }
 ]
 };
