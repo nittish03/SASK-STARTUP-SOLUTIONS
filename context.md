@@ -450,6 +450,17 @@ Published across official client properties and independent high-DA platforms (D
   - `https://write.as/w8a8wqo29hcs4` (*How to Register a Business Name in Saskatchewan: ISC Process, Costs & Sole Proprietorship Setup*)
   - `https://write.as/s9f1quho11y6f` (*Starting a Business in Saskatoon: First-Time Founder Support, Incorporation Documents & CRA Compliance*)
   - + 5 earlier live articles.
+* **Campaign 6 Off-Page Backlinks (Nov 12, 2026 — 15 Verified Placements Across 9 Clean Platforms; Strictly Client Accounts Only):**
+  - **Write.as (3 CLI `200`):** `https://write.as/1xa60pyctfdjo`, `https://write.as/trh30ev4g1tnt`, `https://write.as/hl8jus6xgnwph`
+  - **Telegra.ph (2 CLI `200`):** `https://telegra.ph/Ownr-Alternatives--Provincial-Incorporation-in-Saskatchewan-2026-11-12`, `https://telegra.ph/2026-Saskatchewan-Payroll-Ceilings-CPP2-EI--CRA-Mileage-Guide-11-12`
+  - **WordPress.com (`saskstartupsolutions.wordpress.com`, Chrome + HTTP `200`):** `https://saskstartupsolutions.wordpress.com/2026/11/12/2026-saskatoon-small-business-bookkeeping-catch-up-cleanup-cra-payroll-guide/`
+  - **Blogger (`u/1` `access@clinkora.in`, Chrome + HTTP `200`):** `https://vici-saskstartupsolutions.blogspot.com/2026/11/sbca-2021-beneficial-ownership-isc.html`
+  - **Google Sites (`u/1` `access@clinkora.in`, Chrome + HTTP `200`):** `https://sites.google.com/clinkora.in/vici-saskstartupsolutions/home`
+  - **Padlet (`padlet.com/access_d2vr`, Chrome + HTTP `200`):** `https://padlet.com/access_d2vr/saskatchewan-business-setup-bookkeeping-2026-resources-s025ebjyicgo42t6rvu3`
+  - **Gravatar (`Patrick Vachon`, Chrome + HTTP `200`):** `https://gravatar.com/access5a3edc587b`
+  - **Medium (`@access_99245`, Chrome verified; Cloudflare `403` to bare curl):** `https://medium.com/@access_99245/ownr-alternatives-in-saskatchewan-2026-why-provincial-sbca-2021-incorporation-requires-local-isc-b666c1280e7e`
+  - **Diigo (`saskstartups`, 4 Chrome-verified bookmarks; Cloudflare `403` to bare curl):** `https://www.diigo.com/user/saskstartups/b/839591046`, `.../839591084`, `.../839591124`, `.../839591169`
+  - **Verified Platform Blockers / Skipped (Not Counted):** Hashnode (`@saskstartupsolutions` suspended / `404`), DEV.to (`@saskstartupsolutions` flagged / read-only), Taplink (`ERR_CONNECTION_TIMED_OUT`), logged-out third-party directories, and non-client personal accounts strictly excluded.
 
 ---
 
@@ -457,13 +468,13 @@ Published across official client properties and independent high-DA platforms (D
 
 If you are a new AI agent resuming this session:
 1. **Read this file thoroughly** — all codebase architecture, credential boundaries, ESM rules, and deployment procedures are documented here.
-2. **Current State (Verified Nov 10, 2026):**
-   - **Code & Git Parity:** Local workspace, GitHub `origin/main` (`cbf9ec1` + latest docs commit), and Emergent container `/app` are synchronized cleanly. Pure ES Module exports (`export const ...`) are enforced across `frontend/src/`.
-   - **Content & Top 50 Keywords:** All 16 technical SEO/AEO/GEO checklist items complete, **50/50** target keywords from `SaskStartupSolutions_Top_50_Keywords.pdf` integrated across the codebase, **30 pillar blog guides** (~105,000+ words) live, and `frontend/public/llms.txt` updated for AI crawlers.
-   - **Live Production (`https://saskstartupsolutions.ca/`):** Serving **25th publish** (`0f59fd2`, bundle `static/js/main.f22a2d84.js`, HTTP 200 OK) with **69 URLs** in `sitemap.xml` and verified **0 JS/ESM runtime errors** across Posts 27–30.
-   - **Google Search Console (`sc-domain:saskstartupsolutions.ca`):** `sitemap.xml` Status **`Success`** (**69** discovered pages as of `10 Nov 2026`); Posts 27, 28, 29, and 30 all passed Live URL tests with Priority Indexing requested (Posts 28 & 30 already confirmed **`URL is on Google` / `Page is indexed`**).
-   - **Off-Page Authority:** **58 verified live high-DA backlink assets** across Rentry, Write.as, Telegra.ph, Blogger, Substack, Tumblr, and Google Sites — strictly **ZERO** personal GitHub or personal LinkedIn accounts used.
-3. **Deployment Workflow:** Always follow the 5-stage SOP in Section 9: verify strict ESM + `npm run build`, commit & push from local `/Users/eshway/Desktop/NIPUN1` &rarr; `git fetch origin && git reset --hard origin/main` inside Emergent `/app` &rarr; Republish in Emergent &rarr; verify live bundle & routes &rarr; submit to GSC. Note that Emergent org `Vici Sask` (`access@clinkora.in`) currently displays `-0.47` credits (`Buy Credits` notice); confirm credits before future publishes.
+2. **Current State (Verified Nov 12, 2026):**
+   - **Code & Git Parity:** Local workspace, GitHub `origin/main` (deployment commit `556be77` + Campaign 6 docs commit), and Emergent container `/app` (`d83a95c`) are synchronized cleanly. Pure ES Module exports (`export const ...`) are enforced across `frontend/src/`.
+   - **Content, Landing Pages & Keywords:** Canonical deduplication removed all `/blog` duplicate URLs from `sitemap.xml` (now **48 canonical URLs** cleanly) and replaced 27 legacy internal links with `/blogs/...`. Added **6 single-intent commercial landing pages** (`/incorporate-saskatoon`, `/business-registration-saskatchewan`, `/bookkeeping-saskatoon`, `/bookkeeping-cleanup-saskatoon`, `/isc-annual-returns-saskatoon`, `/multilingual-newcomer-business-saskatoon`), **Posts 31–34** (`34` total pillar blog guides, `34` FAQ datasets), updated `llms.txt` (`HTTP 200`, `0` `/blog/` links), and enforced `X-Robots-Tag: noindex, nofollow` + `robots.txt` disallow on `/api/intake-forms/`. All 2026 statutory figures updated (`$115` sole prop = `$50 + $65`, `$255` numbered corp, `$305` named corp, `$60` annual return, `$74,600` YMPE / `$85,000` YAMPE, `1.63%` EI on `$68,900`, `$0.73/km` / `$0.67/km`).
+   - **Live Production (`https://saskstartupsolutions.ca/`):** Serving **26th publish** (`d83a95c` via Emergent Free republishes), verified `HTTP 200` on `/`, all 6 landing pages, and Posts 31–34.
+   - **Google Search Console (`sc-domain:saskstartupsolutions.ca`):** `sitemap.xml` resubmitted `12 Nov 2026` — Status **`Success`**, **`48` discovered pages** (`0` `/blog` duplicates). All **10/10** new URLs (6 landing pages + Posts 31–34) passed URL Inspection -> **Indexing requested** (`URL was added to a priority crawl queue`) with zero quota errors.
+   - **Off-Page Authority:** **58 earlier verified assets** + **15 Campaign 6 verified placements** across 9 clean client platforms (Write.as, Telegra.ph, Medium, WordPress.com, Blogger, Google Sites, Diigo, Padlet, Gravatar) — strictly **ZERO** personal GitHub, LinkedIn, Substack, Tumblr, or Quora accounts used.
+3. **Deployment Workflow:** Always follow the 5-stage SOP in Section 9: verify strict ESM + `npm run build`, commit & push from local `/Users/eshway/Desktop/NIPUN1` &rarr; `git fetch origin && git reset --hard origin/main` inside Emergent `/app` &rarr; Republish in Emergent &rarr; verify live bundle & routes &rarr; submit to GSC. Note that Emergent org `Vici Sask` (`access@clinkora.in`) currently displays `-0.47` credits (`Buy Credits` notice) for AI workspace edits, while Free republishes continue to deploy synced Git commits.
 4. **Emergency Rollback:** Annotated tag `seo-baseline` and branch `baseline-backup` remain available if rollback is ever requested.
 5. **Local Preview Server:** Port `3000` is idle by default; start on demand with `npx serve -s frontend/build -l 3000`.
 6. **Git Hygiene:** Tracked `.env` removed, `.gitignore` enforces secret exclusions, working tree kept clean on `main`.

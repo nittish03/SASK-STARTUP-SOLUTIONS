@@ -1,0 +1,185 @@
+{
+  "generated_at": "2026-11-12T16:04:29.997844+00:00",
+  "items": [
+    {
+      "platform": "write.as",
+      "source_url": "https://write.as/1xa60pyctfdjo",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/incorporate-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/ownr-saskatchewan-alternative-how-to-incorporate",
+        "https://saskstartupsolutions.ca/"
+      ],
+      "http_status": 200,
+      "link_verified": true,
+      "title": "Ownr Alternatives & Provincial Incorporation in Saskatchewan (2026)"
+    },
+    {
+      "platform": "telegra.ph",
+      "source_url": "https://telegra.ph/Ownr-Alternatives--Provincial-Incorporation-in-Saskatchewan-2026-11-12",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/incorporate-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/ownr-saskatchewan-alternative-how-to-incorporate",
+        "https://saskstartupsolutions.ca/"
+      ],
+      "http_status": 200,
+      "link_verified": true,
+      "title": "Ownr Alternatives & Provincial Incorporation in Saskatchewan (2026)"
+    },
+    {
+      "platform": "telegra.ph",
+      "source_url": "https://telegra.ph/2026-Saskatchewan-Payroll-Ceilings-CPP2-EI--CRA-Mileage-Guide-11-12",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/bookkeeping-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/saskatchewan-2026-payroll-cpp2-ei-mileage-rates-guide",
+        "https://saskstartupsolutions.ca/bookkeeping-cleanup-saskatoon"
+      ],
+      "http_status": 200,
+      "link_verified": true,
+      "title": "2026 Saskatchewan Payroll Ceilings (CPP2, EI) & CRA Mileage Guide"
+    },
+    {
+      "platform": "write.as",
+      "source_url": "https://write.as/trh30ev4g1tnt",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/isc-annual-returns-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/beneficial-ownership-isc-register-saskatchewan-sbca-2021"
+      ],
+      "http_status": 200,
+      "link_verified": true,
+      "title": "SBCA 2021 Beneficial Ownership (ISC Register) & Annual Returns in Saskatchewan"
+    },
+    {
+      "platform": "write.as",
+      "source_url": "https://write.as/hl8jus6xgnwph",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/business-registration-saskatchewan",
+        "https://saskstartupsolutions.ca/multilingual-newcomer-business-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/saskatoon-business-licence-home-based-commercial-guide"
+      ],
+      "http_status": 200,
+      "link_verified": true,
+      "title": "Saskatchewan Business Registration ($115), Saskatoon Licence ($135) & Multilingual Setup"
+    }
+  ],
+  "errors": [
+    "telegra.ph retry SBCA 2021 Beneficial Ownership (ISC Register) & Annual Returns in Saskatchewan: <urlopen error [Errno 54] Connection reset by peer>",
+    "telegra.ph retry Saskatchewan Business Registration ($115), Saskatoon Licence ($135) & Multilingual Setup: <urlopen error [Errno 54] Connection reset by peer>"
+  ],
+  "browser_client_items": [
+    {
+      "platform": "medium.com",
+      "account": "@access_99245",
+      "source_url": "https://medium.com/@access_99245/ownr-alternatives-in-saskatchewan-2026-why-provincial-sbca-2021-incorporation-requires-local-isc-b666c1280e7e",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/incorporate-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/ownr-saskatchewan-alternative-how-to-incorporate"
+      ],
+      "verification": "chrome_verified_live_url (curl 403 Cloudflare bot check)"
+    },
+    {
+      "platform": "wordpress.com",
+      "account": "saskstartupsolutions.wordpress.com",
+      "source_url": "https://saskstartupsolutions.wordpress.com/2026/11/12/2026-saskatoon-small-business-bookkeeping-catch-up-cleanup-cra-payroll-guide/",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/bookkeeping-saskatoon",
+        "https://saskstartupsolutions.ca/bookkeeping-cleanup-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/saskatchewan-2026-payroll-cpp2-ei-mileage-rates-guide"
+      ],
+      "http_status": 200,
+      "verification": "chrome_and_http_200"
+    },
+    {
+      "platform": "blogger.com",
+      "account": "u/1 (access@clinkora.in)",
+      "source_url": "https://vici-saskstartupsolutions.blogspot.com/2026/11/sbca-2021-beneficial-ownership-isc.html",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/isc-annual-returns-saskatoon",
+        "https://saskstartupsolutions.ca/blogs/beneficial-ownership-isc-register-saskatchewan-sbca-2021"
+      ],
+      "http_status": 200,
+      "verification": "chrome_and_http_200"
+    },
+    {
+      "platform": "sites.google.com",
+      "account": "u/1 (access@clinkora.in)",
+      "source_url": "https://sites.google.com/clinkora.in/vici-saskstartupsolutions/home",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/",
+        "https://saskstartupsolutions.ca/incorporate-saskatoon",
+        "https://saskstartupsolutions.ca/business-registration-saskatchewan",
+        "https://saskstartupsolutions.ca/bookkeeping-saskatoon",
+        "https://saskstartupsolutions.ca/bookkeeping-cleanup-saskatoon",
+        "https://saskstartupsolutions.ca/isc-annual-returns-saskatoon",
+        "https://saskstartupsolutions.ca/multilingual-newcomer-business-saskatoon"
+      ],
+      "http_status": 200,
+      "verification": "chrome_and_http_200"
+    },
+    {
+      "platform": "diigo.com",
+      "account": "saskstartups",
+      "source_url": "https://www.diigo.com/user/saskstartups/b/839591046",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/incorporate-saskatoon"
+      ],
+      "verification": "chrome_verified_live_url (curl 403 Cloudflare bot check)"
+    },
+    {
+      "platform": "diigo.com",
+      "account": "saskstartups",
+      "source_url": "https://www.diigo.com/user/saskstartups/b/839591084",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/bookkeeping-cleanup-saskatoon"
+      ],
+      "verification": "chrome_verified_live_url (curl 403 Cloudflare bot check)"
+    },
+    {
+      "platform": "diigo.com",
+      "account": "saskstartups",
+      "source_url": "https://www.diigo.com/user/saskstartups/b/839591124",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/isc-annual-returns-saskatoon"
+      ],
+      "verification": "chrome_verified_live_url (curl 403 Cloudflare bot check)"
+    },
+    {
+      "platform": "diigo.com",
+      "account": "saskstartups",
+      "source_url": "https://www.diigo.com/user/saskstartups/b/839591169",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/multilingual-newcomer-business-saskatoon"
+      ],
+      "verification": "chrome_verified_live_url (curl 403 Cloudflare bot check)"
+    },
+    {
+      "platform": "padlet.com",
+      "account": "padlet.com/access_d2vr",
+      "source_url": "https://padlet.com/access_d2vr/saskatchewan-business-setup-bookkeeping-2026-resources-s025ebjyicgo42t6rvu3",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/",
+        "https://saskstartupsolutions.ca/incorporate-saskatoon",
+        "https://saskstartupsolutions.ca/bookkeeping-saskatoon",
+        "https://saskstartupsolutions.ca/isc-annual-returns-saskatoon"
+      ],
+      "http_status": 200,
+      "verification": "chrome_and_http_200"
+    },
+    {
+      "platform": "gravatar.com",
+      "account": "Patrick Vachon (access5a3edc587b)",
+      "source_url": "https://gravatar.com/access5a3edc587b",
+      "destination_urls": [
+        "https://saskstartupsolutions.ca/"
+      ],
+      "http_status": 200,
+      "verification": "chrome_and_http_200"
+    }
+  ],
+  "blocked_or_skipped_platforms": [
+    "hashnode.com (@saskstartupsolutions account suspended / 404)",
+    "dev.to (@saskstartupsolutions account flagged / read-only)",
+    "taplink.at (ERR_CONNECTION_TIMED_OUT)",
+    "weebly, strikingly, pearltrees, flipboard, crunchbase, alignable, neocities, scoop.it, issuu, slideshare, about.me (logged out / no client account session)",
+    "personal accounts strictly excluded (github nittish03, google u/0, tumblr, substack @turfprofessors, quora seo@asiplanet.com, wakelet YOGA NETWORK, linktree samsarayogastudio)"
+  ]
+}
