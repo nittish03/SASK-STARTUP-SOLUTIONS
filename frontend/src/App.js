@@ -128,6 +128,15 @@ function App() {
                 <Route path="/bookkeeping-cleanup-saskatoon" element={<ServiceLandingPage slug="bookkeeping-cleanup-saskatoon" />} />
                 <Route path="/isc-annual-returns-saskatoon" element={<ServiceLandingPage slug="isc-annual-returns-saskatoon" />} />
                 <Route path="/multilingual-newcomer-business-saskatoon" element={<ServiceLandingPage slug="multilingual-newcomer-business-saskatoon" />} />
+                <Route path="/starting-a-business-saskatoon" element={<ServiceLandingPage slug="starting-a-business-saskatoon" />} />
+                <Route path="/help-starting-a-business-saskatoon" element={<ServiceLandingPage slug="starting-a-business-saskatoon" />} />
+                <Route path="/starting-a-business-saskatchewan" element={<ServiceLandingPage slug="starting-a-business-saskatoon" />} />
+                <Route path="/corporate-tax-t2-saskatoon" element={<ServiceLandingPage slug="corporate-tax-t2-saskatoon" />} />
+                <Route path="/corporate-tax-filing-saskatoon" element={<ServiceLandingPage slug="corporate-tax-t2-saskatoon" />} />
+                <Route path="/small-business-tax-setup-saskatoon" element={<ServiceLandingPage slug="corporate-tax-t2-saskatoon" />} />
+                <Route path="/minute-book-share-structure-saskatchewan" element={<ServiceLandingPage slug="minute-book-share-structure-saskatchewan" />} />
+                <Route path="/saskatchewan-corporate-registry-help" element={<ServiceLandingPage slug="minute-book-share-structure-saskatchewan" />} />
+                <Route path="/isc-saskatchewan-business-filing" element={<ServiceLandingPage slug="minute-book-share-structure-saskatchewan" />} />
                 <Route path="/booking" element={<Booking />} />
                 <Route path="/staff" element={<Staff />} />
                 <Route path="/about" element={<Navigate to="/staff" replace />} />

@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-11-19T17:11:52.785345",
+  "campaign_name": "Campaign 7: Verified High-DA Multi-Platform Backlinks (Rentry DA 82 & Write.as DA 75)",
+  "methodology": "Strictly zero personal accounts (no personal GitHub, no personal LinkedIn). 100% white-hat public content syndication with exact-match keyword anchors verified HTTP 200 OK.",
+  "total_verified_live_backlinks": 8,
+  "verified_live_backlinks": [
+    {
+      "platform": "Rentry.co",
+      "da": 82,
+      "cluster": "Cluster 4: Startup Guidance",
+      "title": "Help Starting a Business in Saskatoon: Startup Support & Incorporation Checklist",
+      "url": "https://rentry.co/9c84m9hd",
+      "target_url": "https://saskstartupsolutions.ca/starting-a-business-saskatoon",
+      "anchor_text": "help starting a business in Saskatoon",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "help starting a business in Saskatoon",
+        "starting a business in Saskatchewan",
+        "first time business owner support Saskatoon",
+        "business registration help Saskatoon",
+        "register a small business Saskatoon"
+      ]
+    },
+    {
+      "platform": "Rentry.co",
+      "da": 82,
+      "cluster": "Cluster 5: Tax, Compliance & Licensing",
+      "title": "T2 Corporate Tax Return Preparation & GIFI Compliance in Saskatoon",
+      "url": "https://rentry.co/xnz3m5p2",
+      "target_url": "https://saskstartupsolutions.ca/corporate-tax-t2-saskatoon",
+      "anchor_text": "corporate tax filing help Saskatoon",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "corporate tax filing help Saskatoon",
+        "T2 corporate tax return Saskatoon",
+        "small business tax setup Saskatoon",
+        "register for GST PST Saskatchewan"
+      ]
+    },
+    {
+      "platform": "Write.as",
+      "da": 75,
+      "cluster": "Cluster 4: Startup Guidance",
+      "title": "Saskatchewan Business Formation: Sole Proprietorship vs Incorporation (2026 Guide)",
+      "url": "https://write.as/0u9zv8kufsfrd",
+      "target_url": "https://saskstartupsolutions.ca/starting-a-business-saskatoon",
+      "anchor_text": "sole proprietorship vs corporation Saskatchewan",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "sole proprietorship vs corporation Saskatchewan",
+        "moving from self employed to incorporated Saskatchewan",
+        "cost to incorporate in Saskatchewan",
+        "new corporation setup Saskatoon"
+      ]
+    },
+    {
+      "platform": "Write.as",
+      "da": 75,
+      "cluster": "Cluster 5: Corporate Registry & Minute Books",
+      "title": "Saskatchewan Corporate Registry & Minute Book Compliance (ISC & SBCA 2021)",
+      "url": "https://write.as/n04ob0zhbo9ex",
+      "target_url": "https://saskstartupsolutions.ca/minute-book-share-structure-saskatchewan",
+      "anchor_text": "minute book setup Saskatchewan",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "minute book setup Saskatchewan",
+        "share structure setup Saskatchewan",
+        "Saskatchewan corporate registry help",
+        "ISC Saskatchewan business filing",
+        "annual return filing Saskatchewan ISC"
+      ]
+    },
+    {
+      "platform": "Rentry.co",
+      "da": 82,
+      "cluster": "Cluster 4: Startup Guidance",
+      "title": "Starting a Business in Saskatoon: First-Time Founder Guide (2026)",
+      "url": "https://rentry.co/33779f4i",
+      "target_url": "https://saskstartupsolutions.ca/starting-a-business-saskatoon",
+      "anchor_text": "starting a business in Saskatoon founder guide",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "help starting a business in Saskatoon",
+        "starting a business in Saskatchewan",
+        "first time business owner support Saskatoon",
+        "sole proprietorship vs corporation Saskatchewan",
+        "moving from self employed to incorporated Saskatchewan"
+      ]
+    },
+    {
+      "platform": "Rentry.co",
+      "da": 82,
+      "cluster": "Cluster 5: Tax, Compliance & Licensing",
+      "title": "Corporate Tax Filing Help & T2 Corporate Returns in Saskatoon",
+      "url": "https://rentry.co/89wrohqa",
+      "target_url": "https://saskstartupsolutions.ca/corporate-tax-t2-saskatoon",
+      "anchor_text": "corporate tax filing help Saskatoon",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "corporate tax filing help Saskatoon",
+        "T2 corporate tax return Saskatoon",
+        "small business tax setup Saskatoon",
+        "register for GST PST Saskatchewan"
+      ]
+    },
+    {
+      "platform": "Write.as",
+      "da": 75,
+      "cluster": "Cluster 5: Corporate Registry & Minute Books",
+      "title": "Saskatchewan Corporate Minute Book Setup & Share Structure Guide (SBCA 2021)",
+      "url": "https://write.as/2wlu84a68lmhb",
+      "target_url": "https://saskstartupsolutions.ca/minute-book-share-structure-saskatchewan",
+      "anchor_text": "minute book setup Saskatchewan",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "minute book setup Saskatchewan",
+        "share structure setup Saskatchewan",
+        "Saskatchewan corporate registry help",
+        "ISC Saskatchewan business filing",
+        "annual return filing Saskatchewan ISC"
+      ]
+    },
+    {
+      "platform": "Write.as",
+      "da": 75,
+      "cluster": "Cluster 3: Bookkeeping Services",
+      "title": "Saskatoon Small Business Bookkeeping & Corporate Tax Directory (2026)",
+      "url": "https://write.as/j6eiiu65fkj8a",
+      "target_url": "https://saskstartupsolutions.ca/bookkeeping-saskatoon",
+      "anchor_text": "bookkeeper Saskatoon",
+      "status": "LIVE HTTP 200",
+      "keywords": [
+        "bookkeeper Saskatoon",
+        "bookkeeping services Saskatoon",
+        "monthly bookkeeping services Saskatoon",
+        "bookkeeping cleanup Saskatoon",
+        "remote bookkeeping Saskatchewan"
+      ]
+    }
+  ]
+}

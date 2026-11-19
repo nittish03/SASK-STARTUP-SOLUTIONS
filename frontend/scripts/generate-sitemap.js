@@ -1,6 +1,7 @@
 // Canonical sitemap generator for Vici SaskStartupSolutions
 const fs = require("fs");
 const path = require("path");
+const { pathToFileURL } = require("url");
 
 const SITE_URL = "https://saskstartupsolutions.ca";
 const PUBLIC_SITEMAP = path.join(__dirname, "..", "public", "sitemap.xml");
@@ -15,6 +16,9 @@ const CORE_ROUTES = [
   "/bookkeeping-cleanup-saskatoon",
   "/isc-annual-returns-saskatoon",
   "/multilingual-newcomer-business-saskatoon",
+  "/starting-a-business-saskatoon",
+  "/corporate-tax-t2-saskatoon",
+  "/minute-book-share-structure-saskatchewan",
   "/booking",
   "/staff",
   "/contact",
@@ -24,7 +28,7 @@ const CORE_ROUTES = [
 ];
 
 async function run() {
-  const { STATIC_BLOG_POSTS } = await import(BLOG_POSTS_PATH);
+  const { STATIC_BLOG_POSTS } = await import(pathToFileURL(BLOG_POSTS_PATH).href);
   const urls = [];
   const seen = new Set();
 

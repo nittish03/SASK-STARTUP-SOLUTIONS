@@ -456,6 +456,256 @@ export const SERVICE_LANDING_PAGES = {
       "bookkeeping-saskatoon"
     ]
   }
+  "starting-a-business-saskatoon": {
+    slug: "starting-a-business-saskatoon",
+    shortTitle: "Starting a Business in Saskatoon",
+    badge: "First-Time Founder Startup Guidance",
+    h1: "Help Starting a Business in Saskatoon & Saskatchewan",
+    seoTitle: "Help Starting a Business in Saskatoon | First-Time Founder Setup | Vici",
+    seoDescription:
+      "Expert help starting a business in Saskatoon. First-time business owner support, sole proprietorship vs corporation, ISC registration, CRA GST/PST setup, and municipal licences.",
+    quickAnswerQuestion: "What are the key steps to start a business in Saskatoon in 2026?",
+    quickAnswer:
+      "To start a business in Saskatoon in 2026: (1) Choose your business structure (sole proprietorship vs. Saskatchewan corporation under SBCA 2021); (2) Reserve your business name with Information Services Corporation (ISC) for $50; (3) Register your business name ($65 for sole prop/partnership) or file Articles of Incorporation ($255); (4) Obtain a City of Saskatoon Business Licence ($135 initial fee); (5) Register for a CRA Business Number (GST RT0001 mandatory over $30,000 gross revenue) and Saskatchewan SETS account (6% PST); (6) Open a dedicated commercial business bank account; and (7) Establish cloud bookkeeping in QuickBooks Online or Xero.",
+    introParagraphs: [
+      "Starting a new business in Saskatoon is an exciting milestone, but navigating provincial corporate registries, municipal licensing, and Canada Revenue Agency (CRA) compliance can feel overwhelming for first-time founders. From deciding whether to register a trade name or incorporate under The Business Corporations Act, 2021 (SBCA 2021), every early legal and administrative decision directly impacts your liability, tax burden, and future financing.",
+      "At Vici SaskStartupSolutions, located at 539 Avenue I N in Saskatoon, founder Patrick Vachon provides hands-on startup guidance and administrative support for first-time business owners, freelancers, and growing trade contractors. We guide you step-by-step through name reservations, ISC filings, CRA tax accounts, Saskatchewan PST registration, City of Saskatoon licensing, and stress-free cloud bookkeeping setup."
+    ],
+    comparisonTitle: "Sole Proprietorship vs. Corporation in Saskatchewan: 2026 Founder Comparison",
+    comparisonHeaders: ["Decision Factor", "Sole Proprietorship / Partnership", "Saskatchewan Corporation (SBCA 2021)", "Vici Recommendation"],
+    comparisonRows: [
+      ["Legal Liability", "Unlimited personal liability for debts, lawsuits, and liabilities", "Separate legal entity; shareholder liability strictly limited to invested capital", "Incorporate if operating in construction, commercial trade, retail, or carrying debt"],
+      ["Setup Cost (ISC Fees)", "$115 CAD total ($50 name reservation + $65 registration)", "$305 CAD total ($50 name reservation + $255 Articles Form 1)", "Sole proprietorship is budget-friendly; incorporation pays off with tax savings"],
+      ["Tax Rate & Filing", "Taxed at personal marginal tax rates (up to 47.5% in SK) via Form T2125", "Eligible for Saskatchewan 1% small business tax rate up to $600k (10% combined with federal 9%)", "Corporation allows corporate retained earnings, tax deferral, and salary/dividend optimization"],
+      ["Ongoing Maintenance", "Name renewal every 3 years ($60 ISC fee)", "Annual ISC Corporate Return ($60 statutory fee) + Annual CRA T2 return + Minute Book", "We administer annual returns and T2 compliance seamlessly"],
+      ["Business Banking", "Can use personal account if using legal name, or sole prop commercial account", "Dedicated corporate bank account legally required with resolution and minute book", "We prepare bank-ready corporate documentation packages"]
+    ],
+    stepsTitle: "First-Time Founder Roadmap: Launching in Saskatoon",
+    steps: [
+      {
+        name: "1. Business Structure & Entity Planning",
+        text: "Evaluate your commercial liability exposure, projected revenues, and financing needs to choose between a sole proprietorship, general partnership, or Saskatchewan provincial corporation."
+      },
+      {
+        name: "2. ISC Name Reservation & Registry Filing",
+        text: "Submit a 90-day name reservation ($50 ISC fee) and register your business name or file Form 1-3 Articles of Incorporation under SBCA 2021."
+      },
+      {
+        name: "3. CRA Tax Setup & Saskatchewan SETS PST",
+        text: "Obtain your 9-digit CRA Business Number, configure GST/HST (RT0001), activate Saskatchewan Ministry of Finance eTax Services (SETS) for 6% PST, and setup WCB if hiring employees."
+      },
+      {
+        name: "4. City of Saskatoon Business Licence & Banking",
+        text: "Submit your City of Saskatoon commercial or home-based business licence ($135 fee) and assemble corporate profile documentation to open your Canadian business bank account."
+      },
+      {
+        name: "5. Cloud Bookkeeping & Receipt Systems",
+        text: "Set up QuickBooks Online or Xero with digital receipt scanning (CRA IC78-10R5 6-year retention compliance) to track every tax deduction from day one."
+      }
+    ],
+    highlightsTitle: "Why First-Time Saskatoon Founders Partner with Vici",
+    highlights: [
+      "Practical Local Knowledge: We understand City of Saskatoon bylaws, zoning permits, Saskatchewan ISC quirks, and local credit unions (Affinity, Conexus).",
+      "Transparent Flat Pricing: No hidden hourly billing. We provide clear, affordable startup packages tailored for bootstrap entrepreneurs and tradespeople.",
+      "Ongoing Partnership: We do not just register your paperwork and disappear; we handle your monthly bookkeeping, payroll, PST reconciliations, and annual filings as your business scales."
+    ],
+    faqs: [
+      {
+        q: "Do I need a business licence to run a home-based business in Saskatoon?",
+        a: "Yes. The City of Saskatoon requires all businesses operating within city limits—including home-based consultancies, online stores, and independent freelancers—to hold a valid municipal business licence. The initial application fee is $135 CAD, renewed annually for $95 CAD."
+      },
+      {
+        q: "At what revenue must I register for GST and Saskatchewan PST?",
+        a: "For federal GST, registration with the CRA is mandatory once your worldwide taxable sales exceed $30,000 CAD across four consecutive calendar quarters. However, for Saskatchewan PST (6%), there is NO small supplier exemption: any business selling taxable goods or services in Saskatchewan must register a SETS account with the Ministry of Finance before making their first taxable sale."
+      },
+      {
+        q: "Can I transition from a sole proprietorship to a corporation later?",
+        a: "Yes. Many founders start as a sole proprietorship to test their business concept and incorporate once annual net profits exceed personal living expenses (typically $70,000+). We assist with sole proprietorship dissolution and corporate transition under SBCA 2021."
+      },
+      {
+        q: "What support does Vici SaskStartupSolutions provide for new founders?",
+        a: "We provide complete start-to-finish administrative support: ISC name search and registration, municipal licensing guidance, CRA tax account registration, business banking documentation, digital bookkeeping setup, and ongoing compliance monitoring."
+      }
+    ],
+    relatedBlogSlugs: [
+      "saskatoon-small-business-startup-incorporation-bookkeeping-guide",
+      "sole-proprietorship-vs-incorporation-saskatchewan",
+      "moving-from-sole-proprietor-to-corporation-saskatchewan",
+      "how-to-register-a-business-name-in-saskatchewan-guide"
+    ],
+    relatedServiceSlugs: [
+      "incorporate-saskatoon",
+      "business-registration-saskatchewan",
+      "bookkeeping-saskatoon"
+    ]
+  },
+  "corporate-tax-t2-saskatoon": {
+    slug: "corporate-tax-t2-saskatoon",
+    shortTitle: "Corporate Tax & T2 Filing Saskatoon",
+    badge: "Corporate Tax Compliance & T2 Administration",
+    h1: "Corporate Tax Filing Help & T2 Corporate Tax Returns in Saskatoon",
+    seoTitle: "Corporate Tax Filing Help Saskatoon | T2 Return Preparation & GIFI | Vici",
+    seoDescription:
+      "Expert corporate tax filing help and T2 return administration in Saskatoon. Saskatchewan 1% small business tax rate up to $600k, CRA GIFI schedules, GST/PST reconciliations, and fiscal year-end filings.",
+    quickAnswerQuestion: "When is the T2 corporate tax return due in Saskatchewan, and what is the small business tax rate?",
+    quickAnswer:
+      "In Saskatchewan, your corporation's T2 income tax return must be filed with the Canada Revenue Agency (CRA) within 6 months of your fiscal year-end. However, any corporate income tax owing must be paid within 3 months of fiscal year-end for Canadian-Controlled Private Corporations (CCPCs) claiming the small business deduction to avoid daily compound interest. Saskatchewan boasts Canada's lowest provincial small business corporate income tax rate of just 1% on active business income up to $600,000, which combines with the federal 9% rate for an exceptionally low 10% combined tax rate.",
+    introParagraphs: [
+      "Filing an annual corporate tax return (Form T2) with the Canada Revenue Agency is a mandatory statutory obligation for every incorporated business in Saskatchewan—even if the company was inactive or earned zero revenue during the fiscal year. Navigating General Index of Financial Information (GIFI) codes, Capital Cost Allowance (CCA) depreciation schedules, shareholder loan accounts, and Saskatchewan provincial tax schedules requires disciplined recordkeeping.",
+      "At Vici SaskStartupSolutions, located at 539 Avenue I N in Saskatoon, Patrick Vachon leads our T2 corporate tax filing administration and bookkeeping team. We bridge the gap between day-to-day transaction ledgers and CRA tax compliance, assembling audit-ready financial statements, GIFI Schedules 100 & 125, and corporate tax schedules so your corporation takes full advantage of Saskatchewan's 1% small business tax rate without missing deadlines."
+    ],
+    comparisonTitle: "2026 Saskatchewan Business Tax Rates & Filing Deadlines",
+    comparisonHeaders: ["Tax Type / Metric", "Saskatchewan Provincial Rate", "Federal CRA Rate", "Statutory Filing / Payment Deadline"],
+    comparisonRows: [
+      ["Small Business Corporate Tax (CCPC)", "1.0% (on active business income up to $600,000)", "9.0% (net small business deduction)", "Payment due in 3 months; T2 return due in 6 months of fiscal year-end"],
+      ["General Corporate Income Tax", "12.0% (on income exceeding $600,000)", "15.0% (general rate)", "Payment due in 2 months; T2 return due in 6 months of fiscal year-end"],
+      ["Provincial Sales Tax (PST / SETS)", "6.0% (applies to taxable goods & services)", "N/A", "Monthly, quarterly, or annual return based on sales volume"],
+      ["Goods & Services Tax (GST)", "N/A", "5.0% (Input Tax Credits refundable)", "Annual (due within 3 months) or quarterly via CRA My Business Account"],
+      ["Statutory Nil Return Requirement", "Mandatory with CRA even if $0 revenue", "Mandatory Form T2 electronic filing", "Filing within 6 months avoids CRA corporate forfeiture & administrative strike-off"]
+    ],
+    stepsTitle: "Saskatchewan Corporate Tax Administration Workflow",
+    steps: [
+      {
+        name: "1. Fiscal Year-End Financial Ledger Audit",
+        text: "Reconcile all 12 months of bank accounts, credit cards, merchant gateways, and accounts payable/receivable to establish verified trial balances."
+      },
+      {
+        name: "2. GIFI Schedule Preparation (100, 125 & 141)",
+        text: "Convert financial ledgers into CRA General Index of Financial Information (GIFI) Balance Sheet (Schedule 100), Income Statement (Schedule 125), and Notes checklist (Schedule 141)."
+      },
+      {
+        name: "3. Capital Cost Allowance (CCA) & Depreciation",
+        text: "Calculate asset depreciation (Schedule 8) for equipment, vehicles, and technology purchases to optimize tax-deductible write-offs."
+      },
+      {
+        name: "4. Shareholder Loan & Dividend Reconciliation",
+        text: "Review owner draws, shareholder loan accounts (Section 15(2) CRA compliance), and prepare T5 dividend summary reporting if dividend remuneration was issued."
+      },
+      {
+        name: "5. Electronic E-Filing & CRA Notice of Assessment",
+        text: "Submit verified corporate tax returns via CRA corporate internet filing and archive the resulting Notice of Assessment and balance confirmation."
+      }
+    ],
+    highlightsTitle: "Professional Scope & Integrity Commitment",
+    highlights: [
+      "Clear Administrative Focus: Vici SaskStartupSolutions specializes in corporate tax administration, bookkeeping compilation, and CRA filing preparation. We are not a CPA public audit firm and do not provide formal audit assurance or Section 85 corporate reorganization structuring.",
+      "CPA Collaboration: If your corporation requires complex compilation engagement reports, cross-border tax opinions, or estate freezes, we collaborate smoothly with your appointed CPA or tax attorney.",
+      "Zero-Late-Filing Policy: We track your fiscal year-end milestone proactively so your corporation never faces CRA late-filing penalties (5% plus 1% per month)."
+    ],
+    faqs: [
+      {
+        q: "Does my Saskatchewan corporation have to file a T2 if it had zero revenue?",
+        a: "Yes. Every Saskatchewan corporation must file an annual T2 corporate return, even with $0 in revenue or transactions. Filing an annual nil return keeps your corporate registry profile in good standing and prevents the CRA from issuing arbitrary assessments or suspending your Business Number."
+      },
+      {
+        q: "What is the small business corporate tax threshold in Saskatchewan?",
+        a: "Saskatchewan provides a generous small business tax limit of $600,000 CAD of active business income—$100,000 higher than the federal $500,000 limit. Active income up to $600,000 is taxed at just 1% provincially and 9% federally, totaling an effective 10% corporate income tax rate."
+      },
+      {
+        q: "What is the difference between the tax payment deadline and the return filing deadline?",
+        a: "This is the most common corporate tax mistake in Canada. For small business CCPCs, any tax balance owing must be paid within 3 months after the fiscal year-end. However, the T2 return itself is not due until 6 months after year-end. Waiting until month 6 to pay your taxes will trigger CRA compound daily arrears interest from month 3."
+      },
+      {
+        q: "What documents do I need to provide for my T2 corporate tax return?",
+        a: "You need your 12-month general ledger, final bank and credit card statements, capital asset purchase receipts, previous year's T2 return and CRA Notice of Assessment, shareholder loan transaction logs, and GST/PST return summaries."
+      }
+    ],
+    relatedBlogSlugs: [
+      "t2-corporate-tax-filing-saskatchewan",
+      "saskatchewan-small-business-tax-deductions-write-offs-guide",
+      "saskatchewan-gst-pst-rules-for-small-business",
+      "notice-to-reader-compilation-financial-statements-saskatoon"
+    ],
+    relatedServiceSlugs: [
+      "bookkeeping-saskatoon",
+      "incorporate-saskatoon",
+      "isc-annual-returns-saskatoon"
+    ]
+  },
+  "minute-book-share-structure-saskatchewan": {
+    slug: "minute-book-share-structure-saskatchewan",
+    shortTitle: "Minute Books & Share Structure",
+    badge: "Corporate Registry & Governance Compliance",
+    h1: "Corporate Minute Book Setup & Share Structure in Saskatchewan",
+    seoTitle: "Corporate Minute Book Setup Saskatchewan | Share Structure & By-Laws | Vici",
+    seoDescription:
+      "Professional corporate minute book setup, share structure design, and ISC corporate registry administration in Saskatchewan. SBCA 2021 compliant by-laws, director resolutions, and share registers.",
+    quickAnswerQuestion: "What is a corporate minute book in Saskatchewan and why is it legally required?",
+    quickAnswer:
+      "In Saskatchewan, a corporate minute book is the official legal binder or secure digital repository containing all constitutional and operational records of a corporation. Under The Business Corporations Act, 2021 (SBCA 2021), every provincial corporation is legally mandated to maintain an up-to-date minute book at its registered office address. It must house the Certificate and Articles of Incorporation (Form 1-01), General Operating By-law No. 1, initial director and shareholder organizational resolutions, director consent forms, share certificate registers, and the mandatory Register of Individuals with Significant Control (Beneficial Ownership Register). Failure to maintain a minute book can block corporate bank loans, halt company sales, and violate ISC statutory compliance.",
+    introParagraphs: [
+      "Many business owners incorporate online and receive their Articles of Incorporation from Saskatchewan Information Services Corporation (ISC), believing their corporate formation is complete. However, receiving your ISC certificate is only the first step. Under Saskatchewan's The Business Corporations Act, 2021 (SBCA 2021), a corporation must hold an organizational meeting, enact corporate bylaws, issue authorized shares, and maintain an organized corporate minute book.",
+      "At Vici SaskStartupSolutions in Saskatoon, we assemble complete physical and digital corporate minute books for new and existing Saskatchewan corporations. Whether you are setting up a single-founder corporation, designing multi-class voting and non-voting share structures (Class A common, Class B non-voting, Class C preferred), or catching up on neglected corporate resolutions, our team ensures your corporate records satisfy Saskatchewan banks, investors, and ISC compliance standards."
+    ],
+    comparisonTitle: "Mandatory Saskatchewan Minute Book Records Checklist (SBCA 2021)",
+    comparisonHeaders: ["Corporate Record / Document", "Legal Requirement Under SBCA 2021", "Purpose & Practical Value", "Common Risk If Missing"],
+    comparisonRows: [
+      ["Articles & Certificate of Incorporation", "Statutory document filed with ISC (Form 1-01)", "Proves legal existence and corporate powers of the entity", "Unable to open corporate bank accounts or secure CRA Business Number"],
+      ["General Operating By-Laws (By-Law No. 1)", "Mandatory rules governing directors, officers, and meetings", "Defines signing authority, banking powers, and board procedures", "Internal shareholder disputes cannot be legally resolved"],
+      ["Director & Shareholder Resolutions", "Organizational resolutions adopting bylaws and issuing shares", "Validates initial corporate acts and authorises banking", "Bank may freeze corporate account or deny credit facilities"],
+      ["Share Register & Share Certificates", "Detailed ledger of share classes, share numbers, and owners", "Defines exact legal ownership and equity percentages", "Tax deductions, dividends, and small business deduction challenged by CRA"],
+      ["Beneficial Ownership / ISC Register", "Mandatory register of individuals with 25%+ voting equity or control", "Provincial transparency requirement under SBCA 2021 Section 21.1", "ISC non-compliance fines up to $5,000 for directors and officers"]
+    ],
+    stepsTitle: "Corporate Minute Book Setup & Administration Process",
+    steps: [
+      {
+        name: "1. Corporate Constitution & Share Structure Design",
+        text: "Design common and non-voting share classes (e.g. Class A Common Voting for active founders, Class B Common Non-Voting for family members or silent investors) that provide long-term dividend and restructuring flexibility."
+      },
+      {
+        name: "2. By-Law Enactment & Director Consents",
+        text: "Draft General Operating By-law No. 1 and formal written consent forms signed by all provincial directors."
+      },
+      {
+        name: "3. Organizational Minutes & Banking Resolutions",
+        text: "Prepare formal initial organizational resolutions appointing officers (President, Secretary, Treasurer) and adopting banking signing authority."
+      },
+      {
+        name: "4. Share Issuance & Physical/Digital Certificates",
+        text: "Generate serialized share certificates, complete the Central Securities Register, and document shareholder subscription payments into corporate accounts."
+      },
+      {
+        name: "5. SBCA 2021 Beneficial Ownership Register Filing",
+        text: "Complete the mandatory register identifying all individuals who own or control 25% or more of corporate voting rights or fair market value."
+      }
+    ],
+    highlightsTitle: "Governance & Regulatory Standards",
+    highlights: [
+      "SBCA 2021 Modernized Compliance: All documentation is fully aligned with Saskatchewan's updated corporate act which eliminated director residency constraints.",
+      "Physical & Cloud Digital Formats: Receive an indexed corporate binder along with an encrypted PDF digital minute book for immediate forwarding to lenders and accountants.",
+      "Annual Resolutions Included: Combine with our ISC Annual Return service to keep your corporate minutes updated every fiscal year."
+    ],
+    faqs: [
+      {
+        q: "What is the difference between Articles of Incorporation and a Minute Book?",
+        a: "Articles of Incorporation are the public registration forms submitted to Saskatchewan ISC to create the legal corporation. The Minute Book is the internal, private corporate record book containing the bylaws, director resolutions, share registers, and share certificates that actually issue ownership and govern day-to-day corporate operations."
+      },
+      {
+        q: "Why do Saskatchewan corporations need multiple share classes?",
+        a: "Establishing multiple share classes (such as Class A Voting Common and Class B Non-Voting Common) gives business owners the flexibility to distribute dividends selectively to different shareholders without diluting voting control of the enterprise."
+      },
+      {
+        q: "Can a corporation be fined for not having an updated Beneficial Ownership register?",
+        a: "Yes. Under Section 21.1 of Saskatchewan's The Business Corporations Act, 2021, corporations that fail to create or maintain a Register of Individuals with Significant Control, or directors who knowingly provide false information, face statutory fines of up to $5,000 CAD."
+      },
+      {
+        q: "Can Vici SaskStartupSolutions update an old, neglected minute book?",
+        a: "Yes. If your corporation was formed years ago and the minute book was lost or never created, we reconstruct corporate minutes, pass annual catch-up director resolutions, and update your ISC profile to restore legal compliance."
+      }
+    ],
+    relatedBlogSlugs: [
+      "unanimous-shareholder-agreement-saskatchewan-guide",
+      "beneficial-ownership-isc-register-saskatchewan-sbca-2021",
+      "isc-annual-returns-corporate-registry-saskatchewan",
+      "what-to-do-after-incorporating-in-saskatchewan"
+    ],
+    relatedServiceSlugs: [
+      "incorporate-saskatoon",
+      "isc-annual-returns-saskatoon",
+      "corporate-tax-t2-saskatoon"
+    ]
+  }
 };
 
 export const SERVICE_LANDING_LIST = Object.values(SERVICE_LANDING_PAGES);
+

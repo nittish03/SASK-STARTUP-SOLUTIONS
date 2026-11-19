@@ -18,6 +18,9 @@ const SPECIALIZED = [
   { to: "/business-registration-saskatchewan", label: "Business Registration Saskatchewan" },
   { to: "/bookkeeping-saskatoon", label: "Bookkeeper Saskatoon" },
   { to: "/bookkeeping-cleanup-saskatoon", label: "Bookkeeping Cleanup Services" },
+  { to: "/starting-a-business-saskatoon", label: "Starting a Business in Saskatoon" },
+  { to: "/corporate-tax-t2-saskatoon", label: "Corporate Tax & T2 Filing" },
+  { to: "/minute-book-share-structure-saskatchewan", label: "Minute Books & Share Structure" },
   { to: "/isc-annual-returns-saskatoon", label: "ISC Annual Returns & Registry" },
   { to: "/multilingual-newcomer-business-saskatoon", label: "Newcomer & Multilingual Setup" },
 ];
