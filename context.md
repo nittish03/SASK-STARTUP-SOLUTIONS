@@ -7,8 +7,8 @@
 > **Local Server:** `http://localhost:3000` (On-demand via `npx serve -s frontend/build -l 3000`; not running persistently)  
 > **Emergent Project:** "Vici Registry Admin" (`bf42bf06-08c2-40be-9c97-5ecd988db1ef`) under Org "Vici Sask"  
 > **Baseline Checkpoint Tag:** `seo-baseline` | **Backup Branch:** `baseline-backup`  
-> **Current Campaign Focus:** SEO, AEO & GEO Ranking Execution (Top 50 Keywords, 30 Pillar Guides, 69 Sitemap URLs, 58 High-DA Backlinks)  
-> **Last Synchronized:** 2026-11-10  
+> **Current Campaign Focus:** SEO, AEO & GEO Ranking Execution (Top 50 Keywords, 9 Commercial Landing Pages, 34 Pillar Guides, 51 Canonical Sitemap URLs, Campaign 6 & 7 High-DA Backlinks)  
+> **Last Synchronized:** 2026-11-19  
 
 ---
 
@@ -478,3 +478,36 @@ If you are a new AI agent resuming this session:
 4. **Emergency Rollback:** Annotated tag `seo-baseline` and branch `baseline-backup` remain available if rollback is ever requested.
 5. **Local Preview Server:** Port `3000` is idle by default; start on demand with `npx serve -s frontend/build -l 3000`.
 6. **Git Hygiene:** Tracked `.env` removed, `.gitignore` enforces secret exclusions, working tree kept clean on `main`.
+
+
+---
+
+## 11. Sprint Update (2026-11-19) — 50 Keywords Acceleration & Campaign 7
+
+* **Commit:** `471f5da` on branch `main`
+* **On-Page Expansion (9 Commercial Landing Pages Total):**
+  1. `/incorporate-saskatoon` &bull; Incorporate a Business in Saskatoon (SBCA 2021, $305 ISC fees)
+  2. `/business-registration-saskatchewan` &bull; Business Registration Services SK ($115 ISC fee)
+  3. `/bookkeeping-saskatoon` &bull; Small Business Bookkeeping Saskatoon (QBO/Xero, monthly reconciliations)
+  4. `/bookkeeping-cleanup-saskatoon` &bull; Emergency Bookkeeping Cleanup (CRA catch-up, back taxes)
+  5. `/isc-annual-returns-saskatoon` &bull; ISC Annual Returns & Corporate Registry ($60 statutory renewals)
+  6. `/multilingual-newcomer-business-saskatoon` &bull; Newcomer & Multilingual Setup (Russian, Ukrainian, Armenian, French)
+  7. `/starting-a-business-saskatoon` &bull; Starting a Business in Saskatoon: First-Time Founder Guide (sole prop vs. corp, licensing)
+  8. `/corporate-tax-t2-saskatoon` &bull; Corporate Tax Filing Help & T2 Corporate Returns in Saskatoon (Saskatchewan 1% tax rate, GIFI)
+  9. `/minute-book-share-structure-saskatchewan` &bull; Minute Book Setup & Share Structure in Saskatchewan (SBCA 2021 compliance)
+* **Sitewide Architecture:**
+  - `Footer.jsx`: 4-column layout linking to all 9 specialized solutions sitewide.
+  - `Header.jsx`: Instant search index expanded for all 9 specialized solutions.
+  - `Home.jsx`: Core business solutions grid upgraded with cards for all solutions.
+  - `Sitemap.jsx`: HTML sitemap updated with all 9 solutions.
+  - `sitemap.xml`: Canonical sitemap updated to **51 URLs** via `scripts/generate-sitemap.js` (with Windows `pathToFileURL` ESM fix).
+* **Campaign 7 Live High-DA Authority Backlinks (8 Placements Verified HTTP 200):**
+  - Rentry.co (DA 82): `https://rentry.co/9c84m9hd` -> `/starting-a-business-saskatoon`
+  - Rentry.co (DA 82): `https://rentry.co/xnz3m5p2` -> `/corporate-tax-t2-saskatoon`
+  - Write.as (DA 75): `https://write.as/0u9zv8kufsfrd` -> `/starting-a-business-saskatoon`
+  - Write.as (DA 75): `https://write.as/n04ob0zhbo9ex` -> `/minute-book-share-structure-saskatchewan`
+  - Rentry.co (DA 82): `https://rentry.co/33779f4i` -> `/starting-a-business-saskatoon`
+  - Rentry.co (DA 82): `https://rentry.co/89wrohqa` -> `/corporate-tax-t2-saskatoon`
+  - Write.as (DA 75): `https://write.as/2wlu84a68lmhb` -> `/minute-book-share-structure-saskatchewan`
+  - Write.as (DA 75): `https://write.as/j6eiiu65fkj8a` -> `/bookkeeping-saskatoon`
+  *(All recorded in `campaign_7_backlinks_log.json`)*.
