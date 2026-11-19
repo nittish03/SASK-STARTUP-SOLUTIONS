@@ -16,6 +16,12 @@ const NAV = [
 
 const SEARCH_INDEX = [
   { label: "Our Services overview", to: "/services", keywords: "services overview bookkeeping t2 isc registry package" },
+  { label: "Incorporate in Saskatoon", to: "/incorporate-saskatoon", keywords: "incorporate business saskatoon saskatchewan corporation setup isc fees" },
+  { label: "Business Registration Saskatchewan", to: "/business-registration-saskatchewan", keywords: "register business name saskatchewan sole proprietorship partnership help saskatoon" },
+  { label: "Bookkeeper Saskatoon", to: "/bookkeeping-saskatoon", keywords: "bookkeeper saskatoon bookkeeping services monthly small business" },
+  { label: "Bookkeeping Cleanup Services", to: "/bookkeeping-cleanup-saskatoon", keywords: "cleanup catchup messy records back taxes cra" },
+  { label: "ISC Annual Returns & Registry", to: "/isc-annual-returns-saskatoon", keywords: "isc annual returns corporate registry compliance saskatchewan" },
+  { label: "Newcomer & Multilingual Setup", to: "/multilingual-newcomer-business-saskatoon", keywords: "newcomer multilingual russian ukrainian armenian filipino business setup" },
   { label: "Part 1 - Bookkeeping", to: "/booking", keywords: "bookkeeping records cra" },
   { label: "Part 2 - T2 Corporate Filing Administration", to: "/booking", keywords: "t2 corporate tax filing cra" },
   { label: "Part 3 - ISC Registry Administration", to: "/booking", keywords: "isc registry incorporation annual report" },

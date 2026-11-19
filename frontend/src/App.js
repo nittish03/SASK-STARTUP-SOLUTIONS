@@ -117,6 +117,12 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/incorporate-saskatoon" element={<ServiceLandingPage slug="incorporate-saskatoon" />} />
+                <Route path="/business-incorporation-saskatoon" element={<ServiceLandingPage slug="incorporate-saskatoon" />} />
+                <Route path="/incorporate-business-saskatoon" element={<ServiceLandingPage slug="incorporate-saskatoon" />} />
+                <Route path="/bookkeeper-saskatoon" element={<ServiceLandingPage slug="bookkeeping-saskatoon" />} />
+                <Route path="/small-business-bookkeeping-saskatoon" element={<ServiceLandingPage slug="bookkeeping-saskatoon" />} />
+                <Route path="/business-registration" element={<ServiceLandingPage slug="business-registration-saskatchewan" />} />
+                <Route path="/register-business-saskatchewan" element={<ServiceLandingPage slug="business-registration-saskatchewan" />} />
                 <Route path="/business-registration-saskatchewan" element={<ServiceLandingPage slug="business-registration-saskatchewan" />} />
                 <Route path="/bookkeeping-saskatoon" element={<ServiceLandingPage slug="bookkeeping-saskatoon" />} />
                 <Route path="/bookkeeping-cleanup-saskatoon" element={<ServiceLandingPage slug="bookkeeping-cleanup-saskatoon" />} />
